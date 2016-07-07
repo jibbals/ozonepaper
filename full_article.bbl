@@ -1,0 +1,384 @@
+\begin{thebibliography}{36}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[AIR(2013)]{AIRS3STD}
+{AIRS3STD}, 2013.
+
+\bibitem[Alexander et~al.(2013)Alexander, Murphy, and Klekociuk]{Alexander2013}
+S.~P. Alexander, D.~J. Murphy, and A.~R. Klekociuk.
+\newblock {High resolution VHF radar measurements of tropopause structure and
+  variability at Davis, Antarctica (69?? S, 78?? E)}.
+\newblock \emph{Atmospheric Chemistry and Physics}, 13\penalty0 (6):\penalty0
+  3121--3132, 2013.
+\newblock ISSN 16807324.
+\newblock \doi{10.5194/acp-13-3121-2013}.
+\newblock URL \url{http://www.atmos-chem-phys.net/13/3121/2013/}.
+
+\bibitem[Baray et~al.(2000)Baray, Daniel, Ancellet, and Legras]{Baray2000}
+J.~L. Baray, V.~Daniel, G.~Ancellet, and B.~Legras.
+\newblock {Planetary-scale tropopause folds in the southern subtropics}.
+\newblock \emph{Geophysical Research Letters}, 27\penalty0 (3):\penalty0
+  353--356, 2000.
+\newblock ISSN 00948276.
+\newblock \doi{10.1029/1999GL010788}.
+
+\bibitem[Beekmann et~al.(1997)Beekmann, Ancellet, Blonsky, {De Muer}, Ebel,
+  Elbern, Hendricks, Kowol, Mancier, Sladkovic, Smit, Speth, Trickl, and {Van
+  Haver}]{Beekmann1997}
+M.~Beekmann, G.~Ancellet, S.~Blonsky, D.~{De Muer}, A.~Ebel, H.~Elbern,
+  J.~Hendricks, J.~Kowol, C.~Mancier, R.~Sladkovic, H.~G~J Smit, P.~Speth,
+  T.~Trickl, and Ph~{Van Haver}.
+\newblock {Regional and global tropopause fold occurrence and related ozone
+  flux across the tropopause}.
+\newblock \emph{Journal of Atmospheric Chemistry}, 28\penalty0 (1-3):\penalty0
+  29--44, 1997.
+\newblock ISSN 01677764.
+\newblock \doi{10.1023/A:1005897314623}.
+
+\bibitem[Bethan et~al.(1996)Bethan, Vaughan, and Reid]{Bethan1996}
+S.~Bethan, G.~Vaughan, and S.~J. Reid.
+\newblock {A comparison of ozone and thermal tropopause heights and the impact
+  of tropopause definition on quantifying the ozone content of the
+  troposphere}.
+\newblock \emph{Quarterly Journal of the Royal Meteorological Society},
+  122\penalty0 (532):\penalty0 929--944, 1996.
+\newblock ISSN 00359009.
+\newblock \doi{10.1002/qj.49712253207}.
+\newblock URL \url{http://doi.wiley.com/10.1002/qj.49712253207}.
+
+\bibitem[Das et~al.(2016)Das, Ratnam, Uma, Subrahmanyam, and Girach]{Das2016}
+S~S Das, M~V Ratnam, K~N Uma, K~V Subrahmanyam, and I~A Girach.
+\newblock {Influence of tropical cyclones on tropospheric ozone : possible
+  implication}.
+\newblock \emph{Atmospheric Chemistry and Physics (Discussions)}, 15\penalty0
+  (2003):\penalty0 19305--19323, 2016.
+\newblock ISSN 1680-7324.
+\newblock \doi{10.5194/acpd-15-19305-2015}.
+
+\bibitem[Dee et~al.(2011)Dee, Uppala, Simmons, Berrisford, Poli, Kobayashi,
+  Andrae, Balmaseda, Balsamo, Bauer, Bechtold, Beljaars, van~de Berg, Bidlot,
+  Bormann, Delsol, Dragani, Fuentes, Geer, Haimberger, Healy, Hersbach,
+  H{\~{A}}³lm, Isaksen, K{\~{A}}¥llberg, K{\~{A}}{\P}hler, Matricardi,
+  McNally, Monge-Sanz, Morcrette, Park, Peubey, de~Rosnay, Tavolato,
+  Th{\~{A}}{\textcopyright}paut, and Vitart]{Dee2011}
+D~P Dee, S~M Uppala, A~J Simmons, P~Berrisford, P~Poli, S~Kobayashi, U~Andrae,
+  M~A Balmaseda, G~Balsamo, P~Bauer, P~Bechtold, A~C~M Beljaars, L~van~de Berg,
+  J~Bidlot, N~Bormann, C~Delsol, R~Dragani, M~Fuentes, A~J Geer, L~Haimberger,
+  S~B Healy, H~Hersbach, E~V H{\~{A}}³lm, L~Isaksen, P~K{\~{A}}¥llberg,
+  M~K{\~{A}}{\P}hler, M~Matricardi, A~P McNally, B~M Monge-Sanz, J.-J.
+  Morcrette, B.-K. Park, C~Peubey, P~de~Rosnay, C~Tavolato, J.-N.
+  Th{\~{A}}{\textcopyright}paut, and F~Vitart.
+\newblock {The ERA-Interim reanalysis: configuration and performance of the
+  data assimilation system}.
+\newblock \emph{Quarterly Journal of the Royal Meteorological Society},
+  137\penalty0 (656):\penalty0 553--597, 2011.
+\newblock ISSN 1477-870X.
+\newblock \doi{10.1002/qj.828}.
+\newblock URL \url{http://dx.doi.org/10.1002/qj.828}.
+
+\bibitem[Edwards(2003)]{Edwards2003}
+D.~P. Edwards.
+\newblock {Tropospheric ozone over the tropical Atlantic: A satellite
+  perspective}.
+\newblock \emph{Journal of Geophysical Research}, 108\penalty0 (D8):\penalty0
+  4237, 2003.
+\newblock ISSN 0148-0227.
+\newblock \doi{10.1029/2002JD002927}.
+\newblock URL \url{http://doi.wiley.com/10.1029/2002JD002927}.
+
+\bibitem[Edwards et~al.(2006)Edwards, Emmons, Gille, Chu, Atti{\'{e}}, Giglio,
+  Wood, Haywood, Deeter, Massie, Ziskin, and Drummond]{Edwards2006}
+D.~P. Edwards, L.~K. Emmons, J.~C. Gille, A.~Chu, J.~L. Atti{\'{e}}, L.~Giglio,
+  S.~W. Wood, Jim Haywood, M.~N. Deeter, S.~T. Massie, D.~C. Ziskin, and
+  James~R. Drummond.
+\newblock {Satellite-observed pollution from Southern Hemisphere biomass
+  burning}.
+\newblock \emph{Journal of Geophysical Research Atmospheres}, 111\penalty0
+  (14):\penalty0 1--17, 2006.
+\newblock ISSN 01480227.
+\newblock \doi{10.1029/2005JD006655}.
+
+\bibitem[Forster et~al.(2007)Forster, Ramaswamy, Artaxo, Berntsen, Betts,
+  Fahey, Haywood, Lean, Lowe, Myhre, Nganga, Prinn, Raga, Schulz, and
+  Dorland]{IPCC_Chapter2}
+P.~Forster, V.~Ramaswamy, P.~Artaxo, T.~Berntsen, R.~Betts, D.W. Fahey,
+  J.~Haywood, J.~Lean, D.C. Lowe, G.~Myhre, J.~Nganga, R.~Prinn, G.~Raga,
+  M.~Schulz, and R.~Van Dorland.
+\newblock {Changes in Atmospheric Constituents and in Radiative Forcing. In:
+  Climate Change 2007: The Physical Science Basis. Contribution of Working
+  Group I to the Fourth Assessment Report of the Intergovernmental Panel on
+  Climate Change[Solomon, S., D. Qin, M. Man}, 2007.
+\newblock URL
+  \url{https://www.ipcc.ch/publications_and_data/ar4/wg1/en/ch2.html}.
+
+\bibitem[Frey et~al.(2015)Frey, Schofield, Hoor, Kunkel, Ravegnani, Ulanovsky,
+  Viciani, D'Amato, and Lane]{Frey2015}
+W.~Frey, R.~Schofield, P.~Hoor, D.~Kunkel, F.~Ravegnani, a.~Ulanovsky,
+  S.~Viciani, F.~D'Amato, and T.~P. Lane.
+\newblock {The impact of overshooting deep convection on local transport and
+  mixing in the tropical upper troposphere/lower stratosphere (UTLS)}.
+\newblock \emph{Atmospheric Chemistry and Physics}, 15\penalty0 (11):\penalty0
+  6467--6486, 2015.
+\newblock ISSN 1680-7324.
+\newblock \doi{10.5194/acp-15-6467-2015}.
+\newblock URL \url{http://www.atmos-chem-phys.net/15/6467/2015/}.
+
+\bibitem[Galani(2003)]{Galani2003}
+E.~Galani.
+\newblock {Observations of stratosphere-to-troposphere transport events over
+  the eastern Mediterranean using a ground-based lidar system}.
+\newblock \emph{Journal of Geophysical Research}, 108\penalty0 (D12):\penalty0
+  1--10, 2003.
+\newblock ISSN 0148-0227.
+\newblock \doi{10.1029/2002JD002596}.
+\newblock URL \url{http://www.agu.org/pubs/crossref/2003/2002JD002596.shtml}.
+
+\bibitem[Jaffe and Wigder(2012)]{Jaffe_2012}
+Daniel~a. Jaffe and Nicole~L. Wigder.
+\newblock {Ozone production from wildfires: A critical review}.
+\newblock \emph{Atmospheric Environment}, 51:\penalty0 1--10, 2012.
+\newblock ISSN 13522310.
+\newblock \doi{10.1016/j.atmosenv.2011.11.063}.
+\newblock URL \url{http://dx.doi.org/10.1016/j.atmosenv.2011.11.063}.
+
+\bibitem[Langford et~al.(2012)Langford, Brioude, Cooper, Senff, Alvarez,
+  Hardesty, Johnson, and Oltmans]{Langford2012}
+A.~O. Langford, J.~Brioude, O.~R. Cooper, C.~J. Senff, R.~J. Alvarez, R.~M.
+  Hardesty, B.~J. Johnson, and S.~J. Oltmans.
+\newblock {Stratospheric influence on surface ozone in the Los Angeles area
+  during late spring and early summer of 2010}.
+\newblock \emph{Journal of Geophysical Research Atmospheres}, 117\penalty0
+  (3):\penalty0 1--17, 2012.
+\newblock ISSN 01480227.
+\newblock \doi{10.1029/2011JD016766}.
+
+\bibitem[Lefohn et~al.(2011)Lefohn, Wernli, Shadwick, Limbach, Oltmans, and
+  Shapiro]{Lefohn2011}
+Allen~S. Lefohn, Heini Wernli, Douglas Shadwick, Sebastian Limbach, Samuel~J.
+  Oltmans, and Melvyn Shapiro.
+\newblock {The importance of stratospheric-tropospheric transport in affecting
+  surface ozone concentrations in the western and northern tier of the United
+  States}.
+\newblock \emph{Atmospheric Environment}, 45\penalty0 (28):\penalty0
+  4845--4857, 2011.
+\newblock ISSN 13522310.
+\newblock \doi{10.1016/j.atmosenv.2011.06.014}.
+\newblock URL \url{http://dx.doi.org/10.1016/j.atmosenv.2011.06.014}.
+
+\bibitem[Lin et~al.(2012)Lin, Fiore, Cooper, Horowitz, Langford, Levy, Johnson,
+  Naik, Oltmans, and Senff]{Lin2012}
+Meiyun Lin, Arlene~M. Fiore, Owen~R. Cooper, Larry~W. Horowitz, Andrew~O.
+  Langford, Hiram Levy, Bryan~J. Johnson, Vaishali Naik, Samuel~J. Oltmans, and
+  Christoph~J. Senff.
+\newblock {Springtime high surface ozone events over the western United States:
+  Quantifying the role of stratospheric intrusions}.
+\newblock \emph{Journal of Geophysical Research Atmospheres}, 117\penalty0
+  (19):\penalty0 1--20, 2012.
+\newblock ISSN 01480227.
+\newblock \doi{10.1029/2012JD018151}.
+
+\bibitem[Mari et~al.(2008)Mari, Cailley, Corre, Saunois, E, L, Thouret, and
+  Stohl]{Mari2008}
+C~H Mari, G~Cailley, L~Corre, M~Saunois, Atti´ E, J~L, V~Thouret, and A~Stohl.
+\newblock {Tracing biomass burning plumes from the Southern Hemisphere during
+  the AMMA 2006 wet season experiment, Atmos}.
+\newblock \emph{Atmospheric Chemistry and Physics}, 8:\penalty0 3951--3961,
+  2008.
+\newblock ISSN 1680-7324.
+\newblock \doi{10.5194/acpd-7-17339-2007}.
+
+\bibitem[Mihalikova et~al.(2012)Mihalikova, Kirkwood, Arnault, and
+  Mikhaylova]{Mihalikova2012}
+M~Mihalikova, S~Kirkwood, J~Arnault, and D~Mikhaylova.
+\newblock {Observation of a tropopause fold by MARA VHF wind-profiler radar and
+  ozonesonde at Wasa, Antarctica: comparison with ECMWF analysis and a WRF
+  model simulation}.
+\newblock \emph{Annales Geophysicae}, 30\penalty0 (9):\penalty0 1411--1421,
+  2012.
+\newblock \doi{10.5194/angeo-30-1411-2012}.
+\newblock URL \url{http://www.ann-geophys.net/30/1411/2012/}.
+
+\bibitem[Nawahda(2013)]{Avnery2011}
+Amin Nawahda.
+\newblock {Comments on "Global crop yield reductions due to surface ozone
+  exposure: 1. Year 2000 crop production losses and economic damage" and "
+  Global crop yield reductions due to surface ozone exposure: 2. Year 2030
+  potential crop production losses and economic }.
+\newblock \emph{Atmospheric Environment}, 71\penalty0 (13):\penalty0 408--409,
+  apr 2013.
+\newblock ISSN 13522310.
+\newblock \doi{10.1016/j.atmosenv.2012.12.045}.
+\newblock URL \url{http://dx.doi.org/10.1016/j.atmosenv.2011.01.002}.
+
+\bibitem[NOAA()]{noaasondes}
+NOAA.
+\newblock {NOAA Ozone sondes appendix}.
+\newblock URL
+  \url{http://www.ndsc.ncep.noaa.gov/organize/protocols/appendix5/}.
+
+\bibitem[Pak et~al.(2003)Pak, Langenfelds, Young, Francey, Meyer, Kivlighon,
+  Cooper, Dunse, Allison, Steele, Galbally, and Weeks]{Pak2003}
+B.C.a Pak, R.L.b Langenfelds, S.A.b Young, R.J.b Francey, C.P.b Meyer, L.M.b
+  Kivlighon, L.N.b Cooper, B.Lb Dunse, C.E.b Allison, L.P.b Steele, IE.b
+  Galbally, and I.A.b Weeks.
+\newblock {Measurements of biomass burning influences in the troposphere over
+  southeast Australia during the SAFARI 2000 dry season campaign}.
+\newblock \emph{Journal of Geophysical Research D: Atmospheres}, 108\penalty0
+  (13):\penalty0 SAF 16--1 -- SAF 16--10, 2003.
+\newblock ISSN 0148-0227.
+\newblock \doi{10.1029/2002JD002343}.
+\newblock URL
+  \url{http://www.scopus.com/inward/record.url?eid=2-s2.0-0742322536&partnerID=40&md5=cafaeef03b948fb456696583ed3ab9a5}.
+
+\bibitem[Price and Vaughan(1993)]{Price1993}
+J.~D. Price and G.~Vaughan.
+\newblock {The potential for stratosphere-troposphere exchange in cut-off-low
+  systems}.
+\newblock \emph{Quarterly Journal of the Royal Meteorological Society},
+  119\penalty0 (510):\penalty0 343--365, 1993.
+\newblock \doi{10.1002/qj.49711951007}.
+\newblock URL
+  \url{http://onlinelibrary.wiley.com/doi/10.1002/qj.49711951007/abstract}.
+
+\bibitem[Reutter et~al.(2015)Reutter, {\v{S}}kerlak, Sprenger, and
+  Wernli]{Reutter2015}
+P.~Reutter, B.~{\v{S}}kerlak, M.~Sprenger, and H.~Wernli.
+\newblock {Stratosphere-troposphere exchange (STE) in the vicinity of North
+  Atlantic cyclones}.
+\newblock \emph{Atmospheric Chemistry and Physics}, 15\penalty0 (19):\penalty0
+  10939--10953, 2015.
+\newblock ISSN 16807324.
+\newblock \doi{10.5194/acp-15-10939-2015}.
+
+\bibitem[Selin et~al.(2009)Selin, Wu, Nam, Reilly, Paltsev, Prinn, and
+  Webster]{Selin2009}
+N~E Selin, S~Wu, K~M Nam, J~M Reilly, S~Paltsev, R~G Prinn, and M~D Webster.
+\newblock {Global health and economic impacts of future ozone pollution}.
+\newblock \emph{Environmental Research Letters}, 4\penalty0 (4):\penalty0
+  044014, 2009.
+\newblock ISSN 1748-9326.
+\newblock \doi{10.1088/1748-9326/4/4/044014}.
+
+\bibitem[Sinha et~al.(2004)Sinha, Jaegl{\'{e}}, Hobbs, and Liang]{Sinha2004}
+Parikhit Sinha, Lyatt Jaegl{\'{e}}, Peter~V. Hobbs, and Qing Liang.
+\newblock {Transport of biomass burning emissions from southern Africa}.
+\newblock \emph{Journal of Geophysical Research}, 109:\penalty0 D20204, 2004.
+\newblock ISSN 01480227.
+\newblock \doi{10.1029/2004JD005044}.
+
+\bibitem[Sprenger et~al.(2003)Sprenger, {Croci Maspoli}, and
+  Wernli]{Sprenger2003}
+Michael Sprenger, Mischa {Croci Maspoli}, and Heini Wernli.
+\newblock {Tropopause folds and cross-tropopause exchange: A global
+  investigation based upon ECMWF analyses for the time period March 2000 to
+  February 2001}.
+\newblock \emph{Journal of Geophysical Research: Atmospheres}, 108\penalty0
+  (D12):\penalty0 n/a----n/a, 2003.
+\newblock ISSN 2156-2202.
+\newblock \doi{10.1029/2002JD002587}.
+\newblock URL \url{http://dx.doi.org/10.1029/2002JD002587}.
+
+\bibitem[Stevenson et~al.(2006)Stevenson, Dentener, Schultz, Ellingsen, van
+  Noije, Wild, Zeng, Amann, Atherton, Bell, Bergmann, Bey, Butler, Cofala,
+  Collins, Derwent, Doherty, Drevet, Eskes, Fiore, Gauss, Hauglustaine,
+  Horowitz, Isaksen, Krol, Lamarque, Lawrence, Montanaro, M{\"{u}}ller, Pitari,
+  Prather, Pyle, Rast, Rodriguez, Sanderson, Savage, Shindell, Strahan, Sudo,
+  and Szopa]{Stevenson2006}
+D~S Stevenson, F~J Dentener, M~G Schultz, K~Ellingsen, T~P~C van Noije, O~Wild,
+  G~Zeng, M~Amann, C~S Atherton, N~Bell, D~J Bergmann, I~Bey, T~Butler,
+  J~Cofala, W~J Collins, R~G Derwent, R~M Doherty, J~Drevet, H~J Eskes, A~M
+  Fiore, M~Gauss, D~A Hauglustaine, L~W Horowitz, I~S~A Isaksen, M~C Krol,
+  J.-F. Lamarque, M~G Lawrence, V~Montanaro, J.-F. M{\"{u}}ller, G~Pitari, M~J
+  Prather, J~A Pyle, S~Rast, J~M Rodriguez, M~G Sanderson, N~H Savage, D~T
+  Shindell, S~E Strahan, K~Sudo, and S~Szopa.
+\newblock {Multimodel ensemble simulations of present-day and near-future
+  tropospheric ozone}.
+\newblock \emph{J. Geophys. Res.}, 111\penalty0 (D8), 2006.
+\newblock \doi{10.1029/2005jd006338}.
+\newblock URL \url{http://dx.doi.org/10.1029/2005JD006338}.
+
+\bibitem[Stohl et~al.(2003)Stohl, Wernli, James, Bourqui, Forster, Liniger,
+  Seibert, and Sprenger]{Stohl2003}
+Andreas Stohl, Heini Wernli, Paul James, Michel Bourqui, Caroline Forster,
+  Mark~A. Liniger, Petra Seibert, and Michael Sprenger.
+\newblock {A new perspective of stratosphere-troposphere exchange}.
+\newblock \emph{Bulletin of the American Meteorological Society}, 84\penalty0
+  (11):\penalty0 1565--1573+1473, 2003.
+\newblock ISSN 00030007.
+\newblock \doi{10.1175/BAMS-84-11-1565}.
+
+\bibitem[Tang and Prather(2010)]{Tang2010}
+Q.~Tang and M.~J. Prather.
+\newblock {Correlating tropospheric column ozone with tropopause folds: The
+  Aura-OMI satellite data}.
+\newblock \emph{Atmospheric Chemistry and Physics}, 10\penalty0 (19):\penalty0
+  9681--9688, 2010.
+\newblock ISSN 16807316.
+\newblock \doi{10.5194/acp-10-9681-2010}.
+
+\bibitem[Tang and Prather(2012)]{Tang2012}
+Q.~Tang and M.~J. Prather.
+\newblock {Five blind men and an elephant: can {NASA} Aura measurements
+  quantify the stratosphere-troposphere exchange of ozone flux?}
+\newblock \emph{Atmospheric Chemistry and Physics}, 11\penalty0 (5):\penalty0
+  2357--2380, 2012.
+\newblock ISSN 16807316.
+\newblock \doi{10.5194/acp-12-2357-2012}.
+\newblock URL \url{http://dx.doi.org/10.5194/acpd-11-26897-2011}.
+
+\bibitem[Terao et~al.(2008)Terao, Logan, Douglass, and Stolarski]{Terao2008}
+Yukio Terao, Jennifer~A Logan, Anne~R Douglass, and Richard~S Stolarski.
+\newblock {Contribution of stratospheric ozone to the interannual variability
+  of tropospheric ozone in the northern extratropics}.
+\newblock \emph{J. Geophys. Res.}, 113\penalty0 (D18), 2008.
+\newblock \doi{10.1029/2008jd009854}.
+\newblock URL \url{http://dx.doi.org/10.1029/2008jd009854}.
+
+\bibitem[Tomikawa et~al.(2009)Tomikawa, Nishimura, and
+  Yamanouchi]{Tomikawa2009}
+Yoshihiro Tomikawa, Yashiro Nishimura, and Takashi Yamanouchi.
+\newblock {Characteristics of Tropopause and Tropopause Inversion Layer in the
+  Polar Region}.
+\newblock \emph{SOLA}, 5:\penalty0 141--144, 2009.
+\newblock \doi{10.2151/sola.2009-036}.
+\newblock URL \url{http://dx.doi.org/10.2151/sola.2009-036}.
+
+\bibitem[Vaughan et~al.(1993)Vaughan, Price, and Howells]{Vaughan1994}
+G~Vaughan, J~D Price, and A~Howells.
+\newblock {Transport into the troposphere in a tropopause fold}.
+\newblock \emph{Quarterly Journal of the Royal Meteorological Society},
+  120\penalty0 (518):\penalty0 1085--1103, 1993.
+\newblock ISSN 00359009.
+\newblock \doi{10.1002/qj.49712051814}.
+
+\bibitem[Wirth(1995)]{Wirth1995}
+Volkmar Wirth.
+\newblock {Diabatic heating in an axisymmetric cut-off cyclone and related
+  stratosphere-troposphere exchange}.
+\newblock \emph{Quarterly Journal of the Royal Meteorological Society},
+  121\penalty0 (521):\penalty0 127--147, 1995.
+\newblock ISSN 00359009.
+\newblock \doi{10.1002/qj.49712152107}.
+\newblock URL \url{http://doi.wiley.com/10.1002/qj.49712152107}.
+
+\bibitem[WMO(1957)]{WMO1957}
+World Meteorological~Organization WMO.
+\newblock {Meteorology A Three-Dimensional Science}.
+\newblock \emph{Geneva, Second Session of the Commission for Aerology},
+  4:\penalty0 134--138, 1957.
+
+\bibitem[Zhang et~al.(2014)Zhang, Jacob, Yue, Downey, Wood, and
+  Blewitt]{Zhang2014}
+L~Zhang, D~J Jacob, X~Yue, N~V Downey, D~A Wood, and D~Blewitt.
+\newblock {Sources contributing to background surface ozone in the {US}
+  Intermountain West}.
+\newblock \emph{Atmos. Chem. Phys.}, 14\penalty0 (11):\penalty0 5295--5309,
+  2014.
+\newblock \doi{10.5194/acp-14-5295-2014}.
+\newblock URL \url{http://dx.doi.org/10.5194/acp-14-5295-2014}.
+
+\end{thebibliography}
