@@ -1,4 +1,4 @@
-\begin{thebibliography}{36}
+\begin{thebibliography}{38}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -49,6 +49,12 @@ S.~Bethan, G.~Vaughan, and S.~J. Reid.
 \newblock ISSN 00359009.
 \newblock \doi{10.1002/qj.49712253207}.
 \newblock URL \url{http://doi.wiley.com/10.1002/qj.49712253207}.
+
+\bibitem[Danielsen(1968)]{Danielson1968}
+Edwin~F. Danielsen.
+\newblock {Stratospheric-Tropospheric Exchange Based on Radioactivity, Ozone
+  and Potential Vorticity}, 1968.
+\newblock ISSN 0022-4928.
 
 \bibitem[Das et~al.(2016)Das, Ratnam, Uma, Subrahmanyam, and Girach]{Das2016}
 S~S Das, M~V Ratnam, K~N Uma, K~V Subrahmanyam, and I~A Girach.
@@ -269,6 +275,21 @@ Parikhit Sinha, Lyatt Jaegl{\'{e}}, Peter~V. Hobbs, and Qing Liang.
 \newblock \emph{Journal of Geophysical Research}, 109:\penalty0 D20204, 2004.
 \newblock ISSN 01480227.
 \newblock \doi{10.1029/2004JD005044}.
+
+\bibitem[Smit et~al.(2007)Smit, Straeter, Johnson, Oltmans, Davies, Tarasick,
+  Hoegger, Stubi, Schmidlin, Northam, Thompson, Witte, Boyd, and
+  Posny]{Smit2007}
+Herman G~J Smit, Wolfgang Straeter, Bryan~J. Johnson, Samuel~J. Oltmans,
+  Jonathan Davies, David~W. Tarasick, Bruno Hoegger, Rene Stubi, Francis~J.
+  Schmidlin, T.~Northam, Anne~M. Thompson, Jacquelyn~C. Witte, Ian Boyd, and
+  Fran{\c{c}}oise Posny.
+\newblock {Assessment of the performance of ECC-ozonesondes under quasi-flight
+  conditions in the environmental simulation chamber: Insights from the Juelich
+  Ozone Sonde Intercomparison Experiment (JOSIE)}.
+\newblock \emph{Journal of Geophysical Research Atmospheres}, 112\penalty0
+  (19):\penalty0 1--18, 2007.
+\newblock ISSN 01480227.
+\newblock \doi{10.1029/2006JD007308}.
 
 \bibitem[Sprenger et~al.(2003)Sprenger, {Croci Maspoli}, and
   Wernli]{Sprenger2003}
