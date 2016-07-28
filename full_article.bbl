@@ -1,4 +1,4 @@
-\begin{thebibliography}{38}
+\begin{thebibliography}{40}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -50,6 +50,17 @@ S.~Bethan, G.~Vaughan, and S.~J. Reid.
 \newblock \doi{10.1002/qj.49712253207}.
 \newblock URL \url{http://doi.wiley.com/10.1002/qj.49712253207}.
 
+\bibitem[Bey et~al.(2001)Bey, Jacob, Yantosca, Logan, Field, Fiore, Li, Liu,
+  Mickley, and Schultz]{Bey2001}
+Isabelle Bey, Daniel~J. Jacob, Robert~M. Yantosca, Jennifer~A. Logan,
+  Brendan~D. Field, Arlene~M. Fiore, Qin-Bin Li, Hong-Yu Liu, Loretta~J.
+  Mickley, and Martin~G. Schultz.
+\newblock {Global Modeling of Tropospheric Chemistry with Assimilated
+  Meteorology: Model Description and Evaluation}.
+\newblock \emph{Journal of Geophysical Research}, 106:\penalty0 73--95, 2001.
+\newblock ISSN 0148-0227.
+\newblock \doi{10.1029/2001JD000807}.
+
 \bibitem[Danielsen(1968)]{Danielson1968}
 Edwin~F. Danielsen.
 \newblock {Stratospheric-Tropospheric Exchange Based on Radioactivity, Ozone
@@ -85,6 +96,16 @@ D~P Dee, S~M Uppala, A~J Simmons, P~Berrisford, P~Poli, S~Kobayashi, U~Andrae,
 \newblock ISSN 1477-870X.
 \newblock \doi{10.1002/qj.828}.
 \newblock URL \url{http://dx.doi.org/10.1002/qj.828}.
+
+\bibitem[Eastham et~al.(2014)Eastham, Weisenstein, and Barrett]{Eastham2014}
+Sebastian~D. Eastham, Debra~K. Weisenstein, and Steven R~H Barrett.
+\newblock {Development and evaluation of the unified tropospheric-stratospheric
+  chemistry extension (UCX) for the global chemistry-transport model
+  GEOS-Chem}.
+\newblock \emph{Atmospheric Environment}, 89:\penalty0 52--63, 2014.
+\newblock ISSN 13522310.
+\newblock \doi{10.1016/j.atmosenv.2014.02.001}.
+\newblock URL \url{http://dx.doi.org/10.1016/j.atmosenv.2014.02.001}.
 
 \bibitem[Edwards(2003)]{Edwards2003}
 D.~P. Edwards.

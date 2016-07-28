@@ -295,13 +295,19 @@
   Figure \ref{fig:SummarySeasonality} shows the seasonal cycles of the STT events for Melbourne, Macquarie Island, and Davis. 
   There is an annual cycle with a summertime peak in the frequency of STT events above Melbourne and Macquarie Island.
   This summertime peak is due to a prevalence of summer storms, with low pressure systems bringing storms and turbulence along with a lowered tropopause level \citep{Reutter2015}. TODO: weather and summer storms citation.
+  
+  A subjective analysis of ERA-I synoptic scale wind and altitude at 500~hPa over the three sites (eg: \ref{fig:Melbourne20050203}(right)) leads to the categorisation of events based on their probable climatological cause.
+  Probable causes are either low pressure fronts, low pressure cutoffs, or undetermined(misc).
+  These categories are coloured as shades of blue in plots \ref{fig:SummarySeasonality}-\ref{fig:SummaryTPDepths}
+  It appears to be the case that low pressure cut off systems are more prevalent in late summer at both Macquarie and Melbourne, and during winter at Davis.
 
   \begin{figure}[!htbp]
   % these IMAGE CREATED BY non_transport_summary.py, labels edited IN INKSCAPE
     \begin{center}
-    \includegraphics[width=1.0\columnwidth]{figures/Seasonality.png}
+    \includegraphics[width=1.0\columnwidth]{figures/summary_season.png}
     \caption{The seasonality of STT events at Davis, Macquarie Island, and Melbourne.
-    The events filtered out as possibly smoke plume influenced are indicated in red.}
+    Events are categorised by associated weather, and coloured bars from each category are stacked atop one another.
+    The events filtered out as possibly smoke plume influenced are displayed here in red.}
     \label{fig:SummarySeasonality}
     \end{center}
   \end{figure}
@@ -313,8 +319,8 @@
   The polar front jet stream is a band of wind extending from the mid troposphere up to the lower stratosphere, which is generally active from winter to spring. 
   This vortex may be directly causing or impacting many of the STTs due to the lowered tropopause altitude which occurs south of the vortex edge (around 60$^\circ$~S).
 
-  Figure \ref{fig:SummaryAltitudes} shows the altitudes of detected events, based on the peak of tropospheric ozone.
-  STT event altitudes most commonly occur at 6 -- 10~km above Melbourne and below 8~km at Davis but are distributed more evenly at Macquarie Island. 
+  Figure \ref{fig:SummaryAltitudes} shows the altitudes of detected events, based on the peak (maximum) of tropospheric ozone.
+  STT event altitudes most commonly occur at 6 -- 10~km above Melbourne and below 8~km at Davis but are distributed more evenly at Macquarie Island, up to 7.5 kilometres altitude.
   Figure \ref{fig:SummaryTPDepths} shows the depths of detected events, based on the ozone peak's distance from the minimal determined tropopause.
   The majority of events occur within 3~km of the tropopause at both Melbourne and Macquarie Island, and within 2~km of the tropopause at Davis.
   
@@ -322,20 +328,20 @@
 
   \begin{figure}[!htbp]
     \begin{center}
-    \includegraphics[width=0.99\columnwidth]{figures/Altitudes.png}
+    \includegraphics[width=0.99\columnwidth]{figures/summary_altitude.png}
     \caption{The distribution of the ozone peak altitude for Davis, Macquarie Island, and Melbourne.
     This shows the altitude of detected events, based on the tropospheric ozone enhancement peak.
-    Red diagonal lines show the removed smoke influenced event altitudes.}
+    Events are categorised by likely causes, with possible smoke influenced events displayed in red.}
     \label{fig:SummaryAltitudes}
     \end{center}
   \end{figure}
 
   \begin{figure}[!htbp]
     \begin{center}
-    \includegraphics[width=0.99\columnwidth]{figures/TPDistance.png}
+    \includegraphics[width=0.99\columnwidth]{figures/summary_depth.png}
     \caption{The distance between the ozone peak and the tropopause, and the cumulative probability of these distances (blue line) for Davis, Macquarie Island, and Melbourne.
     This shows the depth of the event into the troposphere, starting from the tropopause.
-    Red diagonal lines show the removed smoke-influenced event depths}
+    The events filtered out as possibly smoke plume influenced are displayed here in red.}
     \label{fig:SummaryTPDepths}
     \end{center}
   \end{figure}
@@ -429,10 +435,7 @@
   Events typically cause a 3\% enhancement of the tropospheric ozone column.
   This is around $2*10^{11}$ molecules/cm$^3$ ozone enhancement over the southern high latitudes caused by STTs.
   
-% This bibliography is created by mendeley automatically
-%\bibliography{../../References/Ozone.bib}
-
-% This one is a copy of the one above, feel free to edit it
+% This bibliography is created by Mendeley
 \bibliography{bibliography/Ozone.bib}
 
 \end{document}
