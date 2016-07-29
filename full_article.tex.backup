@@ -19,7 +19,7 @@
 
 \begin{document}
 
-\title{Stratospheric ozone intrusion events, characterisation and distribution over high southern latitudes.}
+\title{Stratospheric ozone intrusion events, characterisation and distribution over high southern latitudes using ozonesondes.}
 
 \author[1]{Jesse Greenslade}
 \author[2]{Simon Alexander}
@@ -47,6 +47,8 @@
   The majority of tropospheric ozone due to STT events occur within 3~km below the tropopause at Melbourne and Macquarie Island, and within 2~km below the tropopause at Davis.
   Overall, the fraction of total tropospheric ozone attributed to STT events is 2 – 4\% at each site, however, during individual events, an STT event can contribute more than 10\% of the total tropospheric ozone at that time.
   TODO:We also need to note favourable or unfavourable comparisons between our ozone flux results and previous model\/obs studies; also a sentence about GEOS-Chem results.
+  The GEOS-Chem model run with active stratospheric chemistry compares fairly well with the ozonesondes dataset; seasonal cycles of tropospheric ozone are matched at all three sites and vertical profile averages are well matched.
+  
 \end{abstract}%
 
 
@@ -54,7 +56,7 @@
 
     %\subsection{Background}
     Tropospheric ozone, which constitutes only 10\% of the total ozone column, is an important oxidant, greenhouse gas and is toxic to biological life. 
-    Over the industrial period, increasing tropospheric ozone, has been estimated to exert a radiative forcing equivalent to a quarter of the CO$_2$ forcing \citep{IPCC_Chapter2}. Tropospheric ozone increases above pre-industrial levels are estimated to result in global losses up to \$USD$_{2000}$ 35 billion per annum until 2030 due to food crop impacts \citep{Avnery2011} and up to \$USD$_{2000}$ 580 billion by 2050 (~11.8 billion per year) due to health impacts \citep{Selin2009}. Tropospheric ozone is produced anthropogenically by fossil fuel and biomass combustion emissions (NO$_x$ and volatile organic compounds) that subsequently undergo photochemistry. Natural sources of tropospheric ozone include the downward transport from the ozone-rich stratosphere, wildfires and lightning photochemical production (\citet{Jacobsonsxxxx}Jacobson and references therein). 
+    Over the industrial period, increasing tropospheric ozone, has been estimated to exert a radiative forcing equivalent to a quarter of the CO$_2$ forcing \citep{IPCC_Chapter2}. Tropospheric ozone increases above pre-industrial levels are estimated to result in global losses up to \$USD$_{2000}$ 35 billion per annum until 2030 due to food crop impacts \citep{Avnery2011} and up to \$USD$_{2000}$ 580 billion by 2050 (~11.8 billion per year) due to health impacts \citep{Selin2009}. Tropospheric ozone is produced anthropogenically by fossil fuel and biomass combustion emissions (NO$_x$ and volatile organic compounds) that subsequently undergo photochemistry. Natural sources of tropospheric ozone include the downward transport from the ozone-rich stratosphere, wildfires and lightning photochemical production (\citet{Jacobson2000} and references therein). 
  
     Stratosphere to troposphere transport (STT) of ozone can increase regional surface ozone levels above air quality standard thresholds \citep{Danielson1968, Lefohn2011, Langford2012, Zhang2014}. A review of photochemical models by \citet{Stohl2003} (STACCATO) concluded that between 25-50\% of tropospheric ozone can be attributed to SST events. A lower estimate was derived from the Atmospheric Chemistry and Climate Model Intercomparison Project (ACCMIP), \citet{Stevenson2006} with $5100\pm600$ Tg/yr (\~90\%) and $550\pm170$ Tg/yr (\~10\%) of tropospheric ozone is due to chemical production and STT, respectively. Models are challenged to correctly represent STT, and process studies seem to be key in determining the relative role of SST in the tropospheric ozone budget.
     
@@ -295,6 +297,11 @@
   Figure \ref{fig:SummarySeasonality} shows the seasonal cycles of the STT events for Melbourne, Macquarie Island, and Davis. 
   There is an annual cycle with a summertime peak in the frequency of STT events above Melbourne and Macquarie Island.
   This summertime peak is due to a prevalence of summer storms, with low pressure systems bringing storms and turbulence along with a lowered tropopause level \citep{Reutter2015}. TODO: weather and summer storms citation.
+  
+  A subjective analysis of ERA-I synoptic scale wind and altitude at 500~hPa over the three sites (eg: \ref{fig:Melbourne20050203}(right)) leads to the categorisation of events based on their probable climatological cause.
+  Probable causes are either low pressure fronts, low pressure cutoffs, or undetermined(misc).
+  These categories are coloured as shades of blue in plots \ref{fig:SummarySeasonality}-\ref{fig:SummaryTPDepths}
+  It appears to be the case that low pressure cut off systems are more prevalent in late summer at both Macquarie and Melbourne, and during winter at Davis.
 
   \begin{figure}[!htbp]
   % these IMAGE CREATED BY non_transport_summary.py, labels edited IN INKSCAPE
@@ -405,7 +412,7 @@
   Extrapolating out over the Southern Ocean using our estimated enhanced tropospheric ozone, we can create a rough estimate of the STT effect on tropospheric ozone in this region.
   This is be done by multiplying the monthly likelihoods of STTs with the monthly tropospheric column ozone amounts multiplied by our mean flux fraction.
   Taking the monthly likelihood from our ozonesonde events count per sondes released during each month, and southern latitude tropospheric column ozone amount from GEOS-Chem, the total amount of ozone from STT events over the southern ocean is at least (TODO:update once fixed model is finished) $2.2\times10^{16}$ molecules cm$^{-2}$ yr$^{-1}$.
-  Figure \ref{fig:SOExtrapolation} shows the seasonal STT contribution calculated this way, with l, f being the STT likelihood and fraction respectively.
+  Figure \ref{fig:SOExtrapolation} shows the seasonal STT contribution calculated this way, with l and f being the STT likelihood and fraction respectively.
     
   \begin{figure}[!htbp]
     \includegraphics[width=\textwidth]{figures/SO_extrapolation.png}
@@ -413,8 +420,7 @@
     \label{fig:SOExtrapolation}
   \end{figure}
   
-
-\section{Conclusion}
+\section{Conclusions}
   
   Ozonesonde data in the Southern Hemisphere provides a satellite-independant quantification of STT ozone transport.
   The frequency and amount of ozone descending from the stratosphere into the troposphere can be estimated from the long time series of tropospheric ozone profiles.
@@ -428,12 +434,11 @@
   
   Integration of the ozone enhancement along the altitude of the ozone profile allows a rough estimate of stratospheric transport for each event.
   Events typically cause a 3\% enhancement of the tropospheric ozone column.
-  This is around $2*10^{11}$ molecules/cm$^3$ ozone enhancement over the southern high latitudes caused by STTs.
+  This is around $2*10^{15}$ molecules/cm$^2$ (TODO: Update when model run finishes) ozone enhancement over the southern high latitudes caused by STTs.
   
-% This bibliography is created by mendeley automatically
-%\bibliography{../../References/Ozone.bib}
-
-% This one is a copy of the one above, feel free to edit it
+  GEOS-Chem performs fairly well when compared to ozonesondes at our three sites, with vertical profile averages and seasonal cycles of tropospheric ozone conforming to within \~10\% (TODO: update when model finishes) of the data, even though the model is looking at the average over 2$^{\circ}$ latitude by 2.5$^{\circ}$ longitude grid boxes.
+  
+% This bibliography is created by Mendeley
 \bibliography{bibliography/Ozone.bib}
 
 \end{document}
