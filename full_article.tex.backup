@@ -40,7 +40,7 @@
 \maketitle
 
 \begin{abstract}
-  We develop a quantitative method to determine Stratosphere to Troposphere Transport events (STTs) from ozone sonde profiles. 
+  We develop a quantitative method to identify Stratosphere to Troposphere Transport events (STTs) from ozonesonde profiles. 
   Using this method we estimate the quantity of ozone transported across the tropopause over Melbourne ($38^\circ$S), Macquarie Island ($54^\circ$S), and Davis ($69^\circ$S).
   STT seasonality is determined from a 7--9 year long time series of ozone profiles from each site.
   STT events primarily occur during summer above Melbourne and Macquarie Island, while there is little seasonal cycle in STT events above Davis.
@@ -94,7 +94,7 @@
     
     Stratospheric ozone typically mixes irreversibly down (vertically) into the troposphere in kilometres-scale tongues of air.
     The altitude of the tropospheric ozone peak due to an STT event and the amplitude of the event above the background tropospheric ozone profile vary in space and time.
-    While ozone sondes are released every week or so, ozone events may only be detectable for a matter of hours \citep{Tang2012}.
+    While ozonesondes are released every week or so, ozone events may only be detectable for a matter of hours \citep{Tang2012}.
     The vertical ozone profile recorded by the ozonesonde is highly dependent on the time of launch \citep{Sprenger2003}, and we cannot guarantee that detected ozone enhancements are fully separated from the stratosphere.
     
     In order to characterise tropospheric ozone events a clear definition of where the stratosphere begins is necessary.
@@ -119,7 +119,7 @@
     \begin{figure}[!htbp]
 	\begin{center}
 	\includegraphics[width=0.8\columnwidth]{figures/tpheights}
-	\caption{Monthly mean tropopause altitudes (minimum of lapse-rate and ozone defined tropopause at 3 sites) determined from ozone sondes.
+	\caption{Monthly mean tropopause altitudes (minimum of lapse-rate and ozone defined tropopause at 3 sites) determined from ozonesondes.
 	Dashed lines show the average monthly altitude when only considering dates when STTs occured.) 
 	}
 	\label{fig:seasonaltpheights}
@@ -349,47 +349,49 @@
 
 \section{Comparison with GEOS-Chem}
   
-  Ozone sondes are useful for looking at specific locations with high resolution, and in this work they provide an estimate of both STT occurence rates and STT ozone flux.
+  Ozonesondes are useful for looking at specific locations with high resolution, and in this work they provide an estimate of both STT occurence rates and STT ozone flux.
   This information can be used in conjunction with global scale information in order to extrapolate ozone transport over a large area.
   GEOS-Chem is used to simulate the global ozone concentrations.
   In order to check that the model is reasonable, some simple validation is performed comparing sonde data to colocated grid boxes in GEOS-Chem, using the tropospheric columns of ozone as the metrics.
   After the model is validated this way, an extrapolation is performed and the stratospherically sourced ozone is estimated over the latitude range from 30$^{\circ}$S to 75$^{\circ}$S (TODO: Update these numbers with final decided ones, and give a reason).
   Examination of the GEOS-Chem output also gives us an insight as to whether the simulation can be used on its own in order to estimate STT event distribution and magnitude.
 
-  GEOS-Chem version 10.01 is a global chemical-transport model developed at Harvard \citep{Bey2001}, which includes transport, emission, deposition, chemical creation and destruction of ozone and 103 other trace gases throughout the troposphere.
-  The stratospheric chemistry, including photolysis, is also modeled and stratosphere-troposphere coupling is calculated with the addition of the stratospheric unified chemistry extension \citep{Eastham2014}, which also includes a further 28 trace gases.
-  GEOS-Chem values compared against the ozonesondes are based on a simulation using UCX from 2004-2013 exclusive, with 2004 used as a spinup year.
-  Our GEOS-Chem run included a fix for properly reading Total Ozone Mapping Spectrometer (TOMS) satellite information.
+  GEOS-Chem is a global chemical transport model \citep{Bey2001}, which includes transport, emission, deposition, chemical production and destruction of ozone and 103 other trace gases throughout the troposphere along with stratospheric chemistry, including photolysis. 
+  Stratosphere-troposphere coupling is calculated using the stratospheric unified chemistry extension (UCX) \citep{Eastham2014}, which includes a further 28 trace gases.
+  For comparison to ozonesonde observations, we use GEOS-Chem version 10-011 (including UCX) run from 2005-2012, following a 1-year spin-up for 2004.
+  Transport is driven by assimilated meteorological fields from the Goddard Earth Observing System (GEOS-5) maintained by the Global Modeling and Assimilation Office (GMAO) at NASA.
+  Our simulation was modified from the standard v10-01 to a fix a bug in the treatment of the Total Ozone Mapping Spectrometer (TOMS) satellite data used to calculate photolysis (see TODO:wiki entry for fix or supplementary).
+  The simulation uses 2$^{\circ}$ latitude by 2.5$^{\circ}$ longitude horizontal resolution, with 72 vertical levels from the surface to 0.1~hPa.
+  Biogenic emissions of organic chemicals are determined by the Model of Emissions of Gases and Aerosols from Nature (MEGAN) version 2.1 extended by Guenther et al \citep{Guenther2012}.
+  Anthropogenic emissions are given by the Emissions Database for Global Atmospheric Research (EDGAR) version 4.2.
+  
   
   \begin{figure}[!htbp]
     \includegraphics[width=\textwidth]{figures/StationSeries.png}
-    \caption{Tropospheric ozone in molecules cm$^{-2}$ every six hours simulated by GEOS-Chem (blue) from January 1 2004 until December 31 2010. The ozonesonde calculated tropospheric ozone columns are shown as stars, each representing one measurement. (TODO: Update once fixed model run finishes)}
+    \caption{Tropospheric ozone column ($\Omega_{O3}$, in molecules cm$^{-2}$) at six hourly resolution simulated by GEOS-Chem (blue) from January 1 2004 to December 31 2013. Columns calculated from ozonesondes are shown as black stars, each representing one measurement. (TODO: Update once fixed model run finishes)}
     \label{fig:StationSeriesGEOSChem}
   \end{figure}
   
-  Figure \ref{fig:StationSeriesGEOSChem} shows the time series of tropospheric ozone column (TVC$_{O_3}$) in molecules cm$^{-2}$ from the GEOS-Chem simulation.
-  Coplotted as stars are the measured tropospheric ozone columns calculated using the GPH and ozone partial pressure recorded by the ozone sondes.
-  There is good aggreement between the modelled tropospheric ozone columns and the measurements, with matching seasonal cycles and magnitude.
-  All three sites have a discernable yearly cycle, with Davis having the least spread as well as the greatest outliers.
-  These outlying tropospheric ozone columns all occur during the July to September months.
-  The seasonal maximum for Melbourne is in summer, with a minimum in winter, which is the opposite of both Macquarie and Davis.
-  Both Macquarie Island and Melbourne have more variance in their tropospheric columns.
-  For both sites the data is more spread out over the winter months.
+  Figure \ref{fig:StationSeriesGEOSChem} compares the time series of tropospheric ozone column ($\Omega_{O_3}$) in molecules cm$^{-2}$ simulated by GEOS-Chem (red dots) to the measured tropospheric ozone columns (black stars), calculated using the GPH and ozone partial pressure recorded by the ozonesondes.
+  There is good agreement between the modelled and measured seasonal cycles, with similar timing and magnitude (paired r$^2$ values of TODO: run script when model run finished). 
+  The maximum ozone column at Melbourne occurs in summer, with a minimum in winter. Macquarie and Davis show the opposite. 
+  The model does not generally capture isolated high-ozone events, which at Davis occur exclusively from July to September and at the other sites can occur at all times of year. TODO: why might this be?
   
   \begin{figure}[!htbp]
     \includegraphics[width=\textwidth]{figures/seasonalprofiles00.png}
     \caption{Tropospheric ozone (ppb) over Davis, Macquarie, and Melbourne, seasonally averaged.
-    GEOS-Chem simulated data averaged over January 2005 until December 2013 shown with black line, ozonesonde measurements shown with maroon line.
-    The vertical axis is kilometres.
-    Horizontal dotted line shows the mean tropopause height, shaded areas show one standard deviation.
+    GEOS-Chem simulated data averaged over January 2005 until December 2013 shown with red lines, with dashed red lines showing one standard deviation.
+    Ozonesonde measurements are shown with black lines, and shaded areas over the mean plus or minus one standard deviation.
+    Horizontal dotted line shows the mean tropopause heights, again red for the GEOS-Chem simulation and black for ozonesondes.
     TODO: Update once fixed model run finishes.}
     \label{fig:GEOSChemSeasonalProfiles}
   \end{figure}
   
-  Figure \ref{fig:GEOSChemSeasonalProfiles} shows the measured and simulated seasonal ozone profile for all three sites.
-  Measurements are lower in the upper troposphere than the modeled profile, and more varied.
-  The effect of pollution and mainland influence can be seen over Melbourne, mostly during the summer months (DJF), as the lower altitudes have increased ozone mean as well as more variance.
-  Melbourne sondes show less ozone in the upper troposphere compared to the GEOS-Chem simulated profiles.
+  Figure \ref{fig:GEOSChemSeasonalProfiles} shows the measured and simulated seasonal mean ozone profile at all sites.
+  The model generally underestimates ozone at low altitudes (up to 6~km) at both Davis and Macquarie, although this is less pronounced during summer.
+  Over Melbourne an opposite bias is seen, where the model shows increased ozone levels from around 4~km up to the tropopause.
+  Also notable is the lower tropopause height exhibited by the model, which on average is lower by \~1~km (TODO: mean bias, updated when model finishes).
+  The effect of pollution and mainland influence can be seen over Melbourne, mostly during the summer months (DJF), as the lower altitudes have increased ozone mean as well as more variance
   
   Although GEOS-Chem reasonably matches the ozonesonde tropospheric ozone column, it does not have the resolution required to capture STTs.
   Figure \ref{fig:event_profile_comparison} shows the best (left) and worst (right) comparisons of ozone profiles up to 14~km between the ozonesondes and GEOS-Chem.

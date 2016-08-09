@@ -1,12 +1,9 @@
-\begin{thebibliography}{41}
+\begin{thebibliography}{42}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
-
-\bibitem[WMO()]{WMO1957}
-{No Title}.
 
 \bibitem[AIR(2013)]{AIRS3STD}
 {AIRS3STD}, 2013.
@@ -167,6 +164,18 @@ E.~Galani.
 \newblock \doi{10.1029/2002JD002596}.
 \newblock URL \url{http://www.agu.org/pubs/crossref/2003/2002JD002596.shtml}.
 
+\bibitem[Guenther et~al.(2012)Guenther, Jiang, Heald, Sakulyanontvittaya, Duhl,
+  Emmons, and Wang]{Guenther2012}
+A.~B. Guenther, X.~Jiang, C.~L. Heald, T.~Sakulyanontvittaya, T.~Duhl, L.~K.
+  Emmons, and X.~Wang.
+\newblock {The model of emissions of gases and aerosols from nature version 2.1
+  (MEGAN2.1): An extended and updated framework for modeling biogenic
+  emissions}.
+\newblock \emph{Geoscientific Model Development}, 5\penalty0 (6):\penalty0
+  1471--1492, 2012.
+\newblock ISSN 1991959X.
+\newblock \doi{10.5194/gmd-5-1471-2012}.
+
 \bibitem[Jacobson and Hansson(2000)]{Jacobson2000}
 M~C Jacobson and H~Hansson.
 \newblock {Organic atmospheric aerosols: Review and state of the science}.
@@ -266,7 +275,7 @@ B.C.a Pak, R.L.b Langenfelds, S.A.b Young, R.J.b Francey, C.P.b Meyer, L.M.b
 \newblock {Measurements of biomass burning influences in the troposphere over
   southeast Australia during the SAFARI 2000 dry season campaign}.
 \newblock \emph{Journal of Geophysical Research D: Atmospheres}, 108\penalty0
-  (13):\penalty0 SAF 16----1 ---- SAF 16----10, 2003.
+  (13):\penalty0 SAF 16--1 -- SAF 16--10, 2003.
 \newblock ISSN 0148-0227.
 \newblock \doi{10.1029/2002JD002343}.
 \newblock URL
@@ -417,6 +426,12 @@ Volkmar Wirth.
 \newblock ISSN 00359009.
 \newblock \doi{10.1002/qj.49712152107}.
 \newblock URL \url{http://doi.wiley.com/10.1002/qj.49712152107}.
+
+\bibitem[WMO(1957)]{WMO1957}
+World Meteorological~Organization WMO.
+\newblock {Meteorology A Three-Dimensional Science}.
+\newblock \emph{Geneva, Second Session of the Commission for Aerology},
+  4:\penalty0 134--138, 1957.
 
 \bibitem[Zhang et~al.(2014)Zhang, Jacob, Yue, Downey, Wood, and
   Blewitt]{Zhang2014}
