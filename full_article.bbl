@@ -1,4 +1,4 @@
-\begin{thebibliography}{42}
+\begin{thebibliography}{43}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -266,6 +266,16 @@ NOAA.
 \newblock {NOAA Ozone sondes appendix}.
 \newblock URL
   \url{http://www.ndsc.ncep.noaa.gov/organize/protocols/appendix5/}.
+
+\bibitem[Olsen(2003)]{Olsen2003}
+Mark~a. Olsen.
+\newblock {A comparison of Northern and Southern Hemisphere cross-tropopause
+  ozone flux}.
+\newblock \emph{Geophysical Research Letters}, 30\penalty0 (7):\penalty0 1412,
+  2003.
+\newblock ISSN 0094-8276.
+\newblock \doi{10.1029/2002GL016538}.
+\newblock URL \url{http://doi.wiley.com/10.1029/2002GL016538}.
 
 \bibitem[Pak et~al.(2003)Pak, Langenfelds, Young, Francey, Meyer, Kivlighon,
   Cooper, Dunse, Allison, Steele, Galbally, and Weeks]{Pak2003}
