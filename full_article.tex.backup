@@ -368,7 +368,9 @@
   
   \begin{figure}[!htbp]
     \includegraphics[width=\textwidth]{figures/StationSeries.png}
-    \caption{Tropospheric ozone column ($\Omega_{O3}$, in molecules cm$^{-2}$) at six hourly resolution simulated by GEOS-Chem (blue) from January 1 2004 to December 31 2013. Columns calculated from ozonesondes are shown as black stars, each representing one measurement. (TODO: Update once fixed model run finishes)}
+    \caption{Tropospheric ozone column ($\Omega_{O3}$, in molecules cm$^{-2}$) at daily resolution simulated by GEOS-Chem (red dots) from January 1 2004 to December 31 2013.
+    The GEOS-Chem datapoints are respectively at 7AM, 11AM, and 11AM for Davis, Macquarie, and Melbourne.
+    Columns calculated from ozonesondes are shown as black stars, each representing one measurement. (TODO: Update once fixed model run finishes)}
     \label{fig:StationSeriesGEOSChem}
   \end{figure}
   
@@ -431,7 +433,7 @@
   
   Extrapolating out over the Southern Ocean using our estimated enhanced tropospheric ozone, we can create a rough estimate of the STT effect on tropospheric ozone in this region.
   This is be done by multiplying the monthly likelihoods of STTs with the monthly tropospheric column ozone amounts multiplied by our mean flux fraction.
-  Taking the monthly likelihood from our ozonesonde events count per sondes released during each month, and southern latitude tropospheric column ozone amount from GEOS-Chem, the total amount of ozone from STT events over the southern ocean is at least (TODO:update once fixed model is finished) $2.2\times10^{16}$ molecules cm$^{-2}$ yr$^{-1}$.
+  Taking the monthly likelihood from our ozonesonde events count per sondes released during each month, and southern latitude tropospheric column ozone amount from GEOS-Chem, the total amount of ozone from STT events over the southern ocean is at least (TODO:update once fixed model is finished) $2.2\times10^{16}$ molecules cm$^{-2}$ yr$^{-1}$, TODO: this is around X:TG/yr ozone.
   Figure \ref{fig:SOExtrapolation} shows the seasonal STT contribution calculated this way, with l and f being the STT likelihood and fraction respectively.
     
   \begin{figure}[!htbp]
@@ -439,6 +441,14 @@
     \caption{Top panel shows the estimated STT contribution to tropospheric ozone VC. Bottom panel shows the three factors multiplied together in order to produce the estimation. Units for l and f are on the right, while units for ozone VC amounts are on the left.}
     \label{fig:SOExtrapolation}
   \end{figure}
+  
+  Our estimate is ( todo: greater/smaller/completely different) to other estimates of southern hemispheric ozone transport. 
+  \citet{Olsen2003} use PV and winds from GEOS along with ozone measurements from TOMS to estimate that around 210~TG yr$^{-1}$ of ozone flux occurs in 2000 between 30$^{\circ}$S and 60$^{\circ}$S.
+  Their estimates show a peak in flux from winter to early spring (JJAS), which is the same months when our GEOS-Chem simulation shows the highest tropospheric $\Omega_{O3}$.
+  Other STT flux estimates show \citep{Sprenger2003,Stevenson2006}.
+  
+  \citet{Terao2008} estimate much higher STT contributions: 30--40\% of the tropospheric column, although this is in the northern hemisphere during the STT peak.
+  
   
 \section{Conclusions}
   
