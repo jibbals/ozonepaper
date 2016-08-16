@@ -445,9 +445,11 @@
   Our estimate is ( todo: greater/smaller/completely different) to other estimates of southern hemispheric ozone transport. 
   \citet{Olsen2003} use PV and winds from GEOS along with ozone measurements from TOMS to estimate that around 210~TG yr$^{-1}$ of ozone flux occurs in 2000 between 30$^{\circ}$S and 60$^{\circ}$S.
   Their estimates show a peak in flux from winter to early spring (JJAS), which is the same months when our GEOS-Chem simulation shows the highest tropospheric $\Omega_{O3}$.
-  Other STT flux estimates show \citep{Sprenger2003,Stevenson2006}.
+  Global STT flux estimated from an ensemble of models shows global STT flux at around 550~Tg yr$^{-1}$ \citep{Stevenson2006}.
+  Global net flux (transport from the stratosphere to the troposphere minus opposite transport) is estimated to be 75~Tg yr$^{-1}$ \citep{Sprenger2003}.
   
-  \citet{Terao2008} estimate much higher STT contributions: 30--40\% of the tropospheric column, although this is in the northern hemisphere during the STT peak.
+  Considering the individual event contributions, \citet{Terao2008} estimate much higher STT impacts; where 30--40\% of the tropospheric column is due to STT. 
+  Although this figure is based on the northern hemisphere during the seasonal STT peak.
   
   
 \section{Conclusions}

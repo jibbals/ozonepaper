@@ -353,7 +353,8 @@
   This information can be used in conjunction with global scale information in order to extrapolate ozone transport over a large area.
   GEOS-Chem is used to simulate the global ozone concentrations.
   In order to check that the model is reasonable, some simple validation is performed comparing sonde data to colocated grid boxes in GEOS-Chem, using the tropospheric columns of ozone as the metrics.
-  After the model is validated this way, an extrapolation is performed and the stratospherically sourced ozone is estimated over the latitude range from 30$^{\circ}$S to 75$^{\circ}$S (TODO: Update these numbers with final decided ones, and give a reason).
+  After the model is validated this way, an extrapolation is performed and the stratospherically sourced ozone is estimated over the latitude range from 35$^{\circ}$S to 75$^{\circ}$S.
+  This range is used as it includes all three sites, a change of 5$^{\circ}$ in either direction at either end of the range changes the average tropospheric ozone by -8 to 9\%.
   Examination of the GEOS-Chem output also gives us an insight as to whether the simulation can be used on its own in order to estimate STT event distribution and magnitude.
 
   GEOS-Chem is a global chemical transport model \citep{Bey2001}, which includes transport, emission, deposition, chemical production and destruction of ozone and 103 other trace gases throughout the troposphere along with stratospheric chemistry, including photolysis. 
