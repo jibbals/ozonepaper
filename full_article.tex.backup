@@ -46,8 +46,9 @@
   STT events primarily occur during summer above Melbourne and Macquarie Island, while there is little seasonal cycle in STT events above Davis.
   The majority of tropospheric ozone due to STT events occur within 3~km below the tropopause at Melbourne and Macquarie Island, and within 2~km below the tropopause at Davis.
   Overall, the fraction of total tropospheric ozone attributed to STT events is 2 – 4\% at each site, however, during individual events, an STT event can contribute more than 10\% of the total tropospheric ozone at that time.
-  TODO:We also need to note favourable or unfavourable comparisons between our ozone flux results and previous model\/obs studies; also a sentence about GEOS-Chem results.
-  The GEOS-Chem model run with active stratospheric chemistry compares fairly well with the ozonesondes dataset; seasonal cycles of tropospheric ozone are matched at all three sites and vertical profile averages are well matched.
+  The GEOS-Chem model run with active stratospheric chemistry is too coarsely resolved in the vertical dimension to determine STTs.
+  Simulated seasonal cycles of tropospheric ozone are well matched at all three sites although vertical profile averages have some bias in the troposphere.
+  A conservative estimate of yearly tropospheric ozone flux due to STTs is calculated using the simulated tropospheric ozone column between 35$^\circ$S and  75$^\circ$S of 
   
 \end{abstract}%
 
@@ -158,10 +159,10 @@
     The choice of band limits was set empirically; for an event to qualify as STT, a clear increase above the background ozone level is needed, and a vertical limit of $\sim 5$~km removes seasonal-scale effects.
     We exclude from analysis perturbations at altitudes below 4~km above the surface to avoid surface pollution events and those occuring within 0.5~km of the tropopause to avoid the sharp transition to stratospheric air producing spurious false positives.
     Then using ozone perturbations from 2~km above the surface up to 1~km below the tropopause, we create a threshhold for each launch site at the 99th percentile.
-    Profiles with perturbations exceeding this threshhold are initially classified as STT events.
+    Profiles with perturbations exceeding this threshhold are classified as STT events, subject to one more check.
     
     The ozone peak is defined at the altitude where the OMR is greatest within the lowest range of altitudes where the perturbation profile exceeds the percentile based threshhold.
-    If the OMR between this ozone peak and the tropopause drop below 80~ppb and are more than 20~ppb lower than the peak ozone then the initially classified event is confirmed, otherwise the profile is rejected as a non-event.
+    If the OMR between this ozone peak and the tropopause drop below 80~ppb and are more than 20~ppb lower than the peak ozone then the event is confirmed, otherwise the profile is rejected as a non-event.
     This confirmation is only required if the perturbation profile does not drop below zero between the event peak and the tropopause.
     This happens in order to remove `near tropopause' anomalies for which there is no evidence of detachment from the stratosphere.
 
@@ -176,7 +177,7 @@
       \includegraphics[width=0.8\columnwidth]{figures/filtereg.png}
       \caption{ Left: an example illustrating methods used for STT identification and flux estimation using an ozone profile from 2km to the tropopause (dashed vertical line).
       At Melbourne on the 8th of January 2004 the flux area shows the estimate of stratospheric impact on tropospheric ozone.
-      Right: band pass filtered O$_3$ ppb perturbation profile.
+      Right: bandpass filtered O$_3$ ppb perturbation profile.
       Coloured lines show the 99th percentile of filtered ozone perturbations (purple dashed) and the technique for determining the vertical extent of the event (orange dashed) is outlined in the text.
       See text for details.
       }
@@ -353,7 +354,8 @@
   This information can be used in conjunction with global scale information in order to extrapolate ozone transport over a large area.
   GEOS-Chem is used to simulate the global ozone concentrations.
   In order to check that the model is reasonable, some simple validation is performed comparing sonde data to colocated grid boxes in GEOS-Chem, using the tropospheric columns of ozone as the metrics.
-  After the model is validated this way, an extrapolation is performed and the stratospherically sourced ozone is estimated over the latitude range from 30$^{\circ}$S to 75$^{\circ}$S (TODO: Update these numbers with final decided ones, and give a reason).
+  After the model is validated this way, an extrapolation is performed and the stratospherically sourced ozone is estimated over the latitude range from 35$^{\circ}$S to 75$^{\circ}$S.
+  This range is used as it includes all three sites, a change of 5$^{\circ}$ in either direction at either end of the range changes the average tropospheric ozone by -8 to 9\%.
   Examination of the GEOS-Chem output also gives us an insight as to whether the simulation can be used on its own in order to estimate STT event distribution and magnitude.
 
   GEOS-Chem is a global chemical transport model \citep{Bey2001}, which includes transport, emission, deposition, chemical production and destruction of ozone and 103 other trace gases throughout the troposphere along with stratospheric chemistry, including photolysis. 
