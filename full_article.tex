@@ -271,7 +271,7 @@
     The tropopause heights using both the ozone definition (black dashed line) and lapse rate definition (red dashed line) are shown.
     (Right) Synoptic weather map at 500 hPa from the ERA-Interim reanalysis.
     Vectors show wind direction and speed while colour indicates the geopotential height.
-    Also visible are contours of potential vorticity units with 1 PVU in purple and 2 PVU (often used to determine dynamical tropopause height) in white.}
+    Also visible are contours of potential vorticity units with 1 PVU in purple.}
     \label{fig:Melbourne20050203}
     \end{center}
   \end{figure}
@@ -280,7 +280,7 @@
   The tropopause heights are greater at this time and an ozone intrusion is identified centred around 200~hPa.
   Again, anticorrelated relative humidity provides evidence that the air is stratospheric in origin.
   Note the separation between this intrusion and the ozone tropopause (marked by the black dashed line), which indicates that the sonde passes through regular tropospheric air after hitting a stratospheric intrusion but before reaching the tropopause.
-  Figure \ref{fig:Melbourne20100113}(right) shows a trough of low pressure (front) passing over south-eastern Australia.
+  Figure \ref{fig:Melbourne20100113}(right) shows a trough of low pressure (a low pressure front) passing over south-eastern Australia.
   This low pressure system crosses west to east and causes a wave of lowered tropopause height, which is often the cause of stratospheric mixing.
   During frontal passage, stratospheric air descends and streamers of ozone-rich air break off and mix into the troposphere \citep{Sprenger2003}.
   
@@ -288,12 +288,13 @@
   % these IMAGE CREATED BY show_profile.py, EDITTED IN INKSCAPE
     \begin{center}
     \includegraphics[width=1.0\columnwidth]{figures/Melbourne20100113.png}
-    \caption{As figure \ref{fig:Melbourne20050203}, for 13 January 2010.}
+    \caption{As figure \ref{fig:Melbourne20050203}, for 13 January 2010.
+     Additionally visible is a 2 PVU contour, often used to determine dynamical tropopause height, in white.}
     \label{fig:Melbourne20100113}
     \end{center}
   \end{figure}
 
-  We investigate other STT events above Melbourne, Macquarie Island, and Davis, using reanalysis data.
+  An investigation of the ERA-I synoptic weather during STT events above Melbourne, Macquarie Island, and Davis are performed and are used to subjectively classify the events based on their likely cause.
   Similar characteristics to the case studies presented here occur over Macquarie Island: i.e. a prevalence of frontal and low pressure activity during STT events.
   Typically during STT occurrence, the upper troposphere is not calm, with low pressure fronts or cut-offs nearby at coincident time.
   Over Davis the weather systems are harder to distinguish, and the polar vortex may create ozone folds without other sources of upper tropospheric turbulence.
@@ -302,12 +303,12 @@
 
   Figure \ref{fig:SummarySeasonality} shows the seasonal cycles of the STT events for Melbourne, Macquarie Island, and Davis. 
   There is an annual cycle with a summertime peak in the frequency of STT events above Melbourne and Macquarie Island.
-  This summertime peak is due to a prevalence of summer storms, with low pressure systems bringing storms and turbulence along with a lowered tropopause level \citep{Reutter2015}. TODO: weather and summer storms citation.
+  This summertime peak is due to a prevalence of summer storms, with low pressure systems bringing storms and turbulence along with a lowered tropopause level \citep{Reutter2015}.
   
-  A subjective analysis of ERA-I synoptic scale wind and altitude at 500~hPa over the three sites (eg: \ref{fig:Melbourne20050203}(right)) leads to the categorisation of events based on their probable climatological cause.
+  A subjective analysis of ERA-I synoptic scale wind and altitude at 500~hPa over the three sites (eg: figure \ref{fig:Melbourne20050203}(right)) leads to the categorisation of events based on their probable climatological cause.
   Probable causes are either low pressure fronts, low pressure cutoffs, or undetermined(misc).
-  These categories are coloured as shades of blue in plots \ref{fig:SummarySeasonality}-\ref{fig:SummaryTPDepths}
-  It appears to be the case that low pressure cut off systems are more prevalent in late summer at both Macquarie and Melbourne, and during winter at Davis.
+  These categories are coloured as shades of blue in plots \ref{fig:SummarySeasonality}-\ref{fig:SummaryTPDepths}.
+  This analysis suggests that low pressure cut off systems are more prevalent in late summer at both Macquarie and Melbourne, and during winter at Davis.
 
   \begin{figure}[!htbp]
   % these IMAGE CREATED BY non_transport_summary.py, labels edited IN INKSCAPE
@@ -325,12 +326,12 @@
   It could be that events are non seasonal at Davis, or else that the sample of 45 detected events over 10 years is too small or sparse to clearly show any cycle.
   It is possible that summer events caused by upper troposphere turbulence are balanced out by the events caused by the polar front jet stream, which is strongest during antarctic winter.
   The polar front jet stream is a band of wind extending from the mid troposphere up to the lower stratosphere, which is generally active from winter to spring. 
-  This vortex may be directly causing or impacting many of the STTs due to the lowered tropopause altitude which occurs south of the vortex edge (around 60$^\circ$~S).
+  This vortex may be directly causing or impacting many of the STTs due to the lowered tropopause altitude which occurs south of the vortex edge (around 60$^\circ$S).
 
   Figure \ref{fig:SummaryAltitudes} shows the altitudes of detected events, based on the peak (maximum) of tropospheric ozone.
-  STT event altitudes most commonly occur at 6 -- 10~km above Melbourne and below 8~km at Davis but are distributed more evenly at Macquarie Island, up to 7.5 kilometres altitude.
+  STT event peaks most commonly occur at 6 -- 10~km above Melbourne and below 8~km at Davis but are distributed more evenly at Macquarie Island, up to 7.5 kilometres altitude.
   Figure \ref{fig:SummaryTPDepths} shows the depths of detected events, based on the ozone peak's distance from the minimal determined tropopause.
-  The majority of events occur within 3~km of the tropopause at both Melbourne and Macquarie Island, and within 2~km of the tropopause at Davis.
+  The majority of event peaks occur within 3~km of the tropopause at both Melbourne and Macquarie Island, and within 2~km of the tropopause at Davis.
   
   For both Melbourne and Macquarie Island, the STT events which are unlikely to be fire-related occur mostly in summer and mostly during low pressure synoptic systems which can increase convection and upper tropospheric turbulence.
 
@@ -356,14 +357,6 @@
 
 \section{Comparison with GEOS-Chem}
   
-  Ozonesondes are useful for looking at specific locations with high resolution, and in this work they provide an estimate of both STT occurence rates and STT ozone flux.
-  This information can be used in conjunction with global scale information in order to extrapolate ozone transport over a large area.
-  GEOS-Chem is used to simulate the global ozone concentrations.
-  In order to check that the model is reasonable, some simple validation is performed comparing sonde data to colocated grid boxes in GEOS-Chem, using the tropospheric columns of ozone as the metrics.
-  After the model is validated this way, an extrapolation is performed and the stratospherically sourced ozone is estimated over the latitude range from 35$^{\circ}$S to 75$^{\circ}$S.
-  This range is used as it includes all three sites, a change of 5$^{\circ}$ in either direction at either end of the range changes the average tropospheric ozone by -8 to 9\%.
-  Examination of the GEOS-Chem output also gives us an insight as to whether the simulation can be used on its own in order to estimate STT event distribution and magnitude.
-
   GEOS-Chem is a global chemical transport model \citep{Bey2001}, which includes transport, emission, deposition, chemical production and destruction of ozone and 103 other trace gases throughout the troposphere along with stratospheric chemistry, including photolysis. 
   Stratosphere-troposphere coupling is calculated using the stratospheric unified chemistry extension (UCX) \citep{Eastham2014}, which includes a further 28 trace gases.
   For comparison to ozonesonde observations, we use GEOS-Chem version 10-011 (including UCX) run from 2005-2012, following a 1-year spin-up for 2004.
@@ -373,6 +366,15 @@
   Biogenic emissions of organic chemicals are determined by the Model of Emissions of Gases and Aerosols from Nature (MEGAN) version 2.1 extended by Guenther et al \citep{Guenther2012}.
   Anthropogenic emissions are given by the Emissions Database for Global Atmospheric Research (EDGAR) version 4.2.
   
+  Ozonesondes are useful for looking at specific locations with high resolution, and in this work they provide an estimate of both STT occurence rates and STT ozone flux.
+  This information can be used in conjunction with global scale information in order to extrapolate ozone transport over a large area.
+  GEOS-Chem is used to simulate the global ozone concentrations.
+  In order to check that the model is reasonable, some simple validation is performed.
+  Comparisons of both ozonesonde and GEOS-Chem simulated tropospheric ozone profiles and partial columns are checked, averaging seasonally for colocated data.
+  Following this, an extrapolation is performed and the stratospherically sourced ozone is estimated over the latitude range from 35$^{\circ}$S to 75$^{\circ}$S.
+  This range is used as it includes all three sites, a change of 5$^{\circ}$ in either direction at either end of the range changes the average tropospheric ozone by -8 to 9\%.
+  Examination of the GEOS-Chem output also gives us an insight as to whether the simulation can be used on its own in order to estimate STT event distribution and magnitude.
+  %TODO: JESSE UP TO HERE WITH GENERAL READTHROUGH
   
   \begin{figure}[!htbp]
     \includegraphics[width=\textwidth]{figures/StationSeries.png}

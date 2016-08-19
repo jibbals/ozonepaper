@@ -246,8 +246,9 @@
       \label{fig:excludedeg}
     \end{figure}
     
-    We also include on Figure~\ref{fig:SummarySeasonality} to Figure~\ref{fig:SummaryTPDepths} the events which have possible fire influence. 
-    These events are concentrated in spring at Melbourne and Macquarie Island.
+    STT events flagged in this way are included in Figures \ref{fig:SummarySeasonality} to \ref{fig:SummaryTPDepths}, they are coloured red and do not contribute to STT flux calculations. 
+    These flagged events are concentrated in spring at Melbourne and Macquarie Island, and don't have any otherwise notable characteristics.
+    %TODO: JESSE CURRENLY UP TO HERE IN READTHROUGH OF WHOLE TEXT
 
 \section{Case Studies of synoptic conditions during STT events}
 
@@ -270,7 +271,7 @@
     The tropopause heights using both the ozone definition (black dashed line) and lapse rate definition (red dashed line) are shown.
     (Right) Synoptic weather map at 500 hPa from the ERA-Interim reanalysis.
     Vectors show wind direction and speed while colour indicates the geopotential height.
-    Also visible are contours of potential vorticity units with 1 PVU in purple and 2 PVU (often used to determine dynamical tropopause height) in white.}
+    Also visible are contours of potential vorticity units with 1 PVU in purple. and 2 PVU (often used to determine dynamical tropopause height) in white.}
     \label{fig:Melbourne20050203}
     \end{center}
   \end{figure}
@@ -279,7 +280,7 @@
   The tropopause heights are greater at this time and an ozone intrusion is identified centred around 200~hPa.
   Again, anticorrelated relative humidity provides evidence that the air is stratospheric in origin.
   Note the separation between this intrusion and the ozone tropopause (marked by the black dashed line), which indicates that the sonde passes through regular tropospheric air after hitting a stratospheric intrusion but before reaching the tropopause.
-  Figure \ref{fig:Melbourne20100113}(right) shows a trough of low pressure (front) passing over south-eastern Australia.
+  Figure \ref{fig:Melbourne20100113}(right) shows a trough of low pressure (a low pressure front) passing over south-eastern Australia.
   This low pressure system crosses west to east and causes a wave of lowered tropopause height, which is often the cause of stratospheric mixing.
   During frontal passage, stratospheric air descends and streamers of ozone-rich air break off and mix into the troposphere \citep{Sprenger2003}.
   
@@ -292,7 +293,7 @@
     \end{center}
   \end{figure}
 
-  We investigate other STT events above Melbourne, Macquarie Island, and Davis, using reanalysis data.
+  An investigation of the ERA-I synoptic weather during STT events above Melbourne, Macquarie Island, and Davis are performed and are used to subjectively classify the events based on their likely cause.
   Similar characteristics to the case studies presented here occur over Macquarie Island: i.e. a prevalence of frontal and low pressure activity during STT events.
   Typically during STT occurrence, the upper troposphere is not calm, with low pressure fronts or cut-offs nearby at coincident time.
   Over Davis the weather systems are harder to distinguish, and the polar vortex may create ozone folds without other sources of upper tropospheric turbulence.
