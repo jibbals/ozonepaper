@@ -18,6 +18,17 @@ S.~P. Alexander, D.~J. Murphy, and A.~R. Klekociuk.
 \newblock \doi{10.5194/acp-13-3121-2013}.
 \newblock URL \url{http://www.atmos-chem-phys.net/13/3121/2013/}.
 
+\bibitem[Avnery et~al.(2013)Avnery, Mauzerall, Liu, and Horowitz]{Avnery2011}
+Shiri Avnery, Denise~L. Mauzerall, Junfeng Liu, and Larry~W. Horowitz.
+\newblock {Global crop yield reductions due to surface ozone exposure: 2. Year
+  2030 potential crop production losses and economic damage under two scenarios
+  of O 3 pollution}.
+\newblock \emph{Atmospheric Environment}, 71\penalty0 (13):\penalty0 408--409,
+  2013.
+\newblock ISSN 13522310.
+\newblock \doi{10.1016/j.atmosenv.2012.12.045}.
+\newblock URL \url{http://dx.doi.org/10.1016/j.atmosenv.2011.01.002}.
+
 \bibitem[Baray et~al.(2000)Baray, Daniel, Ancellet, and Legras]{Baray2000}
 J.~L. Baray, V.~Daniel, G.~Ancellet, and B.~Legras.
 \newblock {Planetary-scale tropopause folds in the southern subtropics}.
@@ -248,18 +259,6 @@ M~Mihalikova, S~Kirkwood, J~Arnault, and D~Mikhaylova.
   2012.
 \newblock \doi{10.5194/angeo-30-1411-2012}.
 \newblock URL \url{http://www.ann-geophys.net/30/1411/2012/}.
-
-\bibitem[Nawahda(2013)]{Avnery2011}
-Amin Nawahda.
-\newblock {Comments on "Global crop yield reductions due to surface ozone
-  exposure: 1. Year 2000 crop production losses and economic damage" and "
-  Global crop yield reductions due to surface ozone exposure: 2. Year 2030
-  potential crop production losses and economic }.
-\newblock \emph{Atmospheric Environment}, 71\penalty0 (13):\penalty0 408--409,
-  apr 2013.
-\newblock ISSN 13522310.
-\newblock \doi{10.1016/j.atmosenv.2012.12.045}.
-\newblock URL \url{http://dx.doi.org/10.1016/j.atmosenv.2011.01.002}.
 
 \bibitem[NOAA()]{noaasondes}
 NOAA.
