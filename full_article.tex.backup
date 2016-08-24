@@ -19,7 +19,8 @@
 
 \begin{document}
 
-\title{Stratospheric ozone intrusion events, characterisation and distribution over high southern latitudes using ozonesondes.}
+%\title{Stratospheric ozone intrusion events, characterisation and distribution over high southern latitudes using ozonesondes.}
+\title{Characterising stratospheric ozone intrusions at high southern latitudes}
 
 \author[1]{Jesse Greenslade}
 \author[2]{Simon Alexander}
@@ -46,8 +47,9 @@
   STT events primarily occur during summer above Melbourne and Macquarie Island, while there is little seasonal cycle in STT events above Davis.
   The majority of tropospheric ozone due to STT events occur within 3~km below the tropopause at Melbourne and Macquarie Island, and within 2~km below the tropopause at Davis.
   Overall, the fraction of total tropospheric ozone attributed to STT events is 2 – 4\% at each site, however, during individual events, an STT event can contribute more than 10\% of the total tropospheric ozone at that time.
+  We use the GEOS-Chem model to understand out point-source ozonesonde results in a 3-dimensional context.
   The GEOS-Chem model run with active stratospheric chemistry is too coarsely resolved in the vertical dimension to determine STTs.
-  Simulated seasonal cycles of tropospheric ozone are well matched at all three sites although vertical profile averages have some bias in the troposphere.
+  Simulated seasonal cycles of tropospheric ozone are well matched at all three sites although vertical profile averages have some bias in the troposphere compared with ozonesondes.
   A conservative estimate of yearly tropospheric ozone flux due to STTs is calculated using the simulated tropospheric ozone column between 35$^\circ$S and  75$^\circ$S of $2.2\times10^{16}$ molecules cm$^{-2}$ yr$^{-1}$ (TODO: update number once model finishes).
   
 \end{abstract}%
@@ -56,11 +58,11 @@
 \section{Introduction}
 
     Tropospheric ozone, which constitutes only 10\% of the total ozone column, is an important oxidant, greenhouse gas and is toxic to biological life. 
-    Over the industrial period, increasing tropospheric ozone, has been estimated to exert a radiative forcing equivalent to a quarter of the CO$_2$ forcing \citep{IPCC_Chapter2}. Tropospheric ozone increases above pre-industrial levels are estimated to result in global losses up to \$USD$_{2000}$ 35 billion per annum until 2030 due to food crop impacts \citep{Avnery2011} and up to \$USD$_{2000}$ 580 billion by 2050 (~11.8 billion per year) due to health impacts \citep{Selin2009}. Tropospheric ozone is produced anthropogenically by fossil fuel and biomass combustion emissions (NO$_x$ and volatile organic compounds) that subsequently undergo photochemistry. Natural sources of tropospheric ozone include the downward transport from the ozone-rich stratosphere, wildfires and lightning photochemical production (\citet{Jacobson2000} and references therein). 
+    Over the industrial period, increasing tropospheric ozone, has been estimated to exert a radiative forcing equivalent to a quarter of the CO$_2$ forcing \citep{IPCC_Chapter2}. Tropospheric ozone increases above pre-industrial levels are estimated to result in global losses up to \$USD$_{2000}$ 35 billion per annum until 2030 due to food crop impacts \citep{Avnery2011} and up to \$USD$_{2000}$ 580 billion by 2050 ($\sim$11.8 billion per year) due to health impacts \citep{Selin2009}. Tropospheric ozone is produced anthropogenically by fossil fuel and biomass combustion emissions (NO$_x$ and volatile organic compounds) that subsequently undergo photochemistry. Natural sources of tropospheric ozone include the downward transport from the ozone-rich stratosphere, wildfires and lightning photochemical production (\citet{Jacobson2000} and references therein). 
  
-    Stratosphere to troposphere transport (STT) of ozone can increase regional surface ozone levels above air quality standard thresholds \citep{Danielson1968, Lefohn2011, Langford2012, Zhang2014}. A review of photochemical models by \citet{Stohl2003} (STACCATO) concluded that between 25-50\% of tropospheric ozone can be attributed to SST events. A lower estimate was derived from the Atmospheric Chemistry and Climate Model Intercomparison Project (ACCMIP), \citep{Stevenson2006} with $5100\pm600$ Tg/yr ($\sim$ 90\%) and $550\pm170$ Tg/yr ($\sim$ 10\%) of tropospheric ozone is due to chemical production and STT, respectively. Models are challenged to correctly represent STT, and process studies seem to be key in determining the relative role of SST in the tropospheric ozone budget.
+    Stratosphere to troposphere transport (STT) of ozone can increase regional surface ozone levels above air quality standard thresholds \citep{Danielson1968, Lefohn2011, Langford2012, Zhang2014}. A review of photochemical models by \citet{Stohl2003} (STACCATO) concluded that between 25-50\% of tropospheric ozone can be attributed to SST events. A lower estimate was derived from the Atmospheric Chemistry and Climate Model Intercomparison Project (ACCMIP), \citep{Stevenson2006} with $5100\pm600$ Tg/yr ($\sim$ 90\%) and $550\pm170$ Tg/yr ($\sim$ 10\%) of tropospheric ozone is due to chemical production and STT, respectively. Models are challenged to correctly represent STT, and process studies are key in determining the relative role of SST in the tropospheric ozone budget.
     
-    STT events have been observed due to deep overshooting convection \citep{Frey2015}, tropical cyclones \citep{Das2016} and mid-latitude synoptic scale disturbances (e.g. \citet{Stohl2003,Mihalikova2012}). STT events observed over the Mediterranian region estimate a 10\% contribution to tropospheric ozone budget between 2000 and 2003 \citep{Galani2003}, with other observational studies noting significant occurrences and strong seasonal dependance (i.e. \citet{Lefohn2011}), contributing up to 30\% of the surface ozone over the Western US in spring \citep{Lin2012}. To date, while this topic has received significant attention in the tropics and northern hemisphere, observational estimates from the southern hemisphere extra-tropics is noticeably absent in the literature. 
+    STT events are due to deep overshooting convection \citep{Frey2015}, tropical cyclones \citep{Das2016} and mid-latitude synoptic scale disturbances (e.g. \citet{Stohl2003,Mihalikova2012}). STT events observed over the Mediterranian region estimate a 10\% contribution to tropospheric ozone budget between 2000 and 2003 \citep{Galani2003}, with other observational studies noting significant occurrences and strong seasonal dependance (i.e. \citet{Lefohn2011}), contributing up to 30\% of the surface ozone over the Western US in spring \citep{Lin2012}. To date, while this topic has received significant attention in the tropics and northern hemisphere, observational estimates from the southern hemisphere extra-tropics is noticeably absent in the literature. 
     
     In the extra-tropics, ozone has a longer photochemical lifetime and STT events most commonly occur during synoptic-scale tropopause folds \citep{Sprenger2003, Tang2012} which are characterised by tongues of high Potential Vorticity (PV) air descending to low altitudes. These tongues become elongated and filaments disperse away from the tongue and mix irreversibly into the troposphere. STT events have been observed in tropopause folds around both the polar-front jet \citep{Vaughan1994, Beekmann1997}, and the subtropical jet \citep{Baray2000}. They are also observed near cut-off lows \citep{Price1993, Wirth1995}, which are often accompanied by turbulent weather. A high correlation is found between lower stratospheric and tropospheric ozone \citep{Terao2008} with the highest STT associated with jet-streams over the oceans in winter.
   
@@ -76,13 +78,13 @@
 \section{Data and Methods}
 
   \subsection{Ozonesonde record in the Southern Ocean}
-    Ozonesondes are weather balloons with an attached instrument which measures ozone concentrations roughly every 100m from the surface to around 35km.
-    These ozonesondes provide a high-vertical resolution profile of ozone, along with temperature, pressure, and humidity.
+    Ozonesondes are weather balloons which measure ozone concentrations from the surface to around 35km.
+    These ozonesondes provide a high vertical resolution profile of ozone, along with temperature, pressure, and humidity.
     
     Ozonesondes use an electrochemical concentration cell which senses the proportional electrical current from ozone's reaction to a solution of potassium iodide.
-    Each ozonesonde is completely new and independant, and only used once, and instrument calibration is not performed.
-    Instead, standardised procedures are followed when constructing, transporting, and releasing the ozonesondes.
-    Ozonesondes are estimated to provide around 2\% precision in the stratosphere, which improves at lower altitudes \citep{noaasondes}, although the accuracy has been shown to be around 5-10\% which gets worse if standardised procedures aren't followed \citep{Smit2007}.
+    Most ozonesondes are new and independant, since retrieval of a used ozonesonde can be difficult.
+    Standardised procedures are followed when constructing, transporting, and releasing the ozonesondes.
+    Ozonesondes are estimated to provide around 2\% precision in the stratosphere, which improves at lower altitudes \citep{noaasondes}, although the accuracy has been shown to be around 5-10\% which increases if standardised procedures are not followed \citep{Smit2007}.
     
     Ozonesondes are launched approximately weekly from Melbourne (38$^{\circ}$S, 145$^{\circ}$E), Macquarie Island (55$^{\circ}$S, 159$^{\circ}$E) and Davis (69$^{\circ}$S, 78$^{\circ}$E). 
     For this study, we use the data collected from 2004-2013 for Melbourne and Macquarie, and 2006-2013 for Davis. 
@@ -94,21 +96,21 @@
   \subsection{Characterisation of STT events and associated fluxes}
     \label{Section:CharacterisationOfSTTs}
     
-    Stratospheric ozone typically mixes irreversibly down (vertically) into the troposphere in kilometres-scale tongues of air.
+    Stratospheric ozone typically mixes irreversibly down (vertically and horizontally) into the troposphere in kilometres-scale tongues of air.
     The strength (ozone enhancement above background levels), size, vertical depth, and longevity of these intruding ozone tongues vary due to weather, landscape, and season.
-    While ozonesondes are released every week or so, ozone events may only be detectable for a matter of hours \citep{Tang2012}.
-    This makes the vertical ozone profile recorded by the ozonesonde highly dependent on the time of launch \citep{Sprenger2003}, and we cannot guarantee that detected ozone enhancements are fully separated from the stratosphere.
+    While ozonesondes are released every week or so, ozone intrusion events may only be detectable for a matter of hours \citep{Tang2012}.
+    This makes the vertical ozone profile recorded by the ozonesonde highly dependent on the time of launch \citep{Sprenger2003}, and it cannot be guaranteed that detected ozone enhancements are fully separated from the stratosphere.
     
     In order to characterise tropospheric ozone events a clear definition of where the stratosphere begins is necessary.
     Two common tropopause height definitions are the standard lapse rate tropopause \citep{WMO1957} and the ozone tropopause \citep{Bethan1996}.
-    The lapse rate is the negative altitudinal temperature gradient, and the lapse rate tropopause is defined as the lowest altitude where the lapse rate is below 2$^\circ$~C~$km^{-1}$, provided the lapse rate between this altitude and all subsequent altitudes within 2~km is also below 2$^\circ$~C~$km^{-1}$.
+    The lapse rate is the negative altitudinal temperature gradient, and the lapse rate tropopause is defined as the lowest altitude where the lapse rate is below 2$^\circ$~C~km$^{-1}$, provided the lapse rate between this altitude and all subsequent altitudes within 2~km is also below 2$^\circ$~C~km$^{-1}$.
     The ozone tropopause is defined as the lowest altitude satisfying these three conditions \citep{Bethan1996}:
     \begin{enumerate}
       \item Vertical gradient of ozone mixing ratio (OMR) is greater than 60~ppbv km$^{-1}$
       \item OMR is greater than 80~ppbv
       \item OMR between 500~m and 2000~m (1500~m in the Antarctic) above exceeds 110~ppbv.
     \end{enumerate}
-    At Davis, the ozone tropopause defintion is modified since the site is Antarctic and tropopause levels are lower near the poles.
+    One of our sites (Davis) uses the Antarctic OMR altitude threshhold.
     The ozone tropopause can be less robust during stratosphere-troposphere exchange, however it is more robust than the lapse rate tropopause at polar latitudes in winter and near jet streams in the lower stratosphere \citep{Bethan1996, Tomikawa2009, Alexander2013}.
     In this work the lower of these two tropopause altitudes is used, as both are calculated for each ozonesonde release.
     This choice avoids occasional unrealistically high tropopause heights due to perturbed ozone or temperature measurements in the ozonesonde records.
@@ -135,6 +137,7 @@
     Increased ozone extending down through the stratosphere is apparent during December to March and September to November over Melbourne.
     These increased tropospheric ozone months are due to STTs (in summer), and possible fire smoke plume influence (in winter).
     Over Davis and Macquarie Island the tropospheric ozone is higher between March and October, although the effect is subtle compared to Melbourne.
+    This is due to less photochemical destruction when the sun is lower (TODO: read and cite S. Oltmans antarctic papers - re Andrews comment).
     
     \begin{figure}[!htbp]
       \begin{center}
@@ -361,7 +364,7 @@
   Stratosphere-troposphere coupling is calculated using the stratospheric unified chemistry extension (UCX) \citep{Eastham2014}, which includes a further 28 trace gases.
   For comparison to ozonesonde observations, we use GEOS-Chem version 10-011 (including UCX) run from 2005-2012, following a 1-year spin-up for 2004.
   Transport is driven by assimilated meteorological fields from the Goddard Earth Observing System (GEOS-5) maintained by the Global Modeling and Assimilation Office (GMAO) at NASA.
-  Our simulation was modified from the standard v10-01 to a fix a bug in the treatment of the Total Ozone Mapping Spectrometer (TOMS) satellite data used to calculate photolysis (see TODO:wiki entry for fix or supplementary).
+  Our simulation was modified from the standard v10-01 to a fix a bug in the treatment of the Total Ozone Mapping Spectrometer (TOMS) satellite data used to calculate photolysis (see \citet{TomsFix2016}).
   The simulation uses 2$^{\circ}$ latitude by 2.5$^{\circ}$ longitude horizontal resolution, with 72 vertical levels from the surface to 0.1~hPa.
   Biogenic emissions of organic chemicals are determined by the Model of Emissions of Gases and Aerosols from Nature (MEGAN) version 2.1 extended by Guenther et al \citep{Guenther2012}.
   Anthropogenic emissions are given by the Emissions Database for Global Atmospheric Research (EDGAR) version 4.2.
@@ -383,19 +386,18 @@
     \label{fig:StationSeriesGEOSChem}
   \end{figure}
   
-  TODO: JESSE UP TO HERE IN READTHROUGH
   Figure \ref{fig:StationSeriesGEOSChem} compares the time series of tropospheric ozone column ($\Omega_{O_3}$) in molecules cm$^{-2}$ simulated by GEOS-Chem (red dots) to the measured tropospheric ozone columns (black stars).
   Sonde tropospheric columns are calculated using the GPH and ozone partial pressure recorded by the ozonesondes, using TODO: equation here.
   The seasonal cycles are well correlated, with similar timing and magnitude (paired r$^2$ values of TODO: run script when model run finished). 
   The maximum ozone column at Melbourne occurs in summer, with a minimum in winter. 
   Macquarie and Davis show the opposite seasonal cycle. 
-  The model shows more spread than the ozonesondes, which at Davis occur exclusively from July to September and at the other sites can occur at all times of year.
+  The model shows more spread than the ozonesondes, although there are daily simulated values for the model while only weekly or less for the ozonesondes.
   
   \begin{figure}[!htbp]
     \includegraphics[width=\textwidth]{figures/seasonalprofiles00.png}
     \caption{Tropospheric ozone (ppb) over Davis, Macquarie, and Melbourne, seasonally averaged.
-    GEOS-Chem simulated data averaged over January 2005 until December 2013 shown with red lines, with dashed red lines showing one standard deviation.
-    Ozonesonde measurements are shown with black lines, and shaded areas over the mean plus or minus one standard deviation.
+    GEOS-Chem simulated data averaged over January 2005 until December 2013 are shown with red lines, with dashed red lines showing one standard deviation.
+    Ozonesonde measurements are shown with black lines, and have seasonally coloured shaded areas over the mean plus or minus one standard deviation.
     Horizontal dotted line shows the mean tropopause heights, again red for the GEOS-Chem simulation and black for ozonesondes.
     TODO: Update once fixed model run finishes.}
     \label{fig:GEOSChemSeasonalProfiles}
@@ -404,13 +406,13 @@
   Figure \ref{fig:GEOSChemSeasonalProfiles} shows the measured and simulated seasonal mean ozone profile at all sites.
   The model generally underestimates ozone at low altitudes (up to 6~km) at both Davis and Macquarie, although this is less pronounced during summer.
   Over Melbourne an opposite bias is seen, where the model shows increased ozone levels from around 4~km up to the tropopause.
-  Also notable is the lower tropopause height exhibited by the model, which on average is lower by \~1~km (TODO: mean bias, updated when model finishes).
+  Also notable is the lower tropopause height exhibited by the model, which on average is lower by $\sim$ 1~km (TODO: mean bias, updated when model finishes).
   The effect of pollution and mainland influence can be seen over Melbourne, mostly during the summer months (DJF), as the lower altitudes have increased ozone mean as well as more variance
   
   Although GEOS-Chem reasonably matches the ozonesonde tropospheric ozone column, it does not have the resolution required to capture STTs.
   Figure \ref{fig:event_profile_comparison} shows the best (left) and worst (right) comparisons of ozone profiles up to 14~km between the ozonesondes and GEOS-Chem.
   The model output is shown in red, and is the average over 2$^{\circ}$ latitude by 2.5$^{\circ}$ longitude which contain the respective sonde release site.
-  The vertical resolution from GEOS-Chem is too low to allow detection of STTs, there are roughly 30 vertical levels up to the tropopause, while sondes have upwards of 100.
+  The vertical resolution from GEOS-Chem is too low to allow detection of STTs, with roughly 30 vertical levels up to the tropopause, while sondes have upwards of 100.
   
   \begin{figure}[!htbp]
     \includegraphics[width=\textwidth]{figures/event_profile_comparison.png}
@@ -447,11 +449,11 @@
   Extrapolating out over the Southern Ocean using our estimated enhanced tropospheric ozone, we can create a rough estimate of the STT effect on tropospheric ozone in this region.
   This is be done by multiplying the monthly likelihoods of STTs with the monthly tropospheric column ozone amounts multiplied by our mean flux fraction.
   Taking the monthly likelihood from our ozonesonde events count per sondes released during each month, and southern latitude tropospheric column ozone amount from GEOS-Chem, the total amount of ozone from STT events over the southern ocean is at least (TODO:update once fixed model is finished) $2.2\times10^{16}$ molecules cm$^{-2}$ yr$^{-1}$, TODO: this is around X:TG/yr ozone.
-  Figure \ref{fig:SOExtrapolation} shows the seasonal STT contribution calculated this way, with l and f being the STT likelihood and fraction respectively.
+  Figure \ref{fig:SOExtrapolation} shows the seasonal STT contribution calculated this way, with `l' and `f' being the STT likelihood and fraction respectively.
     
   \begin{figure}[!htbp]
     \includegraphics[width=\textwidth]{figures/SO_extrapolation.png}
-    \caption{Top panel shows the estimated STT contribution to tropospheric ozone VC. Bottom panel shows the three factors multiplied together in order to produce the estimation. Units for l and f are on the right, while units for ozone VC amounts are on the left.}
+    \caption{Top panel shows the estimated STT contribution to tropospheric ozone VC. Bottom panel shows the three factors multiplied together in order to produce the estimation. Units for `l' and `f' are on the right, while units for ozone VC amounts are on the left.}
     \label{fig:SOExtrapolation}
   \end{figure}
   
@@ -471,7 +473,7 @@
   The frequency and amount of ozone descending from the stratosphere into the troposphere can be estimated from the long time series of tropospheric ozone profiles.
   Using almost ten years of ozonesonde profiles over the southern high latitudes, a clear summer peak is seen for STT occurences at both 38$^{\circ}$S and 55$^{\circ}$S, although not at 69$^{\circ}$S.
   
-  We use a band-pass filter to determine STT ozone transport events.
+  We use a Fourier bandpass filter to determine STT ozone transport events.
   The filter removes seasonal tropospheric ozone influences and allows clear detection of ozone-enhanced tongues of air in the troposphere.
   By setting empirical checks, ozonesonde vertical profiles can clearly show tropospheric ozone enhancement which is separated from the stratosphere.
   The cause of these ozone enhancements is examined through the use of satellite and reanalysis datasets on case studies above Melbourne.
@@ -479,9 +481,9 @@
   
   Integration of the ozone enhancement along the altitude of the ozone profile allows a rough estimate of stratospheric transport for each event.
   Events typically cause a 3\% enhancement of the tropospheric ozone column.
-  This is around $2*10^{15}$ molecules/cm$^2$ (TODO: Update when model run finishes) ozone enhancement over the southern high latitudes caused by STTs.
+  This is around $2 \times 10^{15}$ molecules cm$^{-2}$ (TODO: Update when model run finishes) ozone enhancement over the southern high latitudes caused by STTs.
   
-  GEOS-Chem performs fairly well when compared to ozonesondes at our three sites, with vertical profile averages and seasonal cycles of tropospheric ozone conforming to within \~10\% (TODO: update when model finishes) of the data, even though the model is looking at the average over 2$^{\circ}$ latitude by 2.5$^{\circ}$ longitude grid boxes.
+  GEOS-Chem performs fairly well when compared to ozonesondes at our three sites, with vertical profile averages and seasonal cycles of tropospheric ozone conforming to within $\sim$ 10\% (TODO: update when model finishes) of the data, even though the model is looking at the average over 2$^{\circ}$ latitude by 2.5$^{\circ}$ longitude grid boxes.
   
 % This bibliography is created by Mendeley
 \bibliography{bibliography/Ozone.bib}
