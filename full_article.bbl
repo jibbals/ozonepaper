@@ -1,4 +1,4 @@
-\begin{thebibliography}{44}
+\begin{thebibliography}{47}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -245,6 +245,18 @@ Meiyun Lin, Arlene~M. Fiore, Owen~R. Cooper, Larry~W. Horowitz, Andrew~O.
 \newblock ISSN 01480227.
 \newblock \doi{10.1029/2012JD018151}.
 
+\bibitem[Liu et~al.(2015)Liu, Rodriguez, Thompson, Logan, Douglass, Olsen,
+  Steenrod, and Posny]{Liu2015}
+Junhua Liu, Jose~M. Rodriguez, Anne~M. Thompson, Jennifer~A. Logan, Anne~R.
+  Douglass, Mark~A. Olsen, Stephen~D. Steenrod, and Fran{\c{c}}oise Posny.
+\newblock {Origins of tropospheric ozone interannual variation over
+  R{\'{e}}union: A model investigation}.
+\newblock \emph{Journal of Geophysical Research Atmospheres}, pages 1--19,
+  2015.
+\newblock \doi{10.1002/2015JD023981}.
+\newblock URL
+  \url{http://onlinelibrary.wiley.com/doi/10.1002/2015JD023981/abstract}.
+
 \bibitem[Mari et~al.(2008)Mari, Cailley, Corre, Saunois, E, L, Thouret, and
   Stohl]{Mari2008}
 C~H Mari, G~Cailley, L~Corre, M~Saunois, Atti´ E, J~L, V~Thouret, and A~Stohl.
@@ -265,6 +277,16 @@ M~Mihalikova, S~Kirkwood, J~Arnault, and D~Mikhaylova.
   2012.
 \newblock \doi{10.5194/angeo-30-1411-2012}.
 \newblock URL \url{http://www.ann-geophys.net/30/1411/2012/}.
+
+\bibitem[Mze et~al.(2010)Mze, Hauchecorne, Bencherif, Dalaudier, and
+  Bertaux]{Mze2010}
+N.~Mze, A.~Hauchecorne, H.~Bencherif, F.~Dalaudier, and J.~L. Bertaux.
+\newblock {Climatology and comparison of ozone from ENVISAT/GOMOS and
+  SHADOZ/balloon-sonde observations in the southern tropics}.
+\newblock \emph{Atmospheric Chemistry and Physics}, 10\penalty0 (16):\penalty0
+  8025--8035, 2010.
+\newblock ISSN 16807316.
+\newblock \doi{10.5194/acp-10-8025-2010}.
 
 \bibitem[NOAA()]{noaasondes}
 NOAA.
@@ -414,6 +436,17 @@ Yukio Terao, Jennifer~A Logan, Anne~R Douglass, and Richard~S Stolarski.
 \newblock \emph{J. Geophys. Res.}, 113\penalty0 (D18), 2008.
 \newblock \doi{10.1029/2008jd009854}.
 \newblock URL \url{http://dx.doi.org/10.1029/2008jd009854}.
+
+\bibitem[Thompson et~al.(2014)Thompson, Balashov, Witte, Coetzee, Thouret, and
+  Posny]{Thompson2014}
+A.~M. Thompson, N.~V. Balashov, J.~C. Witte, J.~G~R Coetzee, V.~Thouret, and
+  F.~Posny.
+\newblock {Tropospheric ozone increases over the southern Africa region:
+  Bellwether for rapid growth in Southern Hemisphere pollution?}
+\newblock \emph{Atmospheric Chemistry and Physics}, 14\penalty0 (18):\penalty0
+  9855--9869, 2014.
+\newblock ISSN 16807324.
+\newblock \doi{10.5194/acp-14-9855-2014}.
 
 \bibitem[Tomikawa et~al.(2009)Tomikawa, Nishimura, and
   Yamanouchi]{Tomikawa2009}

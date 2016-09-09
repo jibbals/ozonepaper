@@ -65,42 +65,55 @@
  
     Stratosphere-to-troposphere transport (STT) primarily impacts the ozone budget in the upper troposphere but can also increase regional surface ozone levels above the legal thresholds set by air quality standards \citep{Danielson1968, Lefohn2011, Langford2012, Zhang2014}.
     A review of two photochemical models by \citet{Stohl2003} concluded that between 25-50\% of tropospheric ozone column can be attributed to SST events, although this mostly affects the upper troposphere.
-    A lower estimate was derived from the Atmospheric Chemistry and Climate Model Intercomparison Project (ACCMIP), \citet{Stevenson2006} found STT was responsible for only $\sim$ 10\% (equivalent to $550\pm170$ Tg/yr), with the remainder produced photochemically. 
+    A lower estimate was derived from the Atmospheric Chemistry and Climate Model Intercomparison Project (ACCMIP), \citet{Stevenson2006} found STT was responsible for only $\sim$ 10\% (equivalent to $550\pm170$ Tg/yr), with the remainder produced photochemically.
     The wide range in model estimates exists in part because models are challenged to correctly represent STT.
     Observation-based process studies are therefore key in determining the relative frequency of SST to the troposphere, with models then able to use this to quantify STT impact over large regions.
     
     STT events are due to deep overshooting convection \citep{Frey2015}, tropical cyclones \citep{Das2016} and mid-latitude synoptic scale disturbances (e.g. \citet{Stohl2003,Mihalikova2012}).
-    STT events observed over the Mediterranian region estimate a 10\% contribution to tropospheric ozone budget between 2000 and 2003 \citep{Galani2003}, with \citet{Lefohn2011} noting significant STT occurrences and strong seasonal dependance.
+    STT events are strongly dependent on both season and location, for instance over the Mediterranian region, a 10\% contribution to tropospheric ozone is estimated between 2000 and 2003 \citep{Galani2003}, with \citet{Lefohn2011} noting strong seasonal dependance.
     Notably, STTs have been shown to contribute up to 30\% of the surface ozone over the Western US in spring \citep{Lin2012}.
     
-    TODO: Shadoz and some papers into this paragraph
-    To date, while the frequency, seasonality, and impacts of STT events have been well characterised in the tropics and Northern Hemisphere, observational estimates from the Southern Hemispheric extra-tropics are noticeably absent from the literature. 
+    To date, while the frequency, seasonality, and impacts of STT events have been well characterised in the tropics and Northern Hemisphere (NH), observational estimates from the Southern Hemisphe (SH) extra-tropics are noticeably absent from the literature. 
+    Since 1998 NASA has tried to standardise ozonesonde release procedures and improve measurement frequency in the SH through the Southern Hemisphere ADditional OZonesonde (SHADOZ) website (\url{http://croc.gsfc.nasa.gov/shadoz/}).
+    The papers which have focused on tropospheric ozone in the SH also note the difficulties that arise from sparse datasets, as many of the sonde releases only occur every two to four weeks and far fewer release sites exist compared to the NH \citep{Liu2015, Thompson2014, Mze2010}.
+    This is further complicated due to ozone intrusion events sometimes lasting for just a matter of hours \citep{Tang2012}.
+    Recently ozonesondes were analysed showing upper tropospheric ozone is increasing near southern Africa, with the increase most likely due to stratospheric mixing \citep{Liu2015, Thompson2014}. 
+    The extra-tropics in the SH have even less observational studies published.
     
-    In the extra-tropics, ozone has a longer photochemical lifetime and STT events most commonly occur during synoptic-scale tropopause folds \citep{Sprenger2003, Tang2012} which are characterised by tongues of high Potential Vorticity (PV) air descending to low altitudes. These tongues become elongated and filaments disperse away from the tongue and mix irreversibly into the troposphere. STT events have been observed in tropopause folds around both the polar-front jet \citep{Vaughan1994, Beekmann1997}, and the subtropical jet \citep{Baray2000}. They are also observed near cut-off lows \citep{Price1993, Wirth1995}, which are often accompanied by turbulent weather. A high correlation is found between lower stratospheric and tropospheric ozone \citep{Terao2008} with the highest STT associated with jet-streams over the oceans in winter.
+    In the extra-tropics, ozone has a longer photochemical lifetime(TODO: how long?) and STT events most commonly occur during synoptic-scale tropopause folds \citep{Sprenger2003, Tang2012}, and are characterised by tongues of high potential vorticity (PV) air descending to low altitudes.
+    As these tongues become elongated, filaments disperse away from the tongue and mix irreversibly into the troposphere.
+    To date, STT events have been observed in tropopause folds around both the polar front jet \citep{Vaughan1994, Beekmann1997}, and the subtropical jet \citep{Baray2000}.
+    They are also observed near cut-off lows \citep{Price1993, Wirth1995}, some of the stratospheric mixing may be due to the turbulent weather which often accompanies these cut-offs.
+    A high correlation has been found between lower stratospheric and tropospheric ozone concentrations \citep{Terao2008}, suggesting mixing between these two layers, with jet streams over the ocean being the major source of transport between the layers.
   
  %Move to discussion / conclusion ... \citet{Hegglin_2009} estimate that climate change will lead to increased STT of the order of 30 (121) Tg yr$^{-1}$ relative to 1965 in the Southern (Northern) Hemisphere due to an acceleration in the Brewer Dobson circulation. Tropospheric ozone is lost via chemical destruction and dry deposition, estimated to be $4700\pm700$ Tg/yr and $1000\pm200$ Tg/yr, respectively \citep{Stevenson2006}. 
 
     %Hegglin, M. I., and T. G. Shepherd (2009), Large climate-induced changes in ultraviolet index and stratosphere-to-troposphere ozone flux, Nature Geosci, 2(10), 687–\selectlanguage{english}691, doi:10.1038/NGEO604.
 
     % AIMs paragraph
-    In section 2, nearly a decade of ozonesonde flight recordings from three locations spanning latitudes from 38$^{\circ}$S - 69$^{\circ}$S are used to characterise the seasonal cycle of STT events and determine their contribution to the total amount of tropospheric ozone.
-    We examine the depth and frequency of the intrusions and use case studies to relate these STTs to meteorological events.
-    Lastly, the fraction of total tropospheric column ozone attributable to STT events is calculated and an estimate of how much ozone this represents is made using a global chemical transport model.
+    Here, we use nearly a decade of ozonesonde observations from three locations spanning latitudes from 38$^{\circ}$S - 69$^{\circ}$S to characterise the seasonal cycle of STT events and quantify their contribution to the tropospheric ozone budget. 
+    In Section 2 we describe the observations and the methods used to identify STT. 
+    In Section 3 we examine two case studies to relate STT occurrence to meteorological events.
+    Section 4 provides our newly derived climatologies of STT frequency, seasonality, intrusion altitude, and depth. 
+    Section 5 uses these new climatologies to evaluate tropospheric ozone in a global chemical transport model (GEOS-Chem). 
+    Finally, we use the observations and the model to estimate the overall contribution of STT events to total tropospheric ozone in the high southern latitudes.
 
 \section{Data and Methods}
 
   \subsection{Ozonesonde record in the Southern Ocean}
-    Ozonesondes are weather balloons which measure ozone concentrations from the surface to around 35km.
-    These ozonesondes provide a high vertical resolution profile of ozone, along with temperature, pressure, and humidity.
+    %(Too basic)Ozonesondes are weather balloons which measure ozone concentrations from the surface to around 35km.
+    %These ozonesondes provide a high vertical resolution profile of ozone, along with temperature, pressure, and humidity.
+    Ozonesondes provide a high vertical resolution profile of ozone, temperature, pressure, and humidity from the surface to 35 km.
     
-    Ozonesondes use an electrochemical concentration cell which senses the proportional electrical current from ozone's reaction to a solution of potassium iodide.
-    Most ozonesondes are new and independant, since retrieval of a used ozonesonde can be difficult.
-    Standardised procedures are followed when constructing, transporting, and releasing the ozonesondes.
-    Ozonesondes are estimated to provide around 2\% precision in the stratosphere, which improves at lower altitudes \citep{noaasondes}, although the accuracy has been shown to be around 5-10\% which increases if standardised procedures are not followed \citep{Smit2007}.
+    Ozone mixing ratio is quantified with an electrochemical concentration cell that senses the proportional electrical current from reaction of ozone with a solution of potassium iodide.
+    %(relevance) Most ozonesondes are new and independant, since retrieval of a used ozonesonde can be difficult.
+    Standardised procedures are followed when constructing, transporting, and releasing the ozonesondes \citep{noaasondes}.
+    Ozonesondes are estimated to provide around 2\% precision in the stratosphere, which improves at lower altitudes \citep{noaasondes}, although the ozonesondes have been shown to be accurate to within 5\% as long as the correct procedures are followed \citep{Smit2007}.
     
     Ozonesondes are launched approximately weekly from Melbourne (38$^{\circ}$S, 145$^{\circ}$E), Macquarie Island (55$^{\circ}$S, 159$^{\circ}$E) and Davis (69$^{\circ}$S, 78$^{\circ}$E). 
-    For this study, we use the data collected from 2004-2013 for Melbourne and Macquarie, and 2006-2013 for Davis. 
-    Around twice as many ozonesonde launches occur at Davis prior to and during the ozone hole season (June-October) than at other times of the year \citep{Alexander2013}.
+    For this study, we use the data collected from 2004-2013 for Melbourne and Macquarie, and 2006-2013 for Davis.
+    This is because at these dates we have both ozone and geopotential height (GPH) profiles from the ozonesondes at these sites.
+    At Davis, ozonesondes are launched twice as frequently in the months just prior to and during the ozone hole season (June-October) as at other times of the year \citep{Alexander2013}.
     
     %The ERA-I data we used for synoptic weather was of one degree horizontal resolution with pressure levels at 200, 300, 400, and 500 hPa.
     %For individual cases ERA-I data was downloaded at .25 degree horizontal resolution with the full 34 pressure levels from 1000 to 1 hPa. 
@@ -108,32 +121,30 @@
   \subsection{Characterisation of STT events and associated fluxes}
     \label{Section:CharacterisationOfSTTs}
     
-    Stratospheric ozone typically mixes irreversibly down (vertically and horizontally) into the troposphere in kilometres-scale tongues of air.
-    The strength (ozone enhancement above background levels), size, vertical depth, and longevity of these intruding ozone tongues vary due to weather, landscape, and season.
-    While ozonesondes are released every week or so, ozone intrusion events may only be detectable for a matter of hours \citep{Tang2012}.
+    Stratospheric ozone typically mixes irreversibly (vertically and horizontally) into the troposphere in kilometre-scale tongues of air \citep{Frey2015}.
+    The strength (ozone enhancement above background levels), horizontal scale, vertical depth, and longevity of these intruding ozone tongues vary with weather, topography, and season.
     This makes the vertical ozone profile recorded by the ozonesonde highly dependent on the time of launch \citep{Sprenger2003}, and it cannot be guaranteed that detected ozone enhancements are fully separated from the stratosphere.
     
-    In order to characterise tropospheric ozone events a clear definition of where the stratosphere begins is necessary.
-    Two common tropopause height definitions are the standard lapse rate tropopause \citep{WMO1957} and the ozone tropopause \citep{Bethan1996}.
-    The lapse rate is the negative altitudinal temperature gradient, and the lapse rate tropopause is defined as the lowest altitude where the lapse rate is below 2$^\circ$~C~km$^{-1}$, provided the lapse rate between this altitude and all subsequent altitudes within 2~km is also below 2$^\circ$~C~km$^{-1}$.
-    The ozone tropopause is defined as the lowest altitude satisfying these three conditions \citep{Bethan1996}:
+    haracterisation of STT events requires a clear definition of the tropopause.
+    The two most common tropopause height definitions are the standard lapse rate tropopause \citep{WMO1957} and the ozone tropopause \citep{Bethan1996}.
+    The lapse rate tropopause is defined as the lowest altitude where the lapse rate (gradient of temperature with altitude) is less than 2$^\circ$~C~km$^{-1}$, provided the lapse rate between this altitude and all subsequent altitudes within 2~km is also below 2$^\circ$~C~km$^{-1}$.
+    The ozone tropopause is defined as the lowest altitude satisfying the following three conditions for the ozone mixing ratio (OMR)  \citep{Bethan1996}:
     \begin{enumerate}
-      \item Vertical gradient of ozone mixing ratio (OMR) is greater than 60~ppbv km$^{-1}$
+      \item Vertical gradient of OMR is greater than 60~ppbv km$^{-1}$
       \item OMR is greater than 80~ppbv
-      \item OMR between 500~m and 2000~m (1500~m in the Antarctic) above exceeds 110~ppbv.
+      \item OMR exceeds 110~ppbv between 500~m and 2000~m above the altitude under inspection (500~m and 1500~m in the Antarctic, including the site at Davis).
     \end{enumerate}
-    One of our sites (Davis) uses the Antarctic OMR altitude threshhold.
-    The ozone tropopause can be less robust during stratosphere-troposphere exchange, however it is more robust than the lapse rate tropopause at polar latitudes in winter and near jet streams in the lower stratosphere \citep{Bethan1996, Tomikawa2009, Alexander2013}.
+    The ozone tropopause can be less robust during stratosphere-troposphere exchange, however it is more robust than the lapse rate tropopause at polar latitudes in winter and near jet streams in the lower stratosphere due to temperature inversions near the tropopause definition region \citep{Bethan1996, Tomikawa2009, Alexander2013}.
     In this work the lower of these two tropopause altitudes is used, as both are calculated for each ozonesonde release.
-    This choice avoids occasional unrealistically high tropopause heights due to perturbed ozone or temperature measurements in the ozonesonde records.
+    Here, we calculate both tropopause heights for each ozonesonde release and use whichever is lower.
+    This choice avoids occasional unrealistically high tropopause heights due to perturbed ozone or temperature measurements in the ozonesonde data.
     
     Figure \ref{fig:seasonaltpheights} shows the monthly mean tropopause altitudes at each location (solid lines).
-    The mean tropopause altitude for ozonesondes which detected an STT is also shown (dashed lines). 
+    The dashed lines in Figure \ref{fig:seasonaltpheights} show the mean tropopause altitude calculated from the subset of ozonesondes that detected an STT event.
     The seasonal cycle in tropopause altitude at Melbourne is exhibited, showing a maximum in summer, and a minimum is winter.
     This cycle is much more sublte at Macquarie, and almost reversed at Davis, which has a minimum during autumn and maximum from winter to spring.
     The decreasing tropopause altitude which occurs at higher southern latitudes is also apparent, as lower mean tropopause heights occur with more southern latitudes.
-    The tropopause recorded by sonde is generally higher during an STT event at all three sites.
-    %Tropopause altitudes at Davis may exceed 11~km altitude under certain synoptic conditions \citep{Alexander2013}; the relation of tropopause altitude with individual STT events is investigated in detail below.
+    The tropopause is higher on days with an STT event at all during winter and sprint at Davis.
 
     \begin{figure}[!htbp]
 	\begin{center}
