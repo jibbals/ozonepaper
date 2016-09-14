@@ -172,44 +172,50 @@
   \subsection{Characterisation of STT events and associated fluxes}
     \label{Section:CharacterisationOfSTTs}
     
-    TODO: Up to here with Jenny's Comments
-    \citet{Tang2010} define one method of detecting these stratospheric tongues (or tropospheric ozone folds)  as follows: From 5~km altitude, if the ozone level exceeds 80~ppb and then within 3~km decreases by 20~ppb or more to a value less than 120~ppb, then a tropopause fold has occurred.
-    Their definition is based on subjective analysis of sondes released from 20 stations in the latitudinal range from 35$^\circ$S to 40$^\circ$N.
-    We also characterise STT events using the ozonesondes vertical profiles, looking for tropospheric ozone enhancement above a local background (in moles per billion moles of air, or ppb).
-    In this paper, tropospheric ozone events are characterised based on a subjective analysis of ozonesonde profiles at three sites at 38$^\circ$S, 55$^\circ$S, and 69$^\circ$S.
-    Part of the characterisation involves using a Fourier filter which removes high and low frequencies along the vertical dimension (the vertical scale), this filter is called a bandpass, since it retains a band of scales or frequencies.
-    
-    To identify STT events, the vertical profiles of ozone volume mixing ratio are linearly interpolated to a regular grid with 20~m resolution up to 14~km altitude and are then bandpass filtered to retain perturbations with vertical scales between 0.5~km and 5~km.
-    From here onwards the filtered vertical profile is referred to as the perturbation profile.
-    The choice of band limits was set empirically; for an event to qualify as STT, a clear increase above the background ozone level is needed, and a vertical limit of $\sim 5$~km removes seasonal-scale effects.
-    We exclude from analysis perturbations at altitudes below 4~km above the surface to avoid surface pollution events and those occuring within 0.5~km of the tropopause to avoid the sharp transition to stratospheric air producing spurious false positives.
-    Then using ozone perturbations from 2~km above the surface up to 1~km below the tropopause, we create a threshhold for each launch site at the 99th percentile.
-    Profiles with perturbations exceeding this threshhold are classified as STT events, subject to one more check.
-    
-    The ozone peak is defined as the altitude where the OMR is greatest within the lowest range of altitudes where the perturbation profile exceeds the percentile based threshhold.
-    If the OMR between this ozone peak and the tropopause drop below 80~ppb and are more than 20~ppb lower than the peak ozone then the event is confirmed, otherwise the profile is rejected as a non-event.
-    This confirmation is only required if the perturbation profile does not drop below zero between the event peak and the tropopause.
-    This happens in order to remove `near tropopause' anomalies for which there is no evidence of detachment from the stratosphere.
-
-    We conservatively estimate the ozone flux into the troposphere associated with each event.
-    The estimate is conservative since it does not take into any secondary ozone enhancements which may have been caused by the STT, as well as ignoring any heightened ozone background levels which may be due to synoptic-scale stratospheric mixing into the troposphere.
-    The ozone flux calculation is made by integrating the ozone concentration enhancement vertically over the altitude range for which an STT event is identified.
-    Figure~\ref{fig:filterEG} shows an example ozone profile, and how the algorithm detects an STT event, defines the event boundaries, and calculates the ozone flux.
+    We characterise STT events using the ozonesonde vertical profiles to identify tropospheric ozone volume mixing ratio enhancements above a local background (in moles per billion moles of dry air, or ppb).
+    Calculation of ozone transport is performed after converting the profile to molecules cm$^{-3}$.
+    The process is illustrated in Figure~\ref{fig:filterEG} for an example ozone profile.
     
     \begin{figure}[!htbp]
       % Figure created in getevents.pro, edited in inkscape
       \begin{center}
       \includegraphics[width=0.8\columnwidth]{figures/filtereg.png}
-      \caption{ Left: an example illustrating methods used for STT identification and flux estimation using an ozone profile from 2km to the tropopause (dashed vertical line).
-      At Melbourne on the 8th of January 2004, the flux area shows the estimate of stratospheric impact on tropospheric ozone.
-      Right: bandpass filtered O$_3$ ppb perturbation profile.
-      Coloured lines show the 99th percentile of filtered ozone perturbations (purple dashed) and the technique for determining the vertical extent of the event (orange dashed) is outlined in the text.
+      \caption{ An example of the STT identification and flux estimation methods used in this work. 
+	The left panel shows an ozone mixing ratio profile from Melbourne on the 8th of January 2004 from 2km to the tropopause (dashed horizontal line).
+	The right panel shows the perturbation profile created from bandpass filtering of the mixing ratio profile. The STT occurrence threshold calculated from the 99th percentile of filtered ozone perturbations is shown with the orange dashed line, and the technique for determining the vertical extent of the event is shown with the purple dashed lines (see details in text).
+	The ozone flux associated with the STT event is calculated using the area outlined with the orange dashed line in the left panel.
       }
       \label{fig:filterEG}
       \end{center}
     \end{figure}
+    
+    First, the ozone vertical profiles are linearly interpolated to a regular grid with 20~m resolution from the surface to 14~km altitude. 
+    The interpolated profiles are then bandpass filtered using a Fourier transform to retain perturbations with vertical scales between 0.5~km and 5~km (removing low and high frequency perturbations).
+    In what follows, these filtered vertical profiles are referred to as perturbation profiles.
+    The choice of band limits was set empirically. 
+    For an event to qualify as STT, a clear increase above the background ozone level is needed, and we find that a vertical limit of $\sim 5$~km removes seasonal-scale effects.
+    The 0.5~km scale limit is set in order to remove any spikes of ozone which could be considered noise.
+    We next use all the perturbation profiles at each site to calculate the 99th percentile perturbation value for the site.
+    This is considered our threshold for tropospheric ozone perturbations, and perturbations above this threshold in individual ozonesondes are classified as STT events.
+    
+    STTs which occur at altitudes below 4~km are removed in order to avoid surface pollution events
+    Those occurring within 0.5~km of the tropopause are also removed in order to avoid spurious false positives induced by the sharp transition to stratospheric air.
+    
+    Finally, we define the ozone peak as the altitude where the OMR is greatest within the lowest range of altitudes where the perturbation profile exceeds the percentile-based threshold.
+    If the perturbation profile drops below zero between the ozone peak and the tropopause, the STT event is confirmed. 
+    Alternatively, if the OMR between the ozone peak and the tropopause drops below 80~ppb and is at least 20~ppb lower than the OMR at the ozone peak, the STT event is also confirmed. 
+    Otherwise the profile is rejected as a non-event.
+    This final step removes near-tropopause anomalies for which there is no evidence of detachment from the stratosphere.
+
+    We estimate the ozone flux into the troposphere associated with each event by integrating the ozone concentration enhancement vertically over the altitude range for which an STT event is identified (i.e. the range surrounding the ozone peak over which the perturbation profile is greater than zero).
+    This estimate is conservative because it does not take into any secondary ozone enhancements that may have been caused by the STT, and also ignores any heightened ozone background levels which may be due to synoptic-scale stratospheric mixing into the troposphere.
+    
+    \citet{Tang2010} define one possible method for detecting STT events from ozonesonde measurements. 
+    Their definition is based on subjective analysis of sondes released from 20 stations in the latitudinal range from 35$^\circ$S to 40$^\circ$N.
+    In their work, a tropopause fold has occurred if, starting from 5~km altitude, the ozone level exceeds 80~ppb and then within 3~km decreases by 20~ppb or more to a value less than 120~ppb.
 
   \subsection{Sensitivities and limitations}
+    TODO: Up to here with Jenny's Comments
     There are several observationally defined threshholds and limits which have an effect on how many events are detected, what altitude within which they can be detected, and how strongly the events are separated from the stratosphere.
     
     The cut-off threshhold (defined locally to each site) is determined from the 99th percentile of the filtered ozone profile between 2~km and the tropopause height minus 1 kilometer.
