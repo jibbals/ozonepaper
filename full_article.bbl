@@ -1,4 +1,4 @@
-\begin{thebibliography}{47}
+\begin{thebibliography}{48}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -174,6 +174,17 @@ E.~Galani.
 \newblock ISSN 0148-0227.
 \newblock \doi{10.1029/2002JD002596}.
 \newblock URL \url{http://www.agu.org/pubs/crossref/2003/2002JD002596.shtml}.
+
+\bibitem[Gloudemans et~al.(2007)Gloudemans, {De Laat}, Krol, Meirink, {Van Der
+  Werf}, Schrijver, and Aben]{Gloudemans2006}
+Annemieke Gloudemans, Jos {De Laat}, Maarten Krol, Jan~Fokke Meirink, Guido
+  {Van Der Werf}, Hans Schrijver, and Ilse Aben.
+\newblock {Evidence for long-range transport of carbon monoxide in the Southern
+  Hemisphere from SCIAMACHY observations}.
+\newblock \emph{European Space Agency, (Special Publication) ESA SP},
+  33\penalty0 (SP-636):\penalty0 1--5, 2007.
+\newblock ISSN 03796566.
+\newblock \doi{10.1029/2006GL026804}.
 
 \bibitem[Guenther et~al.(2012)Guenther, Jiang, Heald, Sakulyanontvittaya, Duhl,
   Emmons, and Wang]{Guenther2012}

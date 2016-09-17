@@ -214,29 +214,13 @@
     Their definition is based on subjective analysis of sondes released from 20 stations in the latitudinal range from 35$^\circ$S to 40$^\circ$N.
     In their work, a tropopause fold has occurred if, starting from 5~km altitude, the ozone level exceeds 80~ppb and then within 3~km decreases by 20~ppb or more to a value less than 120~ppb.
 
-  \subsection{Sensitivities and limitations}
-    TODO: Up to here with Jenny's Comments
-    There are several observationally defined threshholds and limits which have an effect on how many events are detected, what altitude within which they can be detected, and how strongly the events are separated from the stratosphere.
+  \subsection{Biomass burning influenced events}
     
-    The cut-off threshhold (defined locally to each site) is determined from the 99th percentile of the filtered ozone profile between 2~km and the tropopause height minus 1 kilometer.
-    If an ozonesonde's filtered profile (between 4~km and the tropopause minus 500~m) goes above this threshhold then the profile is flagged as an event.
-    Changing either of these altitude ranges, or the cut-off threshhold, changes how many events are detected.
-    For example, using the 98.5th percentile increased detected events by 26 at Melbourne, 18 at Macquarie Island, and 9 at Davis.
-    We use the 99th percentile because at this point the filter locates clear events with no obvious false positives.
-    
-    The altitude range for flagging filtered profiles is set from 4~km above the surface to 500~m below the tropopause .
-    This range removes possible ground pollution effects as well as local fire smoke plumes which are not likely to ascend above 4~km, as well as allowing event detection up to 500~m from the tropopause.
-    Some events, including the storm-caused event examined in figure \ref{fig:Melbourne20050203} are within one kilometer of the tropopause. 
-    
-    The altitude range used to determine the 99th percentile is set from 2~km up to 1~km below the tropopause.
-    This range removes any anomalous edge effects of the Fourier bandpass filter, as well as discounting the highly variable ozone concentration which occurs near the tropopause.
-    
-    TODO: Check and mention bandpass scale sensitivity.
-    
-  \subsection{Removal of biomass burning influence}
-    
-    Other sources of tropospheric ozone profile perturbation need to be analysed and excluded before drawing any conclusions about STTs based on recorded ozone profiles. 
-    The major possible ozone influence other than STTs in the troposphere above 4~km is smoke plumes from biomass burning.
+    The STT detection algorithm described in Section \ref{Section:CharacterisationOfSTTs} assumes all mid-upper troposphere ozone perturbations above the 99th percentile are caused by stratospheric intrusions. 
+    In some cases, however, these perturbations may in fact reflect ozone production in lofted smoke plumes.
+    Biomass burning in southern Africa and South America has previously been shown to have a major influence on atmospheric composition in the vicinity of our measurement sites \citep{Gloudemans2006, Edwards2006}, particularly from July to December \citep{Pak2003}.
+    On occasion, Australian and Indonesian fires can also reach the mid-high southern latitudes (TODO: cite this).
+    TODO: Up to here with Jenny's Comments(done the sensitivities things though)
     
     Ozone production from biomass burning is complex and affected by photochemistry, fuel nitrogen load, time since emission, and atmospheric plume chemistry both during transport and at the point of measurement.
     %Ozone precursors include nitrogen oxides ($NO_x = NO + NO_2$) and non methane volatile organic compounds (NMVOCs). % too basic for here..
@@ -275,7 +259,24 @@
     
     STT events flagged in this way are included in Figures \ref{fig:SummarySeasonality} to \ref{fig:SummaryTPDepths}, they are coloured red and do not contribute to STT flux calculations. 
     These flagged events are concentrated in spring at Melbourne and Macquarie Island, and don't have any otherwise notable characteristics.
-    %TODO: JESSE CURRENLY UP TO HERE IN READTHROUGH OF WHOLE TEXT
+    
+  \subsection{Sensitivities and limitations}
+    Our method uses several subjectively defined quantities in the process of STT event detection.
+    Here we briefly discuss these and the sensitivity to each.
+    Using the algorithm discussed in section \ref{Section:CharacterisationOfSTTs}, we detect 45 events at Davis, 47 (+8 fire influenced) events at Macquarie Island, and 72(+14 fire influenced) events at Melbourne.
+    
+    
+    The cut-off threshold (defined separately for each site) is determined from the 99th percentile of the ozone perturbations between 2~km and 1~km below the tropopause.
+    We use the 99th percentile because at this point the filter locates clear events with no obvious false positives.
+    Event detection is highly sensitive to this choice; for example, using the 98.5th percentile instead increased detected events by 24 at Melbourne (33\%), 19 at Macquarie Island (40\%), and 10 at Davis (22\%).
+    This high sensitivity means that detection is also sensitive to the profile altitude bounds used in calculation of the percentiles, i.e. the 2~km altitude to 1~km below the tropopause range.
+    The altitude range used to determine the 99th percentile is set from 2~km up to 1~km below the tropopause.
+    This range removes any anomalous edge effects of the Fourier bandpass filter, as well as discounting the highly variable ozone concentration which occurs near the tropopause.
+    Finally, ozone enhancements are only considered STT events if they occur above 4~km and within 500~m below the tropopause.
+    This range removes possible ground pollution, as well as allowing event detection up to 500~m from the tropopause.
+    Some events, including the storm-caused event examined in figure \ref{fig:Melbourne20050203} are within one kilometer of the tropopause. 
+    
+    TODO: Check and mention bandpass scale sensitivity.
 
 \section{Case Studies of synoptic conditions during STT events}
 
