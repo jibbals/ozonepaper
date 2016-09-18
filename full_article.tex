@@ -222,49 +222,42 @@
     On occasion, Australian and Indonesian fires can also reach the mid-high southern latitudes (TODO: cite this).
     TODO: Up to here with Jenny's Comments(done the sensitivities things though)
     
-    Ozone production from biomass burning is complex and affected by photochemistry, fuel nitrogen load, time since emission, and atmospheric plume chemistry both during transport and at the point of measurement.
     %Ozone precursors include nitrogen oxides ($NO_x = NO + NO_2$) and non methane volatile organic compounds (NMVOCs). % too basic for here..
-    Large biomass burning events emit substantial ozone precursors, some of which are capable of being transported far from their origins. 
-    Peroxyacetyl Nitrate (PAN) is a reservoir of NO$_x$ which can lead to enhanced ozone far from the source of a fire \citep{Jaffe_2012}.
+    Large biomass burning events emit substantial quantities of ozone precursors, some of which are capable of being transported long distances and driving ozone production far from the fire source \citep{Jaffe_2012}.
+    Ozone production from biomass burning is complex and affected by photochemistry, fuel nitrogen load, and time since emission. 
+    While ozone production occurs in some biomass burning plumes, this is not always the case; therefore ozone perturbations detected during transported smoke events may or may not be caused by the plume.
+    We therefore flag all detected STT events found near smoke plumes but do not exclude them from our final dataset.
     
-    Biomass burning influence in the Southern Hemisphere comes mostly from Southern Africa and South America, however Australian fires from the midlatitudes, and Indonesian fires can also influence the ozonesonde release sites.
-    Transported biomass burning plumes influence the southern mid-latitudes generally between July and December \citep{Pak2003}.
-    Biomass burning smoke plumes can lead to enhanced ozone, however this is not always the case.
-    Due to the chance of smoke plume influence on STT characterisation, events which occur near smoke plumes are flagged and not included in STT flux calculations.
+    %Biomass burning influence in the Southern Hemisphere comes mostly from Southern Africa and South America, however Australian fires from the midlatitudes, and Indonesian fires can also influence the ozonesonde release sites.
+    %Transported biomass burning plumes influence the southern mid-latitudes generally between July and December \citep{Pak2003}.
     
-    Removal of any possible influence from biomass burning smoke plumes is performed by detection of smoke plumes through global CO measurements.
-    Here we identify transported smoke plumes through enhanced carbon monoxide (CO) levels.
-    CO has a long enough lifetime to be an effective tracer of transport.
-    The primary source of atmospheric enhancement of CO is fires, making CO a good indicator of fire plumes.
-    Using high CO levels as a proxy for smoke plumes is a well established method (eg: \citet{Edwards2003,Sinha2004,Edwards2006,Mari2008}).
+    Possible biomass burning influence is identified using satellite observations of carbon monoxide (CO) from the AIRS (Atmospheric Infrared Sounder) instrument on board the Aqua satellite \citep{AIRS3STD}.
+    CO is emitted during incomplete combustion and is an effective tracer of long-range transport due to its long lifetime.
+    In the Southern Hemisphere, biomass burning is the primary source of CO, making CO a good proxy for fire plumes (eg: \citet{Edwards2003,Sinha2004,Edwards2006,Mari2008}).(TODO: split citations to their most appropriate sentences)
     We use data from the AIRS (Atmospheric Infrared Sounder) instrument on board the Aqua satellite \citep{AIRS3STD}.
-    A visual inspection of AIRS' vertical columns of CO over the Southern Hemisphere is performed in order to exclude events with possible smoke influence at our three sites.
-    We diagnose smoke plumes where high ($\sim 2 \times 10^{18}$ molecules cm$^{-2}$ or higher) CO columns appear and when these occur near our sites during a sonde-detected ozone event, the event is flagged.
+    To identify possible biomass burning influence, we visually inspected AIRS vertical columns CO in the vicinity of our three measurement sites for all dates with detected STT events.
+    We diagnose smoke plumes as areas with elevated CO columns ($\sim 2 \times 10^{18}$ molecules cm$^{-2}$ or higher), and flag any sonde-detected STT event that occurs near a smoke plume.
 
-    Figure \ref{fig:excludedeg}(top) shows a day where smoke plumes are near the Melbourne sonde launch site on the day of a detected event. 
-    An event preliminarily detected on this day through the ozonesonde data is flagged as possibly due to fire.
-    In the figure elevated CO levels can be seen over Australia, likely due to long-range transport from African and/or South American biomass burning.
-    This day can be contrasted with the example in figure \ref{fig:excludedeg}(bottom) where low CO levels are observed over the entire Southern Hemisphere.
-    We screened all days at all three sites where an STT event is detected except for one event that coincided with missing AIRS data (January 2010). 
-    We flagged 15 of 72 events over Melbourne, 8 of 48 events over Macquarie island, and none from 45 over Davis.
-    Nearly all of the flagged events occur within the burning season of the Southern Hemisphere.
+    Figure \ref{fig:excludedeg} contrasts two days with and without signs of biomass burning influence near the Melbourne site (purple circle).
+    17 October 2007 (top) shows a day where elevated CO suggests the site may have been influenced by long-range transport from African and/or South American biomass burning.
+    In contrast, on 3 February 2006 (bottom) CO columns across the Southern Hemisphere show no influence from biomass burning.
+    We screened all days with detected STT events except one event during which there were no available AIRS data (January 2010), and found that biomass burning may have influenced 21\% of events over Melbourne and 17\% of events over Macquarie island.
+    These events are flagged in the following sections, and are not used in our calculation of total STT flux.
+    All of the flagged events except for one (in January at Macquarie Island) occur within the Southern Hemisphere burning season (July to December).% burning season cite? \citep{Pak2003}.
+    No events at Davis were influenced by smoke transport.
     
     \begin{figure}[!htbp]
       \includegraphics[width=\textwidth]{figures/AIRS_compare.png}
-      \caption{AIRS total column CO.
-      The top panel (17 October 2007) is a day when ozone above Melbourne (purple dot) could have been caused by a transported biomass burning plume, and so was excluded from analysis.
-      The bottom panel (3 February 2006) shows an example of a day when Melbourne ozone was likely not influenced by transported smoke plumes and was retained for analysis.}
+      \caption{ Example detection of biomass burning influence using AIRS total column CO. 
+	The top panel (17 October 2007) shows a day when ozone above Melbourne (purple dot) could have been caused by a transported biomass burning plume, and so was flagged in subsequent analysis.
+	The bottom panel (3 February 2006) shows a day when Melbourne ozone was not influenced by transported smoke.}
       \label{fig:excludedeg}
     \end{figure}
-    
-    STT events flagged in this way are included in Figures \ref{fig:SummarySeasonality} to \ref{fig:SummaryTPDepths}, they are coloured red and do not contribute to STT flux calculations. 
-    These flagged events are concentrated in spring at Melbourne and Macquarie Island, and don't have any otherwise notable characteristics.
     
   \subsection{Sensitivities and limitations}
     Our method uses several subjectively defined quantities in the process of STT event detection.
     Here we briefly discuss these and the sensitivity to each.
     Using the algorithm discussed in section \ref{Section:CharacterisationOfSTTs}, we detect 45 events at Davis, 47 (+8 fire influenced) events at Macquarie Island, and 72(+14 fire influenced) events at Melbourne.
-    
     
     The cut-off threshold (defined separately for each site) is determined from the 99th percentile of the ozone perturbations between 2~km and 1~km below the tropopause.
     We use the 99th percentile because at this point the filter locates clear events with no obvious false positives.

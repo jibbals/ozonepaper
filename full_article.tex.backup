@@ -222,24 +222,21 @@
     On occasion, Australian and Indonesian fires can also reach the mid-high southern latitudes (TODO: cite this).
     TODO: Up to here with Jenny's Comments(done the sensitivities things though)
     
-    Ozone production from biomass burning is complex and affected by photochemistry, fuel nitrogen load, time since emission, and atmospheric plume chemistry both during transport and at the point of measurement.
     %Ozone precursors include nitrogen oxides ($NO_x = NO + NO_2$) and non methane volatile organic compounds (NMVOCs). % too basic for here..
-    Large biomass burning events emit substantial ozone precursors, some of which are capable of being transported far from their origins. 
-    Peroxyacetyl Nitrate (PAN) is a reservoir of NO$_x$ which can lead to enhanced ozone far from the source of a fire \citep{Jaffe_2012}.
+    Large biomass burning events emit substantial quantities of ozone precursors, some of which are capable of being transported long distances and driving ozone production far from the fire source \citep{Jaffe_2012}.
+    Ozone production from biomass burning is complex and affected by photochemistry, fuel nitrogen load, and time since emission. 
+    While ozone production occurs in some biomass burning plumes, this is not always the case; therefore ozone perturbations detected during transported smoke events may or may not be caused by the plume.
+    We therefore flag all detected STT events found near smoke plumes but do not exclude them from our final dataset.
     
-    Biomass burning influence in the Southern Hemisphere comes mostly from Southern Africa and South America, however Australian fires from the midlatitudes, and Indonesian fires can also influence the ozonesonde release sites.
-    Transported biomass burning plumes influence the southern mid-latitudes generally between July and December \citep{Pak2003}.
-    Biomass burning smoke plumes can lead to enhanced ozone, however this is not always the case.
-    Due to the chance of smoke plume influence on STT characterisation, events which occur near smoke plumes are flagged and not included in STT flux calculations.
+    %Biomass burning influence in the Southern Hemisphere comes mostly from Southern Africa and South America, however Australian fires from the midlatitudes, and Indonesian fires can also influence the ozonesonde release sites.
+    %Transported biomass burning plumes influence the southern mid-latitudes generally between July and December \citep{Pak2003}.
     
-    Removal of any possible influence from biomass burning smoke plumes is performed by detection of smoke plumes through global CO measurements.
-    Here we identify transported smoke plumes through enhanced carbon monoxide (CO) levels.
-    CO has a long enough lifetime to be an effective tracer of transport.
-    The primary source of atmospheric enhancement of CO is fires, making CO a good indicator of fire plumes.
-    Using high CO levels as a proxy for smoke plumes is a well established method (eg: \citet{Edwards2003,Sinha2004,Edwards2006,Mari2008}).
+    Possible biomass burning influence is identified using satellite observations of carbon monoxide (CO) from the AIRS (Atmospheric Infrared Sounder) instrument on board the Aqua satellite \citep{AIRS3STD}.
+    CO is emitted during incomplete combustion and is an effective tracer of long-range transport due to its long lifetime.
+    In the Southern Hemisphere, biomass burning is the primary source of CO, making CO a good proxy for fire plumes (eg: \citet{Edwards2003,Sinha2004,Edwards2006,Mari2008}).(TODO: split citations to their most appropriate sentences)
     We use data from the AIRS (Atmospheric Infrared Sounder) instrument on board the Aqua satellite \citep{AIRS3STD}.
-    A visual inspection of AIRS' vertical columns of CO over the Southern Hemisphere is performed in order to exclude events with possible smoke influence at our three sites.
-    We diagnose smoke plumes where high ($\sim 2 \times 10^{18}$ molecules cm$^{-2}$ or higher) CO columns appear and when these occur near our sites during a sonde-detected ozone event, the event is flagged.
+    To identify possible biomass burning influence, we visually inspected AIRS vertical columns CO in the vicinity of our three measurement sites for all dates with detected STT events.
+    We diagnose smoke plumes as areas with elevated CO columns ($\sim 2 \times 10^{18}$ molecules cm$^{-2}$ or higher), and flag any sonde-detected STT event that occurs near a smoke plume.
 
     Figure \ref{fig:excludedeg}(top) shows a day where smoke plumes are near the Melbourne sonde launch site on the day of a detected event. 
     An event preliminarily detected on this day through the ozonesonde data is flagged as possibly due to fire.
