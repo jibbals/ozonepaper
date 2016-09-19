@@ -220,7 +220,6 @@
     In some cases, however, these perturbations may in fact reflect ozone production in lofted smoke plumes.
     Biomass burning in southern Africa and South America has previously been shown to have a major influence on atmospheric composition in the vicinity of our measurement sites \citep{Gloudemans2006, Edwards2006}, particularly from July to December \citep{Pak2003}.
     On occasion, Australian and Indonesian fires can also reach the mid-high southern latitudes (TODO: cite this).
-    TODO: Up to here with Jenny's Comments(done the sensitivities things though)
     
     %Ozone precursors include nitrogen oxides ($NO_x = NO + NO_2$) and non methane volatile organic compounds (NMVOCs). % too basic for here..
     Large biomass burning events emit substantial quantities of ozone precursors, some of which are capable of being transported long distances and driving ozone production far from the fire source \citep{Jaffe_2012}.
@@ -238,30 +237,26 @@
     To identify possible biomass burning influence, we visually inspected AIRS vertical columns CO in the vicinity of our three measurement sites for all dates with detected STT events.
     We diagnose smoke plumes as areas with elevated CO columns ($\sim 2 \times 10^{18}$ molecules cm$^{-2}$ or higher), and flag any sonde-detected STT event that occurs near a smoke plume.
 
-    Figure \ref{fig:excludedeg}(top) shows a day where smoke plumes are near the Melbourne sonde launch site on the day of a detected event. 
-    An event preliminarily detected on this day through the ozonesonde data is flagged as possibly due to fire.
-    In the figure elevated CO levels can be seen over Australia, likely due to long-range transport from African and/or South American biomass burning.
-    This day can be contrasted with the example in figure \ref{fig:excludedeg}(bottom) where low CO levels are observed over the entire Southern Hemisphere.
-    We screened all days at all three sites where an STT event is detected except for one event that coincided with missing AIRS data (January 2010). 
-    We flagged 15 of 72 events over Melbourne, 8 of 48 events over Macquarie island, and none from 45 over Davis.
-    Nearly all of the flagged events occur within the burning season of the Southern Hemisphere.
+    Figure \ref{fig:excludedeg} contrasts two days with and without signs of biomass burning influence near the Melbourne site (purple circle).
+    17 October 2007 (top) shows a day where elevated CO suggests the site may have been influenced by long-range transport from African and/or South American biomass burning.
+    In contrast, on 3 February 2006 (bottom) CO columns across the Southern Hemisphere show no influence from biomass burning.
+    We screened all days with detected STT events except one event during which there were no available AIRS data (January 2010), and found that biomass burning may have influenced 21\% of events over Melbourne and 17\% of events over Macquarie island.
+    These events are flagged in the following sections, and are not used in our calculation of total STT flux.
+    All of the flagged events except for one (in January at Macquarie Island) occur within the Southern Hemisphere burning season (July to December).% burning season cite? \citep{Pak2003}.
+    No events at Davis were influenced by smoke transport.
     
     \begin{figure}[!htbp]
       \includegraphics[width=\textwidth]{figures/AIRS_compare.png}
-      \caption{AIRS total column CO.
-      The top panel (17 October 2007) is a day when ozone above Melbourne (purple dot) could have been caused by a transported biomass burning plume, and so was excluded from analysis.
-      The bottom panel (3 February 2006) shows an example of a day when Melbourne ozone was likely not influenced by transported smoke plumes and was retained for analysis.}
+      \caption{ Example detection of biomass burning influence using AIRS total column CO. 
+	The top panel (17 October 2007) shows a day when ozone above Melbourne (purple dot) could have been caused by a transported biomass burning plume, and so was flagged in subsequent analysis.
+	The bottom panel (3 February 2006) shows a day when Melbourne ozone was not influenced by transported smoke.}
       \label{fig:excludedeg}
     \end{figure}
-    
-    STT events flagged in this way are included in Figures \ref{fig:SummarySeasonality} to \ref{fig:SummaryTPDepths}, they are coloured red and do not contribute to STT flux calculations. 
-    These flagged events are concentrated in spring at Melbourne and Macquarie Island, and don't have any otherwise notable characteristics.
     
   \subsection{Sensitivities and limitations}
     Our method uses several subjectively defined quantities in the process of STT event detection.
     Here we briefly discuss these and the sensitivity to each.
     Using the algorithm discussed in section \ref{Section:CharacterisationOfSTTs}, we detect 45 events at Davis, 47 (+8 fire influenced) events at Macquarie Island, and 72(+14 fire influenced) events at Melbourne.
-    
     
     The cut-off threshold (defined separately for each site) is determined from the 99th percentile of the ozone perturbations between 2~km and 1~km below the tropopause.
     We use the 99th percentile because at this point the filter locates clear events with no obvious false positives.
@@ -275,20 +270,26 @@
     
     The event detection was not as sensitive to the choice of Fourier bandpass scales; A widening of the allowed scales to the range 0.4-5.1 increased the detected events by 3 at Melbourne, 2 at Macquarie Island, and Davis lost two events (there are more detected events, but more being filtered out).
 
-\section{Case Studies of synoptic conditions during STT events}
+\subsection{Classifying synoptic conditions during STT events}
+
+  An investigation of the ERA-I synoptic weather during STT events above (at 500~hPa) Melbourne, Macquarie Island, and Davis are used to subjectively classify the events based on their likely cause.
+  Typically during STT occurrence, the upper troposphere is not calm, with low pressure fronts or cut-offs nearby at coincident time.
+  Similar characteristics are seen over Melbourne and Macquarie Island: i.e. a prevalence of frontal and low pressure activity during STT events.
+  Over Davis the weather systems are harder to distinguish, and the stratospheric polar vortex may create ozone folds without other sources of upper tropospheric turbulence.
 
   We examine two case studies in detail to illustrate the synoptic-scale conditions in which STT events occur over Melbourne.
-  Data from the European Center for Medium-range Weather Forecasts (ECMWF) Interim Reanalysis (ERA-I) \citep{Dee2011} product is used for synoptic-scale examination of weather patterns over our three sites on dates matching detected STT events.
+  Data from the European Center for Medium-range Weather Forecasts (ECMWF) Interim Reanalysis (ERA-I) \citep{Dee2011} product are used for synoptic-scale examination of weather patterns over our three sites on dates matching detected STT events.
   
-  Figure \ref{fig:Melbourne20050203}(left) shows the ozonesonde profile recorded on the 3rd of February 2005 above Melbourne.
-  Both tropopause definitions are between 400 and 500 hPa and the ozone spikes have clear anticorrelations with the relative humidity, suggesting dry stratospheric air is measured here. 
-  An ozone intrusion into the troposphere is identified by our detection algorithm at $\sim520$~hPa.
-  Figure \ref{fig:Melbourne20050203}(right) shows the synoptic weather system, a cut-off low pressure system which caused a large storm and lowered the local tropopause height for several days.
-  The wind circles around the low pressure system in a clockwise direction, typical geostrophic flows which are caused by pressure gradients and coriolis forces.
-  The flux of stratospheric ozone brought into the troposphere by this event is at least $3.1 \times 10^{11}$ molecules cm$^{-3}$ , or 8\% of the tropospheric ozone column.
+  Figure \ref{fig:Melbourne20050203} (left) shows the ozonesonde profile above Melbourne on 3 of February 2005.
+  The tropopause was between 400 and 500 hPa and ozone in the upper troposphere was anticorrelated with relative humidity, suggesting the ozone enhancements derived from dry stratospheric air. 
+  An ozone intrusion into the troposphere at $\sim520$~hPa was identified by our detection algorithm.
+  Figure \ref{fig:Melbourne20050203}(right) shows the concurrent synoptic weather system, a cut-off low pressure system that caused a large storm and lowered the local tropopause height for several days.
+  These systems also increase turbulence near the tropopause, which can lead to increased transport events.
+  %The wind circles around the low pressure system in a clockwise direction, typical geostrophic flows which are caused by pressure gradients and coriolis forces.
+  The flux of stratospheric ozone into the troposphere associated with this event, calculated using the method shown in section \ref{Section:CharacterisationOfSTTs}, was at least $3.1 \times 10^{11}$ molecules cm$^{-3}$ , or 8\% of the tropospheric ozone column.
 
   \begin{figure}[!htbp]
-  % these IMAGE CREATED BY show_profile.py, EDITTED IN INKSCAPE
+  % these IMAGE CREATED BY show_profile.py, EDITTED IN INKSCAPE and then PINTA
     \begin{center}
     \includegraphics[width=1.0\columnwidth]{figures/Melbourne20050203.png}
     \caption{(Left) Vertical profile of ozone (black line), relative humidity (blue line), and temperature (red line) for  3 February 2005.
@@ -318,11 +319,6 @@
     \label{fig:Melbourne20100113}
     \end{center}
   \end{figure}
-
-  An investigation of the ERA-I synoptic weather during STT events above Melbourne, Macquarie Island, and Davis are performed and are used to subjectively classify the events based on their likely cause.
-  Similar characteristics to the case studies presented here occur over Macquarie Island: i.e. a prevalence of frontal and low pressure activity during STT events.
-  Typically during STT occurrence, the upper troposphere is not calm, with low pressure fronts or cut-offs nearby at coincident time.
-  Over Davis the weather systems are harder to distinguish, and the stratospheric polar vortex may create ozone folds without other sources of upper tropospheric turbulence.
 
 \section{STT event climatologies}
 
