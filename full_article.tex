@@ -101,6 +101,7 @@
 \section{Data and Methods}
 
   \subsection{Ozonesonde record in the Southern Ocean}
+  \label{Section:ozonesondes}
     %(Too basic)Ozonesondes are weather balloons which measure ozone concentrations from the surface to around 35km.
     %These ozonesondes provide a high vertical resolution profile of ozone, along with temperature, pressure, and humidity.
     Ozonesondes provide a high vertical resolution profile of ozone, temperature, pressure, and humidity from the surface to 35 km.
@@ -219,7 +220,7 @@
     The STT detection algorithm described in Section \ref{Section:CharacterisationOfSTTs} assumes all mid-upper troposphere ozone perturbations above the 99th percentile are caused by stratospheric intrusions. 
     In some cases, however, these perturbations may in fact reflect ozone production in lofted smoke plumes.
     Biomass burning in southern Africa and South America has previously been shown to have a major influence on atmospheric composition in the vicinity of our measurement sites \citep{Gloudemans2006, Edwards2006}, particularly from July to December \citep{Pak2003}.
-    On occasion, Australian and Indonesian fires can also reach the mid-high southern latitudes (TODO: cite this).
+    On occasion, Australian and Indonesian fires can also reach the mid-high southern latitudes, which is seen when examining the carbon monoxide (CO) from the AIRS (Atmospheric Infrared Sounder) instrument on board the Aqua satellite \citep{AIRS3STD}.
     
     %Ozone precursors include nitrogen oxides ($NO_x = NO + NO_2$) and non methane volatile organic compounds (NMVOCs). % too basic for here..
     Large biomass burning events emit substantial quantities of ozone precursors, some of which are capable of being transported long distances and driving ozone production far from the fire source \citep{Jaffe_2012}.
@@ -230,7 +231,7 @@
     %Biomass burning influence in the Southern Hemisphere comes mostly from Southern Africa and South America, however Australian fires from the midlatitudes, and Indonesian fires can also influence the ozonesonde release sites.
     %Transported biomass burning plumes influence the southern mid-latitudes generally between July and December \citep{Pak2003}.
     
-    Possible biomass burning influence is identified using satellite observations of carbon monoxide (CO) from the AIRS (Atmospheric Infrared Sounder) instrument on board the Aqua satellite \citep{AIRS3STD}.
+    Possible biomass burning influence is identified using satellite observations of CO from the AIRS instrument.
     CO is emitted during incomplete combustion and is an effective tracer of long-range transport due to its long lifetime.
     In the Southern Hemisphere, biomass burning is the primary source of CO, making CO a good proxy for fire plumes (eg: \citet{Edwards2003,Sinha2004,Edwards2006,Mari2008}).(TODO: split citations to their most appropriate sentences)
     We use data from the AIRS (Atmospheric Infrared Sounder) instrument on board the Aqua satellite \citep{AIRS3STD}.
@@ -330,40 +331,40 @@
   
   There is an annual cycle in the frequency of STT events  (Fig. \ref{fig:SummarySeasonality}) with a summertime peak above Melbourne and Macquarie Island.
   This summertime peak is due to an increased prevalence of summer low-pressure storms and fronts, which increase turbulence and lower the tropopause \citep{Reutter2015}.
-  
-  TODO: up to here with Jenny's Comments
+  For both Melbourne and Macquarie Island, the STT events which are unlikely to be fire-related occur mostly in summer during these low pressure synoptic systems.
 
   \begin{figure}[!htbp]
   % these IMAGE CREATED BY non_transport_summary.py, labels edited IN INKSCAPE
     \begin{center}
     \includegraphics[width=1.0\columnwidth]{figures/summary_season.png}
-    \caption{The seasonality of STT events at Davis, Macquarie Island, and Melbourne.
-    Events are categorised by associated weather, and coloured bars from each category are stacked atop one another.
-    The events filtered out as possibly smoke plume influenced are displayed here in red.}
+    \caption{Seasonal cycle of STT events detected at Davis (top), Macquarie Island (middle), and Melbourne (bottom).
+      Events are categorised by associated meteorological conditions as described in the text, with low pressure fronts (“frontal”) in dark blue, cut-off low pressure systems (“cutoff”) in teal, and indeterminate meteorology (“misc”) in cyan. 
+      Events that may have been influenced by transported smoke plumes are shown in red (see text for details).}
     \label{fig:SummarySeasonality}
     \end{center}
   \end{figure}
   
-  The frequency of STT events above Davis is relatively constant throughout the year, with a slight increase in events during antarctic winter.
-  The slightly increased winter time frequency may be attributable to the increased frequency of sonde releases during the June to October months over Davis.
-  It could be that events are non-seasonal at Davis, or else that the sample of 45 detected events over 10 years is too small or sparse to clearly show any cycle.
-  It is possible that summer events caused by upper troposphere turbulence are balanced out by the events caused by the polar front jet stream, which is strongest during antarctic winter.
-  The polar front jet stream is a band of wind extending from the mid troposphere up to the lower stratosphere, which is generally active from winter to spring. 
-  This vortex may be directly causing or impacting many of the STTs due to the lowered tropopause altitude which occurs south of the vortex edge (around 60$^\circ$S).
+  At Davis, the frequency of STT events is relatively constant throughout the year, with a slight increase during Antarctic winter.
+  STT events associated with cut-off low pressure systems are more prevalent during winter, while STT events associated with frontal passage occur throughout the year. 
+  The polar vortex and associated lowered tropopause may be partially responsible for the STTs detected in winter.
+  We were unable to meteorologically classify most summertime events at Davis.
 
-  Figure \ref{fig:SummaryAltitudes} shows the altitudes of detected events, based on the peak (maximum) of tropospheric ozone.
-  STT event peaks most commonly occur at 6 -- 10~km above Melbourne and below 8~km at Davis but are distributed more evenly at Macquarie Island, up to 7.5 kilometres altitude.
-  Figure \ref{fig:SummaryTPDepths} shows the depths of detected events, based on the ozone peak's distance from the minimal determined tropopause.
-  The majority of event peaks occur within 3~km of the tropopause at both Melbourne and Macquarie Island, and within 2~km of the tropopause at Davis.
-  
-  For both Melbourne and Macquarie Island, the STT events which are unlikely to be fire-related occur mostly in summer and mostly during low pressure synoptic systems which can increase convection and upper tropospheric turbulence.
+  The slightly increased winter time frequency of STT events at Davis may be attributable to the increased frequency of sonde releases from June to October (see Section \ref{Section:ozonesondes}).
+  It is also possible that the sample of only 45 detected events over 10 years is too small to detect any seasonality.
+
+  Figure \ref{fig:SummaryAltitudes} shows the altitudes of detected events, based on the altitude of peak (maximum) tropospheric ozone in the ozonesonde profile.
+  STT event peaks most commonly occur at 6 -- 10~km above Melbourne and 6 -- 9~km at Davis but are distributed more evenly at Macquarie Island from ~4 -- 7.5 kilometres altitude.
+  There is no clear relationship between meteorological conditions and event altitude.
+
+  Figure \ref{fig:SummaryTPDepths} shows the distance from the tropopause of the peaks of detected events, based on the distance between the peak ozone peak associated with the detected STT event and the tropopause (using the lowest of the two tropopause definitions), as described in Section \ref{Section:ozonesondes}.
+  The majority of STT events occur within 3~km of the tropopause at both Melbourne and Macquarie Island, and within 2~km of the tropopause at Davis. 
+  Again, there is no clear relationships between meteorological conditions and event depth.
 
   \begin{figure}[!htbp]
     \begin{center}
     \includegraphics[width=0.99\columnwidth]{figures/summary_altitude.png}
-    \caption{The distribution of the ozone peak altitude for Davis, Macquarie Island, and Melbourne.
-    This shows the altitude of detected events, based on the tropospheric ozone enhancement peak.
-    Events are categorised by likely causes, with possible smoke influenced events displayed in red.}
+    \caption{The distribution of STT event altitude at Davis (top), Macquarie Island (middle), and Melbourne (bottom), determined as described in the text.
+    Events are coloured as described in Fig. \ref{fig:SummarySeasonality}.}
     \label{fig:SummaryAltitudes}
     \end{center}
   \end{figure}
@@ -371,15 +372,14 @@
   \begin{figure}[!htbp]
     \begin{center}
     \includegraphics[width=0.99\columnwidth]{figures/summary_depth.png}
-    \caption{The distance between the ozone peak and the tropopause, and the cumulative probability of these distances (blue line) for Davis, Macquarie Island, and Melbourne.
-    This shows the depth of the event into the troposphere, starting from the tropopause.
-    The events filtered out as possibly smoke plume influenced are displayed here in red.}
+    \caption{The distribution of STT event distance from the tropopause at Davis (top), Macquarie Island (middle), and Melbourne (bottom), determined as described in the text.
+    Events are coloured as described in Fig. \ref{fig:SummarySeasonality}.}
     \label{fig:SummaryTPDepths}
     \end{center}
   \end{figure}
 
 \section{Comparison with GEOS-Chem}
-  
+  TODO: up to here with Jenny Comments - Much of this section will be moved and some will go into intro.
   GEOS-Chem is a global chemical transport model \citep{Bey2001}, which includes transport, emission, deposition, chemical production and destruction of ozone and 103 other trace gases throughout the troposphere along with stratospheric chemistry, including photolysis. 
   Stratosphere-troposphere coupling is calculated using the stratospheric unified chemistry extension (UCX) \citep{Eastham2014}, which includes a further 28 trace gases.
   For comparison to ozonesonde observations, we use GEOS-Chem version 10-011 (including UCX) run from 2005-2012, following a 1-year spin-up for 2004.

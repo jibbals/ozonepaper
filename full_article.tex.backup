@@ -101,6 +101,7 @@
 \section{Data and Methods}
 
   \subsection{Ozonesonde record in the Southern Ocean}
+  \label{Section:ozonesondes}
     %(Too basic)Ozonesondes are weather balloons which measure ozone concentrations from the surface to around 35km.
     %These ozonesondes provide a high vertical resolution profile of ozone, along with temperature, pressure, and humidity.
     Ozonesondes provide a high vertical resolution profile of ozone, temperature, pressure, and humidity from the surface to 35 km.
@@ -215,11 +216,11 @@
     In their work, a tropopause fold has occurred if, starting from 5~km altitude, the ozone level exceeds 80~ppb and then within 3~km decreases by 20~ppb or more to a value less than 120~ppb.
 
   \subsection{Biomass burning influenced events}
-    
+  \label{Section:BiomassBurning}
     The STT detection algorithm described in Section \ref{Section:CharacterisationOfSTTs} assumes all mid-upper troposphere ozone perturbations above the 99th percentile are caused by stratospheric intrusions. 
     In some cases, however, these perturbations may in fact reflect ozone production in lofted smoke plumes.
     Biomass burning in southern Africa and South America has previously been shown to have a major influence on atmospheric composition in the vicinity of our measurement sites \citep{Gloudemans2006, Edwards2006}, particularly from July to December \citep{Pak2003}.
-    On occasion, Australian and Indonesian fires can also reach the mid-high southern latitudes (TODO: cite this).
+    On occasion, Australian and Indonesian fires can also reach the mid-high southern latitudes, which is seen when examining the carbon monoxide (CO) from the AIRS (Atmospheric Infrared Sounder) instrument on board the Aqua satellite \citep{AIRS3STD}.
     
     %Ozone precursors include nitrogen oxides ($NO_x = NO + NO_2$) and non methane volatile organic compounds (NMVOCs). % too basic for here..
     Large biomass burning events emit substantial quantities of ozone precursors, some of which are capable of being transported long distances and driving ozone production far from the fire source \citep{Jaffe_2012}.
@@ -230,7 +231,7 @@
     %Biomass burning influence in the Southern Hemisphere comes mostly from Southern Africa and South America, however Australian fires from the midlatitudes, and Indonesian fires can also influence the ozonesonde release sites.
     %Transported biomass burning plumes influence the southern mid-latitudes generally between July and December \citep{Pak2003}.
     
-    Possible biomass burning influence is identified using satellite observations of carbon monoxide (CO) from the AIRS (Atmospheric Infrared Sounder) instrument on board the Aqua satellite \citep{AIRS3STD}.
+    Possible biomass burning influence is identified using satellite observations of CO from the AIRS instrument.
     CO is emitted during incomplete combustion and is an effective tracer of long-range transport due to its long lifetime.
     In the Southern Hemisphere, biomass burning is the primary source of CO, making CO a good proxy for fire plumes (eg: \citet{Edwards2003,Sinha2004,Edwards2006,Mari2008}).(TODO: split citations to their most appropriate sentences)
     We use data from the AIRS (Atmospheric Infrared Sounder) instrument on board the Aqua satellite \citep{AIRS3STD}.
@@ -271,7 +272,7 @@
     The event detection was not as sensitive to the choice of Fourier bandpass scales; A widening of the allowed scales to the range 0.4-5.1 increased the detected events by 3 at Melbourne, 2 at Macquarie Island, and Davis lost two events (there are more detected events, but more being filtered out).
 
 \subsection{Classifying synoptic conditions during STT events}
-
+\label{Section:WeatherClassifications}
   An investigation of the ERA-I synoptic weather during STT events above (at 500~hPa) Melbourne, Macquarie Island, and Davis are used to subjectively classify the events based on their likely cause.
   Typically during STT occurrence, the upper troposphere is not calm, with low pressure fronts or cut-offs nearby at coincident time.
   Similar characteristics are seen over Melbourne and Macquarie Island: i.e. a prevalence of frontal and low pressure activity during STT events.
@@ -292,69 +293,74 @@
   % these IMAGE CREATED BY show_profile.py, EDITTED IN INKSCAPE and then PINTA
     \begin{center}
     \includegraphics[width=1.0\columnwidth]{figures/Melbourne20050203.png}
-    \caption{(Left) Vertical profile of ozone (black line), relative humidity (blue line), and temperature (red line) for  3 February 2005.
-    The STT ozone event is highlighted in pink.
-    The tropopause heights using both the ozone definition (black dashed line) and lapse rate definition (red dashed line) are shown.
-    (Right) Synoptic weather map at 500 hPa from the ERA-Interim reanalysis.
-    Vectors show wind direction and speed while colour indicates the geopotential height.
-    Also visible are contours of potential vorticity units with 1 PVU in purple.}
+    \caption{(Left) Vertical profile of ozone (black), relative humidity (blue), and temperature (red) measured by ozonesonde over Melbourne on 3 February 2005.
+    The detected ozone STT event is highlighted in pink.
+    Tropopause heights using both the ozone definition (black dashed line) and lapse rate definition (red dashed line) are also shown.
+    (Right) Geopotential heights at 500 hPa from the ERA-Interim reanalysis, with wind vectors overplotted.
+    Also shown are contours of potential vorticity units with 1 PVU in purple.}
     \label{fig:Melbourne20050203}
     \end{center}
   \end{figure}
   
-  Figure \ref{fig:Melbourne20100113}(left) shows the vertical ozonesonde profile recorded on the 13th January 2010 over Melbourne.
-  The tropopause heights are greater at this time and an ozone intrusion is identified centred around 200~hPa.
-  Again, anticorrelated relative humidity provides evidence that the air is stratospheric in origin.
-  Note the separation between this intrusion and the ozone tropopause (marked by the black dashed line), which indicates that the sonde passes through regular tropospheric air after hitting a stratospheric intrusion but before reaching the tropopause.
-  Figure \ref{fig:Melbourne20100113}(right) shows a trough of low pressure (a low pressure front) passing over south-eastern Australia.
-  This low pressure system crosses west to east and causes a wave of lowered tropopause height, which is often the cause of stratospheric mixing.
-  During frontal passage, stratospheric air descends and streamers of ozone-rich air break off and mix into the troposphere \citep{Sprenger2003}.
+  Figure \ref{fig:Melbourne20100113} (left) shows the vertical ozonesonde profile recorded on the 13th January 2010 over Melbourne.
+  Figure \ref{fig:Melbourne20100113} (left) shows the ozonesonde profile over Melbourne on 13 January 2010.
+  The tropopause was higher on this date (120-160 hPa).
+  Using our algorithm, we detected an ozone intrusion centred around 200~hPa.
+  As before, ozone anticorrelation with relative humidity provides further evidence that the elevated ozone was stratospheric in origin.
+  In this profile, there was clear separation between the detected intrusion (highlighted in pink) and the ozone tropopause (black dashed line), which indicates that the sonde passed through regular tropospheric air after hitting a stratospheric intrusion but before reaching the tropopause.
+  Figure \ref{fig:Melbourne20100113} (right) shows that this event was associated with a trough of low pressure (front) passing over southeastern Australia.
+  This front traveled from west to east and caused a wave of lowered tropopause height. 
+  Frontal passage is a known cause of STT as stratospheric air descends and streamers of ozone-rich air break off and mix into the troposphere \citep{Sprenger2003}.
   
   \begin{figure}[!htbp]
   % these IMAGE CREATED BY show_profile.py, EDITTED IN INKSCAPE
     \begin{center}
     \includegraphics[width=1.0\columnwidth]{figures/Melbourne20100113.png}
-    \caption{As figure \ref{fig:Melbourne20050203}, for 13 January 2010.
-     Additionally visible is a 2 PVU contour, often used to determine dynamical tropopause height, in white.}
+    \caption{Same as Figure \ref{fig:Melbourne20050203} but for 13 January 2010.
+      Also shown in this figure is the 2 PVU contour (white), often used to determine dynamical tropopause height.}
     \label{fig:Melbourne20100113}
     \end{center}
   \end{figure}
 
 \section{STT event climatologies}
-
-  Figure \ref{fig:SummarySeasonality} shows the seasonal cycles of the STT events for Melbourne, Macquarie Island, and Davis. 
-  There is an annual cycle with a summertime peak in the frequency of STT events above Melbourne and Macquarie Island.
-  This summertime peak is due to a prevalence of summer storms, with low pressure systems bringing storms and turbulence along with a lowered tropopause level \citep{Reutter2015}.
   
-  A subjective analysis of ERA-I synoptic scale wind and altitude at 500~hPa over the three sites (eg: Figure \ref{fig:Melbourne20050203}(right)) leads to the categorisation of events based on their probable climatological cause.
-  Probable causes are either low pressure fronts, low pressure cut-offs, or undetermined(misc).
-  These categories are coloured as shades of blue in plots \ref{fig:SummarySeasonality}-\ref{fig:SummaryTPDepths}.
-  This analysis suggests that low pressure cut-off systems are more prevalent in late summer at both Macquarie and Melbourne, and during winter at Davis.
+  re \ref{fig:SummarySeasonality} shows the seasonal cycles of STT events detected at Melbourne, Macquarie Island, and Davis. 
+  STT events in Figures \ref{fig:SummarySeasonality}-\ref{fig:SummaryTPDepths} are coloured based on the meteorological classification described in Section \ref{Section:WeatherClassifications}, with events classified as either low pressure fronts (“frontal”, dark blue), cut-off low pressure systems (“cutoff”, teal), or indeterminate (“misc”, cyan).
+  Events that may have been influenced by transported smoke plumes (Section \ref{Section:BiomassBurning}) are shown in red.
+  (TODO: Event count, including types)
+  
+  There is an annual cycle in the frequency of STT events  (Fig. \ref{fig:SummarySeasonality}) with a summertime peak above Melbourne and Macquarie Island.
+  This summertime peak is due to an increased prevalence of summer low-pressure storms and fronts, which increase turbulence and lower the tropopause \citep{Reutter2015}.
+  For both Melbourne and Macquarie Island, the STT events which are unlikely to be fire-related occur mostly in summer during these low pressure synoptic systems.
+  
+  TODO: up to here with Jenny's Comments
 
   \begin{figure}[!htbp]
   % these IMAGE CREATED BY non_transport_summary.py, labels edited IN INKSCAPE
     \begin{center}
     \includegraphics[width=1.0\columnwidth]{figures/summary_season.png}
-    \caption{The seasonality of STT events at Davis, Macquarie Island, and Melbourne.
-    Events are categorised by associated weather, and coloured bars from each category are stacked atop one another.
-    The events filtered out as possibly smoke plume influenced are displayed here in red.}
+    \caption{Seasonal cycle of STT events detected at Davis (top), Macquarie Island (middle), and Melbourne (bottom).
+      Events are categorised by associated meteorological conditions as described in the text, with low pressure fronts (“frontal”) in dark blue, cut-off low pressure systems (“cutoff”) in teal, and indeterminate meteorology (“misc”) in cyan. 
+      Events that may have been influenced by transported smoke plumes are shown in red (see text for details).}
     \label{fig:SummarySeasonality}
     \end{center}
   \end{figure}
   
-  The frequency of STT events above Davis is relatively constant throughout the year, with a slight increase in events during antarctic winter.
-  The slightly increased winter time frequency may be attributable to the increased frequency of sonde releases during the June to October months over Davis.
-  It could be that events are non-seasonal at Davis, or else that the sample of 45 detected events over 10 years is too small or sparse to clearly show any cycle.
-  It is possible that summer events caused by upper troposphere turbulence are balanced out by the events caused by the polar front jet stream, which is strongest during antarctic winter.
-  The polar front jet stream is a band of wind extending from the mid troposphere up to the lower stratosphere, which is generally active from winter to spring. 
-  This vortex may be directly causing or impacting many of the STTs due to the lowered tropopause altitude which occurs south of the vortex edge (around 60$^\circ$S).
+  At Davis, the frequency of STT events is relatively constant throughout the year, with a slight increase during Antarctic winter.
+  STT events associated with cut-off low pressure systems are more prevalent during winter, while STT events associated with frontal passage occur throughout the year. 
+  The polar vortex and associated lowered tropopause may be partially responsible for the STTs detected in winter.
+  We were unable to meteorologically classify most summertime events at Davis.
 
-  Figure \ref{fig:SummaryAltitudes} shows the altitudes of detected events, based on the peak (maximum) of tropospheric ozone.
-  STT event peaks most commonly occur at 6 -- 10~km above Melbourne and below 8~km at Davis but are distributed more evenly at Macquarie Island, up to 7.5 kilometres altitude.
-  Figure \ref{fig:SummaryTPDepths} shows the depths of detected events, based on the ozone peak's distance from the minimal determined tropopause.
-  The majority of event peaks occur within 3~km of the tropopause at both Melbourne and Macquarie Island, and within 2~km of the tropopause at Davis.
-  
-  For both Melbourne and Macquarie Island, the STT events which are unlikely to be fire-related occur mostly in summer and mostly during low pressure synoptic systems which can increase convection and upper tropospheric turbulence.
+  The slightly increased winter time frequency of STT events at Davis may be attributable to the increased frequency of sonde releases from June to October (see Section \ref{Section:ozonesondes}).
+  It is also possible that the sample of only 45 detected events over 10 years is too small to detect any seasonality.
+
+  Figure \ref{fig:SummaryAltitudes} shows the altitudes of detected events, based on the altitude of peak (maximum) tropospheric ozone in the ozonesonde profile.
+  STT event peaks most commonly occur at 6 -- 10~km above Melbourne and 6 -- 9~km at Davis but are distributed more evenly at Macquarie Island from ~4 -- 7.5 kilometres altitude.
+  There is no clear relationship between meteorological conditions and event altitude.
+
+  Figure \ref{fig:SummaryTPDepths} shows the distance from the tropopause of the peaks of detected events, based on the distance between the peak ozone peak associated with the detected STT event and the tropopause (using the lowest of the two tropopause definitions), as described in Section \ref{Section:ozonesondes}.
+  The majority of STT events occur within 3~km of the tropopause at both Melbourne and Macquarie Island, and within 2~km of the tropopause at Davis. 
+  Again, there is no clear relationships between meteorological conditions and event depth.
 
   \begin{figure}[!htbp]
     \begin{center}
