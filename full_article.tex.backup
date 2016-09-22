@@ -85,6 +85,10 @@
     To date, STT events have been observed in tropopause folds around both the polar front jet \citep{Vaughan1994, Beekmann1997}, and the subtropical jet \citep{Baray2000}.
     They are also observed near cut-off lows \citep{Price1993, Wirth1995}, some of the stratospheric mixing may be due to the turbulent weather which often accompanies these cut-offs.
     A high correlation has been found between lower stratospheric and tropospheric ozone concentrations \citep{Terao2008}, suggesting mixing between these two layers, with jet streams over the ocean being the major source of transport between the layers.
+    
+    Ozonesondes are useful for looking at specific locations with high resolution, and in this work they provide an estimate of both STT occurrence rates and STT ozone flux.
+    At these discrete locations, this information can be used in conjunction with regional-scale information in order to estimate large-scale impacts of STT on tropospheric ozone. Here, the 
+    GEOS-Chem chemical transport model (CTM) is used to provide the regional-scale ozone concentrations.
   
  %Move to discussion / conclusion ... \citet{Hegglin_2009} estimate that climate change will lead to increased STT of the order of 30 (121) Tg yr$^{-1}$ relative to 1965 in the Southern (Northern) Hemisphere due to an acceleration in the Brewer Dobson circulation. Tropospheric ozone is lost via chemical destruction and dry deposition, estimated to be $4700\pm700$ Tg/yr and $1000\pm200$ Tg/yr, respectively \citep{Stevenson2006}. 
 
@@ -170,6 +174,18 @@
       \end{center}
     \end{figure}
 
+  \subsection{Model description}
+    \label{Section:GEOSChemDescription}
+    GEOS-Chem is a global chemical transport model \citep{Bey2001}, which includes transport, emission, deposition, chemical production and destruction of ozone and 103 other trace gases throughout the troposphere along with stratospheric chemistry, including photolysis. 
+    Stratosphere-troposphere coupling is calculated using the stratospheric unified chemistry extension (UCX) \citep{Eastham2014}, which includes a further 28 trace gases.
+    For comparison to ozonesonde observations, we use GEOS-Chem version 10-011 (including UCX) run from 2005-2012, following a 1-year spin-up for 2004.
+    Transport is driven by assimilated meteorological fields from the Goddard Earth Observing System (GEOS-5) maintained by the Global Modeling and Assimilation Office (GMAO) at NASA.
+    Biogenic emissions of organic chemicals are determined by the Model of Emissions of Gases and Aerosols from Nature (MEGAN) version 2.1 extended by Guenther et al \citep{Guenther2012}.
+    Anthropogenic emissions are given by the Emissions Database for Global Atmospheric Research (EDGAR) version 4.2.
+  
+    Our simulation was modified from the standard v10-01 to a fix a bug in the treatment of the Total Ozone Mapping Spectrometer (TOMS) satellite data used to calculate photolysis (see \citet{TomsFix2016}).
+    The simulation uses 2$^{\circ}$ latitude by 2.5$^{\circ}$ longitude horizontal resolution, with 72 vertical levels from the surface to 0.1~hPa. 
+    
   \subsection{Characterisation of STT events and associated fluxes}
     \label{Section:CharacterisationOfSTTs}
     
@@ -270,57 +286,60 @@
     Some events, including the storm-caused event examined in figure \ref{fig:Melbourne20050203} are within one kilometer of the tropopause. 
     
     The event detection was not as sensitive to the choice of Fourier bandpass scales; A widening of the allowed scales to the range 0.4-5.1 increased the detected events by 3 at Melbourne, 2 at Macquarie Island, and Davis lost two events (there are more detected events, but more being filtered out).
+    
+    Flux estimation over the southern ocean is based on the average GEOS-Chem tropospheric vertical column of HCHO over a particular latitude range.
+    The range is from 35$^{\circ}$S to 75$^{\circ}$S, changing this latitude range by 5$^{\circ}$ in either direction at either end of the range changes the average simulated tropospheric ozone by -8 to 9\%.
 
-\subsection{Classifying synoptic conditions during STT events}
-\label{Section:WeatherClassifications}
-  An investigation of the ERA-I synoptic weather during STT events above (at 500~hPa) Melbourne, Macquarie Island, and Davis are used to subjectively classify the events based on their likely cause.
-  Typically during STT occurrence, the upper troposphere is not calm, with low pressure fronts or cut-offs nearby at coincident time.
-  Similar characteristics are seen over Melbourne and Macquarie Island: i.e. a prevalence of frontal and low pressure activity during STT events.
-  Over Davis the weather systems are harder to distinguish, and the stratospheric polar vortex may create ozone folds without other sources of upper tropospheric turbulence.
+  \subsection{Classifying synoptic conditions during STT events}
+  \label{Section:WeatherClassifications}
+    An investigation of the ERA-I synoptic weather during STT events above (at 500~hPa) Melbourne, Macquarie Island, and Davis are used to subjectively classify the events based on their likely cause.
+    Typically during STT occurrence, the upper troposphere is not calm, with low pressure fronts or cut-offs nearby at coincident time.
+    Similar characteristics are seen over Melbourne and Macquarie Island: i.e. a prevalence of frontal and low pressure activity during STT events.
+    Over Davis the weather systems are harder to distinguish, and the stratospheric polar vortex may create ozone folds without other sources of upper tropospheric turbulence.
 
-  We examine two case studies in detail to illustrate the synoptic-scale conditions in which STT events occur over Melbourne.
-  Data from the European Center for Medium-range Weather Forecasts (ECMWF) Interim Reanalysis (ERA-I) \citep{Dee2011} product are used for synoptic-scale examination of weather patterns over our three sites on dates matching detected STT events.
-  
-  Figure \ref{fig:Melbourne20050203} (left) shows the ozonesonde profile above Melbourne on 3 of February 2005.
-  The tropopause was between 400 and 500 hPa and ozone in the upper troposphere was anticorrelated with relative humidity, suggesting the ozone enhancements derived from dry stratospheric air. 
-  An ozone intrusion into the troposphere at $\sim520$~hPa was identified by our detection algorithm.
-  Figure \ref{fig:Melbourne20050203}(right) shows the concurrent synoptic weather system, a cut-off low pressure system that caused a large storm and lowered the local tropopause height for several days.
-  These systems also increase turbulence near the tropopause, which can lead to increased transport events.
-  %The wind circles around the low pressure system in a clockwise direction, typical geostrophic flows which are caused by pressure gradients and coriolis forces.
-  The flux of stratospheric ozone into the troposphere associated with this event, calculated using the method shown in section \ref{Section:CharacterisationOfSTTs}, was at least $3.1 \times 10^{11}$ molecules cm$^{-3}$ , or 8\% of the tropospheric ozone column.
+    We examine two case studies in detail to illustrate the synoptic-scale conditions in which STT events occur over Melbourne.
+    Data from the European Center for Medium-range Weather Forecasts (ECMWF) Interim Reanalysis (ERA-I) \citep{Dee2011} product are used for synoptic-scale examination of weather patterns over our three sites on dates matching detected STT events.
+    
+    Figure \ref{fig:Melbourne20050203} (left) shows the ozonesonde profile above Melbourne on 3 of February 2005.
+    The tropopause was between 400 and 500 hPa and ozone in the upper troposphere was anticorrelated with relative humidity, suggesting the ozone enhancements derived from dry stratospheric air. 
+    An ozone intrusion into the troposphere at $\sim520$~hPa was identified by our detection algorithm.
+    Figure \ref{fig:Melbourne20050203}(right) shows the concurrent synoptic weather system, a cut-off low pressure system that caused a large storm and lowered the local tropopause height for several days.
+    These systems also increase turbulence near the tropopause, which can lead to increased transport events.
+    %The wind circles around the low pressure system in a clockwise direction, typical geostrophic flows which are caused by pressure gradients and coriolis forces.
+    The flux of stratospheric ozone into the troposphere associated with this event, calculated using the method shown in section \ref{Section:CharacterisationOfSTTs}, was at least $3.1 \times 10^{11}$ molecules cm$^{-3}$ , or 8\% of the tropospheric ozone column.
 
-  \begin{figure}[!htbp]
-  % these IMAGE CREATED BY show_profile.py, EDITTED IN INKSCAPE and then PINTA
-    \begin{center}
-    \includegraphics[width=1.0\columnwidth]{figures/Melbourne20050203.png}
-    \caption{(Left) Vertical profile of ozone (black), relative humidity (blue), and temperature (red) measured by ozonesonde over Melbourne on 3 February 2005.
-    The detected ozone STT event is highlighted in pink.
-    Tropopause heights using both the ozone definition (black dashed line) and lapse rate definition (red dashed line) are also shown.
-    (Right) Geopotential heights at 500 hPa from the ERA-Interim reanalysis, with wind vectors overplotted.
-    Also shown are contours of potential vorticity units with 1 PVU in purple.}
-    \label{fig:Melbourne20050203}
-    \end{center}
-  \end{figure}
-  
-  Figure \ref{fig:Melbourne20100113} (left) shows the vertical ozonesonde profile recorded on the 13th January 2010 over Melbourne.
-  Figure \ref{fig:Melbourne20100113} (left) shows the ozonesonde profile over Melbourne on 13 January 2010.
-  The tropopause was higher on this date (120-160 hPa).
-  Using our algorithm, we detected an ozone intrusion centred around 200~hPa.
-  As before, ozone anticorrelation with relative humidity provides further evidence that the elevated ozone was stratospheric in origin.
-  In this profile, there was clear separation between the detected intrusion (highlighted in pink) and the ozone tropopause (black dashed line), which indicates that the sonde passed through regular tropospheric air after hitting a stratospheric intrusion but before reaching the tropopause.
-  Figure \ref{fig:Melbourne20100113} (right) shows that this event was associated with a trough of low pressure (front) passing over southeastern Australia.
-  This front traveled from west to east and caused a wave of lowered tropopause height. 
-  Frontal passage is a known cause of STT as stratospheric air descends and streamers of ozone-rich air break off and mix into the troposphere \citep{Sprenger2003}.
-  
-  \begin{figure}[!htbp]
-  % these IMAGE CREATED BY show_profile.py, EDITTED IN INKSCAPE
-    \begin{center}
-    \includegraphics[width=1.0\columnwidth]{figures/Melbourne20100113.png}
-    \caption{Same as Figure \ref{fig:Melbourne20050203} but for 13 January 2010.
-      Also shown in this figure is the 2 PVU contour (white), often used to determine dynamical tropopause height.}
-    \label{fig:Melbourne20100113}
-    \end{center}
-  \end{figure}
+    \begin{figure}[!htbp]
+    % these IMAGE CREATED BY show_profile.py, EDITTED IN INKSCAPE and then PINTA
+      \begin{center}
+      \includegraphics[width=1.0\columnwidth]{figures/Melbourne20050203.png}
+      \caption{(Left) Vertical profile of ozone (black), relative humidity (blue), and temperature (red) measured by ozonesonde over Melbourne on 3 February 2005.
+      The detected ozone STT event is highlighted in pink.
+      Tropopause heights using both the ozone definition (black dashed line) and lapse rate definition (red dashed line) are also shown.
+      (Right) Geopotential heights at 500 hPa from the ERA-Interim reanalysis, with wind vectors overplotted.
+      Also shown are contours of potential vorticity units with 1 PVU in purple.}
+      \label{fig:Melbourne20050203}
+      \end{center}
+    \end{figure}
+    
+    Figure \ref{fig:Melbourne20100113} (left) shows the vertical ozonesonde profile recorded on the 13th January 2010 over Melbourne.
+    Figure \ref{fig:Melbourne20100113} (left) shows the ozonesonde profile over Melbourne on 13 January 2010.
+    The tropopause was higher on this date (120-160 hPa).
+    Using our algorithm, we detected an ozone intrusion centred around 200~hPa.
+    As before, ozone anticorrelation with relative humidity provides further evidence that the elevated ozone was stratospheric in origin.
+    In this profile, there was clear separation between the detected intrusion (highlighted in pink) and the ozone tropopause (black dashed line), which indicates that the sonde passed through regular tropospheric air after hitting a stratospheric intrusion but before reaching the tropopause.
+    Figure \ref{fig:Melbourne20100113} (right) shows that this event was associated with a trough of low pressure (front) passing over southeastern Australia.
+    This front traveled from west to east and caused a wave of lowered tropopause height. 
+    Frontal passage is a known cause of STT as stratospheric air descends and streamers of ozone-rich air break off and mix into the troposphere \citep{Sprenger2003}.
+    
+    \begin{figure}[!htbp]
+    % these IMAGE CREATED BY show_profile.py, EDITTED IN INKSCAPE
+      \begin{center}
+      \includegraphics[width=1.0\columnwidth]{figures/Melbourne20100113.png}
+      \caption{Same as Figure \ref{fig:Melbourne20050203} but for 13 January 2010.
+	Also shown in this figure is the 2 PVU contour (white), often used to determine dynamical tropopause height.}
+      \label{fig:Melbourne20100113}
+      \end{center}
+    \end{figure}
 
 \section{STT event climatologies}
   
@@ -332,8 +351,6 @@
   There is an annual cycle in the frequency of STT events  (Fig. \ref{fig:SummarySeasonality}) with a summertime peak above Melbourne and Macquarie Island.
   This summertime peak is due to an increased prevalence of summer low-pressure storms and fronts, which increase turbulence and lower the tropopause \citep{Reutter2015}.
   For both Melbourne and Macquarie Island, the STT events which are unlikely to be fire-related occur mostly in summer during these low pressure synoptic systems.
-  
-  TODO: up to here with Jenny's Comments
 
   \begin{figure}[!htbp]
   % these IMAGE CREATED BY non_transport_summary.py, labels edited IN INKSCAPE
@@ -365,9 +382,8 @@
   \begin{figure}[!htbp]
     \begin{center}
     \includegraphics[width=0.99\columnwidth]{figures/summary_altitude.png}
-    \caption{The distribution of the ozone peak altitude for Davis, Macquarie Island, and Melbourne.
-    This shows the altitude of detected events, based on the tropospheric ozone enhancement peak.
-    Events are categorised by likely causes, with possible smoke influenced events displayed in red.}
+    \caption{The distribution of STT event altitude at Davis (top), Macquarie Island (middle), and Melbourne (bottom), determined as described in the text.
+    Events are coloured as described in Fig. \ref{fig:SummarySeasonality}.}
     \label{fig:SummaryAltitudes}
     \end{center}
   \end{figure}
@@ -375,37 +391,19 @@
   \begin{figure}[!htbp]
     \begin{center}
     \includegraphics[width=0.99\columnwidth]{figures/summary_depth.png}
-    \caption{The distance between the ozone peak and the tropopause, and the cumulative probability of these distances (blue line) for Davis, Macquarie Island, and Melbourne.
-    This shows the depth of the event into the troposphere, starting from the tropopause.
-    The events filtered out as possibly smoke plume influenced are displayed here in red.}
+    \caption{The distribution of STT event distance from the tropopause at Davis (top), Macquarie Island (middle), and Melbourne (bottom), determined as described in the text.
+    Events are coloured as described in Fig. \ref{fig:SummarySeasonality}.}
     \label{fig:SummaryTPDepths}
     \end{center}
   \end{figure}
 
 \section{Comparison with GEOS-Chem}
-  
-  GEOS-Chem is a global chemical transport model \citep{Bey2001}, which includes transport, emission, deposition, chemical production and destruction of ozone and 103 other trace gases throughout the troposphere along with stratospheric chemistry, including photolysis. 
-  Stratosphere-troposphere coupling is calculated using the stratospheric unified chemistry extension (UCX) \citep{Eastham2014}, which includes a further 28 trace gases.
-  For comparison to ozonesonde observations, we use GEOS-Chem version 10-011 (including UCX) run from 2005-2012, following a 1-year spin-up for 2004.
-  Transport is driven by assimilated meteorological fields from the Goddard Earth Observing System (GEOS-5) maintained by the Global Modeling and Assimilation Office (GMAO) at NASA.
-  Our simulation was modified from the standard v10-01 to a fix a bug in the treatment of the Total Ozone Mapping Spectrometer (TOMS) satellite data used to calculate photolysis (see \citet{TomsFix2016}).
-  The simulation uses 2$^{\circ}$ latitude by 2.5$^{\circ}$ longitude horizontal resolution, with 72 vertical levels from the surface to 0.1~hPa.
-  Biogenic emissions of organic chemicals are determined by the Model of Emissions of Gases and Aerosols from Nature (MEGAN) version 2.1 extended by Guenther et al \citep{Guenther2012}.
-  Anthropogenic emissions are given by the Emissions Database for Global Atmospheric Research (EDGAR) version 4.2.
-  
-  Ozonesondes are useful for looking at specific locations with high resolution, and in this work they provide an estimate of both STT occurence rates and STT ozone flux.
-  At these discrete locations, this information can be used in conjunction with global-scale information in order to quantify ozone transport over a large area.
-  GEOS-Chem is used to simulate the global ozone concentrations.
-  In order to check that the model is reasonable, some simple validation is performed.
-  Comparisons of both ozonesonde and GEOS-Chem simulated tropospheric ozone profiles and partial columns are checked, averaging seasonally for colocated data.
-  Following this, an extrapolation is performed and the stratospherically sourced ozone is estimated over the latitude range from 35$^{\circ}$S to 75$^{\circ}$S.
-  This range is used as it includes all three sites, a change of 5$^{\circ}$ in either direction at either end of the range changes the average tropospheric ozone by -8 to 9\%.
-  Examination of the GEOS-Chem output also gives us an insight as to whether the simulation can be used on its own in order to estimate STT event distribution and magnitude.
+  TODO: up to here with Jenny Comments - Much of this section will be moved and some will go into intro.
   
   \begin{figure}[!htbp]
+    % made in examine_stations.py in stations repository
     \includegraphics[width=\textwidth]{figures/StationSeries.png}
-    \caption{Tropospheric ozone column ($\Omega_{O3}$, in molecules cm$^{-2}$) at daily resolution simulated by GEOS-Chem (red dots) from January 1 2004 to December 31 2013.
-    The GEOS-Chem datapoints are respectively at 7AM, 11AM, and 11AM for Davis, Macquarie, and Melbourne.
+    \caption{Tropospheric ozone column ($\Omega_{O3}$, in molecules cm$^{-2}$) at daily resolution simulated by GEOS-Chem (red dots) from January 1 2004 to December 31 2013. For each plot, the model has been sampled in the grid square containing the site.
     Columns calculated from ozonesondes are shown as black stars, each representing one measurement. (TODO: Update once fixed model run finishes)}
     \label{fig:StationSeriesGEOSChem}
   \end{figure}
