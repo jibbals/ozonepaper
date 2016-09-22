@@ -184,7 +184,10 @@
     Anthropogenic emissions are given by the Emissions Database for Global Atmospheric Research (EDGAR) version 4.2.
   
     Our simulation was modified from the standard v10-01 to a fix a bug in the treatment of the Total Ozone Mapping Spectrometer (TOMS) satellite data used to calculate photolysis (see \citet{TomsFix2016}).
-    The simulation uses 2$^{\circ}$ latitude by 2.5$^{\circ}$ longitude horizontal resolution, with 72 vertical levels from the surface to 0.1~hPa. 
+    The simulation uses 2$^{\circ}$ latitude by 2.5$^{\circ}$ longitude horizontal resolution, with 72 vertical levels from the surface to 0.1~hPa.
+    For the three sites, a vertical profile of ozone is stored every 6 hours, based on standard UTC+0 time.
+    This means that the GEOS-Chem profiles which match ozonesonde release hours are local times of 7AM, 11AM, and 11AM for Davis, Macquarie, and Melbourne respectively.
+    
     
   \subsection{Characterisation of STT events and associated fluxes}
     \label{Section:CharacterisationOfSTTs}
@@ -398,12 +401,12 @@
   \end{figure}
 
 \section{Comparison with GEOS-Chem}
-  TODO: up to here with Jenny Comments - Much of this section will be moved and some will go into intro.
   
   \begin{figure}[!htbp]
     % made in examine_stations.py in stations repository
     \includegraphics[width=\textwidth]{figures/StationSeries.png}
-    \caption{Tropospheric ozone column ($\Omega_{O3}$, in molecules cm$^{-2}$) at daily resolution simulated by GEOS-Chem (red dots) from January 1 2004 to December 31 2013. For each plot, the model has been sampled in the grid square containing the site.
+    \caption{Tropospheric ozone column ($\Omega_{O3}$, in molecules cm$^{-2}$) at daily resolution simulated by GEOS-Chem (red dots) from January 1 2004 to December 31 2013.
+    For each plot, the model has been sampled in the grid square containing the site.
     Columns calculated from ozonesondes are shown as black stars, each representing one measurement. (TODO: Update once fixed model run finishes)}
     \label{fig:StationSeriesGEOSChem}
   \end{figure}
@@ -411,16 +414,18 @@
   Figure \ref{fig:StationSeriesGEOSChem} compares the time series of tropospheric ozone column ($\Omega_{O_3}$) in molecules cm$^{-2}$ simulated by GEOS-Chem (red dots) to the measured tropospheric ozone columns (black stars).
   Sonde tropospheric columns are calculated using the GPH and ozone partial pressure recorded by the ozonesondes, using TODO: equation here.
   The seasonal cycles are well correlated, with similar timing and magnitude (paired r$^2$ values of TODO: run script when model run finished). 
-  The maximum ozone column at Melbourne occurs in summer, with a minimum in winter. 
-  Macquarie and Davis show the opposite seasonal cycle. 
-  The model shows more spread than the ozonesondes, although there are daily simulated values for the model while only weekly or less for the ozonesondes.
+  In both observations and model, the maximum ozone column at Melbourne occurs in summer, with a minimum in winter, while Macquarie and Davis show the opposite seasonality.
+  The model shows more day-to-day variability than the ozonesondes, although there are daily simulated values for the model while only weekly or less for the ozonesondes. (TODO: Verify this and update station series plot: overplot in white w/ red outline or something) the model points that correspond to only the days where we have observations )
+  
+  TODO: up to here with Jenny Comments - Much of this section will be moved and some will go into intro.
   
   \begin{figure}[!htbp]
+    % Created in examine_stations.py
     \includegraphics[width=\textwidth]{figures/seasonalprofiles00.png}
-    \caption{Tropospheric ozone (ppb) over Davis, Macquarie, and Melbourne, seasonally averaged.
-    GEOS-Chem simulated data averaged over January 2005 until December 2013 are shown with red lines, with dashed red lines showing one standard deviation.
-    Ozonesonde measurements are shown with black lines, and have seasonally coloured shaded areas over the mean plus or minus one standard deviation.
-    Horizontal dotted line shows the mean tropopause heights, again red for the GEOS-Chem simulation and black for ozonesondes.
+    \caption{Observed and simulated tropospheric ozone profiles over Davis, Macquarie, and Melbourne, averaged seasonally.
+    Model means (2005-2013 average) is shown as red solid lines, with red dashed lines showing the 10th and 90th percentile.
+    Ozonesonde means (over each season, for all years) are shown as black solid lines, with coloured shaded areas showing the 10th and 90th percentile.
+    The horizontal dotted line shows the mean tropopause heights from the model (red) and the observations (black).
     TODO: Update once fixed model run finishes.}
     \label{fig:GEOSChemSeasonalProfiles}
   \end{figure}

@@ -405,35 +405,37 @@
   \begin{figure}[!htbp]
     % made in examine_stations.py in stations repository
     \includegraphics[width=\textwidth]{figures/StationSeries.png}
-    \caption{Tropospheric ozone column ($\Omega_{O3}$, in molecules cm$^{-2}$) at daily resolution simulated by GEOS-Chem (red dots) from January 1 2004 to December 31 2013.
+    \caption{Tropospheric ozone column ($\Omega_{O3}$, in molecules cm$^{-2}$) at daily resolution simulated by GEOS-Chem (grey dots) from January 1 2004 to April 31 2013.
+    Simulated points which are on the same day as an ozonesonde are displayed in red.
     For each plot, the model has been sampled in the grid square containing the site.
     Columns calculated from ozonesondes are shown as black stars, each representing one measurement. (TODO: Update once fixed model run finishes)}
     \label{fig:StationSeriesGEOSChem}
   \end{figure}
   
   Figure \ref{fig:StationSeriesGEOSChem} compares the time series of tropospheric ozone column ($\Omega_{O_3}$) in molecules cm$^{-2}$ simulated by GEOS-Chem (red dots) to the measured tropospheric ozone columns (black stars).
-  Sonde tropospheric columns are calculated using the GPH and ozone partial pressure recorded by the ozonesondes, using TODO: equation here.
+  Sonde tropospheric columns are calculated using the GPH and ozone partial pressure recorded by the ozonesondes, using (TODO: equation here.)
   The seasonal cycles are well correlated, with similar timing and magnitude (paired r$^2$ values of TODO: run script when model run finished). 
   In both observations and model, the maximum ozone column at Melbourne occurs in summer, with a minimum in winter, while Macquarie and Davis show the opposite seasonality.
-  The model shows more day-to-day variability than the ozonesondes, although there are daily simulated values for the model while only weekly or less for the ozonesondes. (TODO: Verify this and update station series plot: overplot in white w/ red outline or something) the model points that correspond to only the days where we have observations )
-  
-  TODO: up to here with Jenny Comments - Much of this section will be moved and some will go into intro.
+  The model shows more day-to-day variability than the ozonesondes, although there are daily simulated values for the model while only weekly or less for the ozonesondes. (TODO: Verify this)
   
   \begin{figure}[!htbp]
+    % Created in examine_stations.py
     \includegraphics[width=\textwidth]{figures/seasonalprofiles00.png}
-    \caption{Tropospheric ozone (ppb) over Davis, Macquarie, and Melbourne, seasonally averaged.
-    GEOS-Chem simulated data averaged over January 2005 until December 2013 are shown with red lines, with dashed red lines showing one standard deviation.
-    Ozonesonde measurements are shown with black lines, and have seasonally coloured shaded areas over the mean plus or minus one standard deviation.
-    Horizontal dotted line shows the mean tropopause heights, again red for the GEOS-Chem simulation and black for ozonesondes.
+    \caption{Observed and simulated tropospheric ozone profiles over Davis, Macquarie, and Melbourne, averaged seasonally.
+    Model means (2005-2013 average) is shown as red solid lines, with red dashed lines showing the 10th and 90th percentile.
+    Ozonesonde means (over each season, for all years) are shown as black solid lines, with coloured shaded areas showing the 10th and 90th percentile.
+    The horizontal dotted line shows the mean tropopause heights from the model (red) and the observations (black).
     TODO: Update once fixed model run finishes.}
     \label{fig:GEOSChemSeasonalProfiles}
   \end{figure}
   
-  Figure \ref{fig:GEOSChemSeasonalProfiles} shows the measured and simulated seasonal mean ozone profile at all sites.
-  The model generally underestimates ozone at low altitudes (up to 6~km) at both Davis and Macquarie, although this is less pronounced during summer.
-  Over Melbourne an opposite bias is seen, where the model shows increased ozone levels from around 4~km up to the tropopause.
-  Also notable is the lower tropopause height exhibited by the model, which on average is lower by $\sim$ 1~km (TODO: mean bias, updated when model finishes).
-  The effect of pollution and mainland influence can be seen over Melbourne, mostly during the summer months (DJF), as the lower altitudes have increased ozone mean as well as more variance
+  Figure \ref{fig:GEOSChemSeasonalProfiles} shows the observed and simulated ozone profiles at all sites, averaged seasonally.
+  The model generally underestimates ozone at low altitudes (up to 6~km) at both Davis and Macquarie, although this bias is less pronounced during summer.
+  Over Melbourne, ozone in the lower troposphere is well represented, but the model overestimates ozone from around 4~km to the tropopause.
+  Also notable is the lower tropopause height simulated by the model, which on average is $\sim$ 1~km lower than observed (TODO: mean bias, updated when model finishes).
+  The effect of local pollution can be seen over Melbourne, mostly during the austral summer months (DJF), as the increased mean mixing ratios and enhanced variance near the surface.
+  
+  TODO: up to here with Jenny Comments
   
   Although GEOS-Chem reasonably matches the ozonesonde tropospheric ozone column, it does not have the resolution required to capture STTs.
   Figure \ref{fig:event_profile_comparison} shows the best (left) and worst (right) comparisons of ozone profiles up to 14~km between the ozonesondes and GEOS-Chem.
