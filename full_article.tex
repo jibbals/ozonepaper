@@ -185,7 +185,8 @@
   
     Our simulation was modified from the standard v10-01 to a fix a bug in the treatment of the Total Ozone Mapping Spectrometer (TOMS) satellite data used to calculate photolysis (see \citet{TomsFix2016}).
     The simulation uses 2$^{\circ}$ latitude by 2.5$^{\circ}$ longitude horizontal resolution, with 72 vertical levels from the surface to 0.1~hPa.
-    For the three sites, a vertical profile of ozone is stored every 6 hours, based on standard UTC+0 time.
+    The profile stored at each site is the average within the grid boxes which contain the site.
+    For each site, a vertical profile of ozone is stored every 6 hours, based on standard UTC+0 time.
     This means that the GEOS-Chem profiles which match ozonesonde release hours are local times of 7AM, 11AM, and 11AM for Davis, Macquarie, and Melbourne respectively.
     
     
@@ -435,59 +436,76 @@
   Also notable is the lower tropopause height simulated by the model, which on average is $\sim$ 1~km lower than observed (TODO: mean bias, updated when model finishes).
   The effect of local pollution can be seen over Melbourne, mostly during the austral summer months (DJF), as the increased mean mixing ratios and enhanced variance near the surface.
   
-  TODO: up to here with Jenny Comments
-  
   Although GEOS-Chem reasonably matches the ozonesonde tropospheric ozone column, it does not have the resolution required to capture STTs.
-  Figure \ref{fig:event_profile_comparison} shows the best (left) and worst (right) comparisons of ozone profiles up to 14~km between the ozonesondes and GEOS-Chem.
-  The model output is shown in red, and is the average over 2$^{\circ}$ latitude by 2.5$^{\circ}$ longitude which contain the respective sonde release site.
+  Figure \ref{fig:event_profile_comparison} compares modeled (red) and observed (black) ozone profiles on three example days when STT events were detected using the ozonesondes. 
+  The plot shows the profile with the closest (qualitative) match between model and observations; from left to right the profiles are from Davis yyyymmdd, Macquarie Island yyyymmdd, and Melbourne yyyymmdd. (TODO: update this plot)
   The vertical resolution from GEOS-Chem is too low to allow detection of STTs, with roughly 30 vertical levels up to the tropopause, while sondes have upwards of 100.
   
   \begin{figure}[!htbp]
     \includegraphics[width=\textwidth]{figures/event_profile_comparison.png}
-    \caption{Ozonesonde profiles (black) against GEOS-Chem profiles (red) for three different dates, one over each site.
-    The dates were picked based on subjective visual analysis as follows: left is the best match - May 19th 2004 over Macquarie, middle is an average case - January 15th, 2007 over Davis, and right is the worst match - February 3rd 2005 over Melbourne.}
+    \caption{Example comparisons of ozone profiles from ozonesondes (black) and GEOS-Chem (red) from 		  three different dates during which STT events were detected from the measurements.
+      The dates were picked based on subjective visual analysis. 
+      The examples show the best match between model and observations for: (left) 19 May 2004 over Macquarie Island;  (middle) 15 January 2007 over Davis, and (right) 3 February 2005 over Melbourne.
+      (TODO: update figure and caption dates, use best matches, show model pressure levels with Xs.}
     \label{fig:event_profile_comparison}
   \end{figure}
   
-\section{Stratosphere to troposphere ozone flux from STT events}
+\section{Stratosphere-to-troposphere ozone flux from STT events}
   
-  Based on the integrated ozone amount associated with each STT event (see section \ref{Section:CharacterisationOfSTTs}), we find a lower bound for the STT ozone flux over each of our three sites (fire influence excluded).
-  This is a conservative lower bound as the algorithm ignores secondary ozone peaks which may also be transported down from the stratosphere, as well as ignoring potential ozone dispersion from the ozone peak.
-  Figure \ref{fig:fluxsummary} shows the mean fraction of total tropospheric column ozone attributed to stratospheric ozone intrusions at each site, averaged over days when an STT event occurs.
-  The mean fraction of tropospheric ozone attributed to STT events is 2--4\%, on individual days this value can exceed 10\% at Macquarie and Melbourne.
-  Figure \ref{fig:fluxsummaryabs} shows the data in absolute terms, and indicates that the mean STT event impact is around $1$ to $2 \times 10^{16}$~molecules/cm$^2$.
-  Our flux estimates are relatively insensitive to our biomass burning filter; including smoke-influenced days changes the mean flux by less than 0.25\% (5\% relative change).
+  We quantify the mean stratosphere-to-troposphere ozone flux due to STTs at each site based on the integrated ozone amount associated with each STT event (see section \ref{Section:CharacterisationOfSTTs}).
+  Events that may have been influenced by transported biomass burning are excluded from this calculation.
+  This estimate is a conservative lower bound as our algorithm ignores secondary ozone peaks which may also be transported down from the stratosphere and also potential ozone enhancement due to the ozone intrusion which is outside the event positive perturbation range around the detected ozone peak.
+  
+  Figure \ref{fig:fluxsummary} shows the mean fraction of total tropospheric column ozone calculated from ozonesonde profiles at each site attributed to stratospheric ozone intrusions, averaged over days when an STT event occurred.
+  At all sites, the mean fraction of tropospheric ozone attributed to STT events is 2--4\%. On individual days, this value can exceed 10\% at Macquarie and Melbourne.
+  Figure \ref{fig:fluxsummaryabs} shows the STT-induced ozone flux in absolute terms.
+  We find that the mean ozone flux associated with STT events is $1$ to $2 \times 10^{16}$~molecules/cm$^2$.
+  Our flux estimates are relatively insensitive to our biomass burning filter: including smoke-influenced days changed the mean flux by less than 5\% relative to the absolute absolute values.
   
   \begin{figure}[!htbp]
-    \begin{center}
-    % Flux plot from 
-    \includegraphics[width=0.8\columnwidth]{figures/flux_relative.png}
-    \caption{Fraction of total tropospheric column ozone attributed to stratospheric air intrusions during STT events.}
-    \label{fig:fluxsummary}
-    \end{center}
-  \end{figure}
-  \begin{figure}[!htbp]
+  % Flux box and whisker plots from flux_summary.pro in OzoneWork(HPC) and edited in Inkscape
     \begin{center}
     \includegraphics[width=0.8\columnwidth]{figures/flux_absolute.png}
-    \caption{Tropospheric ozone attributed to stratospheric air intrusions during STT events.}
+    \caption{Tropospheric ozone attributed to STT, derived from ozonesonde measurements as described in the text.
+      Box shows the interquartile range (IQR), with the centre line being the median, whiskers show the mininimum and maximum, circles show values which lie more than 1.5 IQR from the median.}
     \label{fig:fluxsummaryabs}
     \end{center}
   \end{figure}
+  \begin{figure}[!htbp]
+    \begin{center}
+    \includegraphics[width=0.8\columnwidth]{figures/flux_relative.png}
+    \caption{Fraction of total tropospheric column ozone attributed to STT, derived from ozonesonde measurements as described in the text.}
+    \label{fig:fluxsummary}
+    \end{center}
+  \end{figure}
   
-  Extrapolating out over the Southern Ocean using our estimated enhanced tropospheric ozone, we can create a rough estimate of the STT effect on tropospheric ozone in this region.
-  This is be done by multiplying the monthly likelihoods of STTs with the monthly tropospheric column ozone amounts multiplied by our mean flux fraction.
-  Taking the monthly likelihood from our ozonesonde events count per sondes released during each month, and southern latitude tropospheric column ozone amount from GEOS-Chem, the total amount of ozone from STT events over the southern ocean is at least (TODO:update once fixed model is finished) $2.2\times10^{16}$ molecules cm$^{-2}$ yr$^{-1}$, TODO: this is around X:TG/yr ozone.
-  Figure \ref{fig:SOExtrapolation} shows the seasonal STT contribution calculated this way, with `l' and `f' being the STT likelihood and fraction respectively.
+  We use simulated tropospheric ozone columns from GEOS-Chem to extrapolate the sonde-based estimates to the entire Southern Ocean region. 
+  To do so, we multiply the monthly likelihoods of STTs (fraction of sonde releases for which an STT event was detected, per month, `l') by the monthly mean tropospheric ozone column over the Southern Ocean (from the GEOS-Chem multi-year mean, $\Omega_{SO_{O_3}}$) and by the monthly mean fraction of the ozone column attributed to STT (`f') (as in Fig. \ref{fig:fluxsummary}, but separated by month).
+  The monthly values of each term in this equation are shown in Figure \ref{fig:SOExtrapolation} (lower panel).
+  The equation can be written simply: Flux$= \Omega_{SO_{O_3}} \times f \times l$.
+  
+  Figure \ref{fig:SOExtrapolation} shows the extrapolated monthly mean ozone flux from STT events over the Southern Ocean.
+  We find that STT events may be responsible for at least (TODO:update once fixed model is finished) $2.2\times10^{16}$ molecules cm$^{-2}$ yr$^{-1}$, of the tropospheric ozone over the Southern Ocean, TODO: this is around X:TG/yr ozone.
     
   \begin{figure}[!htbp]
+    % Plot from examine_stations.py in stations repo
     \includegraphics[width=\textwidth]{figures/SO_extrapolation.png}
-    \caption{Top panel shows the estimated STT contribution to tropospheric ozone VC. Bottom panel shows the three factors multiplied together in order to produce the estimation. Units for `l' and `f' are on the right, while units for ozone VC amounts are on the left.}
+    \caption{(Top) Estimated contribution of STT to tropospheric ozone columns over the Southern Ocean.
+      (Bottom) The three quantities used to calculate (as per the text) the flux estimates shown in the top panel.
+      The tropospheric ozone column (left axis) is from GEOS-Chem, while the STT fraction and likelihoods (right axis) are from the ozonesonde measurements.
+      The STT fraction is multiplied by 3 to show the seasonality.}
     \label{fig:SOExtrapolation}
   \end{figure}
   
-  Our estimate is ( todo: greater/smaller/completely different) to other estimates of southern hemispheric ozone transport. 
-  \citet{Olsen2003} use PV and winds from GEOS along with ozone measurements from TOMS to estimate that around 210~TG yr$^{-1}$ of ozone flux occurs in 2000 between 30$^{\circ}$S and 60$^{\circ}$S.
-  Their estimates show a peak in flux from winter to early spring (JJAS), which is the same months when our GEOS-Chem simulation shows the highest tropospheric $\Omega_{O3}$.
+  Our estimate is ( todo: greater/smaller/completely different) to other estimates of southern hemisphere STT flux. 
+  \citet{Olsen2003} use PV and winds from the GEOS reanalysis combined with ozone measurements from the TOMS satellite to estimate that around 210~TG yr$^{-1}$ of ozone flux occurs in 2000 between 30$^{\circ}$S and 60$^{\circ}$S.
+  Their estimates show peak ozone flux from winter to early spring (JJAS). 
+  At this time of year, we find from the GEOS-Chem simulation the highest overall tropospheric $\Omega_{O3}$, but a relatively low overall STT flux.
+  Instead, our results suggest that the STT flux is largest in austral summer (DJFM), primarily due to an increased frequency of STT detections during these months.
+  It is worth noting that the 30$^{\circ}$S to 60$^{\circ}$S latitudes describe the Ferrel cell, while our region of analysis includes some of the Polar cell which may affect comparisons.
+  
+  TODO: up to here with Jenny Comments
+  
   Global STT flux estimated from an ensemble of models shows global STT flux at around 550~Tg yr$^{-1}$ \citep{Stevenson2006}.
   Global net flux (transport from the stratosphere to the troposphere minus opposite transport) is estimated to be 75~Tg yr$^{-1}$ \citep{Sprenger2003}.
   
