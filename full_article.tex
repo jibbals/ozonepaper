@@ -50,7 +50,7 @@
   We use the GEOS-Chem model to understand out point-source ozonesonde results in a 3-dimensional context.
   The GEOS-Chem model run with active stratospheric chemistry is too coarsely resolved in the vertical dimension to determine STTs.
   Simulated seasonal cycles of tropospheric ozone are well matched at all three sites although vertical profile averages have some bias in the troposphere compared with ozonesondes.
-  A conservative estimate of yearly tropospheric ozone flux due to STTs is calculated using the simulated tropospheric ozone column between 35$^\circ$S and  75$^\circ$S of $2.2\times10^{16}$ molecules cm$^{-2}$ yr$^{-1}$ (TODO: update number once model finishes).
+  A conservative estimate of yearly tropospheric ozone flux due to STTs is calculated using the simulated tropospheric ozone column between 35$^\circ$S and  75$^\circ$S of $3.2\times10^{16}$ molecules cm$^{-2}$ yr$^{-1}$.
   
 \end{abstract}%
 
@@ -409,7 +409,7 @@
     \caption{Tropospheric ozone column ($\Omega_{O3}$, in molecules cm$^{-2}$) at daily resolution simulated by GEOS-Chem (grey dots) from January 1 2004 to April 31 2013.
     Simulated points which are on the same day as an ozonesonde are displayed in red.
     For each plot, the model has been sampled in the grid square containing the site.
-    Columns calculated from ozonesondes are shown as black stars, each representing one measurement. (TODO: Update once fixed model run finishes)}
+    Columns calculated from ozonesondes are shown as black stars, each representing one measurement.}
     \label{fig:StationSeriesGEOSChem}
   \end{figure}
   
@@ -425,15 +425,14 @@
     \caption{Observed and simulated tropospheric ozone profiles over Davis, Macquarie, and Melbourne, averaged seasonally.
     Model means (2005-2013 average) is shown as red solid lines, with red dashed lines showing the 10th and 90th percentile.
     Ozonesonde means (over each season, for all years) are shown as black solid lines, with coloured shaded areas showing the 10th and 90th percentile.
-    The horizontal dotted line shows the mean tropopause heights from the model (red) and the observations (black).
-    TODO: Update once fixed model run finishes.}
+    The horizontal dotted line shows the mean tropopause heights from the model (red) and the observations (black).}
     \label{fig:GEOSChemSeasonalProfiles}
   \end{figure}
   
   Figure \ref{fig:GEOSChemSeasonalProfiles} shows the observed and simulated ozone profiles at all sites, averaged seasonally.
   The model generally underestimates ozone at low altitudes (up to 6~km) at both Davis and Macquarie, although this bias is less pronounced during summer.
   Over Melbourne, ozone in the lower troposphere is well represented, but the model overestimates ozone from around 4~km to the tropopause.
-  Also notable is the lower tropopause height simulated by the model, which on average is $\sim$ 1~km lower than observed (TODO: mean bias, updated when model finishes).
+  Also shown is the tropopause height simulated by the model (horizontal dashed red line), the mean of which is always higher than the observed average, although this difference is statistically insignificant.
   The effect of local pollution can be seen over Melbourne, mostly during the austral summer months (DJF), as the increased mean mixing ratios and enhanced variance near the surface.
   
   Although GEOS-Chem reasonably matches the ozonesonde tropospheric ozone column, it does not have the resolution required to capture STTs.
@@ -485,7 +484,7 @@
   The equation can be written simply: Flux$= \Omega_{SO_{O_3}} \times f \times l$.
   
   Figure \ref{fig:SOExtrapolation} shows the extrapolated monthly mean ozone flux from STT events over the Southern Ocean.
-  We find that STT events may be responsible for at least (TODO:update once fixed model is finished) $2.2\times10^{16}$ molecules cm$^{-2}$ yr$^{-1}$, of the tropospheric ozone over the Southern Ocean, TODO: this is around X:TG/yr ozone.
+  We find that STT events may be responsible for at least $3.2 \times10^{16}$ molecules cm$^{-2}$ yr$^{-1}$, of the tropospheric ozone over the Southern Ocean, TODO: this is around X:TG/yr ozone.
     
   \begin{figure}[!htbp]
     % Plot from examine_stations.py in stations repo
@@ -528,7 +527,7 @@
   
   Integration of the ozone enhancement along the altitude of the ozone profile allows a rough estimate of stratospheric transport for each event.
   Events typically cause a 3\% enhancement of the tropospheric ozone column.
-  This is around $2 \times 10^{15}$ molecules cm$^{-2}$ (TODO: Update when model run finishes) ozone enhancement over the southern high latitudes caused by STTs.
+  Within a year this ranges from $1$ to $6 \times 10^{15}$ molecules cm$^{-2}$ ozone enhancement over the southern high latitudes caused by STTs.
   
   GEOS-Chem performs fairly well when compared to ozonesondes at our three sites, with vertical profile averages and seasonal cycles of tropospheric ozone conforming to within $\sim 10$\% (TODO: update when model finishes) of the data, even though the model is looking at the average over 2$^{\circ}$ latitude by 2.5$^{\circ}$ longitude grid boxes.
   
