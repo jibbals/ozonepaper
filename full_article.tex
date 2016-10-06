@@ -65,7 +65,7 @@
  
     Stratosphere-to-troposphere transport (STT) primarily impacts the ozone budget in the upper troposphere but can also increase regional surface ozone levels above the legal thresholds set by air quality standards \citep{Danielson1968, Lefohn2011, Langford2012, Zhang2014}.
     A review of two photochemical models by \citet{Stohl2003} concluded that between 25-50\% of tropospheric ozone column can be attributed to SST events, although this mostly affects the upper troposphere.
-    A lower estimate was derived from the Atmospheric Chemistry and Climate Model Intercomparison Project (ACCMIP), \citet{Stevenson2006} found STT was responsible for only $\sim$ 10\% (equivalent to $550\pm170$ Tg/yr), with the remainder produced photochemically.
+    A lower estimate was derived from the Atmospheric Chemistry and Climate Model Intercomparison Project (ACCMIP), \citet{Stevenson2006} found STT was responsible for only $\sim$ 10\% (equivalent to $550\pm170$ Tg yr$^{-1}$), with the remainder produced photochemically.
     The wide range in model estimates exists in part because models are challenged to correctly represent STT.
     Observation-based process studies are therefore key in determining the relative frequency of SST to the troposphere, with models then able to use this to quantify STT impact over large regions.
     
@@ -90,7 +90,7 @@
     At these discrete locations, this information can be used in conjunction with regional-scale information in order to estimate large-scale impacts of STT on tropospheric ozone. Here, the 
     GEOS-Chem chemical transport model (CTM) is used to provide the regional-scale ozone concentrations.
   
- %Move to discussion / conclusion ... \citet{Hegglin_2009} estimate that climate change will lead to increased STT of the order of 30 (121) Tg yr$^{-1}$ relative to 1965 in the Southern (Northern) Hemisphere due to an acceleration in the Brewer Dobson circulation. Tropospheric ozone is lost via chemical destruction and dry deposition, estimated to be $4700\pm700$ Tg/yr and $1000\pm200$ Tg/yr, respectively \citep{Stevenson2006}. 
+ %Move to discussion / conclusion ... \citet{Hegglin_2009} estimate that climate change will lead to increased STT of the order of 30 (121) Tg yr$^{-1}$ relative to 1965 in the Southern (Northern) Hemisphere due to an acceleration in the Brewer Dobson circulation. Tropospheric ozone is lost via chemical destruction and dry deposition, estimated to be $4700\pm700$ Tg yr$^{-1}$ and $1000\pm200$ Tg yr$^{-1}$, respectively \citep{Stevenson2006}. 
 
     %Hegglin, M. I., and T. G. Shepherd (2009), Large climate-induced changes in ultraviolet index and stratosphere-to-troposphere ozone flux, Nature Geosci, 2(10), 687–\selectlanguage{english}691, doi:10.1038/NGEO604.
 
@@ -457,7 +457,7 @@
   Figure \ref{fig:fluxsummary} shows the mean fraction of total tropospheric column ozone calculated from ozonesonde profiles at each site attributed to stratospheric ozone intrusions, averaged over days when an STT event occurred.
   At all sites, the mean fraction of tropospheric ozone attributed to STT events is 2--4\%. On individual days, this value can exceed 10\% at Macquarie and Melbourne.
   Figure \ref{fig:fluxsummaryabs} shows the STT-induced ozone flux in absolute terms.
-  We find that the mean ozone flux associated with STT events is $1$ to $2 \times 10^{16}$~molecules/cm$^2$.
+  We find that the mean ozone flux associated with STT events is $1$ to $2 \times 10^{16}$~molecules cm$^{-2}$.
   Our flux estimates are relatively insensitive to our biomass burning filter: including smoke-influenced days changed the mean flux by less than 5\% relative to the absolute absolute values.
   
   \begin{figure}[!htbp]
@@ -497,29 +497,30 @@
   \end{figure}
   
   Our estimate is far less than other estimates of STT flux, due to our conservative estimate of flux within each event, as well as filtering out events which are too close to the tropopause.
+  Global STT flux estimated from an ensemble of models suggests values around 550~Tg yr$^{-1}$ \citep{Stevenson2006}.
+  Global net downward STT flux is estimated to be 75~Tg yr$^{-1}$ \citep{Sprenger2003}.
+  Our estimate of 1.82~Tg is $\sim$2.4\% of this value, which is less than we expect.
+  This method of flux estimation could be improved if we could account for background ozone enhancement and mixing due to events.
+  This highlights one of the difficulties with temporally sparse ozonesonde data.
+  Our flux calculation only looks at a particular type of ozone event and is unsuitable for comparison with total or net STT flux.
+  
+  
   \citet{Olsen2003} use PV and winds from the GEOS reanalysis combined with ozone measurements from the TOMS satellite to estimate that around 210~TG yr$^{-1}$ of ozone flux occurs in 2000 between 30$^{\circ}$S and 60$^{\circ}$S.
   Their estimates show peak ozone flux from winter to early spring (JJAS). 
   At this time of year, we find from the GEOS-Chem simulation the highest overall tropospheric $\Omega_{O3}$, but a relatively low overall STT flux.
-  Instead, our results suggest that the STT flux is largest in austral summer (DJFM), primarily due to an increased frequency of STT detections during these months.
+  Our results suggest that the STT flux (due to tropopause fold style events) is largest in austral summer (DJFM), primarily due to an increased frequency of STT detections during these months.
   Some legitimate STT events may have been removed due to coincident smoke plumes, which could affect our STT event frequency during winter.
-  It is worth noting that the 30$^{\circ}$S to 60$^{\circ}$S latitudes describe the Ferrel cell, while our region of analysis includes some of the Polar cell.
-  
-  TODO: up to here with Jenny Comments
-  
-  Global STT flux estimated from an ensemble of models suggests values around 550~Tg yr$^{-1}$ \citep{Stevenson2006}.
-  Our estimate of 1.82 is $\sim$0.32~\% of this value, .
-  The net flux is also important, although the algorithm used here only examines flux in the downward direction.
-  Global net flux (transport from the stratosphere to the troposphere minus opposite transport) is estimated to be 75~Tg yr$^{-1}$ \citep{Sprenger2003}.
+  It is worth noting that the 30$^{\circ}$S to 60$^{\circ}$S latitudes describe the Ferrel cell, while our region of analysis also includes some of the Polar cell.
   
   Considering the individual event contributions, \citet{Terao2008} estimate much higher STT impacts; where 30--40\% of the tropospheric column is due to STT. 
-  Although this figure is based on the Northern Hemisphere during the seasonal STT peak.
-  This shows the order of difference between STT flux at various latitudes
-  
+  Although this figure is based on the Northern Hemisphere, if we assume that STT flux due to an event is actually 35\% (instead of using our estimated influence) our estimate increases by roughly a factor of 11: to $\sim$21.38~Tg yr$^{-1}$
+  This would suggest that tropopause fold ozone transport events over the southern ocean account $\sim$28.5\% of global net STT flux.
   
 \section{Conclusions}
   
   Ozonesonde data in the Southern Hemisphere provides a satellite-independant quantification of STT ozone transport.
   The frequency and amount of ozone descending from the stratosphere into the troposphere can be estimated from the long time series of tropospheric ozone profiles.
+  Further work needs to be done to quantify STT flux using solely ozonesonde data, more frequent sonde releases would make this easier.
   Using almost ten years of ozonesonde profiles over the southern high latitudes, a clear summer peak is seen for STT occurences at both 38$^{\circ}$S and 55$^{\circ}$S, although not at 69$^{\circ}$S.
   
   We use a Fourier bandpass filter to determine STT ozone transport events.

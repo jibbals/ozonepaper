@@ -146,10 +146,10 @@
     The tropopause is higher on days with an STT event at all during winter and sprint at Davis.
 
     \begin{figure}[!htbp] \begin{center}
+    % figure produced in seasonal_tropopause in Examine_stations.py
       \includegraphics[width=0.8\columnwidth]{figures/tpheights}
-      \caption{Multi-year monthly mean tropopause altitude (minimum of lapse rate and ozone defined tropopause) determined from ozonesondes measurements at Melbourne (2004-2013), Macquarie (2004-2013) and Davis (2006-2013) (solid lines).
-      Dashed lines show the monthly mean tropopause altitude for the subset of dates when STT events occurred. 
-      (TODO: vertical shaded 90th percentiles, change height lable to altitude)
+      \caption{Multi-year monthly median tropopause altitude (minimum of lapse rate and ozone defined tropopause) determined from ozonesondes measurements at Melbourne (2004-2013), Macquarie (2004-2013) and Davis (2006-2013) (solid lines).
+      Vertical shading shows the 10th to the 90th percentile of tropopauses for each site.
       }
       \label{fig:seasonaltpheights}
     \end{center} \end{figure}
@@ -497,19 +497,17 @@
   \end{figure}
   
   Our estimate is far less than other estimates of STT flux, due to our conservative estimate of flux within each event, as well as filtering out events which are too close to the tropopause.
+  Global STT flux estimated from an ensemble of models suggests values around 550~Tg yr$^{-1}$ \citep{Stevenson2006}.
+  Global net STT flux (transport from the stratosphere to the troposphere minus opposite transport) is estimated to be 75~Tg yr$^{-1}$ \citep{Sprenger2003}.
+  Our estimate of 1.82~Tg is $\sim$2.32\% of this value, .
+  Our flux calculation only looks at a particular type of ozone event and is unsuitable for comparison with total or net STT flux.
+  
   \citet{Olsen2003} use PV and winds from the GEOS reanalysis combined with ozone measurements from the TOMS satellite to estimate that around 210~TG yr$^{-1}$ of ozone flux occurs in 2000 between 30$^{\circ}$S and 60$^{\circ}$S.
   Their estimates show peak ozone flux from winter to early spring (JJAS). 
   At this time of year, we find from the GEOS-Chem simulation the highest overall tropospheric $\Omega_{O3}$, but a relatively low overall STT flux.
   Instead, our results suggest that the STT flux is largest in austral summer (DJFM), primarily due to an increased frequency of STT detections during these months.
   Some legitimate STT events may have been removed due to coincident smoke plumes, which could affect our STT event frequency during winter.
   It is worth noting that the 30$^{\circ}$S to 60$^{\circ}$S latitudes describe the Ferrel cell, while our region of analysis includes some of the Polar cell.
-  
-  TODO: up to here with Jenny Comments
-  
-  Global STT flux estimated from an ensemble of models suggests values around 550~Tg yr$^{-1}$ \citep{Stevenson2006}.
-  Our estimate of 1.82 is $\sim$0.32~\% of this value, .
-  The net flux is also important, although the algorithm used here only examines flux in the downward direction.
-  Global net flux (transport from the stratosphere to the troposphere minus opposite transport) is estimated to be 75~Tg yr$^{-1}$ \citep{Sprenger2003}.
   
   Considering the individual event contributions, \citet{Terao2008} estimate much higher STT impacts; where 30--40\% of the tropospheric column is due to STT. 
   Although this figure is based on the Northern Hemisphere during the seasonal STT peak.
