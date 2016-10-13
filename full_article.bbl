@@ -1,4 +1,4 @@
-\begin{thebibliography}{48}
+\begin{thebibliography}{49}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -267,6 +267,17 @@ Junhua Liu, Jose~M. Rodriguez, Anne~M. Thompson, Jennifer~A. Logan, Anne~R.
 \newblock \doi{10.1002/2015JD023981}.
 \newblock URL
   \url{http://onlinelibrary.wiley.com/doi/10.1002/2015JD023981/abstract}.
+
+\bibitem[Liu et~al.(2016)Liu, Rodriguez, Steenrod, Douglass, Logan, Olsen,
+  Wargan, and Ziemke]{Liu2016}
+Junhua Liu, Jose~M. Rodriguez, Stephen~D. Steenrod, Anne~R. Douglass,
+  Jennifer~A. Logan, Mark Olsen, Krzysztof Wargan, and Jerald Ziemke.
+\newblock {Causes of interannual variability of tropospheric ozone over the
+  Southern Ocean}.
+\newblock \emph{Atmospheric Chemistry and Physics Discussions}, \penalty0
+  (October):\penalty0 1--46, 2016.
+\newblock ISSN 1680-7316.
+\newblock \doi{10.5194/ACP-2016-692}.
 
 \bibitem[Mari et~al.(2008)Mari, Cailley, Corre, Saunois, E, L, Thouret, and
   Stohl]{Mari2008}
