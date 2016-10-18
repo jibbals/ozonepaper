@@ -43,8 +43,8 @@
 \begin{abstract}
   We develop a quantitative method to identify Stratosphere to Troposphere Transport events (STTs) from ozonesonde profiles. 
   Using this method we estimate the seasonality and quantity of ozone transported across the tropopause over Melbourne ($38^\circ$S), Macquarie Island ($54^\circ$S), and Davis ($69^\circ$S).
-  STT seasonality is determined from a 7--9 year long time series of ozone profiles from each site.
-  STT events primarily occur during summer above all three sites, although there are relatively more events seen in the austral winter above Davis.
+  STT seasonality is determined by two distinct methods using 7--9 years of ozone profiles from each site.
+  The primary method we focus on here shows STT events primarily occurring during summer above all three sites, although there are relatively more events seen in the austral winter above Davis.
   The majority of tropospheric ozone peaks from by STT events occur within 3~km below the tropopause at Melbourne and Macquarie Island, and within 2~km below the tropopause at Davis.
   Overall, the fraction of total tropospheric ozone attributed to STT events is 2 – 4\% at each site, however, during individual events, an STT event can contribute more than 10\% of the total tropospheric ozone at that time.
   The meteorological cause of STT events is postulated through visual inspection of ERA-I weather data, with the majority of events caused by low pressure frontal systems at all three sites.
@@ -390,7 +390,25 @@
   We were unable to meteorologically classify most summertime events at Davis.
 
   %The increased winter time frequency of STT events at Davis (relative to Macquarie and Melbourne) may be due to increased polar jet stream activity at this time.
-
+  
+  To examine the robustness of the distributions shown in Fig 7, we developed an alternative assessment of the seasonal occurrence of STT events and the results from this assessment are shown in Figure \ref{fig:AndrewProxySTT}.
+  Here STT occurrence is evaluated by consideration of the square of the dry Brunt-Viäsälä frequency (N$^2$) at the heights of the ozone tropopause (z$_{OT}$) lapse rate tropopause (z$_{LRT}$) in each ozonesonde profile that has been binned to 500~m resolution.
+  We use N2 to assess atmospheric stability, which is normally distinctly higher in the stratosphere than in the troposphere, and assume that the vertical temperature gradients within the intrusion respond most rapidly to transported heat, which is an additional characteristic of stratospheric air.
+  The altitude binning chosen is a compromise between vertical resolution and the level of variability in N$^2$ introduced by temperature gradients associated with perturbations from gravity waves and changes near the lapse rate tropopause, and is the minimum that produces a robust seasonal distribution.
+  We define STT as having taken place if N$^2$(z$_{OT}$) > N$^2$(z$_{LRT}$) and z$_{OT}$ $<$ z$_{LRT}$; in this way the characteristically higher static stability and ozone concentration of stratospheric intrusion is regarded as being retained as it penetrates below the lapse rate tropopause. 
+  The seasonal distributions shown for the three stations in Fig. \ref{fig:AndrewProxySTT} are generally similar to those shown in Fig. \ref{fig:SummarySeasonality}, with the main exception that no events are identified with the alternative method at Davis in the first half of the year.
+  For the months December to June, ozonesondes are generally only launched monthly at Davis, and the lack of STT events in these months for Davis shown in Fig. \ref{fig:AndrewProxySTT} potentially reflects the fewer measurement opportunities.
+  
+  \begin{figure}[!htbp]
+    % Figure from Andrew Klekociuk excel barplot
+    \begin{center}
+    \includegraphics[width=0.8\columnwidth]{figures/AndrewSTTProxy_py.png}
+    \caption{Seasonal distribution of the STT proxy, obtained from consideration of the static stability at the ozone and lapse rate tropopauses, for Melbourne (1999-2012), Macquarie Island (1994-2012) and Davis (2003-2012).
+    Data for Laverton is also included (1984-1999).}
+    \label{fig:AndrewProxySTT}
+    \end{center}
+  \end{figure}
+  
   Figure \ref{fig:SummaryAltitudes} shows the altitudes of detected events, based on the altitude of peak (maximum) tropospheric ozone in the ozonesonde profile.
   STT event peaks most commonly occur at 6 -- 10~km above Melbourne and 6 -- 9~km at Davis but are distributed more evenly at Macquarie Island from ~4 -- 7.5 kilometres altitude.
   There is no clear relationship between meteorological conditions and event altitude.
@@ -416,23 +434,6 @@
     \label{fig:SummaryTPDepths}
     \end{center}
   \end{figure}
-  
-  TODO: paragraph from Andrew on Figure \ref{fig:AndrewProxySTT}.
-  Dr. Andrew Klekociuk determines a different method of STT determination: by examining the static stability and relative heights of the thermal and ozone tropopauses.
-  Using this method the general form of the seasonality at the sites is similar, with Davis having more events in winter and spring, Melbourne having a peak in summer, and Macquarie Island having a peak in summer and early autumn.
-  A difference is the absence of STT events at Davis in the early part of the year, but this is when we have limited sonde flights (generally only one per month).
-  At Macquarie Island, this proxy has a spike in September, but generally the occurrence has a minimum in winter and spring as seen in the analysis in this work.
-  
-  \begin{figure}[!htbp]
-    % Figure from Andrew Klekociuk excel barplot
-    \begin{center}
-    \includegraphics[width=0.8\columnwidth]{figures/AndrewSTTProxy.png}
-    \caption{The strat-to-trop proxy for Broadmeadows (1999-2012), Macquarie Island (1994-2012) and Davis (2003-2012).
-    Data for Laverton is also included (1984-1999).}
-    \label{fig:AndrewProxySTT}
-    \end{center}
-  \end{figure}
-  
 
 \section{Comparison with GEOS-Chem}
   
