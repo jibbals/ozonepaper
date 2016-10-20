@@ -453,8 +453,11 @@
     \Omega_{HCHO} = \int_{0}^{\text{TP}} \frac{n_{HCHO}}{V} \times N_{Av} \text{d}z
   \end{equation*}
   The seasonal cycles of $\Omega_{HCHO}$ from ozonesondes appear to have similar season and magnitude as the modeled $\Omega_{HCHO}$.
-  The paired r$^2$ values for Davis, Macquarie, Melbourne respectively are 0.38, 0.18, 0.37 between the observed and modelled tropospheric columns.
   In both observations and model, the maximum ozone column at Melbourne occurs in summer, with a minimum in winter, while Macquarie and Davis show the opposite seasonality.
+  
+  Using reduced major axis regression to calculate the line of best fit gives a near one to one slope for all sites, with the most divergent site (Melbourne) having a slope of 1.33.
+  The paired r$^2$ values for Davis, Macquarie, Melbourne respectively are 0.38, 0.18, 0.37 between the observed and modelled tropospheric columns.
+  Removing the seasonality by subtracting the multi-year mean monthly values from GEOS-Chem and ozonesonde data lowers the r$^2$ values to .07, .12, .30 respectively, however the slope of all the regressions remains near (within 10\% of) 1.
   %The model shows more day-to-day variability than the ozonesondes (MAYBEDO: Verify this), although there are daily simulated values for the model while only weekly or less for the ozonesondes.
   
   \begin{figure}[!htbp]
@@ -576,6 +579,7 @@
   Further work needs to be done to quantify STT flux using solely ozonesonde data, more frequent ozonesonde releases would make this easier.
   
   GEOS-Chem estimates of the tropospheric ozone column match fairly well with the ozonesonde observations, with least squares regression correlation coefficient (r$^2$) of 0.38, 0.18, 0.37, for Davis, Macquarie, and Melbourne respectively.
+  Using reduced major axis regression (which does not assume that there is no error in either X or Y) there is a near one to one slope at all three sites, with or without removing the seasonality of both GEOS-Chem and the ozonesondes.
   Our STT detection algorithm is unsuitable for GEOS-Chem output, as the model averages over 2$^{\circ}$ latitude by 2.5$^{\circ}$ longitude grid boxes, with a lower vertical resolution (especially in the upper troposphere).
   
 % This bibliography is created by Mendeley
