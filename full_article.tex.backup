@@ -116,7 +116,7 @@
     Ozone mixing ratio is quantified with an electrochemical concentration cell that senses the proportional electrical current from reaction of ozone with a solution of potassium iodide.
     %(relevance) Most ozonesondes are new and independant, since retrieval of a used ozonesonde can be difficult.
     Standardised procedures are followed when constructing, transporting, and releasing the ozonesondes \citep{noaasondes}.
-    Ozonesondes are estimated to provide around 2\% precision in the stratosphere, which improves at lower altitudes \citep{noaasondes}, although the ozonesondes have been shown to be accurate to within 5\% as long as the correct procedures are followed \citep{Smit2007}.
+    Ozonesondes are estimated to provide around 2\% precision in the stratosphere, which improves at lower altitudes \citep{noaasondes}, and ozonesondes have been shown to be accurate to within 5\% as long as the correct procedures are followed \citep{Smit2007}.
     
     Ozonesondes are launched approximately weekly from Melbourne (38$^{\circ}$S, 145$^{\circ}$E), Macquarie Island (55$^{\circ}$S, 159$^{\circ}$E) and Davis (69$^{\circ}$S, 78$^{\circ}$E). 
     For this study, we use the data collected from 2004-2013 for Melbourne and Macquarie, and 2006-2013 for Davis.
@@ -453,8 +453,11 @@
     \Omega_{HCHO} = \int_{0}^{\text{TP}} \frac{n_{HCHO}}{V} \times N_{Av} \text{d}z
   \end{equation*}
   The seasonal cycles of $\Omega_{HCHO}$ from ozonesondes appear to have similar season and magnitude as the modeled $\Omega_{HCHO}$.
-  The paired r$^2$ values for Davis, Macquarie, Melbourne respectively are 0.38, 0.18, 0.37 between the observed and modelled tropospheric columns.
   In both observations and model, the maximum ozone column at Melbourne occurs in summer, with a minimum in winter, while Macquarie and Davis show the opposite seasonality.
+  
+  Using reduced major axis regression to calculate the line of best fit gives a near one to one slope for all sites, with the most divergent site (Melbourne) having a slope of 1.33.
+  The paired r$^2$ values for Davis, Macquarie, Melbourne respectively are 0.38, 0.18, 0.37 between the observed and modelled tropospheric columns.
+  Removing the seasonality by subtracting the multi-year mean monthly values from GEOS-Chem and ozonesonde data lowers the r$^2$ values to .07, .12, .30 respectively, however the slope of all the regressions remains near (within 10\% of) 1.
   %The model shows more day-to-day variability than the ozonesondes (MAYBEDO: Verify this), although there are daily simulated values for the model while only weekly or less for the ozonesondes.
   
   \begin{figure}[!htbp]

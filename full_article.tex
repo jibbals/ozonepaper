@@ -116,7 +116,7 @@
     Ozone mixing ratio is quantified with an electrochemical concentration cell that senses the proportional electrical current from reaction of ozone with a solution of potassium iodide.
     %(relevance) Most ozonesondes are new and independant, since retrieval of a used ozonesonde can be difficult.
     Standardised procedures are followed when constructing, transporting, and releasing the ozonesondes \citep{noaasondes}.
-    Ozonesondes are estimated to provide around 2\% precision in the stratosphere, which improves at lower altitudes \citep{noaasondes}, although the ozonesondes have been shown to be accurate to within 5\% as long as the correct procedures are followed \citep{Smit2007}.
+    Ozonesondes are estimated to provide around 2\% precision in the stratosphere, which improves at lower altitudes \citep{noaasondes}, and ozonesondes have been shown to be accurate to within 5\% as long as the correct procedures are followed \citep{Smit2007}.
     
     Ozonesondes are launched approximately weekly from Melbourne (38$^{\circ}$S, 145$^{\circ}$E), Macquarie Island (55$^{\circ}$S, 159$^{\circ}$E) and Davis (69$^{\circ}$S, 78$^{\circ}$E). 
     For this study, we use the data collected from 2004-2013 for Melbourne and Macquarie, and 2006-2013 for Davis.
@@ -541,10 +541,10 @@
   Our estimate is far less than other estimates of STT flux, due to our conservative estimate of flux within each event, as well as filtering out events which are too close to the tropopause.
   Global STT flux estimated from an ensemble of models suggests values around 550~Tg yr$^{-1}$ \citep{Stevenson2006}.
   Global net downward STT flux is estimated to be 75~Tg yr$^{-1}$ \citep{Sprenger2003}.
-  Our estimate of 1.82~Tg is $\sim$2.4\% of this value, which is less than we expect.
-  This method of flux estimation could be improved if we could account for background ozone enhancement and mixing due to events.
+  Our estimate of 1.82~Tg is $\sim$2.4\% of this value, which is quite a bit lower.
+  This method of flux estimation could be increased if we could account for background ozone enhancement and mixing due to events.
   This highlights one of the difficulties with temporally sparse ozonesonde data.
-  Our flux calculation only looks at a particular type of ozone event and is unsuitable for comparison with total or net STT flux.
+  Our flux calculation only looks at a particular type of ozone event and may be unsuitable for comparison with total or net STT flux.
   
   \citet{Olsen2003} use PV and winds from the GEOS reanalysis combined with ozone measurements from the TOMS satellite to estimate that around 210~Tg yr$^{-1}$ of ozone flux occurs in 2000 between 30$^{\circ}$S and 60$^{\circ}$S.
   Their estimates show peak ozone flux from winter to early spring (JJAS).
@@ -557,6 +557,7 @@
   Considering the individual event contributions, \citet{Terao2008} estimate much higher STT impacts using a global CTM with a stratospheric ozone tracer; where 30--40\% of the 500~hPa ozone is due to STT.
   Although this figure is based on the Northern Hemisphere upper troposphere, if we assume that STT flux due to an event is actually 35\% (instead of using our estimated influence) our estimate increases by roughly a factor of 11: to $\sim$21.38~Tg yr$^{-1}$
   This would suggest that tropopause fold ozone transport events over the southern ocean account $\sim$28.5\% of global net STT flux.
+  
   
 \section{Conclusions}
   
@@ -579,8 +580,9 @@
   Further work needs to be done to quantify STT flux using solely ozonesonde data, more frequent ozonesonde releases would make this easier.
   
   GEOS-Chem estimates of the tropospheric ozone column match fairly well with the ozonesonde observations, with least squares regression correlation coefficient (r$^2$) of 0.38, 0.18, 0.37, for Davis, Macquarie, and Melbourne respectively.
-  Using reduced major axis regression (which does not assume that there is no error in either X or Y) there is a near one to one slope at all three sites, with or without removing the seasonality of both GEOS-Chem and the ozonesondes.
+  Using reduced major axis regression (which does not assume that there is no error in the measurements) there is a near one to one slope at all three sites, with or without removing the seasonality of both GEOS-Chem and the ozonesondes.
   Our STT detection algorithm is unsuitable for GEOS-Chem output, as the model averages over 2$^{\circ}$ latitude by 2.5$^{\circ}$ longitude grid boxes, with a lower vertical resolution (especially in the upper troposphere).
+  Due to their high vertical resolution ozonesondes are able to detect STT events where reanalysis datasets or models may not.
   
 % This bibliography is created by Mendeley
 \bibliography{bibliography/Ozone.bib}
