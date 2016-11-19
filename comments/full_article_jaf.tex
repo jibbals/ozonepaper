@@ -28,7 +28,7 @@
 \author[1,5]{Jenny A. Fisher}
 \author[2]{Andrew Klekociuk}
 
-\affil[1]{Centre for Atmospheric Chemistry, School of Chemistry, University of Wollongong}
+\affil[1]{Center for Atmospheric Chemistry, School of Chemistry, University of Wollongong}
 \affil[2]{Australian Antarctic Division, Hobart}
 \affil[3]{School of Earth Sciences, University of Melbourne}
 \affil[4]{ARC Centre of Excellence for Climate System Science, University of New South Wales}
@@ -110,9 +110,7 @@
   \label{Section:ozonesondes}
     %(Too basic)Ozonesondes are weather balloons which measure ozone concentrations from the surface to around 35km.
     %These ozonesondes provide a high vertical resolution profile of ozone, along with temperature, pressure, and humidity.
-    Ozonesondes provide a high vertical resolution profile of ozone, temperature, pressure, and humidity from the surface to 35 km.
-    
-    Ozone mixing ratio is quantified with an electrochemical concentration cell that senses the proportional electrical current from reaction of ozone with a solution of potassium iodide.
+    Ozonesondes provide a profile of ozone mixing ratio, temperature, pressure, and humidity with high vertical resolution from the surface to 35 km. The ozone mixing ratio is quantified with an electrochemical concentration cell that senses the proportional electrical current from reaction of ozone with a solution of potassium iodide.
     %(relevance) Most ozonesondes are new and independant, since retrieval of a used ozonesonde can be difficult.
     Standardised procedures are followed when constructing, transporting, and releasing the ozonesondes \citep{noaasondes}.
     Ozonesondes are estimated to provide around 2\% precision in the stratosphere, which improves at lower altitudes \citep{noaasondes}, and ozonesondes have been shown to be accurate to within 5\% as long as the correct procedures are followed \citep{Smit2007}.
@@ -135,7 +133,8 @@
       \item OMR exceeds 110~ppb between 500~m and 2000~m above the altitude under inspection (500~m and 1500~m in the Antarctic, including the site at Davis).
     \end{enumerate}
     The ozone tropopause can be less robust during stratosphere-troposphere exchange; however, it is more robust than the lapse rate tropopause at polar latitudes in winter and near jet streams in the lower stratosphere due to temperature inversions near the tropopause \citep{Bethan1996, Tomikawa2009, Alexander2013}.
-    In this work, the lower of these two tropopause altitudes is used. 
+    In this work, the lower of these two tropopause altitudes is used. %, as both are calculated for each ozonesonde release. %% that's obvious if you are comparing two!
+    %Here, we calculate both tropopause heights for each ozonesonde release and use whichever is lower.
     This choice avoids occasional unrealistically high tropopause heights due to perturbed ozone or temperature measurements in the ozonesonde data.
     
     Figure \ref{fig:seasonaltpheights} shows the monthly mean tropopause altitudes at each location (solid lines).
@@ -184,6 +183,7 @@
 
     Our simulations span 2005-2012 (following a 1-year spin-up for 2004) with horizontal resolution of 2$^{\circ}$ latitude by 2.5$^{\circ}$ longitude and 72 vertical levels from the surface to 0.01~hPa.
     For comparison to the ozonesonde observations, the model was sampled every 6 hours within the grid box containing each site.
+%    For each site, a vertical profile of ozone is stored every 6 hours, based on standard UTC+0 time.
     This means that the GEOS-Chem profiles which match ozonesonde release hours are local times of 7AM, 11AM, and 11AM for Davis, Macquarie, and Melbourne respectively.
     
     
@@ -250,6 +250,7 @@
     Possible biomass burning influence is identified using satellite observations of CO from the AIRS (Atmospheric Infrared Sounder) instrument on board the Aqua satellite \citep{AIRS3STD}.
     CO is emitted during incomplete combustion and is an effective tracer of long-range transport due to its long lifetime.
     In the Southern Hemisphere, biomass burning is the primary source of CO, making CO a good proxy for fire plumes (eg: \citet{Edwards2003,Sinha2004,Edwards2006,Mari2008}).(TODO: split citations to their most appropriate sentences)
+    %We use data from the AIRS (Atmospheric Infrared Sounder) instrument on board the Aqua satellite \citep{AIRS3STD}.
     To identify possible biomass burning influence, we visually inspected AIRS vertical column CO in the vicinity of our three measurement sites for all dates with detected STT events.
     We diagnose smoke plumes as areas with elevated CO columns ($\sim 2 \times 10^{18}$ molecules cm$^{-2}$ or higher), and flag any sonde-detected STT event that occurs near a smoke plume.
 
@@ -272,7 +273,7 @@
   \subsection{Sensitivities and limitations}
     Our method uses several subjectively defined quantities in the process of STT event detection.
     Here we briefly discuss these and the sensitivity to each.
-    Using the algorithm discussed in Section \ref{Section:CharacterisationOfSTTs}, we detect 45 events at Davis, 47 (+8 fire influenced) events at Macquarie Island, and 72 (+14 fire influenced) events at Melbourne.
+    Using the algorithm discussed in Section \ref{Section:CharacterisationOfSTTs}, we detect 45 events at Davis, 47 (+8 fire-influenced) events at Macquarie Island, and 72 (+14 fire influenced) events at Melbourne.
     
     The cut-off threshold (defined separately for each site) is determined from the 99th percentile of the ozone perturbation profiles between 2~km and 1~km below the tropopause.
     We use the 99th percentile because at this point the filter locates clear events with no obvious false positives.
