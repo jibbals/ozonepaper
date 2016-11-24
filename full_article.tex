@@ -409,9 +409,8 @@
   \begin{figure}[!htbp]
     % Figure from Andrew Klekociuk excel barplot
     \begin{center}
-    \includegraphics[width=0.8\columnwidth]{figures/AndrewSTTProxy.png}
-    \caption{Seasonal distribution of the alternative STT proxy, obtained from consideration of the static stability at the ozone and lapse rate tropopauses, for Melbourne (1999-2012), Macquarie Island (1994-2012) and Davis (2003-2012).
-    Data for Laverton is also included (1984-1999).}
+    \includegraphics[width=0.8\columnwidth]{figures/AndrewProxySTT.png}
+    \caption{Seasonal distribution of the alternative STT proxy, obtained from consideration of the static stability at the ozone and lapse rate tropopauses, for Davis (2003-2012), Macquarie Island (1994-2012) and Melbourne (1999-2012).}
     \label{fig:AndrewProxySTT}
     \end{center}
   \end{figure}
@@ -444,28 +443,29 @@
 
 \section{Simulation of southern mid-latitude ozone columns}
   
+  Figure \ref{fig:StationSeriesGEOSChem} compares the time series of tropospheric ozone columns ($\Omega_{O_3}$) in molecules cm$^{-2}$ simulated by GEOS-Chem (red) to the measured tropospheric ozone columns (black).
+  Observed tropospheric columns are calculated from the ozonesondes by calculating the ozone number density (molec cm$^{-3}$) using measured ozone partial pressure (P$_{O_3}$) and integrating over the measured GPH up to the tropopause:
+  \begin{equation*}
+    %\frac{n_{O_3}}{V} &=& \frac{P_{O_3}}{RT} \\
+    %\mathbf{\Omega_{O_3}} = \int_{0}^{\text{TP}} \frac{n_{O_3}}{V} \times N_{Av} \text{d}z
+    \mathbf{\Omega_{O_3}} = \int_{0}^{\text{TP}} \frac{P_{O_3}(z)}{R \times T(z)} \times N_{Av} \text{d}z
+  \end{equation*}
+  %The seasonal cycles of $\Omega_{O_3}$ from ozonesondes appear to have similar season and magnitude as the modeled $\Omega_{O_3}$.
+  In both observations and model, the maximum ozone column at Melbourne occurs in austral summer, with a minimum in winter, while Macquarie and Davis show the opposite seasonality.
+  
   \begin{figure}[!htbp]
     % made in examine_stations.py in stations repository
     \includegraphics[width=\textwidth]{figures/StationSeries.png}
     \caption{Comparison between observed (black) and simulated (grey, red) tropospheric ozone columns ($\Omega_{O3}$, in molecules cm$^{-2}$) from 1 January 2004 to 30 April 2013.
     For the model, daily output is shown in grey, while output from days with ozonesonde measurements are shown in red.
     For each site, the model has been sampled in the relevant grid square.}
-
     %Columns calculated from ozonesondes are shown as black stars, each representing one measurement.}
     \label{fig:StationSeriesGEOSChem}
   \end{figure}
   
-  Figure \ref{fig:StationSeriesGEOSChem} compares the time series of tropospheric ozone columns ($\Omega_{O_3}$) in molecules cm$^{-2}$ simulated by GEOS-Chem (red) to the measured tropospheric ozone columns (black).
-  Observed tropospheric columns are calculated from the ozonesondes by calculating the ozone number density (molec cm$^{-3}$) using measured ozone partial pressure (P$_{HCHO}$) and integrating over the measured GPH up to the tropopause:
-  \begin{equation*}
-    \frac{n_{HCHO}}{V} = \frac{P_{HCHO}}{RT}
-    \Omega_{HCHO} = \int_{0}^{\text{TP}} \frac{n_{HCHO}}{V} \times N_{Av} \text{d}z
-  \end{equation*}
-  %The seasonal cycles of $\Omega_{HCHO}$ from ozonesondes appear to have similar season and magnitude as the modeled $\Omega_{HCHO}$.
-  In both observations and model, the maximum ozone column at Melbourne occurs in austral summer, with a minimum in winter, while Macquarie and Davis show the opposite seasonality.
-  
-  GEOS-Chem provides a reasonable simulation of the observed seasonality and magnitude of $\Omega_{O_3}$. Reduced major axis regression of observed versus simulated $\Omega_{O_3}$ gives a line of best fit with a slope near one-to-one for all sites, with the most divergent site (Melbourne) having a slope of 1.33. The model is only partially able to reproduce the variability in the observations, with paired r$^2$ values for of 0.38 for Davis, 0.18 for Macquarie, and 0.37 for Melbourne.
-  Much of the variability is driven by the seasonal cycle, and after removing this effect (by subtracting the multi-year monthly means), the r$^2$ values decrease to .07, .12, .30 respectively, although the slope of all the regressions remains within 10\% of 1.
+  GEOS-Chem provides a reasonable simulation of the observed seasonality and magnitude of $\Omega_{O_3}$. Reduced major axis regression of observed versus simulated $\Omega_{O_3}$ gives a line of best fit with a slopes being todo for Davis, todo for Macquarie, and 1.33 for Melbourne.
+  The model is only partially able to reproduce the variability in the observations, with paired r$^2$ values for of 0.38 for Davis, 0.18 for Macquarie, and 0.37 for Melbourne.
+  Much of the variability is driven by the seasonal cycle, and after removing this effect (by subtracting the multi-year monthly means), the r$^2$ values decrease to .07, .12, .30 respectively, although the slope of all the regressions remains within 10\% of 1. (TODO: rerun regression test for values)
   %The model shows more day-to-day variability than the ozonesondes (MAYBEDO: Verify this), although there are daily simulated values for the model while only weekly or less for the ozonesondes.
   
   \begin{figure}[!htbp]
@@ -491,7 +491,8 @@
   
   \begin{figure}[!htbp]
     \includegraphics[width=\textwidth]{figures/event_profile_comparison.png}
-    \caption{Example comparisons of ozone profiles from ozonesondes (black) and GEOS-Chem (red) from 		  three different dates during which STT events were detected from the measurements.
+    \caption{%
+      Example comparisons of ozone profiles from ozonesondes (black) and GEOS-Chem (red) from three different dates during which STT events were detected from the measurements.
       The dates were picked based on subjective visual analysis. 
       The examples show the best match between model and observations for each site.
       GEOS-Chem pressure levels are marked with a dash.}
