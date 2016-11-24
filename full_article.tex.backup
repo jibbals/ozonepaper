@@ -124,9 +124,10 @@
     
     \begin{table}[htbp!]
       \centering
+      \caption{Seasonal distribution of sonde releases per site.}
       \begin{tabular}{| c | c | c | c |} 
 	\hline
-	Site & Sondes & Sondes by month (JFMAM...) & Start to end date (YYYY/MM/DD) \\
+	Site & Sondes & Sondes by month (JFMAM...) & Start to end date \\
 	\hline
 	Davis     & 240 & 11,12,13,12,17,31,29,28,32,28,15,12 & 2006/04/13 - 2013/11/13  \\ 
 	Macquarie & 390 & 32,31,45,28,34,33,28,35,29,33,31,31 & 2004/01/20 - 2013/01/09 \\
@@ -291,7 +292,7 @@
     
     The cut-off threshold (defined separately for each site) is determined from the 99th percentile of the ozone perturbation profiles between 2~km and 1~km below the tropopause.
     We use the 99th percentile because at this point the filter locates clear events with no obvious false positives.
-    Event detection is highly sensitive to this choice; for example, using the 98.5th percentile instead increased detected events by 24 (33\%) at Melbourne, 19 (40\%) at Macquarie Island, and 10 (22\%) at Davis.
+    Event detection is highly sensitive to this choice; for example, using the 98.5th percentile instead increased detected events by 10 (22\%) at Davis, 19 (40\%) at Macquarie Island, and 24 (33\%) at Melbourne.
     This high sensitivity means that detection is also sensitive to the profile altitude bounds used in calculation of the percentiles, i.e. from 2~km altitude to 1~km below the tropopause.
     %The altitude range used to determine the 99th percentile is set from 2~km up to 1~km below the tropopause.
     This range was chosen to remove anomalous edge effects of the Fourier bandpass filter and to discount the highly variable ozone concentration which occurs near the tropopause.
@@ -300,10 +301,11 @@
     This range removes possible ground pollution, as well as allowing event detection up to 500~m from the tropopause.
     Some likely events are removed by this range, including the storm-caused event examined below in figure \ref{fig:Melbourne20050203} are within one kilometer of the tropopause. 
     
-    The event detection was not as sensitive to the choice of Fourier bandpass scales: a widening of the allowed scales to the range 0.4-5.1 increased the detected events by 3 at Melbourne and 2 at Macquarie Island, while Davis lost two events (there were more events detected, but also more filtered out).
+    The event detection was less sensitive to the choice of Fourier bandpass scales: a widening of the allowed scales from the range 0.5-5.0 to 0.4-5.1 increased the detected events by 3 at Melbourne and 2 at Macquarie Island, while Davis lost two events.
+    It may seem strange that Davis lost events when the bandpass range was widened, however this was an effect of the threshold value in the perturbations filter increasing - removing some detections which weren't subsequently filtered.
     
-    Flux estimation over the southern ocean is based on the average GEOS-Chem tropospheric vertical column of ozone over a particular latitude range.
-    The range is from 35$^{\circ}$S to 75$^{\circ}$S, changing this latitude range by 5$^{\circ}$ in either direction at either end of the range changes the average simulated tropospheric ozone by -8 to 9\%.
+    Over all the method used here to detect STTs is conservative, more events can be classified however there is more chance of misdiagnosis. 
+    None of the detected events needed to be manually filtered using the described parameters.
 
   \subsection{Classifying synoptic conditions during STT events}
   \label{Section:WeatherClassifications}
@@ -362,13 +364,13 @@
   Ozonesonde releases and detected event counts are summarised in table \ref{table:EventCounts}.
   \begin{table}[htbp!]
     \centering
-    \begin{tabular}{| c | c | c | c | c | c |} 
+    \begin{tabular}{| c | c | c | c | c | c | c |} 
       \hline
       Site & Sondes & Events & Cut-offs & Frontals & Misc & Fire \\
       \hline
       Davis     & 240 & 45 & 7  & 20 & 18 & 0 \\ 
-      Macquarie & 390 & 47 & 10 & 25 & 4 & 8 \\
-      Melbourne & 456 & 72 & 15 & 40 & 3 & 14 \\
+      Macquarie & 390 & 47 & 10 & 20 & 9 & 8 \\
+      Melbourne & 456 & 72 & 12 & 34 & 12 & 14 \\
       \hline
     \end{tabular}
     \caption{Total number of ozonesonde releases and detected STT events, along with the number of events in each category (see text).}
@@ -528,6 +530,13 @@
   To do so, we multiply the monthly likelihoods of STTs (fraction of ozonesonde releases for which an STT event was detected, per month, `l') by the monthly mean tropospheric ozone column over the Southern Ocean (from the GEOS-Chem multi-year mean, $\Omega_{SO_{O_3}}$) and by the monthly mean fraction of the ozone column attributed to STT (`f') (as in Fig. \ref{fig:fluxsummary}, but separated by month).
   The monthly values of each term in this equation are shown in Figure \ref{fig:SOExtrapolation} (lower panel).
   The equation can be written simply as Flux$= \Omega_{SO_{O_3}} \times f \times l$.
+
+  Flux estimation over the southern ocean is based on the average GEOS-Chem tropospheric vertical column of ozone over a particular latitude range.
+  The range is from 35$^{\circ}$S to 75$^{\circ}$S, chosen as it captures the three measurement stations.
+  Changing this latitude range by 5$^{\circ}$ in either direction at either end of the range changes the average simulated tropospheric ozone by -8 to 9\%.
+  A more spatially resolved estimate could be calculated, by splitting the southern ocean into longitudinal and latitudinal bins.
+  This could include using the gradient of flux and frequency estimations along their latitudes, as well as estimated longitudinal variations such as the enhanced STE east of Australia shown in (TODO:find paper mentioned by I. Galbally).
+  An improved spatial distribution for the flux estimation is beyond the scope of this work and would not address the limitations of the technique shown here.
   
   Figure \ref{fig:SOExtrapolation} (top) shows the extrapolated monthly mean ozone flux from STT events over the Southern Ocean.
   We find from this estimate that STT events may be responsible for at least $3.2 \times10^{16}$~molecules cm$^{-2}$ yr$^{-1}$ of the tropospheric ozone over the Southern Ocean, equivalent to 2.57~Tg yr$^{-1}$.
