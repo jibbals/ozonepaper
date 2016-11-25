@@ -464,9 +464,10 @@
     \label{fig:StationSeriesGEOSChem}
   \end{figure}
   
-  GEOS-Chem provides a reasonable simulation of the observed seasonality and magnitude of $\Omega_{O_3}$. Reduced major axis regression of observed versus simulated $\Omega_{O_3}$ gives a line of best fit with a slopes being todo for Davis, todo for Macquarie, and 1.33 for Melbourne.
+  GEOS-Chem provides a reasonable simulation of the observed seasonality and magnitude of $\Omega_{O_3}$. 
+  Reduced major axis regression of observed versus simulated $\Omega_{O_3}$ gives a line of best fit with a slopes being 1.08 for Davis, 0.99 for Macquarie, and 1.34 for Melbourne.
   The model is only partially able to reproduce the variability in the observations, with paired r$^2$ values for of 0.38 for Davis, 0.18 for Macquarie, and 0.37 for Melbourne.
-  Much of the variability is driven by the seasonal cycle, and after removing this effect (by subtracting the multi-year monthly means), the r$^2$ values decrease to .07, .12, .30 respectively, although the slope of all the regressions remains within 10\% of 1. (TODO: rerun regression test for values)
+  Much of the variability is driven by the seasonal cycle, and after removing this effect (by subtracting the multi-year monthly means), the r$^2$ values decrease to .07, .11, .30 respectively, although the slope improves at Melbourne to 1.08.
   %The model shows more day-to-day variability than the ozonesondes (MAYBEDO: Verify this), although there are daily simulated values for the model while only weekly or less for the ozonesondes.
   
   \begin{figure}[!htbp]
@@ -536,13 +537,13 @@
 
   Flux estimation over the southern ocean is based on the average GEOS-Chem tropospheric vertical column of ozone over a particular latitude range.
   The range is from 35$^{\circ}$S to 75$^{\circ}$S, chosen as it captures the three measurement stations.
-  Changing this latitude range by 5$^{\circ}$ in either direction at either end of the range changes the average simulated tropospheric ozone by -8 to 9\%.
+  Changing this latitude range by 5$^{\circ}$ in either direction at either end of the range changes the average simulated tropospheric ozone by -7 to 9\%.
   A more spatially resolved estimate could be calculated, by splitting the southern ocean into longitudinal and latitudinal bins.
   This could include using the gradient of flux and frequency estimations along their latitudes, as well as estimated longitudinal variations such as the enhanced STE east of Australia shown in (TODO:find paper mentioned by I. Galbally).
   An improved spatial distribution for the flux estimation is beyond the scope of this work and would not address the limitations of the technique shown here.
   
   Figure \ref{fig:SOExtrapolation} (top) shows the extrapolated monthly mean ozone flux from STT events over the Southern Ocean.
-  We find from this estimate that STT events may be responsible for at least $3.2 \times10^{16}$~molecules cm$^{-2}$ yr$^{-1}$ of the tropospheric ozone over the Southern Ocean, equivalent to 2.57~Tg yr$^{-1}$.
+  We find from this estimate that STT events may be responsible for at least $3.1 \times10^{16}$~molecules cm$^{-2}$ yr$^{-1}$ of the tropospheric ozone over the Southern Ocean, equivalent to 2.48~Tg yr$^{-1}$.
   %This is calculated using the surface area from GEOS-Chem over the southern ocean grid boxes along with the molecules cm$^{-2}$ per month calculations, along with ozone molar mass of 48~g mol$^{-1}$.
     
   \begin{figure}[!htbp]
@@ -559,7 +560,7 @@
   %Global STT flux estimated from an ensemble of models suggests values around 550~Tg yr$^{-1}$ \citep{Stevenson2006}.
   %Global net downward STT flux is estimated to be 75~Tg yr$^{-1}$ \citep{Sprenger2003}.
   Previous studies have derived global gross STT fluxes of 550~Tg yr$^{-1}$ \citep{Stevenson2006} and net downward STT fluxes of 75~Tg yr$^{-1}$ \citep{Sprenger2003}.
-  Our estimate of 2.57~Tg yr$^{-1}$ would suggest only $\sim$3.42\% of the global net downward flux can be attributed to STT events, a value that is likely much too low.
+  Our estimate of 2.48~Tg yr$^{-1}$ would suggest only $\sim$3.3\% of the global net downward flux can be attributed to STT events, a value that is likely much too low.
   %This method of flux estimation could be increased if we could account for background ozone enhancement and mixing due to events.
   This result highlights one of the difficulties associated with temporally sparse ozonesonde data.
   Our flux calculation only detects STT events that satisfy very specific criteria, and may therefore be unsuitable for calculating large-scale STT fluxes.
@@ -578,7 +579,7 @@
   As described previously, our estimate of the fraction of tropospheric ozone from each STT event ($f$) is almost certainly biased low, perhaps by a significant amount. 
   Using a global CTM with a stratospheric ozone tracer, \citet{Terao2008} estimated that this number was closer to 30--40\%, at least for the ozone mixing ratio at 500~hPa in the northern hemisphere.
   %Although this figure is based on the Northern Hemisphere upper troposphere, if we assume that STT flux due to an event is actually 35\% (instead of using our estimated influence) our estimate increases by roughly a factor of 12: to $\sim$30.2~Tg yr$^{-1}$
-  If we we assume a fractional ozone flux due to each event STT event of $f$=35\% based on their results (rather than our estimated 2-4\%), our estimate of the net downward ozone STT flux from southern ocean STT events increases by an order of magnitude to $\sim$30~Tg yr$^{-1}$ -- 40\% of the global downward flux estimated by \citet{Sprenger2003}.
+  If we we assume a fractional ozone flux due to each event STT event of $f$=35\% based on their results (rather than our estimated 2-4\%), our estimate of the net downward ozone STT flux from southern ocean STT events increases by an order of magnitude to $\sim$29.5~Tg yr$^{-1}$ -- 39\% of the global downward flux estimated by \citet{Sprenger2003}.
 
 %  This would suggest that tropopause fold ozone transport events over the southern ocean account $\sim$40.3\% of global net STT flux.
   
