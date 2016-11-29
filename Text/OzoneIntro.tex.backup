@@ -10,14 +10,13 @@ Several of these models show a decrease in the tropospheric ozone in the high so
 Tropospheric ozone is produced photochemically from NO$_x$ and volatile organic compounds, which have both anthropogenic (fossil fuel, biomass combustion) and natural (wildfires, lightning, biogenic) sources.
 In the upper troposphere, downward transport from the ozone-rich stratosphere provides an additional natural source of tropospheric ozone (\citet{Jacobson2000} and references therein).
 Understanding and accurately portraying ozone concentrations in the troposphere is important to allow accurate predictions of future climate.
-This will become even more important as projections of future climate changes suggest altered the vertical mixing rates, ultra violet index (UVI) and ozone RF \citep{Hegglin2009}.
 
 Stratosphere-to-troposphere transport (STT) primarily impacts the ozone budget in the upper troposphere but can also increase regional surface ozone levels above the legal thresholds set by air quality standards \citep{Danielson1968, Lefohn2011, Langford2012, Zhang2014}.
 In the western US, for example, STT events have been shown to contribute up to 30\% of surface ozone in spring \citep{Lin2012}.
 Estimates of the overall contribution of STT to tropospheric ozone vary widely (e.g., \citep{Galani2003},  \citet{Stohl2003}, \citet{Stevenson2006}, \citet{Lefohn2011}).
 A review of two photochemical models by \citet{Stohl2003} concluded that 25-50\% of the tropospheric ozone column can be attributed to STT events globally, with most contribution in the upper troposphere.
 In contrast, \citet{Stevenson2006} found STT was responsible for only $\sim$ 10\% of the tropospheric ozone column (equivalent to $550\pm170$ Tg yr$^{-1}$) in the Atmospheric Chemistry and Climate Model Inter-comparison Project (ACCMIP) simulations, with the remainder produced photochemically.
-This wide range in model estimates exists in part because STT is challenging to accurately represent in global models, which are not resolved enough to simulate small scale turbulence.
+This wide range in model estimates exists in part because STT is challenging to accurately represent in models, which may not be resolved enough to simulate small scale turbulence.
 Observation-based process studies are therefore key in determining the relative frequency of STT events, with models then able to use this to quantify STT impact over large regions.
 Ozonesondes are particularly valuable for this purpose as they provide multi-year datasets with high vertical resolution.
 

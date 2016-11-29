@@ -6,7 +6,6 @@
     %(Too basic)Ozonesondes are weather balloons which measure ozone concentrations from the surface to around 35km.
     %These ozonesondes provide a high vertical resolution profile of ozone, along with temperature, pressure, and humidity.
     Ozonesondes provide a high vertical resolution profile of ozone, temperature, pressure, and humidity from the surface to 35 km.
-    In the troposphere the ozonesondes generally take 150-300 measurements.
     
     Ozone mixing ratio is quantified with an electrochemical concentration cell that senses the proportional electrical current from reaction of ozone with a solution of potassium iodide.
     %(relevance) Most ozonesondes are new and independant, since retrieval of a used ozonesonde can be difficult.
@@ -141,7 +140,6 @@
     Our method differs somewhat from that used by \citet{Tang2010} to detect STT events from ozonesonde measurements. 
     Their definition is based on subjective analysis of sondes released from 20 stations ranging in latitude from 35$^\circ$S to 40$^\circ$N.
     They identify an STT event if, starting from 5~km altitude, ozone exceeds 80~ppb and then within 3~km decreases by 20~ppb or more to a value less than 120~ppb.
-    Their technique would miss many events due to lower tropospheric ozone concentrations in the cleaner southern hemisphere.
 
   \subsection{Biomass burning influence}
   \label{Section:BiomassBurning}

@@ -138,6 +138,12 @@ Guenther, A.~B., Jiang, X., Heald, C.~L., Sakulyanontvittaya, T., Duhl, T.,
   modeling biogenic emissions}, Geoscientific Model Development, 5, 1471--1492,
   \doi{10.5194/gmd-5-1471-2012}, 2012.
 
+\bibitem[{Hegglin and Shepherd(2009)}]{Hegglin2009}
+Hegglin, M.~I. and Shepherd, T.~G.: {Large climate-induced changes in
+  ultraviolet index and stratosphere-to-troposphere ozone flux}, Nature
+  Geoscience, 2, 687--691, \doi{10.1038/ngeo604},
+  \urlprefix\url{http://dx.doi.org/10.1038/ngeo604}, 2009.
+
 \bibitem[{Jacobson and Hansson(2000)}]{Jacobson2000}
 Jacobson, M.~C. and Hansson, H.: {Organic atmospheric aerosols: Review and
   state of the science}, Reviews of Geophysics, pp. 267--294,
@@ -212,14 +218,6 @@ Mze, N., Hauchecorne, A., Bencherif, H., Dalaudier, F., and Bertaux, J.~L.:
   SHADOZ/balloon-sonde observations in the southern tropics}, Atmospheric
   Chemistry and Physics, 10, 8025--8035, \doi{10.5194/acp-10-8025-2010}, 2010.
 
-\bibitem[{Nawahda(2013)}]{Avnery2011}
-Nawahda, A.: {Comments on "Global crop yield reductions due to surface ozone
-  exposure: 1. Year 2000 crop production losses and economic damage" and "
-  Global crop yield reductions due to surface ozone exposure: 2. Year 2030
-  potential crop production losses and economic}, Atmospheric Environment, 71,
-  408--409, \doi{10.1016/j.atmosenv.2012.12.045},
-  \urlprefix\url{http://dx.doi.org/10.1016/j.atmosenv.2011.01.002}, 2013.
-
 \bibitem[{NOAA()}]{noaasondes}
 NOAA: {NOAA Ozone sondes appendix},
   \urlprefix\url{http://www.ndsc.ncep.noaa.gov/organize/protocols/appendix5/}.
@@ -260,13 +258,6 @@ Reutter, P., {\v{S}}kerlak, B., Sprenger, M., and Wernli, H.:
   {Stratosphere-troposphere exchange (STE) in the vicinity of North Atlantic
   cyclones}, Atmospheric Chemistry and Physics, 15, 10\,939--10\,953,
   \doi{10.5194/acp-15-10939-2015}, 2015.
-
-\bibitem[{Selin et~al.(2009)Selin, Wu, Nam, Reilly, Paltsev, Prinn, and
-  Webster}]{Selin2009}
-Selin, N.~E., Wu, S., Nam, K.~M., Reilly, J.~M., Paltsev, S., Prinn, R.~G., and
-  Webster, M.~D.: {Global health and economic impacts of future ozone
-  pollution}, Environmental Research Letters, 4, 044\,014,
-  \doi{10.1088/1748-9326/4/4/044014}, 2009.
 
 \bibitem[{Sinha et~al.(2004)Sinha, Jaegl{\'{e}}, Hobbs, and Liang}]{Sinha2004}
 Sinha, P., Jaegl{\'{e}}, L., Hobbs, P.~V., and Liang, Q.: {Transport of biomass
@@ -309,6 +300,23 @@ Stevenson, D.~S., Dentener, F.~J., Schultz, M.~G., Ellingsen, K., van Noije, T.
   S.: {Multimodel ensemble simulations of present-day and near-future
   tropospheric ozone}, J. Geophys. Res., 111, \doi{10.1029/2005jd006338},
   \urlprefix\url{http://dx.doi.org/10.1029/2005JD006338}, 2006.
+
+\bibitem[{Stevenson et~al.(2013)Stevenson, Young, Naik, Lamarque, Shindell,
+  Voulgarakis, Skeie, Dalsoren, Myhre, Berntsen, Folberth, Rumbold, Collins,
+  MacKenzie, Doherty, Zeng, {Van Noije}, Strunk, Bergmann, Cameron-Smith,
+  Plummer, Strode, Horowitz, Lee, Szopa, Sudo, Nagashima, Josse, Cionni, Righi,
+  Eyring, Conley, Bowman, Wild, and Archibald}]{Stevenson2013}
+Stevenson, D.~S., Young, P.~J., Naik, V., Lamarque, J.~F., Shindell, D.~T.,
+  Voulgarakis, a., Skeie, R.~B., Dalsoren, S.~B., Myhre, G., Berntsen, T.~K.,
+  Folberth, G.~a., Rumbold, S.~T., Collins, W.~J., MacKenzie, I.~a., Doherty,
+  R.~M., Zeng, G., {Van Noije}, T. P.~C., Strunk, a., Bergmann, D.,
+  Cameron-Smith, P., Plummer, D.~a., Strode, S.~a., Horowitz, L., Lee, Y.~H.,
+  Szopa, S., Sudo, K., Nagashima, T., Josse, B., Cionni, I., Righi, M., Eyring,
+  V., Conley, a., Bowman, K.~W., Wild, O., and Archibald, a.: {Tropospheric
+  ozone changes, radiative forcing and attribution to emissions in the
+  Atmospheric Chemistry and Climate Model Intercomparison Project (ACCMIP)},
+  Atmospheric Chemistry and Physics, 13, 3063--3085,
+  \doi{10.5194/acp-13-3063-2013}, 2013.
 
 \bibitem[{Stohl et~al.(2003)Stohl, Wernli, James, Bourqui, Forster, Liniger,
   Seibert, and Sprenger}]{Stohl2003}
