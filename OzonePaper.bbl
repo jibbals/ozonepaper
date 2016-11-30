@@ -1,4 +1,4 @@
-\begin{thebibliography}{49}
+\begin{thebibliography}{52}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{{\tt #1}}
 \providecommand{\urlprefix}{URL }
@@ -19,6 +19,16 @@ Alexander, S.~P., Murphy, D.~J., and Klekociuk, A.~R.: {High resolution VHF
 Baray, J.~L., Daniel, V., Ancellet, G., and Legras, B.: {Planetary-scale
   tropopause folds in the southern subtropics}, Geophysical Research Letters,
   27, 353--356, \doi{10.1029/1999GL010788}, 2000.
+
+\bibitem[{Baray et~al.(2012)Baray, Duflot, Posny, Cammas, Thompson, Gabarrot,
+  Bonne, and Zeng}]{Baray2012}
+Baray, J.-L., Duflot, V., Posny, F., Cammas, J.-P., Thompson, A.~M., Gabarrot,
+  F., Bonne, J.-L., and Zeng, G.: {One year ozonesonde measurements at
+  Kerguelen Island (49.2S, 70.1E): Influence of stratosphere-to-troposphere
+  exchange and long-range transport of biomass burning plumes}, Journal of
+  Geophysical Research: Atmospheres, 117, n/a----n/a,
+  \doi{10.1029/2011JD016717},
+  \urlprefix\url{http://dx.doi.org/10.1029/2011JD016717}, 2012.
 
 \bibitem[{Beekmann et~al.(1997)Beekmann, Ancellet, Blonsky, {De Muer}, Ebel,
   Elbern, Hendricks, Kowol, Mancier, Sladkovic, Smit, Speth, Trickl, and {Van
@@ -43,6 +53,13 @@ Bey, I., Jacob, D.~J., Yantosca, R.~M., Logan, J.~A., Field, B.~D., Fiore,
   Modeling of Tropospheric Chemistry with Assimilated Meteorology: Model
   Description and Evaluation}, Journal of Geophysical Research, 106, 73--95,
   \doi{10.1029/2001JD000807}, 2001.
+
+\bibitem[{Brinksma et~al.(2002)Brinksma, Ajtic, Bergwerff, Bodeker, Boyd, Haan,
+  Hogervorst, Hovenier, and Swart}]{Brinksma2002}
+Brinksma, E.~J., Ajtic, J., Bergwerff, J.~B., Bodeker, G.~E., Boyd, I.~S.,
+  Haan, J. F.~D., Hogervorst, W., Hovenier, J.~W., and Swart, D. P.~J.: {Five
+  years of observations of ozone profiles over Lauder , New Zealand}, 107,
+  1--11, \doi{10.1029/2001JD000737}, 2002.
 
 \bibitem[{Danielsen(1968)}]{Danielson1968}
 Danielsen, E.~F.: {Stratospheric-Tropospheric Exchange Based on Radioactivity,
@@ -122,6 +139,13 @@ Galani, E.: {Observations of stratosphere-to-troposphere transport events over
   \urlprefix\url{http://www.agu.org/pubs/crossref/2003/2002JD002596.shtml},
   2003.
 
+\bibitem[{Giglio et~al.(2013)Giglio, Randerson, and {Van Der
+  Werf}}]{Giglio2013}
+Giglio, L., Randerson, J.~T., and {Van Der Werf}, G.~R.: {Analysis of daily,
+  monthly, and annual burned area using the fourth-generation global fire
+  emissions database (GFED4)}, Journal of Geophysical Research: Biogeosciences,
+  118, 317--328, \doi{10.1002/jgrg.20042}, 2013.
+
 \bibitem[{Gloudemans et~al.(2007)Gloudemans, {De Laat}, Krol, Meirink, {Van Der
   Werf}, Schrijver, and Aben}]{Gloudemans2006}
 Gloudemans, A., {De Laat}, J., Krol, M., Meirink, J.~F., {Van Der Werf}, G.,
@@ -149,7 +173,7 @@ Jacobson, M.~C. and Hansson, H.: {Organic atmospheric aerosols: Review and
   state of the science}, Reviews of Geophysics, pp. 267--294,
   \doi{10.1029/1998RG000045}, 2000.
 
-\bibitem[{Jaffe and Wigder(2012)}]{Jaffe_2012}
+\bibitem[{Jaffe and Wigder(2012)}]{Jaffe2012}
 Jaffe, D.~a. and Wigder, N.~L.: {Ozone production from wildfires: A critical
   review}, Atmospheric Environment, 51, 1--10,
   \doi{10.1016/j.atmosenv.2011.11.063},
