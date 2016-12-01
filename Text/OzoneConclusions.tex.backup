@@ -16,21 +16,29 @@ Examination of STT events at three sites spanning the SH extra-tropics (38$^{\ci
 All three sites show a summer (DJF) maximum and winter (JJA) minimum, although the seasonal amplitude is less apparent at the Antarctic site (Davis), as events (likely due to polar jet stream caused turbulence) are also detected regularly in winter and spring.  %The cause of these ozone enhancements is examined through the use of satellite CO data (to determine fire influence) and ERA-I meteorological data.
 Comparison with ERA-Interim reanalysis data suggests the majority of events are caused by turbulent weather in the upper troposphere due to low pressure fronts, followed by cut-off low pressure systems.
 
+Vertical integration of the observed ozone enhancement also allows a rough estimate of the flux associated with each event, although this is a conservative lower limit.
+We find that on average STT events are responsible for $\sim$3\% of the total tropospheric ozone column.
+Across all months, we conservatively estimate that the ozone enhancement due to STT events at our three sites ranges from $1$ to $6 \times 10^{16}$ molecules cm$^{-2}$.
 \citet{Hegglin2009} estimate that climate change will lead to increased STT of the order of 30 (121) Tg yr$^{-1}$ relative to 1965 in the Southern (Northern) Hemisphere due to an acceleration in the Brewer Dobson circulation.
+As the climate alters, an understanding of mixing between the stratosphere and troposphere over the southern ocean will help diagnose potential hazards.
+Seasonality and impact of stratospheric ozone are changing over time, furter analysis of this long term set of ozonesonde data will be useful into the future.
+
+%GEOS-Chem estimates of the tropospheric ozone column match fairly well with the ozonesonde observations, with least squares regression correlation coefficient (r$^2$) of 0.38, 0.18, 0.37, for Davis, Macquarie, and Melbourne respectively.
+%Using reduced major axis regression (which does not assume that there is no error in the measurements) there is a near one to one slope at all three sites, with or without removing the seasonality of both GEOS-Chem and the ozonesondes.
+%Our STT detection algorithm is unsuitable for GEOS-Chem output, as the model averages over 2$^{\circ}$ latitude by 2.5$^{\circ}$ longitude grid boxes, with a lower vertical resolution (especially in the upper troposphere).
 
 A comparison of ozonesonde measured ozone profiles against those simulated by the GEOS-Chem global chemical transport model is performed.
-Vertical integration of the ozonesonde observed ozone provides the tropospheric ozone column.
-It also allows a rough estimate of the flux associated with each event, although this is a conservative lower limit.
 The major features in the ozonesonde record of tropospheric ozone columns are well represented by the model.
-Ozonesondes prove to be more useful, as simulated profiles generally can not identify STT events due to their lower vertical resolution.
-Simulated tropospheric column ozone is combined with ozonesonde data to provide a first estimate of the total contribution of STT events to tropospheric ozone over the southern ocean.
-Across all months, we conservatively estimate that the ozone enhancement due to STT events at our three sites ranges from $1$ to $6 \times 10^{16}$ molecules cm$^{-2}$.
-This method implies that STT events can only explain $\sim$3\% of the global net downward flux of ozone, a value that is likely much too low.
+Ozonesondes prove to be more useful due to their higher vertical resolution, as simulated profiles generally can not identify STT events.
+Simulated tropospheric column ozone is combined with ozonesonde data to estimate STT flux and frequencies derived from the measurements to provide a first estimate of the total contribution of STT events to tropospheric ozone over the southern ocean.
+This method implies that STT events can only explain $\sim$3\% of the global net downward flux of ozone, a value that is likely much too low. 
 Replacing the sonde-derived estimate of the ozone fraction associated with each event with a value derived from a global model \citep{Terao2008} increases this estimate by an order of magnitude.
 
 Estimating STT flux using ozonesonde data alone remains challenging; however, the very high vertical resolution provided by ozonesondes means they are capable of detecting STT events that models, reanalyses, and satellites may not. 
 Further work is needed to more accurately translate these ozonesonde measurements into STT ozone fluxes, particularly in the SH where data are sparse and STT is likely to be a major contributor to upper tropsopheric ozone in some regions.
 More frequent ozonesonde releases at SH sitewould facilitate development of better STT flux estimates for this region.
-As the climate alters, an understanding of mixing between the stratosphere and troposphere over the southern ocean will help diagnose potential hazards.
-Seasonality and impact of stratospheric ozone are changing over time, furter analysis of this long term set of ozonesonde data will be useful into the future.
 
+
+%Due to their high vertical resolution ozonesondes are able to detect STT events where reanalysis datasets or models may not.
+
+%    Further work needs to be done to quantify STT flux using solely ozonesonde data, more frequent ozonesonde releases would make this easier.
