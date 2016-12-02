@@ -473,26 +473,25 @@
   %Global STT flux estimated from an ensemble of models suggests values around 550~Tg yr$^{-1}$ \citep{Stevenson2006}.
   %Global net downward STT flux is estimated to be 75~Tg yr$^{-1}$ \citep{Sprenger2003}.
   Previous studies have derived global gross STT fluxes of 550~Tg yr$^{-1}$ \citep{Stevenson2006} and net downward STT fluxes of 75~Tg yr$^{-1}$ \citep{Sprenger2003}.
-  Our estimate of 2.48~Tg yr$^{-1}$ would suggest only $\sim$3.3\% of the global net downward flux can be attributed to STT events, a value that is likely much too low.
+  Our estimate of 2.48~Tg yr$^{-1}$ would suggest only $\sim$3.3\% of the global net downward flux can be attributed to STT events in the southern ocean, a value that is likely too low.
   %This method of flux estimation could be increased if we could account for background ozone enhancement and mixing due to events.
-  This result highlights one of the difficulties associated with temporally sparse ozonesonde data.
-  Our flux calculation only detects STT events that satisfy very specific criteria, and may therefore be unsuitable for calculating large-scale STT fluxes.
+  This result highlights one of the difficulties associated with temporally sparse ozonesonde data, as STT impact is hard to measure without multiple measurements during and surrounding an event.
+  It's also worth noting that our flux estimate only detects STT events that satisfy specific criteria, and may therefore be unsuitable for calculating more general STT fluxes.
   
   %\citet{Olsen2003} used PV and winds from the GEOS reanalysis combined with ozone measurements from the TOMS satellite to estimate that the ozone flux between 30$^{\circ}$S and 60$^{\circ}$S 210~Tg yr$^{-1}$ .
   %Their estimates show peak ozone flux from winter to early spring (JJAS).
   %\citet{Liu2016} model the upper tropospheric ozone and it's source (emissions/lightning/stratospheric) over the Atlantic ocean between 30$^{\circ}$S and 45$^{\circ}$S, and suggest that most of this is transported from the stratosphere from March to September, which is when the subtropical jet system is strongest.
-  Other studies have found peak STT ozone fluxes in the SH extratropics occur from autumn or winter to early spring \citep{Olsen2003, Liu2016}. 
+  Other studies have found increased STT ozone fluxes in the SH extratropics occur from autumn or winter to early spring \citep{Olsen2003, Liu2016}. 
   At this time of year, we find the highest tropospheric $\Omega_{O3}$, but a relatively low STT flux.
   Our results suggest instead that the ozone flux associated with STT events (at least those due to tropopause folds) is largest in austral summer (December-March), primarily due to an increased frequency of STT detections during these months.
   Some legitimate STT events may have been removed due to coincident smoke plumes, which could affect our STT event frequency during winter.
   %It is worth noting that the 30$^{\circ}$S to 60$^{\circ}$S latitudes describe the Ferrel cell, while our region of analysis also includes some of the Polar cell.
-  
 
   %Considering the individual event contributions, \citet{Terao2008} estimate much higher STT impacts using a global CTM with a stratospheric ozone tracer; where 30--40\% of the 500~hPa ozone is due to STT.
-  As described previously, our estimate of the fraction of tropospheric ozone from each STT event ($f$) is almost certainly biased low, perhaps by a significant amount. 
+  As described previously, our estimate of the fraction of tropospheric ozone from each STT event ($I$) is almost certainly biased low, perhaps by a significant amount. 
   Using a global CTM with a stratospheric ozone tracer, \citet{Terao2008} estimated that this number was closer to 30--40\%, at least for the ozone mixing ratio at 500~hPa in the northern hemisphere.
   %Although this figure is based on the Northern Hemisphere upper troposphere, if we assume that STT flux due to an event is actually 35\% (instead of using our estimated influence) our estimate increases by roughly a factor of 12: to $\sim$30.2~Tg yr$^{-1}$
-  If we we assume a fractional ozone flux due to each event STT event of $f$=35\% based on their results (rather than our estimated 2-4\%), our estimate of the net downward ozone STT flux from southern ocean STT events increases by an order of magnitude to $\sim$29.5~Tg yr$^{-1}$ -- 39\% of the global downward flux estimated by \citet{Sprenger2003}.
+  If we we assume a fractional ozone flux due to each event STT event of $f$=35\% based on their results (rather than our calculation of 2-4\%), our estimate of the net downward ozone STT flux from southern ocean STT events increases by an order of magnitude to $\sim$29.5~Tg yr$^{-1}$ -- 39\% of the global net downward flux estimated by \citet{Sprenger2003}.
 
 %  This would suggest that tropopause fold ozone transport events over the southern ocean account $\sim$40.3\% of global net STT flux.
   

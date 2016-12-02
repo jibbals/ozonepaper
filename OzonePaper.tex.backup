@@ -80,15 +80,13 @@
 \appendixfigures  %% needs to be added in front of appendix figures in one-column style (\documentclass[acp, manuscript]{copernicus})
 \appendixtables   %% needs to be added in front of appendix tables in one-column style (\documentclass[acp, manuscript]{copernicus})
 
-%%%%%%%%%%%%%%%%% Not used in discussion %%%%%%%%%%%%%%%%%
-% \authorcontribution{Mr. Greenslade Authored and edited this manuscript, as well as analysing the datasets, and runing the simulations. 
-% Dr. Alexander provided the IDL scripts which initially read and bandpassed the ozonesonde profiles, as well as providing direction to my work.
-% Dr. Schofield outlined the introduction and story of the paper.
-% Dr. Klekociuk provided the static stability analysis as an alternative to the bandpass filter method.
-% Dr. J. A. Fisher who edited or supplied feedback for much of the manuscript.}
-% 
-% \competinginterests{The authors declare that they have no conflict of interest.}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\authorcontribution{Mr. Greenslade Authored and edited this manuscript, as well as analysing the datasets, and runing the simulations. 
+Dr. Alexander provided the IDL scripts which initially read and bandpassed the ozonesonde profiles, as well as providing direction to my work.
+Dr. Schofield outlined the introduction and story of the paper.
+Dr. Klekociuk provided the static stability analysis as an alternative to the bandpass filter method.
+Dr. J. A. Fisher who edited or supplied feedback for much of the manuscript.}
+
+\competinginterests{The authors declare that they have no conflict of interest.}
 
 %\disclaimer{disclaimer}
 

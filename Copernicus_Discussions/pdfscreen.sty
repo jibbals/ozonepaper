@@ -564,7 +564,7 @@
 \def\panelfont{\fontsize{7pt}{7pt}\itshape\selectfont}
 \def\st{\hbox{\vrule height10pt depth5pt width\z@}\panelfont}
 \def\addButton#1#2{\begingroup\normalsfcodes\fboxsep0pt\fboxrule.4pt\shadowsize.4pt%
-       \sffamily\color{buttonshadow}\shadowbox{\colorbox{buttonbackground}%
+       \sffamily\color{white}\shadowbox{\colorbox{buttonbackground}%
        {\hbox to #1{\hfil\Black\st#2\hfil}}\color{buttonshadow}}\endgroup}
 %
 %------------ Panel macros ----------------
@@ -830,7 +830,7 @@
 \def\numberline#1{}
 \def\ST{\hbox{\vrule height8pt depth3pt width\z@}\scriptsize\itshape}
 \def\scrShadowButton#1#2{\begingroup\fboxsep0pt\fboxrule.6pt\shadowsize.1pt%
-       \sffamily\color{buttonshadow}\shadowbox{\colorbox{buttonbackground}%
+       \sffamily\color{white}\shadowbox{\colorbox{buttonbackground}%
        {\hbox to #1{\color{fgcolor}\ST#2\hfill}}\color{buttonshadow}}\endgroup}
 \def\scrNormalButton#1#2{\begingroup\sffamily\color{white}%
          \noindent{\colorbox{panelbackground}%
@@ -944,7 +944,7 @@
 \let\old@secnumber\@secnumber
   \def\@secnumber{\protect\textcolor{section\thesection@level}{\old@secnumber}}%
   \def\@seccntformat#1{\protect\textcolor{section\thesection@level}%
-     {\expandafter\upshape\csname the#1\endcsname}\quad}%
+     {\expandafter\upshape\csname the#1\endcsname.}\quad}%
   \def\@secnumfont{\protect\textcolor{section\thesection@level}}%\mdseries}
   \def\abstractname{\protect\textcolor{blue}{\@Panelabstractname}}
   \let\o@title\@title
