@@ -7,14 +7,8 @@
 %% Please use the following documentclass and journal abbreviations for discussion papers and final revised papers.
 
 %% 2-column papers and discussion papers
-%\documentclass[acp, manuscript]{copernicus} % single column manuscript:
+\documentclass[acp, manuscript]{copernicus} % single column manuscript: used for both discussion and submission
 %\documentclass[acp]{copernicus} % two column
-
-%%%%%%%%%%% These are just for discussion phase %%%%%%%%%%%%%%%%%%
-\documentclass[acpd, online]{copernicus_discussions} % discussion stage
-\usepackage{xcolor}
-\usepackage{hyperref}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % shortcut commands for one or two column figures
 %\newcommand{\igone}[1]{\includegraphics[width=8.3cm]{#1}}
@@ -24,20 +18,11 @@
 \title{Stratospheric ozone intrusion events and their impacts on tropospheric ozone}
 
 % \Author[affil]{given_name}{surname}
-% TODO: Back to capital A after discussion
-%\Author[1]{Jesse}{Greenslade}
-%\Author[2]{Simon}{Alexander}
-%\Author[3,4]{Robyn}{Schofield}
-%\Author[1,5]{Jenny A.}{Fisher}
-%\Author[2]{Andrew}{Klekociuk}
-
-%%%%%%%%%%% Discussion uses small a %%%%%%%%%%%%%%%%%%
-\author[1]{Jesse}{Greenslade}
-\author[2]{Simon}{Alexander}
-\author[3,4]{Robyn}{Schofield}
-\author[1,5]{Jenny A.}{Fisher}
-\author[2]{Andrew}{Klekociuk}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\Author[1]{Jesse}{Greenslade}
+\Author[2]{Simon}{Alexander}
+\Author[3,4]{Robyn}{Schofield}
+\Author[1,5]{Jenny A.}{Fisher}
+\Author[2]{Andrew}{Klekociuk}
 
 \affil[1]{Centre for Atmospheric Chemistry, School of Chemistry, University of Wollongong}
 \affil[2]{Australian Antarctic Division, Hobart}
@@ -80,15 +65,13 @@
 \appendixfigures  %% needs to be added in front of appendix figures in one-column style (\documentclass[acp, manuscript]{copernicus})
 \appendixtables   %% needs to be added in front of appendix tables in one-column style (\documentclass[acp, manuscript]{copernicus})
 
-%%%%%%%%%%%%%%%%% Not used in discussion %%%%%%%%%%%%%%%%%
-% \authorcontribution{Mr. Greenslade Authored and edited this manuscript, as well as analysing the datasets, and runing the simulations. 
-% Dr. Alexander provided the IDL scripts which initially read and bandpassed the ozonesonde profiles, as well as providing direction to my work.
-% Dr. Schofield outlined the introduction and story of the paper.
-% Dr. Klekociuk provided the static stability analysis as an alternative to the bandpass filter method.
-% Dr. J. A. Fisher who edited or supplied feedback for much of the manuscript.}
-% 
-% \competinginterests{The authors declare that they have no conflict of interest.}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\authorcontribution{Mr. Greenslade Authored and edited this manuscript, as well as analysing the datasets, and runing the simulations. 
+Dr. Alexander provided the IDL scripts which initially read and bandpassed the ozonesonde profiles, as well as providing direction to my work.
+Dr. Schofield outlined the introduction and story of the paper.
+Dr. Klekociuk provided the static stability analysis as an alternative to the bandpass filter method.
+Dr. J. A. Fisher who edited or supplied feedback for much of the manuscript.}
+
+\competinginterests{The authors declare that they have no conflict of interest.}
 
 %\disclaimer{disclaimer}
 
