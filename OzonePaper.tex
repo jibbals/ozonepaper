@@ -19,19 +19,20 @@
 
 % \Author[affil]{given_name}{surname}
 \Author[1]{Jesse}{Greenslade}
-\Author[2]{Simon}{Alexander}
-\Author[3,4]{Robyn}{Schofield}
-\Author[1,5]{Jenny A.}{Fisher}
-\Author[2]{Andrew}{Klekociuk}
+\Author[2,3]{Simon}{Alexander}
+\Author[4,5]{Robyn}{Schofield}
+\Author[1,6]{Jenny A.}{Fisher}
+\Author[2,3]{Andrew}{Klekociuk}
 
 \affil[1]{Centre for Atmospheric Chemistry, School of Chemistry, University of Wollongong}
 \affil[2]{Australian Antarctic Division, Hobart}
-\affil[3]{School of Earth Sciences, University of Melbourne}
-\affil[4]{ARC Centre of Excellence for Climate System Science, University of New South Wales}
-\affil[5]{School of Earth \& Environmental Sciences, University of Wollongong}
+\affil[3]{Antarctic Climate and Ecosystems Co-operative Research Centre, Hobart, Australia}
+\affil[4]{School of Earth Sciences, University of Melbourne}
+\affil[5]{ARC Centre of Excellence for Climate System Science, University of New South Wales}
+\affil[6]{School of Earth \& Environmental Sciences, University of Wollongong}
 
-\runningtitle{Ozone STTs}
-\runningauthor{J. Greenslade}
+\runningtitle{Southern Hemisphere stratospheric intrusions}
+\runningauthor{Greenslade et al}
 \correspondence{Jesse Greenslade (jwg366@uowmail.edu.au)}
 
 \received{}
@@ -57,6 +58,7 @@
 \conclusions  %% \conclusions[modified heading if necessary]
 \input{Text/OzoneConclusions.tex}
 
+% No appendix...
 \appendix
 % \section{}    %% Appendix A
 % 
@@ -65,8 +67,9 @@
 \appendixfigures  %% needs to be added in front of appendix figures in one-column style (\documentclass[acp, manuscript]{copernicus})
 \appendixtables   %% needs to be added in front of appendix tables in one-column style (\documentclass[acp, manuscript]{copernicus})
 
-\authorcontribution{Mr. Greenslade Authored and edited this manuscript, as well as analysing the datasets, and runing the simulations. 
-Dr. Alexander provided the IDL scripts which initially read and bandpassed the ozonesonde profiles, as well as providing direction to my work.
+\authorcontribution{Mr. Greenslade Authored and edited this manuscript, as well as analysing the datasets, under the supervision of Dr. Alexander, Dr. Fisher, and Dr. Schofield.
+Mr. Greenslade ran GEOS-Chem and analysed the output.
+Dr. Alexander provided the IDL scripts which initially read and bandpassed the ozonesonde profiles.
 Dr. Schofield outlined the introduction and story of the paper.
 Dr. Klekociuk provided the static stability analysis as an alternative to the bandpass filter method.
 Dr. J. A. Fisher who edited or supplied feedback for much of the manuscript.}
@@ -75,12 +78,19 @@ Dr. J. A. Fisher who edited or supplied feedback for much of the manuscript.}
 
 %\disclaimer{disclaimer}
 
+% Data availability
+%
+%\begin{acknowledgements}{Data availability}
+\textit{Data availability.} All GEOS-Chem model output and the ozonesonde observational data are available from the authors upon request.
+%\end{acknowledgements}
+
+
 \begin{acknowledgements}
-Thanks to Dr. M. Tully who shared the ozonesonde data.
+We thank the Australian Bureau of Meteorology and the Australian Antarctic Division for providing the ozonesonde data. 
+The ERA-Interim data were downloaded from the ECMWF website following registration.
+This work was commenced with support from the Australian Department of the Environment summer ozone science scholarship and partly supported by research project 4012 of the Australian Antarctic Programme.
 
 This research was undertaken with the assistance of resources provided at the NCI National Facility systems at the Australian National University through the National Computational Merit Allocation Scheme supported by the Australian Government.
-%Thanks to Dr. S. Alexander who really got me started on this project.
-%Thanks to Dr. Fisher who's comments seem endless and useful
 
 \end{acknowledgements}
 
