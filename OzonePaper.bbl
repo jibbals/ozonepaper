@@ -1,4 +1,4 @@
-\begin{thebibliography}{52}
+\begin{thebibliography}{50}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{{\tt #1}}
 \providecommand{\urlprefix}{URL }
@@ -53,13 +53,6 @@ Bey, I., Jacob, D.~J., Yantosca, R.~M., Logan, J.~A., Field, B.~D., Fiore,
   Modeling of Tropospheric Chemistry with Assimilated Meteorology: Model
   Description and Evaluation}, Journal of Geophysical Research, 106, 73--95,
   \doi{10.1029/2001JD000807}, 2001.
-
-\bibitem[{Brinksma et~al.(2002)Brinksma, Ajtic, Bergwerff, Bodeker, Boyd, Haan,
-  Hogervorst, Hovenier, and Swart}]{Brinksma2002}
-Brinksma, E.~J., Ajtic, J., Bergwerff, J.~B., Bodeker, G.~E., Boyd, I.~S.,
-  Haan, J. F.~D., Hogervorst, W., Hovenier, J.~W., and Swart, D. P.~J.: {Five
-  years of observations of ozone profiles over Lauder , New Zealand}, 107,
-  1--11, \doi{10.1029/2001JD000737}, 2002.
 
 \bibitem[{Danielsen(1968)}]{Danielson1968}
 Danielsen, E.~F.: {Stratospheric-Tropospheric Exchange Based on Radioactivity,
@@ -161,12 +154,6 @@ Guenther, A.~B., Jiang, X., Heald, C.~L., Sakulyanontvittaya, T., Duhl, T.,
   from nature version 2.1 (MEGAN2.1): An extended and updated framework for
   modeling biogenic emissions}, Geoscientific Model Development, 5, 1471--1492,
   \doi{10.5194/gmd-5-1471-2012}, 2012.
-
-\bibitem[{Hegglin and Shepherd(2009)}]{Hegglin2009}
-Hegglin, M.~I. and Shepherd, T.~G.: {Large climate-induced changes in
-  ultraviolet index and stratosphere-to-troposphere ozone flux}, Nature
-  Geoscience, 2, 687--691, \doi{10.1038/ngeo604},
-  \urlprefix\url{http://dx.doi.org/10.1038/ngeo604}, 2009.
 
 \bibitem[{Jacobson and Hansson(2000)}]{Jacobson2000}
 Jacobson, M.~C. and Hansson, H.: {Organic atmospheric aerosols: Review and
