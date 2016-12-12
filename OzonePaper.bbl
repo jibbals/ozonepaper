@@ -1,4 +1,4 @@
-\begin{thebibliography}{50}
+\begin{thebibliography}{49}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{{\tt #1}}
 \providecommand{\urlprefix}{URL }
@@ -228,10 +228,6 @@ Mze, N., Hauchecorne, A., Bencherif, H., Dalaudier, F., and Bertaux, J.~L.:
   {Climatology and comparison of ozone from ENVISAT/GOMOS and
   SHADOZ/balloon-sonde observations in the southern tropics}, Atmospheric
   Chemistry and Physics, 10, 8025--8035, \doi{10.5194/acp-10-8025-2010}, 2010.
-
-\bibitem[{NOAA()}]{noaasondes}
-NOAA: {NOAA Ozone sondes appendix},
-  \urlprefix\url{http://www.ndsc.ncep.noaa.gov/organize/protocols/appendix5/}.
 
 \bibitem[{Olsen(2003)}]{Olsen2003}
 Olsen, M.~a.: {A comparison of Northern and Southern Hemisphere
