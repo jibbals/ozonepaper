@@ -4,11 +4,9 @@
   \subsection{Ozonesonde record in the Southern Ocean}
   \label{Section:ozonesondes}
     %(Too basic)Ozonesondes are weather balloons which measure ozone concentrations from the surface to around 35km.
-    %These ozonesondes provide a high vertical resolution profile of ozone, along with temperature, pressure, and humidity.
     Ozonesondes provide a high vertical resolution profile of ozone, temperature, pressure, and humidity from the surface to 35 km.
     In the troposphere, the ozonesondes generally make 150-300 measurements.    
     Ozone mixing ratio is quantified with an electrochemical concentration cell that senses the proportional electrical current from reaction of ozone with a solution of potassium iodide.
-    %(relevance) Most ozonesondes are new and independant, since retrieval of a used ozonesonde can be difficult.
     Standardised procedures are followed when constructing, transporting, and releasing the ozonesondes \url{http://www.ndsc.ncep.noaa.gov/organize/protocols/appendix5/}.
     Ozonesondes are estimated to provide around 2\% precision in the stratosphere, which improves at lower altitudes, and ozonesondes have been shown to be accurate to within 5\% when the correct procedures are followed \citep{Smit2007}.
     
@@ -18,19 +16,18 @@
     A summary of ozonesondes at each site can be seen in Table \ref{table:sondesummary}.
     
     \begin{table}[t]
-      %\centering
       \caption{Number of sonde releases at each site over the period of analysis.}
       \begin{tabular}{ c   c   c   c  } 
-	\hline
-	Site & Total Releases & Monthly Releases (J, F, M, ...) & Date Range \\
-	\hline
-	Davis     & 240 & 11, 12, 13, 12, 17, 31,	& 2006/04/13 -  \\ 
-		  &	& 29, 28, 32, 28, 15, 12 	& 2013/11/13	\\
-	Macquarie & 390 & 32, 31, 45, 28, 34, 33,	& 2004/01/20 -  \\
-		  &	& 28, 35, 29, 33, 31, 31 	& 2013/01/09	\\ 
-	Melbourne & 456 & 31, 38, 40, 38, 41, 36,	& 2004/01/08 -  \\
-		  &	& 38, 39, 46, 40, 38, 31        & 2013/12/18	\\
-	\hline
+					\hline
+					Site & Total Releases & Monthly Releases (J, F, M, ...) & Date Range \\
+					\hline
+					Davis           & 240 & 11, 12, 13, 12, 17, 31,	 & 2006/04/13 -  \\ 
+						                    &	        & 29, 28, 32, 28, 15, 12 	 & 2013/11/13	\\
+					Macquarie & 390 & 32, 31, 45, 28, 34, 33,	 & 2004/01/20 -  \\
+						                     &       	  & 28, 35, 29, 33, 31, 31   & 2013/01/09	\\ 
+					Melbourne & 456 & 31, 38, 40, 38, 41, 36,	 & 2004/01/08 -  \\
+						                     &         & 38, 39, 46, 40, 38, 31   & 2013/12/18	\\
+					\hline
       \end{tabular}
       \label{table:sondesummary}
     \end{table}
@@ -56,7 +53,6 @@
 
     \begin{figure}[t] 
     % figure produced in seasonal_tropopause in Examine_stations.py
-      %\includegraphics[width=0.8\columnwidth]{figures/tpheights}
       \includegraphics[width=10cm]{figures/tpheights.png}
       \caption{%
 	Multi-year monthly median tropopause altitude (minimum of lapse rate and ozone defined tropopause) determined from ozonesondes measurements at Melbourne (2004-2013), Macquarie (2004-2013) and Davis (2006-2013) (solid lines).
@@ -72,7 +68,6 @@
     
     \begin{figure*}[t]
       %Figure created seasonal_tropozone function in examine stations - ported from IDL
-      %\includegraphics[width=0.95\columnwidth]{figures/seasonaltropozone}
       \includegraphics[width=12.0cm]{figures/seasonaltropozone}
       \caption{ %
 	Multi-year mean seasonal cycle of ozone mixing ratio over Davis, Macquarie, and Melbourne as measured by ozonesondes.
@@ -112,8 +107,6 @@
     
     \begin{figure}[t]
       % Figure created in getevents.pro, edited in inkscape
-      
-      %\includegraphics[width=0.8\columnwidth]{figures/filtereg.png}
       \includegraphics[width=8.3cm]{figures/filtereg.png}
       \caption{ %
 	An example of the STT identification and flux estimation methods used in this work. 
@@ -122,10 +115,8 @@
 	The ozone flux associated with the STT event is calculated using the area outlined with the orange dashed line in the left panel.
       }
       \label{fig:filterEG}
-      
     \end{figure}
    
-       
     We define the ozone peak as the altitude where the OMR is greatest within the lowest range of altitudes over which the perturbation profile exceeds the percentile-based threshold.
     The STT event is confirmed if the perturbation profile drops below zero between the ozone peak and the tropopause. 
     Alternatively, the STT event is also confirmed if the OMR between the ozone peak and the tropopause drops below 80~ppb and is at least 20~ppb lower than the OMR at the ozone peak. 
@@ -171,7 +162,7 @@
     All days with detected STT events were screened, with the exception of one event during which there were no available AIRS data (January 2010).
     We find that biomass burning may have influenced 14 events over Melbourne and 8 events over Macquarie island.
     These events are flagged in the following sections, and are not used in our calculation of total STT flux.
-    All of the flagged events except for one (in January at Macquarie Island) occurred during the Southern Hemisphere burning season (July to December, \citet{Edwards2006}). % burning season cite? \citep{Pak2003}.
+    All of the flagged events except for one (in January at Macquarie Island) occurred during the Southern Hemisphere burning season (July to December, \citet{Edwards2006}). % burning season from \citep{Pak2003}.
     No events at Davis were seen to be influenced by smoke transport.
     
     \begin{figure}[t]
@@ -286,12 +277,9 @@
   
   There is an annual cycle in the frequency of STT events  (Fig. \ref{fig:SummarySeasonality}) with a summertime peak at all three sites.
   This summertime peak is due to a prevalence of summer low-pressure storms and fronts, which increase turbulence and lower the tropopause \citep{Reutter2015}.
-  %For all three sites, STT events mainly occur in summer, and are most commonly associated with low pressure synoptic systems.
-  % repetitive - jaf
   At Davis, there is increased Antarctic winter activity, which may be due to the polar vortex and it's associated lowered tropopause and increased turbulence.
   STT events associated with cut-off low pressure systems are more prevalent during summer (winter for Davis), while STT events associated with frontal passage occur throughout the year.
-
-  %The increased winter time frequency of STT events at Davis (relative to Macquarie and Melbourne) may be due to increased polar jet stream activity at this time.
+  This seasonality is not seen in the recent ERA-Interim tropopause fold analysis performed by \citet{Skerlak2015}, where a winter maximum over Australia can be seen (although in the subtropics only - from around 20$^{\circ}$~S to 40$^{\circ}$~S).
   
   To examine the robustness of the distributions shown in Fig. \ref{fig:SummarySeasonality}, we developed an alternative assessment of the seasonal occurrence of STT events, with results shown in Fig. \ref{fig:AndrewProxySTT}.
   Here STT occurrence is evaluated by consideration of the square of the dry Brunt-Viäsälä frequency (N$^2$) at the heights of the ozone tropopause (z$_{OT}$) and lapse rate tropopause (z$_{LRT}$) in each ozonesonde profile that has been binned to 500~m resolution.
@@ -327,13 +315,10 @@
   Again, there is no clear relationships between meteorological conditions and event depth.
 
   \begin{figure}[t]
-    
-    %\includegraphics[width=0.99\columnwidth]{figures/summary_depth.png}
     \includegraphics[width=12cm]{figures/summary_depth.png}
     \caption{The distribution of STT event depth, defined as the distance from the event to the tropopause, at Davis (top), Macquarie Island (middle), and Melbourne (bottom), determined as described in the text.
     Events are coloured as described in Fig. \ref{fig:SummarySeasonality}.}
-    \label{fig:SummaryTPDepths}
-    
+    \label{fig:SummaryTPDepths}    
   \end{figure}
 
 \section{Simulation of southern mid-latitude ozone columns}
@@ -430,7 +415,7 @@
   We use simulated tropospheric ozone columns from GEOS-Chem to extrapolate the ozonesonde-based estimates to the entire Southern Ocean region, defined here as 35$^{\circ}$ S-75$^{\circ}$ S to encompass our three measurement sites. 
   To do so, we multiply the monthly likelihoods of STTs (fraction of ozonesonde releases for which an STT event was detected, per month, \textit{f}) by the monthly mean fraction of the ozone column attributed to STT (as in Fig. \ref{fig:fluxsummary}, \textit{I}) and by the monthly mean tropospheric ozone column over the Southern Ocean (from the GEOS-Chem multi-year mean, $\Omega_{SO_{O_3}}$), expressed simply as Flux$= \Omega_{SO_{O_3}} \times f \times I$.
   The monthly values of each term in this equation are shown in Fig. \ref{fig:SOExtrapolation} (upper panel).
-  A more spatially resolved estimate could be determined by dividing the Southern Ocean region into longitudinal and latitudinal bins for calculating the average $\Omega_{SO_{O_3}}$ from GEOS-Chem, applying latitudinal gradients to $f$ and $I$ based on their values at the three sonde release sites, and adding longitudinal variability due to seasonal stratospheric wind jet streams \citep{Baray2012}, but this is beyond the scope of this work and in any case would not address the limitations of the estimate provided below.
+  A more spatially resolved estimate could be determined by dividing the Southern Ocean region into longitudinal and latitudinal bins for calculating the average $\Omega_{SO_{O_3}}$ from GEOS-Chem, applying latitudinal gradients to $f$ and $I$ based on their values at the three sonde release sites, and adding longitudinal variability due to seasonal stratospheric wind jet streams \citep{Baray2012,Skerlak2015}, but this is beyond the scope of this work and in any case would not address the limitations of the estimate provided below.
   %The equation can be written simply as Flux$= \Omega_{SO_{O_3}} \times f \times I$.
 
   %Flux estimation over the Southern Ocean is based on the average GEOS-Chem tropospheric vertical column of ozone over a particular latitude range.
