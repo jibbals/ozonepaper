@@ -6,3 +6,4 @@ build
 *.bbl
 *.dvi
 *.synctex*
+comments/Example*
