@@ -1,0 +1,62 @@
+%% Copernicus Publications Manuscript Preparation Template for LaTeX Submissions
+%% ---------------------------------
+%% This template should be used for copernicus.cls
+%% The class file and some style files are bundled in the Copernicus Latex Package, which can be downloaded from the different journal webpages.
+%% For further assistance please contact Copernicus Publications at: production@copernicus.org
+%% http://publications.copernicus.org/for_authors/manuscript_preparation.html
+%% Please use the following documentclass and journal abbreviations for discussion papers and final revised papers.
+
+\documentclass[acp, manuscript]{copernicus} % single column manuscript: used for both discussion and submission
+
+% shortcut commands for one or two column figures
+%\newcommand{\igone}[1]{\includegraphics[width=8.3cm]{#1}}
+%\newcommand{\igtwo}[1]{\includegraphics[width=12.0cm]{#1}}
+
+\begin{document}
+\title{Supplementary}
+
+% \Author[affil]{given_name}{surname}
+\Author[1]{Jesse W.}{Greenslade}
+\Author[2,3]{Simon P.}{Alexander}
+\Author[4,5]{Robyn}{Schofield}
+\Author[1,6]{Jenny A.}{Fisher}
+\Author[2,3]{Andrew K.}{Klekociuk}
+
+\affil[1]{Centre for Atmospheric Chemistry, School of Chemistry, University of Wollongong}
+\affil[2]{Australian Antarctic Division, Hobart}
+\affil[3]{Antarctic Climate and Ecosystems Co-operative Research Centre, Hobart, Australia}
+\affil[4]{School of Earth Sciences, University of Melbourne}
+\affil[5]{ARC Centre of Excellence for Climate System Science, University of New South Wales}
+\affil[6]{School of Earth \& Environmental Sciences, University of Wollongong}
+
+\runningtitle{Southern Hemisphere stratospheric ozone intrusions}
+\runningauthor{Greenslade et al.}
+\correspondence{Jesse Greenslade (jwg366@uowmail.edu.au)}
+
+\received{}
+\pubdiscuss{} %% only important for two-stage journals
+\revised{}
+\accepted{}
+\published{}
+
+%% These dates will be inserted by Copernicus Publications during the typesetting process.
+\firstpage{1}
+\maketitle
+
+
+%\begin{abstract}
+%\end{abstract}
+
+\section{Southern Ocean extrapolation}
+
+\subsection{Definition}
+
+\subsection{Code}
+
+\subsection{Results}
+
+
+\bibliographystyle{copernicus}
+\bibliography{bibliography/Ozone.bib}
+
+\end{document}

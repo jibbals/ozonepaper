@@ -1,0 +1,70 @@
+%% Copernicus Publications Manuscript Preparation Template for LaTeX Submissions
+%% ---------------------------------
+%% This template should be used for copernicus.cls
+%% The class file and some style files are bundled in the Copernicus Latex Package, which can be downloaded from the different journal webpages.
+%% For further assistance please contact Copernicus Publications at: production@copernicus.org
+%% http://publications.copernicus.org/for_authors/manuscript_preparation.html
+%% Please use the following documentclass and journal abbreviations for discussion papers and final revised papers.
+
+\documentclass[acp, manuscript]{copernicus} % single column manuscript: used for both discussion and submission
+
+% shortcut commands for one or two column figures
+%\newcommand{\igone}[1]{\includegraphics[width=8.3cm]{#1}}
+%\newcommand{\igtwo}[1]{\includegraphics[width=12.0cm]{#1}}
+
+\begin{document}
+\title{Supplementary}
+
+% \Author[affil]{given_name}{surname}
+\Author[1]{Jesse W.}{Greenslade}
+\Author[2,3]{Simon P.}{Alexander}
+\Author[4,5]{Robyn}{Schofield}
+\Author[1,6]{Jenny A.}{Fisher}
+\Author[2,3]{Andrew K.}{Klekociuk}
+
+\affil[1]{Centre for Atmospheric Chemistry, School of Chemistry, University of Wollongong}
+\affil[2]{Australian Antarctic Division, Hobart}
+\affil[3]{Antarctic Climate and Ecosystems Co-operative Research Centre, Hobart, Australia}
+\affil[4]{School of Earth Sciences, University of Melbourne}
+\affil[5]{ARC Centre of Excellence for Climate System Science, University of New South Wales}
+\affil[6]{School of Earth \& Environmental Sciences, University of Wollongong}
+
+\runningtitle{Southern Hemisphere stratospheric ozone intrusions}
+\runningauthor{Greenslade et al.}
+\correspondence{Jesse Greenslade (jwg366@uowmail.edu.au)}
+
+\received{}
+\pubdiscuss{} %% only important for two-stage journals
+\revised{}
+\accepted{}
+\published{}
+
+%% These dates will be inserted by Copernicus Publications during the typesetting process.
+\firstpage{1}
+\maketitle
+
+
+%\begin{abstract}
+%\end{abstract}
+
+\section{Southern Ocean extrapolation}
+
+\subsection{Outline}
+  We use simulated tropospheric ozone columns from GEOS-Chem to extrapolate the ozonesonde-based estimates to the entire Southern Ocean region, defined here as 35$^{\circ}$ S-75$^{\circ}$ S to encompass our three measurement sites. 
+  To do so, we multiply the monthly likelihoods of STTs (fraction of ozonesonde releases for which an STT event was detected, per month, \textit{f}) by the monthly mean fraction of the ozone column attributed to STT, \textit{I}) and by the monthly mean tropospheric ozone column over the Southern Ocean (from the GEOS-Chem multi-year mean, $\Omega_{SO_{O_3}}$), expressed simply as Flux$= \Omega_{SO_{O_3}} \times f \times I$.
+  The monthly values of each term in this equation are shown in Fig. \ref{fig:SOExtrapolation} (upper panel).
+  A more spatially resolved estimate could be determined by dividing the Southern Ocean region into longitudinal and latitudinal bins for calculating the average $\Omega_{SO_{O_3}}$ from GEOS-Chem, applying latitudinal gradients to $f$ and $I$ based on their values at the three sonde release sites, and adding longitudinal variability due to seasonal stratospheric wind jet streams \citep{Baray2012,Skerlak2015}, but this is beyond the scope of this work and in any case would not address the limitations of the estimate provided below.
+
+  To give an idea of sensitivity to zonal definition, a change of the bounding latitudes by 5$^{\circ}$ in either direction at either end changes the average simulated tropospheric ozone by -7 to 9\%.
+  It is worth noting that this extrapolation is very simplistic and is performed as a simple example of how the seasonal ozone STT calculations could be used.
+  
+  
+\subsection{Code}
+
+\subsection{Results}
+
+
+\bibliographystyle{copernicus}
+\bibliography{bibliography/Ozone.bib}
+
+\end{document}

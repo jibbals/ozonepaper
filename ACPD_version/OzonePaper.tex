@@ -1,6 +1,134 @@
+%% Copernicus Publications Manuscript Preparation Template for LaTeX Submissions
+%% ---------------------------------
+%% This template should be used for copernicus.cls
+%% The class file and some style files are bundled in the Copernicus Latex Package, which can be downloaded from the different journal webpages.
+%% For further assistance please contact Copernicus Publications at: production@copernicus.org
+%% http://publications.copernicus.org/for_authors/manuscript_preparation.html
+%% Please use the following documentclass and journal abbreviations for discussion papers and final revised papers.
 
+\documentclass[acp, manuscript]{copernicus} % single column manuscript: used for both discussion and submission
+%\documentclass[acp]{copernicus} % two column
+%\documentclass[acpd, manuscript]{copernicus}
+
+\begin{document}
+\title{Stratospheric ozone intrusion events and their impacts on tropospheric ozone}
+
+% \Author[affil]{given_name}{surname}
+\Author[1]{Jesse W.}{Greenslade}
+\Author[2,3]{Simon P.}{Alexander}
+\Author[4,5]{Robyn}{Schofield}
+\Author[1,6]{Jenny A.}{Fisher}
+\Author[2,3]{Andrew K.}{Klekociuk}
+
+\affil[1]{Centre for Atmospheric Chemistry, School of Chemistry, University of Wollongong}
+\affil[2]{Australian Antarctic Division, Hobart}
+\affil[3]{Antarctic Climate and Ecosystems Co-operative Research Centre, Hobart, Australia}
+\affil[4]{School of Earth Sciences, University of Melbourne}
+\affil[5]{ARC Centre of Excellence for Climate System Science, University of New South Wales}
+\affil[6]{School of Earth \& Environmental Sciences, University of Wollongong}
+
+\runningtitle{Southern Hemisphere stratospheric ozone intrusions}
+\runningauthor{Greenslade et al.}
+\correspondence{Jesse Greenslade (jwg366@uowmail.edu.au)}
+
+\received{}
+\pubdiscuss{} %% only important for two-stage journals
+\revised{}
+\accepted{}
+\published{}
+
+%% These dates will be inserted by Copernicus Publications during the typesetting process.
+\firstpage{1}
+\maketitle
+
+
+\begin{abstract}
+%\input{Text/OzoneAbstract.tex}
+  Stratosphere-to-troposphere transport (STT) provides an important natural source of ozone to the upper troposphere, but the characteristics of STT events in the southern hemisphere extratropics and their contribution to the regional tropospheric ozone budget remain poorly constrained.
+  Here, we develop a quantitative method to identify STT events from ozonesonde profiles. 
+  Using this method we estimate the seasonality and quantify the ozone transported across the tropopause over Davis ($69^\circ$ S), Macquarie Island ($54^\circ$ S), and Melbourne ($38^\circ$ S).
+  STT seasonality is determined by two distinct methods: a Fourier bandpass filter of the vertical ozone profile, and an analysis of the Brunt-Viäsälä frequency.
+  Using a bandpass filter on 7--9 years of ozone profiles from each site provides clear detection of STT events, with maximum occurrences during summer and minimum during winter above all three sites.
+  The majority of tropospheric ozone enhancements from STT events occur within 2.5~km, 3~km of the tropopause at Davis, and Macquarie Island.
+  Events are more spread out at Melbourne, occurring frequently up to 7.5~km from the tropopause.
+  The mean fraction of total tropospheric ozone attributed to STT during STT events is 2–4\% at each site; however, during individual events over 10\% of tropospheric ozone may be directly transported from the stratosphere.
+  The cause of STTs is determined to be largely due to synoptic low pressure frontal systems, determined using coincident ERA-Interim reanalysis meteorological data.
+  %Ozone enhancements caused by transported biomass burning plumes are flagged using an analysis of CO column measurements from the AIRS satellite.
+  %The effects of African and South American biomass burning are apparent during the austral autumn and winter months.
+  Ozone enhancements can also be caused by biomass burning plumes transported from Africa and South America, these are apparent during austral winter and spring, and are determined using satellite measurements of CO.
+
+  To provide regional context for the ozonesonde observations, we use the GEOS-Chem chemical transport model, which is too coarsely resolved to distinguish STT events but is able to accurately simulate the seasonal cycle of tropospheric ozone columns over the three southern hemisphere sites.
+  %The GEOS-Chem model is run with active stratospheric chemistry, however is too coarsely resolved in the vertical and horizontal dimensions to determine STTs.
+  %Simulated seasonal cycles of tropospheric ozone are well matched at all three sites although vertical profile averages have some (non-significant) bias in the troposphere compared with ozonesondes.
+  Combining the ozonesonde-derived STT event characteristics with the simulated tropospheric ozone columns from GEOS-Chem, we conservatively estimate that the annual tropospheric ozone flux over the Southern Ocean due to STT events is $\sim3.2\times10^{16}$ molecules cm$^{-2}$ yr$^{-1}$.
+  %A conservative estimate of yearly tropospheric ozone flux due to STTs is calculated using the simulated tropospheric ozone column between 35$^\circ$ S and 75$^\circ$ S of $3.2\times10^{16}$ molecules cm$^{-2}$ yr$^{-1}$.
+  This value is significantly lower than expected from previous global estimates due to the conservative nature of several components of our calculation, in particular the contribution of STT to total tropospheric ozone during an event (STT impact).
+  Using an assumed STT impact of 35\% based on prior modelling studies rather than our observational estimate of 2--4\% increases the estimated Southern Ocean flux by an order of magnitude.%to $\sim$29.5~Tg yr$^{-1}$.
+  Despite lingering uncertainties in scaling ozonesonde measurements to regional values, ozonesonde datasets provide a useful tool for STT detection, and the analysis methods described in this paper could be applied to many existing long-term records.
+
+\end{abstract}
+
+\introduction  %% \introduction[modified heading if necessary]
+%\input{Text/OzoneIntro.tex}
+
+Tropospheric ozone constitutes only 10\% of the total ozone column but is an important oxidant and greenhouse gas which is toxic to life, harming natural ecosystems and reducing agricultural productivity.
+Over the industrial period, increasing tropospheric ozone has been estimated to exert a radiative forcing (RF) of 365~mWm$^{-2}$  \citep{Stevenson2013}, equivalent to a quarter of the CO$_2$ forcing \citep{IPCC_Chapter2}. 
+While much tropospheric ozone is produced photochemically from anthropogenic and natural precursors, %from NO$_x$ and volatile organic compounds, which have both anthropogenic (fossil fuel, biomass combustion) and natural (wildfires, lightning, biogenic) sources.
+downward transport from the ozone-rich stratosphere provides an additional natural source of ozone that is particularly important in the upper troposphere (\citet{Jacobson2000} and references therein).
+The contribution of this source to overall tropospheric ozone budgets remains uncertain, especially in the southern hemisphere.
+While models show decreasing tropospheric ozone due to stratospheric ozone depletion propagated to the upper troposphere through vertical mixing \citep{Stevenson2013}, recent work based on the Southern Hemisphere ADditional OZonesonde (SHADOZ) network suggests increasing upper tropospheric ozone near southern Africa, most likely due to stratospheric mixing \citep{Liu2015, Thompson2014}.
+Uncertainties in the various processes which produce tropospheric ozone limit predictions of future ozone-induced radiative forcing.
+Here we use a multi-year record of ozonesonde observations from sites in the southern hemisphere extratropics, combined with a global model, to better characterise the impact of stratospheric ozone on the tropospheric ozone budget in the southern hemisphere.
+%Understanding and accurately portraying ozone concentrations in the troposphere is important to allow accurate predictions of future climate.
+%This will become even more important as projections of future climate changes suggest altered vertical mixing rates, ultra violet index (UVI) and ozone RF \citep{Hegglin2009}.
+% Doesn't really belong in first intro paragraph - maybe in conclusions? -jaf
+
+Stratosphere-to-troposphere transport (STT) primarily impacts the ozone budget in the upper troposphere but can also increase regional surface ozone levels above the legal thresholds set by air quality standards \citep{Danielson1968, Lelieveld2009, Lefohn2011, Langford2012, Zhang2014}.
+In the western US, for example, STT events have been shown to contribute up to 30\% of surface ozone in spring \citep{Lin2012}.
+Another important region of STT is the Middle East, where surface ozone excedes values of 80~ppbv in summer, with 10~ppbv from STT contribution \citep{Lelieveld2009}.
+Estimates of the overall contribution of STT to tropospheric ozone vary widely \citep[e.g.,][]{Galani2003, Stohl2003, Stevenson2006, Lefohn2011}.
+Early work based on two photochemical models showed that 25-50\% of the tropospheric ozone column can be attributed to STT events globally, with most contribution in the upper troposphere \citep{Stohl2003}.
+In contrast, a more recent analysis of the Atmospheric Chemistry and Climate Model Inter-comparison Project (ACCMIP) simulations by \citet{Young2013} found STT is responsible for $540\pm140$~Tg yr$^{-1}$, equivalent to $\sim$11\% of the tropospheric ozone column, with the remainder produced photochemically \citep{Monks2015}.
+This wide range in model estimates exists in part because STT is challenging to accurately represent, and better model resolution is necessary to simulate small scale turbulence.
+Observation-based process studies are therefore key in determining the relative frequency of STT events, with models then able to quantify STT impact over large regions.
+Ozonesondes are particularly valuable for this purpose as they provide multi-year datasets with high vertical resolution.
+
+Lower stratospheric and upper tropospheric ozone concentrations are highly correlated \citep{Terao2008}, suggesting mixing across the tropopause mainly caused by the jet streams over the ocean.
+Extratropical STT events most commonly occur during synoptic-scale tropopause folds \citep{Sprenger2003, Tang2012, Frey2015} and are characterised by tongues of high potential vorticity (PV) air descending to low altitudes.
+As these tongues become elongated, filaments disperse away from the tongue and mix irreversibly into the troposphere.
+STT can also be induced by deep overshooting convection \citep{Frey2015}, tropical cyclones \citep{Das2016} and mid-latitude synoptic scale disturbances (e.g., \citet{Stohl2003, Mihalikova2012}). 
+STT events have been observed in tropopause folds around both the polar front jet \citep{Vaughan1994, Beekmann1997} and the subtropical jet \citep{Baray2000}.
+A big influence on the high surface ozone concentrations over the eastern Mediterranean is stratospheric mixing and anticyclonic subsidence \citep{Zanis2014}. 
+They are also observed near cut-off lows \citep{Price1993, Wirth1995}, so both regional weather patterns and stratospheric mixing are important to understand for STT analysis.
+
+%STT events are driven by deep overshooting convection \citep{Frey2015}, tropical cyclones \citep{Das2016} and mid-latitude synoptic scale disturbances (e.g., \citet{Stohl2003, Mihalikova2012}) and are strongly dependent on both season and location. 
+The strength (ozone enhancement above background levels), horizontal scale, vertical depth, and longevity of these intruding ozone tongues vary with weather, topography, and season.
+%Because of their dependence on meteorological phenomena, STT events are strongly dependent on both season and location.
+While the frequency, seasonality, and impacts of STT events have been well characterised in the tropics and northern hemisphere (NH), observational estimates from the southern hemisphere (SH) extra-tropics are noticeably absent in the literature. 
+%Since 1998 NASA has tried to standardise ozonesonde release procedures and improve measurement frequency in the SH through the Southern Hemisphere ADditional OZonesonde (SHADOZ) program (\url{http://croc.gsfc.nasa.gov/shadoz/}).
+% moved reference earlier
+%Recent work based on the  Southern Hemisphere ADditional OZonesonde (SHADOZ) ozonesondes suggests increasing upper tropospheric ozone near southern Africa, most likely due to stratospheric mixing \citep{Liu2015, Thompson2014}.
+% jaf
+%In 2002 \citet{Brinksma2002} examine 5 years of ozonesondes released at Lauder, New Zealand, and show tropospheric ozone depletion following the break up of the polar vortex and dispersion of the ozone hole.
+The role of STT in the SH remains highly uncertain due to the much more limited data availability compared to the NH and the temporal sparsity of these datasets \citep{Mze2010, Thompson2014, Liu2015}. 
+%Many of the ozonesonde releases only occur every two to four weeks, ozone intrusion events often last for just a matter of hours \citep{Tang2012}.
+
+%Tropospheric ozone is lost via chemical destruction and dry deposition, estimated to be $4700\pm700$ Tg yr$^{-1}$ and $1000\pm200$ Tg yr$^{-1}$, respectively \citep{Stevenson2006}. 
+
+%Hegglin, M. I., and T. G. Shepherd (2009), Large climate-induced changes in ultraviolet index and stratosphere-to-troposphere ozone flux, Nature Geosci, 2(10), 687–\selectlanguage{english}691, doi:10.1038/NGEO604.
+%TODO: Put this bit into thesis
+%\citet{Hegglin2009} estimate that climate change will lead to increased STT of the order of 30 (121) Tg yr$^{-1}$ relative to 1965 in the Southern (Northern) Hemisphere due to an acceleration in the Brewer Dobson circulation.
+
+% AIMs paragraph
+Here, we characterise the seasonal cycle of STT events and quantify their contribution to the SH extratropical tropospheric ozone budget using nearly a decade of ozonesonde observations from three locations around the Southern Ocean spanning latitudes from 38$^{\circ}$S-69$^{\circ}$S. 
+In Section 2 we describe the observations and the methods used to identify STT events and to relate STT occurrence to meteorological events.
+Section 3 provides our newly derived climatologies of STT frequency, seasonality, intrusion altitude, and depth, and Section 4 uses these new climatologies to evaluate upper tropospheric ozone in a global chemical transport model (GEOS-Chem). 
+Finally, in Section 5 we use the observations and the model to estimate the overall contribution of STT events to total tropospheric ozone in the high southern latitudes.
+
+
+
+%\input{Text/OzoneBody.tex}
 \section{Data and Methods}
-
   \subsection{Ozonesonde record in the Southern Ocean}
   \label{Section:ozonesondes}
     %(Too basic)Ozonesondes are weather balloons which measure ozone concentrations from the surface to around 35km.
@@ -412,7 +540,18 @@
     \label{fig:fluxsummaryabs}
   \end{figure}
   
-  TODO: Extrapolate over small region here and mention supplementary extrapolation.
+  We use simulated tropospheric ozone columns from GEOS-Chem to extrapolate the ozonesonde-based estimates to the entire Southern Ocean region, defined here as 35$^{\circ}$ S-75$^{\circ}$ S to encompass our three measurement sites. 
+  To do so, we multiply the monthly likelihoods of STTs (fraction of ozonesonde releases for which an STT event was detected, per month, \textit{f}) by the monthly mean fraction of the ozone column attributed to STT (as in Fig. \ref{fig:fluxsummary}, \textit{I}) and by the monthly mean tropospheric ozone column over the Southern Ocean (from the GEOS-Chem multi-year mean, $\Omega_{SO_{O_3}}$), expressed simply as Flux$= \Omega_{SO_{O_3}} \times f \times I$.
+  The monthly values of each term in this equation are shown in Fig. \ref{fig:SOExtrapolation} (upper panel).
+  A more spatially resolved estimate could be determined by dividing the Southern Ocean region into longitudinal and latitudinal bins for calculating the average $\Omega_{SO_{O_3}}$ from GEOS-Chem, applying latitudinal gradients to $f$ and $I$ based on their values at the three sonde release sites, and adding longitudinal variability due to seasonal stratospheric wind jet streams \citep{Baray2012,Skerlak2015}, but this is beyond the scope of this work and in any case would not address the limitations of the estimate provided below.
+  %The equation can be written simply as Flux$= \Omega_{SO_{O_3}} \times f \times I$.
+
+  %Flux estimation over the Southern Ocean is based on the average GEOS-Chem tropospheric vertical column of ozone over a particular latitude range.
+  %The range is from 35$^{\circ}$ S to 75$^{\circ}$ S, chosen to capture the three measurement stations.
+  %Changing this latitude range by 5$^{\circ}$ in either direction at either end of the range changes the average simulated tropospheric ozone by -7 to 9\%.
+  %A more spatially resolved estimate could be calculated, by splitting the Southern Ocean into longitudinal and latitudinal bins.
+  %This could include using the gradient of flux and frequency estimations along their latitudes, as well as estimated longitudinal variations due to seasonal stratospheric wind jetstreams \citep{Baray2012}.
+  %An improved spatial distribution for the flux estimation is beyond the scope of this work and would not address the limitations of the estimate shown here.
   
   Figure \ref{fig:SOExtrapolation} (lower panel) shows the resulting extrapolated monthly mean ozone flux from STT events over the Southern Ocean.
   Previous studies have found STT ozone fluxes in the SH extratropics are largest from autumn or winter to early spring \citep{Olsen2003, Liu2016}.
@@ -461,3 +600,149 @@
   %Although this figure is based on the Northern Hemisphere upper troposphere, if we assume that STT flux due to an event is actually 35\% (instead of using our estimated influence) our estimate increases by roughly a factor of 12: to $\sim$30.2~Tg yr$^{-1}$
   If we we assume a fractional ozone impact due to each event STT event of $I$=35\% based on their results (rather than our calculation of $I$=2-4\%), our estimate of the net downward ozone STT flux from Southern Ocean STT events increases by an order of magnitude to $\sim$29.5~Tg yr$^{-1}$, equivalent to 39\% of the global net downward flux estimated by \citet{Sprenger2003}.
   
+
+
+\conclusions  %% \conclusions[modified heading if necessary]
+%\input{Text/OzoneConclusions.tex}
+%\section{Conclusions}
+  
+Stratosphere-to-troposphere transport (STT) can be a major source of ozone to the remote free troposphere, but the occurrence and influence of STT events remains poorly quantified in the southern hemisphere (SH) extratropics.
+Ozonesonde observations in the SH provide a satellite-independent quantification of the frequency of STT events, as well as an estimate of their impact and source.
+%The frequency and amount of ozone descending from the stratosphere into the troposphere can be estimated from the long time series of tropospheric ozone profiles.
+Using almost ten years of ozonesonde profiles over the southern high latitudes, we have quantified the frequency, seasonality, and altitude distributions of STT events in the SH extratropics. 
+By combining this information with ozone column estimates from a global chemical transport model, we provided a first, conservative estimate of the influence of STT events on tropospheric ozone over the Southern Ocean.
+
+Our method involved applying a Fourier bandpass filter to the measured ozone profiles to determine STT event occurrence and strength.
+The filter removed seasonal influences and allowed clear detection of ozone-enhanced tongues of air in the troposphere.
+By setting empirically-derived threshholds, this method clearly distinguished tropospheric ozone enhancements that are separated from the stratosphere.
+Our method is sensitive to various parameters involved in the calculation; however, for our sites we saw no false positive detections of STT events.
+
+Detected STT events at three sites spanning the SH extra-tropics (38$^{\circ}$S, 55$^{\circ}$S, and 69$^{\circ}$S) showed a distinct seasonal cycle.
+All three sites displayed a summer (DJF) maximum and winter (JJA) minimum, although the seasonal amplitude was less apparent at the Antarctic site (Davis) as events were also detected regularly in winter and spring (likely due to polar jet stream-caused turbulence).  %The cause of these ozone enhancements is examined through the use of satellite CO data (to determine fire influence) and ERA-I meteorological data.
+Comparison with ERA-Interim reanalysis data suggested the majority of events were caused by turbulent weather in the upper troposphere due to low pressure fronts, followed by cut-off low pressure systems.
+Comparison of ozonesonde-measured ozone profiles against those simulated by the GEOS-Chem global chemical transport model showed the model is able to reproduce seasonal features but does not have sufficient vertical resolution to distinguish STT events.
+%The seasonal features in the ozonesonde record of tropospheric ozone columns are well represented by the model.
+%Simulated profiles generally can not identify STT events due to their lower vertical resolution.
+
+By combining the simulated tropospheric column ozone from GEOS-Chem with ozonesonde-derived STT estimates, we provided a first estimate of the total contribution of STT events to tropospheric ozone over the Southern Ocean.
+We conservatively estimated that the ozone enhancement due to STT events at our three sites ranges from $1$-$6 \times 10^{16}$ molecules cm$^{-2}$.
+This method implies that STT events can only explain $\sim$3\% of the global net downward flux of ozone, a value that is likely too low.
+Replacing the sonde-derived estimate of the ozone fraction associated with each STT event with a value derived from a global model \citep{Terao2008} increases this estimate by an order of magnitude.
+
+Estimating STT flux using ozonesonde data alone remains challenging; however, the very high vertical resolution provided by ozonesondes means they are capable of detecting STT events that models, reanalyses, and satellites may not. 
+Further work is needed to more accurately translate these ozonesonde measurements into STT ozone fluxes, particularly in the SH where data are sparse and STT is likely to be a major contributor to upper tropsopheric ozone in some regions.
+More frequent ozonesonde releases at SH sites would facilitate development of better STT flux estimates for this region.
+%As the climate alters, an understanding of mixing between the stratosphere and troposphere over the southern ocean will help diagnose potential hazards.
+%Seasonality and impact of stratospheric ozone are changing over time, furter analysis of this long term set of ozonesonde data will be useful into the future.
+
+\appendix
+% \section{}    %% Appendix A
+% \subsection{}     %% Appendix A1, A2, etc.
+
+\appendixfigures  %% needs to be added in front of appendix figures in one-column style (\documentclass[acp, manuscript]{copernicus})
+\appendixtables   %% needs to be added in front of appendix tables in one-column style (\documentclass[acp, manuscript]{copernicus})
+
+\authorcontribution{JG wrote the algorithms, ran the GEOS-Chem simulations, performed the analysis and led the writing of the paper under the supervision and guidance of SPA, RS, and JAF. AK contributed the Davis ozonesonde data and performed the analysis of the alternate STT proxy. All authors contributed to editing and revising the manuscript.}
+
+% Authored and edited this manuscript, as well as analysing the datasets, under the supervision of Dr. Alexander, Dr. Fisher, and Dr. Schofield.
+%Mr. Greenslade ran GEOS-Chem and analysed the output.
+%Dr. Alexander provided the IDL scripts which initially read and bandpassed the ozonesonde profiles.
+%Dr. Schofield outlined the introduction and story of the paper.
+%Dr. Klekociuk provided the static stability analysis as an alternative to the bandpass filter method.
+%Dr. J. A. Fisher who edited or supplied feedback for much of the manuscript.}
+
+\competinginterests{The authors declare that they have no conflict of interest.}
+
+%\disclaimer{disclaimer}
+
+% Data availability
+%
+\textit{Data availability.} All GEOS-Chem model output and the ozonesonde observational data are available from the authors upon request.
+
+
+\begin{acknowledgements}
+We thank the Australian Bureau of Meteorology and the Australian Antarctic Division for providing the ozonesonde data. 
+The ERA-Interim data were downloaded from the ECMWF website following registration.
+This work was commenced with support from the Australian Department of the Environment summer ozone science scholarship and partly supported by research project 4012 of the Australian Antarctic Programme.
+This research was undertaken with the assistance of resources provided at the NCI National Facility systems at the Australian National University through the National Computational Merit Allocation Scheme supported by the Australian Government.
+This work was supported through funding by the Australian Government's Australian Antarctic science grant program (FoRCES 4012), the Australian Research Council's Centre of Excellence for Climate System Science (CE110001028), the Commonwealth Department of the Environment ozone summer scholar program.
+Dr. Clare Paton Walsh identified the need to account for smoke-influenced events, and provided discussions on how to go about doing such.
+\end{acknowledgements}
+
+%% Since the Copernicus LaTeX package includes the BibTeX style file copernicus.bst,
+%% authors experienced with BibTeX only have to include the following two lines:
+%%
+\bibliographystyle{copernicus}
+\bibliography{bibliography/Ozone.bib}
+%%
+%% URLs and DOIs can be entered in your BibTeX file as:
+%%
+%% URL = {http://www.xyz.org/~jones/idx_g.htm}
+%% DOI = {10.5194/xyz}
+
+
+%% LITERATURE CITATIONS
+%%
+%% command                        & example result
+%% \citet{jones90}|               & Jones et al. (1990)
+%% \citep{jones90}|               & (Jones et al., 1990)
+%% \citep{jones90,jones93}|       & (Jones et al., 1990, 1993)
+%% \citep[p.~32]{jones90}|        & (Jones et al., 1990, p.~32)
+%% \citep[e.g.,][]{jones90}|      & (e.g., Jones et al., 1990)
+%% \citep[e.g.,][p.~32]{jones90}| & (e.g., Jones et al., 1990, p.~32)
+%% \citeauthor{jones90}|          & Jones et al.
+%% \citeyear{jones90}|            & 1990
+
+%%% ONE-COLUMN TABLE
+%
+%%t
+%\begin{table}[t]
+%\caption{TEXT}
+%\begin{tabular}{column = lcr}
+%\tophline
+%
+%\middlehline
+%
+%\bottomhline
+%\end{tabular}
+%\belowtable{} % Table Footnotes
+%\end{table}
+%
+%%% TWO-COLUMN TABLE
+%
+%%t
+%\begin{table*}[t]
+%\caption{TEXT}
+%\begin{tabular}{column = lcr}
+%\tophline
+%
+%\middlehline
+%
+%\bottomhline
+%\end{tabular}
+%\belowtable{} % Table Footnotes
+%\end{table*}
+%
+%
+%%% MATHEMATICAL EXPRESSIONS
+%
+%%% All papers typeset by Copernicus Publications follow the math typesetting regulations
+%%% given by the IUPAC Green Book (IUPAC: Quantities, Units and Symbols in Physical Chemistry,
+%%% 2nd Edn., Blackwell Science, available at: http://old.iupac.org/publications/books/gbook/green_book_2ed.pdf, 1993).
+%%%
+%%% Physical quantities/variables are typeset in italic font (t for time, T for Temperature)
+%%% Indices which are not defined are typeset in italic font (x, y, z, a, b, c)
+%%% Items/objects which are defined are typeset in roman font (Car A, Car B)
+%%% Descriptions/specifications which are defined by itself are typeset in roman font (abs, rel, ref, tot, net, ice)
+%%% Abbreviations from 2 letters are typeset in roman font (RH, LAI)
+%%% Vectors are identified in bold italic font using \vec{x}
+%%% Matrices are identified in bold roman font
+%%% Multiplication signs are typeset using the LaTeX commands \times (for vector products, grids, and exponential notations) or \cdot
+%%% The character * should not be applied as mutliplication sign
+
+%%% PHYSICAL UNITS
+%%%
+%%% Please use \unit{} and apply the exponential notation
+
+
+\end{document}
