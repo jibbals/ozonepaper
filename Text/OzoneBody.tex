@@ -11,6 +11,10 @@
     Ozonesondes are estimated to provide around 2\% precision in the stratosphere, which improves at lower altitudes, and ozonesondes have been shown to be accurate to within 5\% when the correct procedures are followed \citep{Smit2007}.
     
     Ozonesondes are launched approximately weekly from Melbourne (38$^{\circ}$ S, 145$^{\circ}$ E), Macquarie Island (55$^{\circ}$ S, 159$^{\circ}$ E) and Davis (69$^{\circ}$ S, 78$^{\circ}$ E). 
+    Melbourne, a major city in Victoria, Australia is in the far south eastern section of the Australian mainland, actual releases are north of the central business district in the Broadmeadows suburb.
+    Macquarie island is isolated from the Australian mainland, situated in the remote southern ocean and unlikely to be affected by any local anthropogenic pollution events.
+    Davis is on the coast of Antarctica and also unlikely to experience the effects of local pollution.
+    
     For this study, we use the 2004-2013 data for Melbourne and Macquarie and the 2006-2013 data for Davis because both ozone and geopotential height (GPH) profiles were measured during these periods.
     At Davis, ozonesondes are launched twice as frequently during the ozone hole season and preceding months (June-October) as at other times of year \citep{Alexander2013}.
     A summary of ozonesondes at each site can be seen in Table \ref{table:sondesummary}.
@@ -18,16 +22,16 @@
     \begin{table}[t]
       \caption{Number of sonde releases at each site over the period of analysis.}
       \begin{tabular}{ c   c   c   c  } 
-					\hline
-					Site & Total Releases & Monthly Releases (J, F, M, ...) & Date Range \\
-					\hline
-					Davis           & 240 & 11, 12, 13, 12, 17, 31,	 & 2006/04/13 -  \\ 
-						                    &	        & 29, 28, 32, 28, 15, 12 	 & 2013/11/13	\\
-					Macquarie & 390 & 32, 31, 45, 28, 34, 33,	 & 2004/01/20 -  \\
-						                     &       	  & 28, 35, 29, 33, 31, 31   & 2013/01/09	\\ 
-					Melbourne & 456 & 31, 38, 40, 38, 41, 36,	 & 2004/01/08 -  \\
-						                     &         & 38, 39, 46, 40, 38, 31   & 2013/12/18	\\
-					\hline
+	\hline
+	Site 		& Total Releases & Monthly Releases (J, F, M, ...) & Date Range \\
+	\hline
+	Davis		& 240	& 11, 12, 13, 12, 17, 31,	& 2006/04/13 -  \\ 
+			&	& 29, 28, 32, 28, 15, 12 	& 2013/11/13	\\
+	Macquarie 	& 390	& 32, 31, 45, 28, 34, 33,	& 2004/01/20 -  \\
+			&	& 28, 35, 29, 33, 31, 31 	& 2013/01/09	\\ 
+	Melbourne 	& 456	& 31, 38, 40, 38, 41, 36,	& 2004/01/08 -  \\
+			&	& 38, 39, 46, 40, 38, 31 	& 2013/12/18	\\
+	\hline
       \end{tabular}
       \label{table:sondesummary}
     \end{table}
@@ -45,7 +49,7 @@
     In this work, the lower of these two tropopause altitudes is used. 
     This choice avoids occasional unrealistically high tropopause heights due to perturbed ozone or temperature measurements in the ozonesonde data.
     
-    Figure \ref{fig:seasonaltpheights} shows the monthly mean tropopause altitudes at each location (solid lines).
+    Figure \ref{fig:seasonaltpheights} shows the monthly median tropopause altitudes at each location (solid lines).
     At Melbourne, tropopause altitude displays a seasonal cycle with maximum in summer and minimum is winter.
     This seasonality is missing at Macquarie and almost reversed at Davis, which has a minimum during autumn and maximum from winter to spring.
     Tropopause altitude decreases with latitude from 9-12 km at Melbourne (38$^\circ$ S) to 7-9 km at Davis (69$^\circ$ S).
@@ -414,50 +418,22 @@
   
   TODO: Extrapolate over small region here and mention supplementary extrapolation.
   
-  Figure \ref{fig:SOExtrapolation} (lower panel) shows the resulting extrapolated monthly mean ozone flux from STT events over the Southern Ocean.
-  Previous studies have found STT ozone fluxes in the SH extratropics are largest from autumn or winter to early spring \citep{Olsen2003, Liu2016}.
-  At this time of year, we find the highest tropospheric $\Omega_{O3}$ but a relatively low STT flux due to reduced event frequency (Fig. \ref{fig:SOExtrapolation}).
-  Our results suggest instead that the ozone flux associated with STT events (at least those due to tropopause folds) is largest in austral summer (December-March), primarily due to an increased frequency of STT detections during these months.
-  It is possible that our estimated event frequencies are too low in late winter-early spring as some legitimate STT events may have been excluded due to coincident smoke plumes.
-  %It is worth noting that the 30$^{\circ}$ S to 60$^{\circ}$ S latitudes describe the Ferrel cell, while our region of analysis also includes some of the Polar cell.
+  TODO: Discuss other literature's estimates of STT flux comparing it with small regions.
+  Skerlak2015
   
-  \begin{figure*}[t]
-    % Plot from examine_stations.py in stations repo
-    \includegraphics[width=12.0cm]{figures/SO_extrapolation.png}
-    \caption{%
-      (Top) The three quantities used to calculate the total Southern Ocean ozone flux from STT events.
-      The tropospheric ozone column $\Omega_{SO_{O_3}}$ (black, left axis) is from GEOS-Chem, while the STT fraction $f$ (magenta, right axis) and Impact $I$ (teal, right axis) are from the ozonesonde measurements.
-      The STT impact is multiplied by 3 to better show the seasonality.
-      (Bottom) Estimated contribution of STT to tropospheric ozone columns over the Southern Ocean.}
-    \label{fig:SOExtrapolation}
-  \end{figure*}
-
-
-  Summing the monthly estimated fluxes shown in Fig. \ref{fig:SOExtrapolation} over the year, we find from this estimate that STT events may be responsible for at least $3.1 \times10^{16}$~molecules cm$^{-2}$ yr$^{-1}$ of the tropospheric ozone over the Southern Ocean, equivalent to 2.48~Tg yr$^{-1}$.
-  %This is calculated using the surface area from GEOS-Chem over the Southern Ocean grid boxes along with the molecules cm$^{-2}$ per month calculations, along with ozone molar mass of 48~g mol$^{-1}$.
-  Our estimate is smaller than expected from prior work that suggests global gross STT fluxes of 550~Tg yr$^{-1}$ \citep{Stevenson2006} and net downward STT fluxes of 75~Tg yr$^{-1}$ \citep{Sprenger2003}.
-  Our value would suggest only $\sim$3.3\% of this global net downward flux can be attributed to STT events in the Southern Ocean region, a contribution that is likely too low.
-  This result is only marginally sensitive to the latitude range chosen to represent the Southern Ocean (35$^{\circ}$ S-75$^{\circ}$ S): changing this range by 5$^{\circ}$ in either direction at either end of the range changes $\Omega_{SO_{O_3}}$ by -7 to +9\%, with even smaller impacts on the overall flux.
+  Two previous studies have found STT ozone fluxes in the SH extratropics are largest from autumn or winter to early spring.
+  \citet{Olsen2003} used PV and winds from the GEOS reanalysis combined with ozone measurements from the TOMS satellite to estimate that the ozone flux between 30$^{\circ}$ S and 60$^{\circ}$ S 210~Tg yr$^{-1}$ .
+  \citet{Liu2016} model the upper tropospheric ozone and it's source (emissions/lightning/stratospheric) over the Atlantic ocean between 30$^{\circ}$ S and 45$^{\circ}$ S, and suggest that most of this is transported from the stratosphere from March to September, which is when the subtropical jet system is strongest.
+  TODO: Small mention of supplementary results, with notes about simplistic nature of extrapolating over the whole SO.
+  
   As discussed in Sect. \ref{sec:sensitivity}, there are several uncertainties in our method that are likely to lead to a low bias in the overall extrapolated flux, including a conservative estimate of flux within each event and a process that excludes potential events which are too close to the tropopause or to transported smoke plumes.
 
   %  This result highlights the difficulty associated with extrapolating from temporally sparse ozonesonde data, as STT impact is hard to measure without multiple measurements during and surrounding each event.
   
-  %Our estimate is smaller than other estimates of STT flux, due to our conservative estimate of flux within each event, as well as filtering out events which are too close to the tropopause.
-  %Global STT flux estimated from an ensemble of models suggests values around 550~Tg yr$^{-1}$ \citep{Stevenson2006}.
-  %Global net downward STT flux is estimated to be 75~Tg yr$^{-1}$ \citep{Sprenger2003}.
-  %Previous studies have derived global gross STT fluxes of 550~Tg yr$^{-1}$ \citep{Stevenson2006} and net downward STT fluxes of 75~Tg yr$^{-1}$ \citep{Sprenger2003}.
-  %Our estimate of 2.48~Tg yr$^{-1}$ would suggest only $\sim$3.3\% of the global net downward flux can be attributed to STT events in the Southern Ocean region, a value that is likely too low.
-  %This method of flux estimation could be increased if we could account for background ozone enhancement and mixing due to events.
-  
   %It's also worth noting that our flux estimate only detects STT events that satisfy specific criteria, and may therefore be unsuitable for calculating more general STT fluxes.
   
-  %\citet{Olsen2003} used PV and winds from the GEOS reanalysis combined with ozone measurements from the TOMS satellite to estimate that the ozone flux between 30$^{\circ}$ S and 60$^{\circ}$ S 210~Tg yr$^{-1}$ .
-  %Their estimates show peak ozone flux from winter to early spring (JJAS).
-  %\citet{Liu2016} model the upper tropospheric ozone and it's source (emissions/lightning/stratospheric) over the Atlantic ocean between 30$^{\circ}$ S and 45$^{\circ}$ S, and suggest that most of this is transported from the stratosphere from March to September, which is when the subtropical jet system is strongest.
-
   %Considering the individual event contributions, \citet{Terao2008} estimate much higher STT impacts using a global CTM with a stratospheric ozone tracer; where 30--40\% of the 500~hPa ozone is due to STT.
   Our estimate of the fraction of tropospheric ozone from each STT event ($I$) is therefore almost certainly biased low, perhaps by a significant amount. 
   Using a global CTM with a stratospheric ozone tracer, \citet{Terao2008} estimated that this number was closer to 30--40\%, at least for the ozone mixing ratio at 500~hPa in the northern hemisphere.
-  %Although this figure is based on the Northern Hemisphere upper troposphere, if we assume that STT flux due to an event is actually 35\% (instead of using our estimated influence) our estimate increases by roughly a factor of 12: to $\sim$30.2~Tg yr$^{-1}$
-  If we we assume a fractional ozone impact due to each event STT event of $I$=35\% based on their results (rather than our calculation of $I$=2-4\%), our estimate of the net downward ozone STT flux from Southern Ocean STT events increases by an order of magnitude to $\sim$29.5~Tg yr$^{-1}$, equivalent to 39\% of the global net downward flux estimated by \citet{Sprenger2003}.
+  
   
