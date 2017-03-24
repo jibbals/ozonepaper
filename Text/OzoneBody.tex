@@ -37,7 +37,7 @@
     \end{table}
     
     Characterisation of STT events requires a clear definition of the tropopause.
-    The two most common tropopause height definitions are the standard lapse rate tropopause \citep{WMO1957} and the ozone tropopause \citep{Bethan1996}.
+    Two common tropopause height definitions are the standard lapse rate tropopause \citep{WMO1957} and the ozone tropopause \citep{Bethan1996}.
     The lapse rate tropopause is defined as the lowest altitude where the lapse rate (vertical gradient of temperature) is less than 2$^\circ$C~km$^{-1}$, provided the lapse rate between this altitude and 2~km above is also below 2$^\circ$C~km$^{-1}$.
     The ozone tropopause is defined as the lowest altitude satisfying the following three conditions for the ozone mixing ratio (OMR) \citep{Bethan1996}:
     \begin{enumerate}
@@ -46,8 +46,9 @@
       \item OMR exceeds 110~ppb between 500~m and 2000~m above the altitude under inspection (modified to between 500~m and 1500~m in the Antarctic, including the site at Davis).
     \end{enumerate}
     The ozone tropopause can be less robust during stratosphere-troposphere exchange; however, it is more robust than the lapse rate tropopause at polar latitudes in winter and near jet streams in the lower stratosphere due to temperature inversions near the tropopause \citep{Bethan1996, Tomikawa2009, Alexander2013}.
-    In this work, the lower of these two tropopause altitudes is used. 
+    In this work, the lower of these two tropopause altitudes is used.
     This choice avoids occasional unrealistically high tropopause heights due to perturbed ozone or temperature measurements in the ozonesonde data.
+    Another commonly used tropopause definition (the dynamical tropopause) is determined from the $\pm 2$ PVU isosurface, which allows a 3D view of folds and other tropopause features in a sufficiently resolved model \citep{Skerlak2014}.
     
     Figure \ref{fig:seasonaltpheights} shows the monthly median tropopause altitudes at each location (solid lines).
     At Melbourne, tropopause altitude displays a seasonal cycle with maximum in summer and minimum is winter.
@@ -92,6 +93,7 @@
     For comparison to the ozonesonde observations, the model state was saved every 6 hours within the grid boxes containing each site.
     When comparing against ozonesondes, GEOS-Chem UTC+0 time samples are used for all sites.
     This means that the simulated ozone profiles are analysed at local times of 7AM for Davis, and 11AM for Macquarie and Melbourne.
+    GEOS-Chem uses the tropopause height provided by GEOS-5 met fields which are calculated using a lapse-rate definition using the first minimum above the surface in the function $0.03 \times T(p) – log_{10}(p)$, with p in hPa and T being temperature as a function of pressure \citep{Rienecker2008}.
     
   \subsection{Characterisation of STT events and associated fluxes}
     \label{Section:CharacterisationOfSTTs}
