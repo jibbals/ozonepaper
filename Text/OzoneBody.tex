@@ -93,7 +93,7 @@
     For comparison to the ozonesonde observations, the model state was saved every 6 hours within the grid boxes containing each site.
     When comparing against ozonesondes, GEOS-Chem UTC+0 time samples are used for all sites.
     This means that the simulated ozone profiles are analysed at local times of 7AM for Davis, and 11AM for Macquarie and Melbourne.
-    GEOS-Chem uses the tropopause height provided by GEOS-5 met fields which are calculated using a lapse-rate definition using the first minimum above the surface in the function $0.03 \times T(p) – log_{10}(p)$, with p in hPa and T being temperature as a function of pressure \citep{Rienecker2008}.
+    GEOS-Chem uses the tropopause height provided by GEOS-5 met fields which are calculated using a lapse-rate definition using the first minimum above the surface in the function $0.03 \times T(p) - log_{10}(p)$, with p in hPa and T being temperature as a function of pressure \citep{Rienecker2008}.
     
   \subsection{Characterisation of STT events and associated fluxes}
     \label{Section:CharacterisationOfSTTs}
@@ -136,7 +136,7 @@
     Our method differs somewhat from that used by \citet{Tang2010} to detect STT events from ozonesonde measurements. 
     Their definition is based on subjective analysis of sondes released from 20 stations ranging in latitude from 35$^\circ$ S to 40$^\circ$ N.
     They identify an STT event if, starting from 5~km altitude, ozone exceeds 80~ppb and then within 3~km decreases by 20~ppb or more to a value less than 120~ppb.
-    Their technique would miss many events due to the lower ozone concentrations found in the cleaner Southern Hemisphere.
+    Their technique would miss many events due to the lower ozone concentrations found in the cleaner Southern Hemisphere (SH).
 
   \subsection{Biomass burning influence}
   \label{Section:BiomassBurning}
@@ -164,11 +164,11 @@
 
     Figure \ref{fig:excludedeg} contrasts two days; one with and one without signs of biomass burning influence near the Melbourne site (purple circle).
     On 17 October 2007 (top) elevated CO suggests the site may have been influenced by long-range transport from African and/or South American biomass burning.
-    In contrast, on 3 February 2006 (bottom) CO columns across the Southern Hemisphere show no influence from biomass burning.
+    In contrast, on 3 February 2006 (bottom) CO columns across the SH show no influence from biomass burning.
     All days with detected STT events were screened, with the exception of one event during which there were no available AIRS data (January 2010).
     We find that biomass burning may have influenced 14 events over Melbourne and 8 events over Macquarie island.
     These events are flagged in the following sections, and are not used in our calculation of total STT flux.
-    All of the flagged events except for one (in January at Macquarie Island) occurred during the Southern Hemisphere burning season (July to December, \citet{Edwards2006}). % burning season from \citep{Pak2003}.
+    All of the flagged events except for one (in January at Macquarie Island) occurred during the SH burning season (July to December, \citet{Edwards2006}). % burning season from \citep{Pak2003}.
     No events at Davis were seen to be influenced by smoke transport.
     
     \begin{figure}[t]
@@ -285,7 +285,16 @@
   This summertime peak is due to a prevalence of summer low-pressure storms and fronts, which increase turbulence and lower the tropopause \citep{Reutter2015}.
   At Davis, there is increased Antarctic winter activity, which may be due to the polar vortex and it's associated lowered tropopause and increased turbulence.
   STT events associated with cut-off low pressure systems are more prevalent during summer (winter for Davis), while STT events associated with frontal passage occur throughout the year.
-  This seasonality is not seen in the recent ERA-Interim tropopause fold analysis performed by \citet{Skerlak2015}, where a winter maximum over Australia can be seen (although in the subtropics only - from around 20$^{\circ}$~S to 40$^{\circ}$~S).
+  
+  This seasonality is not seen in the recent ERA-Interim tropopause fold analysis performed by \citet{Skerlak2015}, where a winter maximum over Australia can be seen.
+  However their winter maximum is in the subtropics only - from around 20$^{\circ}$~S to 40$^{\circ}$~S.
+  \cite{Wauben1998} look at modelled (CTM driven by ECMWF output) and measured ozone distributions and find more SH ozone in the lower troposphere during Austral winter, however they note that the ECMWF fields are uncertain here again due to lack of measurements.
+  Their work shows a generally cleaner lower troposphere in the SH but can not be construed to suggest more or less STT folds in either season.
+  \cite{Sprenger2003} examine modelled STT folds using ECMWF output over March 2000 - April 2001, and show that for this year there is a clear Austral winter maximum, again over the 20$^{\circ}$~S to 40$^{\circ}$~S band.
+  The winter maximum \textbf{does not} include Melbourne, or the southern ocean, which may help explain why we see a seasonality which disagrees with these prior studies.
+  
+  The measurement sites are not in the regions which have a clear winter maximum seen in Fig. 1 of \cite{Sprenger2003}, and the large scale winter maximum shown by all three studies seems to be dominated by the system in that region.
+  The seasonality of our three sites is not driven by the larger STT system seen over the southern Indian ocean and middle Australia which dominates prior analysis near or over Australia.
   
   To examine the robustness of the distributions shown in Fig. \ref{fig:SummarySeasonality}, we developed an alternative assessment of the seasonal occurrence of STT events, with results shown in Fig. \ref{fig:AndrewProxySTT}.
   Here STT occurrence is evaluated by consideration of the square of the dry Brunt-Viäsälä frequency (N$^2$) at the heights of the ozone tropopause (z$_{OT}$) and lapse rate tropopause (z$_{LRT}$) in each ozonesonde profile that has been binned to 500~m resolution.
