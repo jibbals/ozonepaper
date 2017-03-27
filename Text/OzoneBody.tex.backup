@@ -93,7 +93,7 @@
     For comparison to the ozonesonde observations, the model state was saved every 6 hours within the grid boxes containing each site.
     When comparing against ozonesondes, GEOS-Chem UTC+0 time samples are used for all sites.
     This means that the simulated ozone profiles are analysed at local times of 7AM for Davis, and 11AM for Macquarie and Melbourne.
-    GEOS-Chem uses the tropopause height provided by GEOS-5 met fields which are calculated using a lapse-rate definition using the first minimum above the surface in the function $0.03 \times T(p) – log_{10}(p)$, with p in hPa and T being temperature as a function of pressure \citep{Rienecker2008}.
+    GEOS-Chem uses the tropopause height provided by GEOS-5 met fields which are calculated using a lapse-rate definition using the first minimum above the surface in the function $0.03 \times T(p) - log_{10}(p)$, with p in hPa and T being temperature as a function of pressure \citep{Rienecker2008}.
     
   \subsection{Characterisation of STT events and associated fluxes}
     \label{Section:CharacterisationOfSTTs}
@@ -292,7 +292,9 @@
   Their work shows a generally cleaner lower troposphere in the SH but can not be construed to suggest more or less STT folds in either season.
   \cite{Sprenger2003} examine modelled STT folds using ECMWF output over March 2000 - April 2001, and show that for this year there is a clear Austral winter maximum, again over the 20$^{\circ}$~S to 40$^{\circ}$~S band.
   The winter maximum \textbf{does not} include Melbourne, or the southern ocean, which may help explain why we see a seasonality which disagrees with these prior studies.
-  Since these measurement sites are not situated inside the region affected by the higher ozone seen in the Indian ocean and middle Australia in SH winter, it is likely we see the seasonality which is not driven by that system.
+  
+  The measurement sites are not in the regions which have a clear winter maximum seen in Fig. 1 of \cite{Sprenger2003}, and the large scale winter maximum shown by all three studies seems to be dominated by the system in that region.
+  The seasonality of our three sites is not driven by the larger STT system seen over the southern Indian ocean and middle Australia which dominates prior analysis near or over Australia.
   
   To examine the robustness of the distributions shown in Fig. \ref{fig:SummarySeasonality}, we developed an alternative assessment of the seasonal occurrence of STT events, with results shown in Fig. \ref{fig:AndrewProxySTT}.
   Here STT occurrence is evaluated by consideration of the square of the dry Brunt-Viäsälä frequency (N$^2$) at the heights of the ozone tropopause (z$_{OT}$) and lapse rate tropopause (z$_{LRT}$) in each ozonesonde profile that has been binned to 500~m resolution.
@@ -426,6 +428,8 @@
   \end{figure}
   
   TODO: Extrapolate over small region here and mention supplementary extrapolation.
+  Two regions are used to examine possible STT flux over a larger area using modeled tropospheric ozone concentrations.
+  The regions are shown in Fig. \ref{fig:ComparisonRegion}.
   
   TODO: Discuss other literature's estimates of STT flux comparing it with small regions.
   Skerlak2015
