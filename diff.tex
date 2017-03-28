@@ -1,7 +1,7 @@
 %% Copernicus Publications Manuscript Preparation Template for LaTeX Submissions
 %DIF LATEXDIFF DIFFERENCE FILE
 %DIF DEL ACPD_version/OzonePaper.tex   Wed Mar 22 15:17:15 2017
-%DIF ADD OzonePaper.tex                Tue Mar 28 10:44:24 2017
+%DIF ADD OzonePaper.tex                Tue Mar 28 13:46:00 2017
 %% ---------------------------------
 %% This template should be used for copernicus.cls
 %% The class file and some style files are bundled in the Copernicus Latex Package, which can be downloaded from the different journal webpages.
@@ -307,10 +307,11 @@
     }
 
     \DIFaddend The choice of band limits was set empirically in order to remove the slow positive gradient of ozone over altitude as well as any measurement noise.
-    For an event to qualify as STT, a clear increase above the background ozone level is needed, and we find that a bandpass filter removes seasonal-scale effects.
+    For an event to qualify as STT, a clear increase above the background ozone level is needed, and \DIFdelbegin \DIFdel{we find that }\DIFdelend a bandpass filter \DIFdelbegin \DIFdel{removes seasonal-scale }\DIFdelend \DIFaddbegin \DIFadd{leaves us with these increases minus any noise or seasonal scale vertical profile }\DIFaddend effects.
     The 0.5~km scale limit is set in order to remove any spikes of ozone which could be considered noise.
     We next use all the perturbation profiles at each site to calculate the 99th percentile perturbation value for the site.
-    This is our threshold for tropospheric ozone perturbations, and any profiles with perturbations exceeding this value in individual ozonesondes are classified as STT events.
+    \DIFaddbegin \DIFadd{The threshold is calculated from all the interpolated filtered values between 2~km above the surface and 1~km below the tropopause.
+    }\DIFaddend This is our threshold for tropospheric ozone perturbations, and any profiles with perturbations exceeding this value in individual ozonesondes are classified as STT events.
     STT events at altitudes below 4~km are removed to avoid surface pollution, and events within 0.5~km of the tropopause are removed to avoid false positives induced by the sharp transition to stratospheric air.
 
     \begin{figure}[t]
@@ -410,14 +411,14 @@
   \subsection{Classifying synoptic conditions during STT events}
   \label{Section:WeatherClassifications}
     Data from the European Centre for Medium-range Weather Forecasts (ECMWF) Interim Reanalysis (ERA-I) \citep{Dee2011} product are used for synoptic-scale examination of weather patterns over our three sites on dates matching detected STT events.
-    We use the ERA-I 500~hPa data to subjectively classify the events based on their likely meteorological cause.
+    We use the ERA-I 500~hPa data to subjectively classify the events based on their likely meteorological cause\DIFaddbegin \DIFadd{, examining each date where an event was detected}\DIFaddend .
     During STT occurrence, the upper troposphere is typically characterised by nearby low pressure fronts or cut-offs.
     Over Melbourne and Macquarie Island, we find that frontal and low pressure activity are prevalent during STT events (see Sect. \ref{sec:eventclimatologies}).
     Over Davis, the weather systems are harder to distinguish. The stratospheric polar vortex may create ozone folds without other sources of upper tropospheric turbulence.
 
     We examine two case studies in detail to illustrate the relationship between synoptic-scale conditions and STT events  over Melbourne.
     Figure \ref{fig:Melbourne20050203} (left) shows the ozone profile on 3 February 2005.
-    The tropopause was between 400 and 500 hPa and ozone in the upper troposphere was anticorrelated with relative humidity, suggesting the ozone enhancements derived from dry stratospheric air. 
+    The tropopause was between 400 and 500\DIFaddbegin \DIFadd{~}\DIFaddend hPa and ozone in the upper troposphere was anticorrelated with relative humidity, suggesting the ozone enhancements derived from dry stratospheric air. 
     An ozone intrusion into the troposphere at $\sim$520~hPa was identified by our detection algorithm.
     The right panel shows the concurrent synoptic weather system, a cut-off low pressure system that caused a large storm and lowered the local tropopause height for several days.
     %These systems also increase turbulence near the tropopause, which can lead to increased transport events.
@@ -430,13 +431,13 @@
       \caption{(Left) Vertical profile of ozone (black), relative humidity (blue), and temperature (red) measured by ozonesonde over Melbourne on 3 February 2005.
       The detected ozone STT event is highlighted in pink.
       Tropopause heights using both the ozone definition (black dashed line) and lapse rate definition (red dashed line) are also shown.
-      (Right) Geopotential heights at 500 hPa from the ERA-Interim reanalysis, with wind vectors over-plotted.
+      (Right) Geopotential heights at 500\DIFaddbeginFL \DIFaddFL{~}\DIFaddendFL hPa from the ERA-Interim reanalysis, with wind vectors over-plotted.
       Also shown is the 1~PVU contour line (purple).}
       \label{fig:Melbourne20050203}
     \end{figure*}
 
     Figure \ref{fig:Melbourne20100113} (left) shows the ozone profile over Melbourne on 13 January 2010.
-    The tropopause was higher on this date (120-160 hPa).
+    The tropopause was higher on this date (120-160\DIFaddbegin \DIFadd{~}\DIFaddend hPa).
     Using our algorithm, we detected an ozone intrusion centred around 200~hPa.
     As before, ozone anti-correlation with relative humidity provides further evidence that the elevated ozone was stratospheric in origin.
     In this profile, there was clear separation between the detected intrusion (highlighted in pink) and the ozone tropopause (black dashed line), which indicates that the sonde passed through regular tropospheric air after hitting a stratospheric intrusion but before reaching the tropopause.
@@ -559,7 +560,8 @@ examine modelled STT folds using ECMWF output over March 2000 - April 2001, and 
     \Omega_{O_3} = \int_{0}^{TP} \frac{P_{O_3}(z)}{k_B \times T(z)} \mathrm{d}z
   \end{equation}
   where $z$ is the altitude (GPH), $TP$ is the altitude at the tropopause, $T$ is the temperature, and $k_B$ is the Boltzmann constant.
-  In both observations and model, the maximum ozone column at Melbourne occurs in austral summer, with a minimum in winter, while Macquarie and Davis show the opposite seasonality.
+  \DIFaddbegin \DIFadd{GEOS-Chem outputs ozone density (molecules cm$^{-3}$), and height of each simulated box, as well as which level contains the tropopause, allowing modelled $\Omega_{O_3}$ to be calculated as the product of density and height summed up to the box below the tropopause level.
+  }\DIFaddend In both observations and model, the maximum ozone column at Melbourne occurs in austral summer, with a minimum in winter, while Macquarie and Davis show the opposite seasonality.
 
   \begin{figure*}[t]
     % made in examine_stations.py in stations repository
@@ -572,7 +574,7 @@ examine modelled STT folds using ECMWF output over March 2000 - April 2001, and 
     \label{fig:StationSeriesGEOSChem}
   \end{figure*}
 
-  GEOS-Chem provides a reasonable simulation of the observed seasonality and magnitude of $\Omega_{O_3}$. 
+  GEOS-Chem provides a reasonable simulation of the observed seasonality and magnitude of $\Omega_{O_3}$.
   Reduced major axis regression of observed versus simulated $\Omega_{O_3}$ gives a line of best fit with slopes of 1.08 for Davis, 0.99 for Macquarie, and 1.34 for Melbourne.
   The model is only partially able to reproduce the variability in the observations, with paired r$^2$ values for of 0.38 for Davis, 0.18 for Macquarie, and 0.37 for Melbourne.
   Much of the variability is driven by the seasonal cycle, and after removing this effect (by subtracting the multi-year monthly means), the r$^2$ values decrease to .07, .11, .30 respectively, although the slope improves at Melbourne to 1.08.
@@ -640,11 +642,12 @@ examine modelled STT folds using ECMWF output over March 2000 - April 2001, and 
     \label{fig:fluxsummaryabs}
   \end{figure}
 
-  \DIFdelbegin \DIFdel{We use simulated tropospheric ozone columns from GEOS-Chem to extrapolate the ozonesonde-based estimates to the entire Southern Ocean region , defined here as 35$^{\circ}$ S-75$^{\circ}$ S to encompass our three measurement sites.
-  To do so, we multiply the monthly likelihoods of STTs (fraction of ozonesonde releases for which an STT event was detected, per month, }\textit{\DIFdel{f}}%DIFAUXCMD
-\DIFdel{) by the monthly mean fraction of the ozone column attributed to STT (as in Fig. \ref{fig:fluxsummary}, }\textit{\DIFdel{I}}%DIFAUXCMD
+  \DIFdelbegin \DIFdel{We use simulated tropospheric ozone columns from GEOS-Chem to extrapolate the ozonesonde-based estimates to the entire Southern Ocean region, defined here as 35$^{\circ}$ S-75$^{\circ}$ S to encompass our three measurement sites. To do so, we multiply the monthly likelihoods of STTs (fraction of ozonesonde releases for which an STT event was detected, per month, }\textit{\DIFdel{f}}%DIFAUXCMD
+\DIFdel{)
+  by the monthly mean fraction of the ozone column attributed to STT (as in Fig. \ref{fig:fluxsummary}, }\textit{\DIFdel{I}}%DIFAUXCMD
 \DIFdel{) and by the monthly mean tropospheric ozone column over the Southern Ocean (from the GEOS-Chem multi-year mean, $\Omega_{SO_{O_3}}$), expressed simply as Flux$= \Omega_{SO_{O_3}} \times f \times I$.
-  The monthly values of each term in this equation }\DIFdelend \DIFaddbegin \DIFadd{TODO: Extrapolate over small region here and mention supplementary extrapolation.
+  The monthly values of each term in this equation }\DIFdelend \DIFaddbegin \DIFadd{TODO: mention supplementary extrapolation. and add plots for subregion extrap (perhaps?)
+  TODO: Compare against Skerlak values
   Two regions are used to examine possible STT flux over a larger area using modeled tropospheric ozone concentrations.
   The regions }\DIFaddend are shown in Fig. \DIFdelbegin \DIFdel{\ref{fig:SOExtrapolation} (upper panel).
   A more spatially resolved estimate could be determined by dividing the Southern Ocean region into longitudinal and latitudinal bins for calculating the average $\Omega_{SO_{O_3}}$ from GEOS-Chem, applying latitudinal gradients to $f$ and $I$ based on their values at the three sonde release sites, and adding longitudinal variability due to seasonal stratospheric wind jet streams \mbox{%DIFAUXCMD
@@ -653,6 +656,9 @@ examine modelled STT folds using ECMWF output over March 2000 - April 2001, and 
 , but this is beyond the scope of this work and in any case would not address the limitations of the estimate provided below.
   %DIF < The equation can be written simply as Flux$= \Omega_{SO_{O_3}} \times f \times I$.
 }\DIFdelend \DIFaddbegin \DIFadd{\ref{fig:ComparisonRegion}.
+  The region containing Melbourne and Macquarie describes $\sim 5.87$ million square km, extending from 60$^{\circ}$ S to 35$^{\circ}$ S, and 140$^{\circ}$ E to 165$^{\circ}$ E, with an estimated STT ozone contribution of $\sim 3.977 \times 10^{16}$ molecules cm$^{-2}$ a$^{-1}$ or equivalently 0.1862~Tg a$^{-1}$.
+  %DIF > If we assume the proportion of ozone due to an event is actually 35\%, as in Terao08 for the northern hemisphere: 4.627e+17 molecules/cm2/yr (2.166e+00 Tg/yr)
+  The region containing Davis describes $\sim 2.91$ million square km, extending from 70$^{\circ}$ S to 55$^{\circ}$ S, and 60$^{\circ}$ E to 90$^{\circ}$ E, with an estimated STT ozone contribution of $\sim 2.343 \times 10^{16}$ molecules cm$^{-2}$ a$^{-1}$ or equivalently 0.05440~Tg a$^{-1}$.
   }\DIFaddend 
 
   %DIF < Flux estimation over the Southern Ocean is based on the average GEOS-Chem tropospheric vertical column of ozone over a particular latitude range.
