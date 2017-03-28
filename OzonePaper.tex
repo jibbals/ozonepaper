@@ -229,10 +229,17 @@
     First, the ozone vertical profiles are linearly interpolated to a regular grid with 20~m resolution from the surface to 14~km altitude. 
     The interpolated profiles are then bandpass-filtered using a Fourier transform to retain perturbations with vertical scales between 0.5~km and 5~km (removing low and high frequency perturbations).
     In what follows, these filtered vertical profiles are referred to as perturbation profiles.
+    
+    We assume that in the troposphere, the ozone profile is a simple summation of sine and cosine waves.
+    Note that this would not really be the case if you include the stratosphere due to the sharp jump at the tropopause.
+    Once the troposphere is split into wave sine and cosine wave functions we remove the waves with frequency outside of our chosen bandwidth (in this case the upper and lower frequency limits equate to our chosen vertical scale).
+    This is done quickly using a fast fourier transform method \citep{Press1992}, using IDL code written by Dr. Simon Alexander shown in a supplementary document (TODO: how to reference?).
+    
     The choice of band limits was set empirically in order to remove the slow positive gradient of ozone over altitude as well as any measurement noise.
-    For an event to qualify as STT, a clear increase above the background ozone level is needed, and we find that a bandpass filter removes seasonal-scale effects.
+    For an event to qualify as STT, a clear increase above the background ozone level is needed, and a bandpass filter leaves us with these increases minus any noise or seasonal scale vertical profile effects.
     The 0.5~km scale limit is set in order to remove any spikes of ozone which could be considered noise.
     We next use all the perturbation profiles at each site to calculate the 99th percentile perturbation value for the site.
+    The threshold is calculated from all the interpolated filtered values between 2~km above the surface and 1~km below the tropopause.
     This is our threshold for tropospheric ozone perturbations, and any profiles with perturbations exceeding this value in individual ozonesondes are classified as STT events.
     STT events at altitudes below 4~km are removed to avoid surface pollution, and events within 0.5~km of the tropopause are removed to avoid false positives induced by the sharp transition to stratospheric air.
     
@@ -552,9 +559,13 @@
     \label{fig:fluxsummaryabs}
   \end{figure}
   
-  TODO: Extrapolate over small region here and mention supplementary extrapolation.
+  TODO: mention supplementary extrapolation. and add plots for subregion extrap (perhaps?)
+  TODO: Compare against Skerlak values
   Two regions are used to examine possible STT flux over a larger area using modeled tropospheric ozone concentrations.
   The regions are shown in Fig. \ref{fig:ComparisonRegion}.
+  The region containing Melbourne and Macquarie describes $\sim 5.87$ million square km, extending from 60$^{\circ}$ S to 35$^{\circ}$ S, and 140$^{\circ}$ E to 165$^{\circ}$ E, with an estimated STT ozone contribution of $\sim 3.977 \times 10^{16}$ molecules cm$^{-2}$ a$^{-1}$ or equivalently 0.1862~Tg a$^{-1}$.
+  %If we assume the proportion of ozone due to an event is actually 35\%, as in Terao08 for the northern hemisphere: 4.627e+17 molecules/cm2/yr (2.166e+00 Tg/yr)
+  The region containing Davis describes $\sim 2.91$ million square km, extending from 70$^{\circ}$ S to 55$^{\circ}$ S, and 60$^{\circ}$ E to 90$^{\circ}$ E, with an estimated STT ozone contribution of $\sim 2.343 \times 10^{16}$ molecules cm$^{-2}$ a$^{-1}$ or equivalently 0.05440~Tg a$^{-1}$.
   
   \begin{figure}[t]
   % Flux box and whisker plots from flux_summary.pro in OzoneWork(HPC) and edited in Inkscape

@@ -1,7 +1,7 @@
 %% Copernicus Publications Manuscript Preparation Template for LaTeX Submissions
 %DIF LATEXDIFF DIFFERENCE FILE
 %DIF DEL ACPD_version/OzonePaper.tex   Wed Mar 22 15:17:15 2017
-%DIF ADD OzonePaper.tex                Mon Mar 27 17:45:49 2017
+%DIF ADD OzonePaper.tex                Tue Mar 28 10:44:24 2017
 %% ---------------------------------
 %% This template should be used for copernicus.cls
 %% The class file and some style files are bundled in the Copernicus Latex Package, which can be downloaded from the different journal webpages.
@@ -276,7 +276,8 @@
     Our simulation was modified from the standard v10-01 to fix an error in the treatment of ozone data from the Total Ozone Mapping Spectrometer (TOMS) satellite used to calculate photolysis (see \url{http://wiki.seas.harvard.edu/geos-chem/index.php/FAST-JX_v7.0_photolysis_mechanism#Fix_for_TOMS_to_address_strange_cycle_in_OH_output.}).  
 
     Our simulations span 2005-2012 (following a 1-year spin-up) with horizontal resolution of 2$^{\circ}$ latitude by 2.5$^{\circ}$ longitude and 72 vertical levels from the surface to 0.01~hPa.
-    For comparison to the ozonesonde observations, the model state was saved every 6 hours within the grid boxes containing each site.
+    \DIFaddbegin \DIFadd{The vertical resolution is finer near the surface at $\sim 60$~m between levels, spreading out to $\sim 500$~m near 10~km altitude, and reaching $\sim 1500$~m near the top of the atmosphere.
+    }\DIFaddend For comparison to the ozonesonde observations, the model state was saved every 6 hours within the grid boxes containing each site.
     When comparing against ozonesondes, GEOS-Chem UTC+0 time samples are used for all sites.
     This means that the simulated ozone profiles are analysed at local times of 7AM for Davis, and 11AM for Macquarie and Melbourne.
     \DIFaddbegin \DIFadd{GEOS-Chem uses the tropopause height provided by GEOS-5 met fields which are calculated using a lapse-rate definition using the first minimum above the surface in the function $0.03 \times T(p) - log_{10}(p)$, with p in hPa and T being temperature as a function of pressure \mbox{%DIFAUXCMD
@@ -294,7 +295,18 @@
     First, the ozone vertical profiles are linearly interpolated to a regular grid with 20~m resolution from the surface to 14~km altitude. 
     The interpolated profiles are then bandpass-filtered using a Fourier transform to retain perturbations with vertical scales between 0.5~km and 5~km (removing low and high frequency perturbations).
     In what follows, these filtered vertical profiles are referred to as perturbation profiles.
-    The choice of band limits was set empirically in order to remove the slow positive gradient of ozone over altitude as well as any measurement noise.
+    \DIFaddbegin 
+
+    \DIFadd{We assume that in the troposphere, the ozone profile is a simple summation of sine and cosine waves.
+    Note that this would not really be the case if you include the stratosphere due to the sharp jump at the tropopause.
+    Once the troposphere is split into wave sine and cosine wave functions we remove the waves with frequency outside of our chosen bandwidth (in this case the upper and lower frequency limits equate to our chosen vertical scale).
+    This is done quickly using a fast fourier transform method \mbox{%DIFAUXCMD
+\citep{Press1992}
+}%DIFAUXCMD
+, using IDL code written by Dr. Simon Alexander shown in a supplementary document (TODO: how to reference?).
+    }
+
+    \DIFaddend The choice of band limits was set empirically in order to remove the slow positive gradient of ozone over altitude as well as any measurement noise.
     For an event to qualify as STT, a clear increase above the background ozone level is needed, and we find that a bandpass filter removes seasonal-scale effects.
     The 0.5~km scale limit is set in order to remove any spikes of ozone which could be considered noise.
     We next use all the perturbation profiles at each site to calculate the 99th percentile perturbation value for the site.
