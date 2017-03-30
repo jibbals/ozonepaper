@@ -14,6 +14,10 @@
 %\newcommand{\igone}[1]{\includegraphics[width=8.3cm]{#1}}
 %\newcommand{\igtwo}[1]{\includegraphics[width=12.0cm]{#1}}
 
+\usepackage{verbatim} % this one is for code in the supplementary
+% Run with this uncommented to remove supplementary stuff from final pdf
+%\includeonly{}
+
 \begin{document}
 \title{Stratospheric ozone intrusion events and their impacts on tropospheric ozone in the Southern Hemisphere}
 
@@ -44,7 +48,6 @@
 %% These dates will be inserted by Copernicus Publications during the typesetting process.
 \firstpage{1}
 \maketitle
-
 
 \begin{abstract}
 %\input{Text/OzoneAbstract.tex}
@@ -233,7 +236,7 @@
     We assume that in the troposphere, the ozone profile is a simple summation of sine and cosine waves.
     Note that this would not really be the case if you include the stratosphere due to the sharp jump at the tropopause.
     Once the troposphere is split into wave sine and cosine wave functions we remove the waves with frequency outside of our chosen bandwidth (in this case the upper and lower frequency limits equate to our chosen vertical scale).
-    This is done quickly using a fast fourier transform method \citep{Press1992}, using IDL code written by Dr. Simon Alexander shown in a supplementary document (TODO: how to reference?).
+    This is done quickly using a fast fourier transform method \citep{Press1992}, using IDL code written by Dr. Simon Alexander shown in a supplementary document \ref{supp:sec:FFTCode}.
     
     The choice of band limits was set empirically in order to remove the slow positive gradient of ozone over altitude as well as any measurement noise.
     For an event to qualify as STT, a clear increase above the background ozone level is needed, and a bandpass filter leaves us with these increases minus any noise or seasonal scale vertical profile effects.
@@ -478,7 +481,7 @@
     \Omega_{O_3} = \int_{0}^{TP} \frac{P_{O_3}(z)}{k_B \times T(z)} \mathrm{d}z
   \end{equation}
   where $z$ is the altitude (GPH), $TP$ is the altitude at the tropopause, $T$ is the temperature, and $k_B$ is the Boltzmann constant.
-  GEOS-Chem outputs ozone density (molecules cm$^{-3}$), and height of each simulated box, as well as which level contains the tropopause - modelled $\Omega_{O_3}$ is calculated as the product of density and height summed up to the box below the tropopause level.
+  GEOS-Chem outputs ozone density (molecules cm$^{-3}$), and height of each simulated box, as well as which level contains the tropopause, allowing modelled $\Omega_{O_3}$ to be calculated as the product of density and height summed up to the box below the tropopause level.
   In both observations and model, the maximum ozone column at Melbourne occurs in austral summer, with a minimum in winter, while Macquarie and Davis show the opposite seasonality.
   
   \begin{figure*}[t]
@@ -560,13 +563,32 @@
     \label{fig:fluxsummaryabs}
   \end{figure}
   
-  TODO: mention supplementary extrapolation. and add plots for subregion extrap (perhaps?)
-  TODO: Compare against Skerlak values
+  TOdo: add plots for subregion extrap (perhaps?)
   Two regions are used to examine possible STT flux over a larger area using modeled tropospheric ozone concentrations.
   The regions are shown in Fig. \ref{fig:ComparisonRegion}.
-  The region containing Melbourne and Macquarie describes $\sim 5.87$ million square km, extending from 60$^{\circ}$ S to 35$^{\circ}$ S, and 140$^{\circ}$ E to 165$^{\circ}$ E, with an estimated STT ozone contribution of $\sim 3.977 \times 10^{16}$ molecules cm$^{-2}$ a$^{-1}$ or equivalently 0.1862~Tg a$^{-1}$.
-  %If we assume the proportion of ozone due to an event is actually 35\%, as in Terao08 for the northern hemisphere: 4.627e+17 molecules/cm2/yr (2.166e+00 Tg/yr)
-  The region containing Davis describes $\sim 2.91$ million square km, extending from 70$^{\circ}$ S to 55$^{\circ}$ S, and 60$^{\circ}$ E to 90$^{\circ}$ E, with an estimated STT ozone contribution of $\sim 2.343 \times 10^{16}$ molecules cm$^{-2}$ a$^{-1}$ or equivalently 0.05440~Tg a$^{-1}$.
+  The region containing Melbourne and Macquarie (M region) describes $\sim 5.87$ million square km, extending from 60$^{\circ}$ S to 35$^{\circ}$ S, and 140$^{\circ}$ E to 165$^{\circ}$ E, with an estimated STT ozone contribution of $\sim 3.977 \times 10^{16}$ molecules cm$^{-2}$ a$^{-1}$ or equivalently 0.1862~Tg a$^{-1}$.
+  The region containing Davis (D region) describes $\sim 2.91$ million square km, extending from 70$^{\circ}$ S to 55$^{\circ}$ S, and 60$^{\circ}$ E to 90$^{\circ}$ E, with an estimated STT ozone contribution of $\sim 2.343 \times 10^{16}$ molecules cm$^{-2}$ a$^{-1}$ or equivalently 0.05440~Tg a$^{-1}$.
+  
+  TODO: uncertainties with extrapolations
+  The uncertainties in these two regions of extrapolated ozone are determined from the standard deviations, by adding the relative uncertainty of each factor for the final uncertainty.
+  This ignores uncertainty due to the non-homogeneity of the regions extrapolated over, and would require more data or analysis to apply to larger regions.
+  These uncertainties for the two regions are shown in Table \ref{table:extrapolationUncertainties}, the M region flux uncertainty is X\% (blah Tg/a), while the D region flux uncertainty is X\% (blah Tg/a).:
+  \begin{table}[t]
+    %\centering
+    \caption{Uncertainty in ozone flux extrapolation.}
+    \begin{tabular}{ l l l l l } 
+      \hline
+      Region & $\Delta$f & $\Delta$I & $\Delta \Omega_{O_3}$ & $\Delta$flux \\
+      \hline
+      M region & X(X\%) & X(X\%) & X(X\%) & X(X\%)  \\ 
+      D region & X(X\%) & X(X\%) & X(X\%) & X(X\%)  \\
+      \hline
+    \end{tabular}
+    \label{table:extrapolationUncertainties}
+  \end{table}
+  
+  The extrapolation over the entire southern ocean has been performed by extending the above calculations, however assuming such a large area is homogeneous is not feasible.
+  The results over the southern ocean can be viewed in the supplementary section \ref{sup:sec:SOExtrapolation}.
   
   \begin{figure}[t]
   % Flux box and whisker plots from flux_summary.pro in OzoneWork(HPC) and edited in Inkscape
@@ -592,8 +614,6 @@
   %Considering the individual event contributions, \citet{Terao2008} estimate much higher STT impacts using a global CTM with a stratospheric ozone tracer; where 30--40\% of the 500~hPa ozone is due to STT.
   Our estimate of the fraction of tropospheric ozone from each STT event ($I$) is therefore almost certainly biased low, perhaps by a significant amount. 
   Using a global CTM with a stratospheric ozone tracer, \citet{Terao2008} estimated that this number was closer to 30--40\%, at least for the ozone mixing ratio at 500~hPa in the northern hemisphere.
-  
-
 
 \conclusions  %% \conclusions[modified heading if necessary]
 %\input{Text/OzoneConclusions.tex}
@@ -628,6 +648,19 @@ More frequent ozonesonde releases at SH sites would facilitate development of be
 %As the climate alters, an understanding of mixing between the stratosphere and troposphere over the southern ocean will help diagnose potential hazards.
 %Seasonality and impact of stratospheric ozone are changing over time, furter analysis of this long term set of ozonesonde data will be useful into the future.
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Supplementary      %
+% Prepend S to section labels and figures
+%\setcounter{section}{0}
+\renewcommand{\thesection}{S\arabic{section}}
+%\setcounter{figure}{0}
+\renewcommand{\thefigure}{S\arabic{figure}}%
+% run with \includeonly{} after finishing everything else - so that this part is not in the document
+\include{Supptext}
+\renewcommand{\thesection}{\arabic{section}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \appendix
 % \section{}    %% Appendix A
@@ -645,7 +678,6 @@ More frequent ozonesonde releases at SH sites would facilitate development of be
 % Data availability
 %
 \textit{Data availability.} All GEOS-Chem model output and the ozonesonde observational data are available from the authors upon request.
-
 
 \begin{acknowledgements}
 We thank the Australian Bureau of Meteorology and the Australian Antarctic Division for providing the ozonesonde data. 
