@@ -174,6 +174,7 @@
     \end{enumerate}
     The ozone tropopause can be less robust during stratosphere-troposphere exchange; however, it is more robust than the lapse rate tropopause at polar latitudes in winter and near jet streams in the lower stratosphere due to temperature inversions near the tropopause \citep{Bethan1996, Tomikawa2009, Alexander2013}.
     In this work, the lower of these two tropopause altitudes is used.
+    We slightly alter the lapse rate tropopause definition so as only to detect tropopauses above 4~km altitude, since at all three sites we saw several false positive lapse-rate detections due to temperature inversions near 2~km in altitude.
     This choice avoids occasional unrealistically high tropopause heights due to perturbed ozone or temperature measurements in the ozonesonde data.
     Another commonly used tropopause definition (the dynamical tropopause) is determined from the $\pm 2$ PVU isosurface, which allows a 3D view of folds and other tropopause features in a sufficiently resolved model \citep{Skerlak2014}.
     
@@ -323,10 +324,10 @@
     Here we briefly discuss these quantities and the sensitivity of the method to each.
     Using the algorithm discussed in Sect. \ref{Section:CharacterisationOfSTTs}, we detect 45 events at Davis, 47 (+8 fire influenced) events at Macquarie Island, and 72 (+14 fire influenced) events at Melbourne.
     
-    The cut-off threshold (defined separately for each site) is determined from the 99th percentile of the ozone perturbation profiles between 2~km and 1~km below the tropopause.
+    The cut-off threshold (defined separately for each site) is determined from the 99th percentile of the ozone perturbation profiles between 2~km above the earth's surface and 1~km below the tropopause.
     We use the 99th percentile because at this point the filter locates clear events with no obvious false positives.
     Event detection is highly sensitive to this choice; for example, using the 98.5th percentile instead increased detected events by 10 (22\%) at Davis, 19 (40\%) at Macquarie Island, and 24 (33\%) at Melbourne.
-    Event detection is therefore also sensitive to the range over which the percentile is calculated (2~km to 1~km below the tropopause).
+    Event detection is therefore also sensitive to the range over which the percentile is calculated (2~km above the earth's surface to 1~km below the tropopause).
     This range was chosen to remove anomalous edge effects of the Fourier bandpass filter and to discount the highly variable ozone concentration which occurs near the tropopause.
     
     Ozone enhancements are only considered STT events if they occur above 4~km and below 500~m below the tropopause.
@@ -399,9 +400,9 @@
       \hline
       Site & Events & Cut-offs & Frontals & Misc & Fire \\
       \hline
-      Davis     & 45 & 7  & 20 & 18 & 0 \\ 
+      Davis     & 46 & 7  & 20 & 19 & 0 \\ 
       Macquarie & 47 & 10 & 20 & 9  & 8 \\
-      Melbourne & 72 & 12 & 34 & 12 & 14 \\
+      Melbourne & 73 & 12 & 34 & 13 & 14 \\
       \hline
     \end{tabular}
     \label{table:EventCounts}

@@ -399,9 +399,9 @@
       \hline
       Site & Events & Cut-offs & Frontals & Misc & Fire \\
       \hline
-      Davis     & 45 & 7  & 20 & 18 & 0 \\ 
+      Davis     & 46 & 7  & 20 & 19 & 0 \\ 
       Macquarie & 47 & 10 & 20 & 9  & 8 \\
-      Melbourne & 72 & 12 & 34 & 12 & 14 \\
+      Melbourne & 73 & 12 & 34 & 13 & 14 \\
       \hline
     \end{tabular}
     \label{table:EventCounts}
@@ -568,6 +568,7 @@
   The regions are shown in Fig. \ref{fig:ComparisonRegion}.
   The region containing Melbourne and Macquarie (M region) describes $\sim 5.87$ million square km, extending from 60$^{\circ}$ S to 35$^{\circ}$ S, and 140$^{\circ}$ E to 165$^{\circ}$ E, with an estimated STT ozone contribution of $\sim 3.977 \times 10^{16}$ molecules cm$^{-2}$ a$^{-1}$ or equivalently 0.1862~Tg a$^{-1}$.
   The region containing Davis (D region) describes $\sim 2.91$ million square km, extending from 70$^{\circ}$ S to 55$^{\circ}$ S, and 60$^{\circ}$ E to 90$^{\circ}$ E, with an estimated STT ozone contribution of $\sim 2.343 \times 10^{16}$ molecules cm$^{-2}$ a$^{-1}$ or equivalently 0.05440~Tg a$^{-1}$.
+  The region along the coast of Antarctica is estimated to undergo $\sim 350$~kg km$^{-2}$ s$^{-1}$, which is higher than estimated here in the D region (.
   
   TODO: uncertainties with extrapolations
   The uncertainties in these two regions of extrapolated ozone are determined from the standard deviations, by adding the relative uncertainty of each factor for the final uncertainty.
