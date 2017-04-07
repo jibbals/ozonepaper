@@ -584,45 +584,47 @@
   For example if we expect to see an event 25\% of the time in a month, and events last one day, we expect one event every four days ($\sim 7.5$ events in that month) whereas if we expect events to last a whole week then we would expect $\sim$one event in that month.
   This leads us to multiply our flux$_i$ by L, and then by the range dictated by our assumed event lifetime.
   
-  Figures \ref{fig:MExtrapolation, fig:DExtrapolation} (upper panel) shows the factors I, L, and $\Omega_{SO_{O_3}}$ which are used along with the assumed event lifetime to estimate the STT flux.
-  The tropospheric ozone and area of our region is calculated using the output and surface area from GEOS-Chem over the Southern Ocean grid boxes along with the molecules cm$^{-2}$ per month calculations, along with ozone molar mass of 48~g mol$^{-1}$.
-  Fig. \ref{fig:MExtrapolation, fig:DExtrapolation} (lower panel) shows the results of the calculation when we choose 2.5 days for our flux estimation, with the range shown in representing the values calculated if we assume events last 1 day (upper bound of estimated flux) or one week (lower bound of estimated flux).
-  
-  \begin{figure}[t]
+  \begin{figure}
     % Plot from examine_stations.py in stations repo
     \includegraphics[width=12.0cm]{figures/STT_extrapolation_MelbMac_B.png}
     \caption{%
       (Top) The three quantities used to calculate the ozone flux from STT events over the region containing Macquarie Island and Melbourne.
       The tropospheric ozone column $\Omega_{trop O_3}$ (black, left axis) is from GEOS-Chem, while the STT likelihood $L$ (magenta, right axis) and impact $I$ (teal, right axis) are from the ozonesonde measurements.
       The STT impact is multiplied by 4 to better show the seasonality.
-      (Bottom) Estimated contribution of STT to tropospheric ozone columns over the region, with range and line determined through the assumed possible longevity of STT events as described in the text.}
+      (Bottom) Estimated contribution of STT to tropospheric ozone columns over the region, with range and line determined through the assumed possible longevity of STT events as described in the text.
+      Black line shows STT ozone flux if event lifetime is assumed to be 2.5 days.}
     \label{fig:MExtrapolation}
   \end{figure}
 
-  \begin{figure}[t]
+  \begin{figure}
     \includegraphics[width=12.0cm]{figures/STT_extrapolation_Dav_B.png}
     \caption{%
       As described in \ref{fig:MExtrapolation}, for the region containing Davis station.}
     \label{fig:DExtrapolation}
   \end{figure}
   
-  TODO: Discuss other literature's estimates of STT flux comparing it with small regions.
-  Skerlak2014 estimate see around X to Y kg/km2/month in these regions...
-  
-  \cite{Skerlak2014} shows an estimate of roughly X to Y~kg km$^{-2}$ month$^{-1}$ in these regions, while we estimate X to Y~kg km$^{-2}$ month$^{-1}$ with our technique TODO:.
-  The seasonal contributions are shown in Table TODO:
   \begin{table}[t]
     \caption{Seasonal ozone contribution in our two regions, in kg km$^{-2}$ month$^{-1}$.}
     \begin{tabular}{ l l l l l } 
       \hline
       Region & DJF & MAM & JJA & SON \\
       \hline
-      M region & X(X\%) & X(X\%) & X(X\%) \\ 
-      D region & X(X\%) & X(X\%) & X(X\%) \\
+      M region & 41(X\%) & 12(X\%) &  2(X\%) &  7(\%) \\ 
+      D region & 17(X\%) &  9(X\%) & 11(X\%) & 14(\%) \\
       \hline
     \end{tabular}
     \label{table:extrapolationResults}
   \end{table}
+  
+  Figures \ref{fig:MExtrapolation, fig:DExtrapolation} (upper panel) shows the factors I, L, and $\Omega_{SO_{O_3}}$ which are used along with the assumed event lifetime to estimate the STT flux.
+  The tropospheric ozone and area of our region is calculated using the output and surface area from GEOS-Chem over the Southern Ocean grid boxes along with the molecules cm$^{-2}$ per month calculations, along with ozone molar mass of 48~g mol$^{-1}$.
+  Fig. \ref{fig:MExtrapolation, fig:DExtrapolation} (lower panel) shows the results of the calculation when we choose 2.5 days for our flux estimation, with the range shown in representing the values calculated if we assume events last 1 day (upper bound of estimated flux) or one week (lower bound of estimated flux).
+  
+  TODO: Discuss other literature's estimates of STT flux comparing it with small regions.
+  Skerlak2014 estimate see around X to Y kg/km2/month in these regions...
+  
+  \cite{Skerlak2014} shows an estimate of roughly X to Y~kg km$^{-2}$ month$^{-1}$ in these regions, while we estimate X to Y~kg km$^{-2}$ month$^{-1}$ with our technique TODO:.
+  The seasonal contributions are shown in Table \ref{table:extrapolationResults}.
   
   TODO: uncertainties with extrapolations discuss overall pct uncertainty after bracketting range
   The uncertainties in these two regions of extrapolated ozone are determined from the standard deviations, by adding the relative uncertainty of each factor for the final uncertainty.

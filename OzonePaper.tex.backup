@@ -568,38 +568,43 @@
     \caption{Ozonesonde release sites and the regions used to examine STT effect on tropospheric ozone levels.}
     \label{fig:ComparisonRegion}
   \end{figure}
-  TOdo: add plots for subregion extrap (perhaps?)
+  
   Two regions are used to examine possible STT flux over a larger area using modeled tropospheric ozone concentrations.
   The regions are shown in Fig. \ref{fig:ComparisonRegion}.
   The region containing Melbourne and Macquarie (M region) describes $\sim 5.87$ million square km, extending from 60$^{\circ}$ S to 35$^{\circ}$ S, and 140$^{\circ}$ E to 165$^{\circ}$ E, with an estimated STT ozone contribution of $\sim 3.3 \times 10^{17}$ molecules cm$^{-2}$ a$^{-1}$ or equivalently 1.6~Tg a$^{-1}$.
-  The region containing Davis (D region) describes $\sim 2.91$ million square km, extending from 70$^{\circ}$ S to 55$^{\circ}$ S, and 60$^{\circ}$ E to 90$^{\circ}$ E, with an estimated STT ozone contribution of $\sim 2.7 \times 10^{17}$ molecules cm$^{-2}$ a$^{-1}$ or equivalently 0.6~Tg a$^{-1}$.
+  The region containing Davis (D region) describes $\sim 2.91$ million square km, extending from 70$^{\circ}$ S to 55$^{\circ}$ S, and 60$^{\circ}$ E to 90$^{\circ}$ E, with an estimated STT ozone contribution of $\sim 2.7 \times 10^{17}$ molecules cm$^{-2}$ a$^{-1}$ or equivalently 0.6~Tg a$^{-1}$. TODO: UPDATE THESE NUMBEROONIES.
   
   We use simulated tropospheric ozone columns from GEOS-Chem to extrapolate the ozonesonde-based estimates to the entire Southern Ocean region, defined here as 35$^{\circ}$ S-75$^{\circ}$ S to encompass our three measurement sites. 
-  To determine the ozone column attributable to STT, we determine monthly averaged STT impact (\textit{I}) and the monthly mean tropospheric ozone column over the Southern Ocean (from the GEOS-Chem multi-year mean, $\Omega_{SO_{O_3}}$), expressed simply as flux$_{per event} = \Omega_{SO_{O_3}} \times I$.
-  This value gives us the STT flux per event in each month.
+  To determine the ozone column attributable to STT, we determine monthly averaged STT impact (\textit{I}) and the monthly mean tropospheric ozone column over the Southern Ocean (from the GEOS-Chem multi-year mean, $\Omega_{SO_{O_3}}$), expressed simply as flux$_i = \Omega_{SO_{O_3}} \times I$.
+  Where flux$_i$ is the STT flux per event in each month.
   Next we determine how many events are occuring per month, using a few of assumptions: we assume only one event can occur at one time, and that no event is measured twice.
   These assumptions are not realistic, however they allow a simple estimate of events per month from the relatively sparse dataset.
   The monthly likelihoods of STT is calculated from fraction of ozonesonde releases for which an STT event was detected, within each month, \textit{L}.
   And if we assume events last N days, we find how many events per month by multiplying the days in a month by L and dividing by the assumed event lifetime.
   For example if we expect to see an event 25\% of the time in a month, and events last one day, we expect one event every four days ($\sim 7.5$ events in that month) whereas if we expect events to last a whole week then we would expect $\sim$one event in that month.
-  This leads us to multiply our flux$_{per event}$ by L, and then by the range dictated by our assumed event lifetime.
+  This leads us to multiply our flux$_i$ by L, and then by the range dictated by our assumed event lifetime.
   
-  Figure \ref{fig:STT_Extrapolation} (upper panel) shows the factors I, L, and $\Omega_{SO_{O_3}}$ which are used along with the assumed event lifetime to estimate the STT flux.
-  The tropospheric ozone and area of our region is calculated using the output and surface area from GEOS-Chem over the Southern Ocean grid boxes along with the molecules cm$^{-2}$ per month calculations, along with ozone molar mass of 48~g mol$^{-1}$.
-  Fig. \ref{fig:STT_Extrapolation} (lower panel) shows the results of the calculation when we choose 2.5 days for our flux estimation, with the range shown in representing the values calculated if we assume events last 1 day (upper bound of estimated flux) or one week (lower bound of estimated flux).
+  \begin{figure}
+    % Plot from examine_stations.py in stations repo
+    \includegraphics[width=12.0cm]{figures/STT_extrapolation_MelbMac_B.png}
+    \caption{%
+      (Top) The three quantities used to calculate the ozone flux from STT events over the region containing Macquarie Island and Melbourne.
+      The tropospheric ozone column $\Omega_{trop O_3}$ (black, left axis) is from GEOS-Chem, while the STT likelihood $L$ (magenta, right axis) and impact $I$ (teal, right axis) are from the ozonesonde measurements.
+      The STT impact is multiplied by 4 to better show the seasonality.
+      (Bottom) Estimated contribution of STT to tropospheric ozone columns over the region, with range and line determined through the assumed possible longevity of STT events as described in the text.}
+    \label{fig:MExtrapolation}
+  \end{figure}
+
+  \begin{figure}
+    \includegraphics[width=12.0cm]{figures/STT_extrapolation_Dav_B.png}
+    \caption{%
+      As described in \ref{fig:MExtrapolation}, for the region containing Davis station.}
+    \label{fig:DExtrapolation}
+  \end{figure}
   
-  TODO: Discuss other literature's estimates of STT flux comparing it with small regions.
-  Skerlak2014 estimate see around X to Y kg/km2/month in these regions...
-  
-  It is worth noting that this extrapolation is very simplistic and is performed as an example of how the seasonal ozone STT calculations could be used.
-  A more spatially resolved estimate could be determined by dividing the Southern Ocean region into longitudinal and latitudinal bins for calculating the average $\Omega_{SO_{O_3}}$ from GEOS-Chem, applying latitudinal gradients to $L$ and $I$ based on their values at the three sonde release sites, and adding longitudinal variability due to seasonal stratospheric wind jet streams \citep{Baray2012,Skerlak2015}.
-  An improved estimate of event lifetime and parameterisation of how many events may be occuring simultaneously could also be addressed, however this is beyond the scope of this work and in any case would not address all the limitations of the estimate provided below.
-  
-  \cite{Skerlak2014} shows an estimate of roughly X to Y~kg km$^{-2}$ month$^{-1}$ in these regions, while we estimate X to Y~kg km$^{-2}$ month$^{-1}$ with our technique TODO:.
-  The seasonal contributions are shown in Table TODO:
   \begin{table}[t]
     \caption{Seasonal ozone contribution in our two regions, in kg km$^{-2}$ month$^{-1}$.}
-    \begin{tabular}{ l l l l } 
+    \begin{tabular}{ l l l l l } 
       \hline
       Region & DJF & MAM & JJA & SON \\
       \hline
@@ -607,36 +612,35 @@
       D region & X(X\%) & X(X\%) & X(X\%) \\
       \hline
     \end{tabular}
-    \label{table:extrapolationUncertainties}
+    \label{table:extrapolationResults}
   \end{table}
+  
+  Figures \ref{fig:MExtrapolation, fig:DExtrapolation} (upper panel) shows the factors I, L, and $\Omega_{SO_{O_3}}$ which are used along with the assumed event lifetime to estimate the STT flux.
+  The tropospheric ozone and area of our region is calculated using the output and surface area from GEOS-Chem over the Southern Ocean grid boxes along with the molecules cm$^{-2}$ per month calculations, along with ozone molar mass of 48~g mol$^{-1}$.
+  Fig. \ref{fig:MExtrapolation, fig:DExtrapolation} (lower panel) shows the results of the calculation when we choose 2.5 days for our flux estimation, with the range shown in representing the values calculated if we assume events last 1 day (upper bound of estimated flux) or one week (lower bound of estimated flux).
+  
+  TODO: Discuss other literature's estimates of STT flux comparing it with small regions.
+  Skerlak2014 estimate see around X to Y kg/km2/month in these regions...
+  
+  \cite{Skerlak2014} shows an estimate of roughly X to Y~kg km$^{-2}$ month$^{-1}$ in these regions, while we estimate X to Y~kg km$^{-2}$ month$^{-1}$ with our technique TODO:.
+  The seasonal contributions are shown in Table \ref{table:extrapolationResults}.
   
   TODO: uncertainties with extrapolations discuss overall pct uncertainty after bracketting range
   The uncertainties in these two regions of extrapolated ozone are determined from the standard deviations, by adding the relative uncertainty of each factor for the final uncertainty.
   This ignores uncertainty due to the non-homogeneity of the regions extrapolated over, and would require more data or analysis to apply to larger regions.
-  These uncertainties for the two regions are shown in Table \ref{table:extrapolationUncertainties}, the M region flux uncertainty is X\% (blah Tg/a), while the D region flux uncertainty is X\% (blah Tg/a).:
-  \begin{table}[t]
-    %\centering
-    \caption{Uncertainty in ozone flux extrapolation.}
-    \begin{tabular}{ l l l l l } 
-      \hline
-      Region & $\Delta$f & $\Delta$I & $\Delta \Omega_{O_3}$ & $\Delta$flux \\
-      \hline
-      M region & X(X\%) & X(X\%) & X(X\%) & X(X\%)  \\ 
-      D region & X(X\%) & X(X\%) & X(X\%) & X(X\%)  \\
-      \hline
-    \end{tabular}
-    \label{table:extrapolationUncertainties}
-  \end{table}
-  
-  The extrapolation over the entire southern ocean has been performed by extending the above calculations, however assuming such a large area is homogeneous is not feasible.
-  The results over the southern ocean can be viewed in the supplementary section (TODO: hardcode reference here{sup:sec:SOExtrapolation}).
+  The overall uncertainty as a percentage is shown in parentheses in Table \ref{table:extrapolationResults}.
   
   Two previous studies have found STT ozone fluxes in the SH extratropics are largest from autumn or winter to early spring.
   \citet{Olsen2003} used PV and winds from the GEOS reanalysis combined with ozone measurements from the TOMS satellite to estimate that the ozone flux between 30$^{\circ}$ S and 60$^{\circ}$ S 210~Tg yr$^{-1}$ .
   \citet{Liu2016} model the upper tropospheric ozone and it's source (emissions/lightning/stratospheric) over the Atlantic ocean between 30$^{\circ}$ S and 45$^{\circ}$ S, and suggest that most of this is transported from the stratosphere from March to September, which is when the subtropical jet system is strongest.
-  TODO: Small mention of supplementary results, with notes about simplistic nature of extrapolating over the whole SO.
+  The extrapolation over the entire southern ocean has been performed by extending the above calculations, however assuming such a large area is homogeneous is not feasible.
+  The results over the southern ocean can be viewed in the supplementary section (TODO: hardcode reference here{sup:sec:SOExtrapolation}).
   
-  As discussed in Sect. \ref{sec:sensitivity}, there are several uncertainties in our method that are likely to lead to a low bias in the overall extrapolated flux, including a conservative estimate of flux within each event and a process that excludes potential events which are too close to the tropopause or to transported smoke plumes.
+  It is worth noting that this extrapolation is very simplistic and is performed as an example of how the seasonal ozone STT calculations could be used.
+  A more spatially resolved estimate could be determined by dividing the Southern Ocean region into longitudinal and latitudinal bins for calculating the average $\Omega_{SO_{O_3}}$ from GEOS-Chem, applying latitudinal gradients to $L$ and $I$ based on their values at the three sonde release sites, and adding longitudinal variability due to seasonal stratospheric wind jet streams \citep{Baray2012,Skerlak2015}.
+  An improved estimate of event lifetime and parameterisation of how many events may be occuring simultaneously could also be addressed, however this is beyond the scope of this work and in any case would not address all the limitations of the estimate provided below.
+  
+  As discussed in here and in Sect. \ref{sec:sensitivity}, there are several uncertainties in our method that are likely to lead to a low bias in the overall extrapolated flux, including a conservative estimate of flux within each event and a process that excludes potential events which are too close to the tropopause or to transported smoke plumes.
 
   %  This result highlights the difficulty associated with extrapolating from temporally sparse ozonesonde data, as STT impact is hard to measure without multiple measurements during and surrounding each event.
   
