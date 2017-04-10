@@ -246,7 +246,7 @@
     STT events at altitudes below 4~km are removed to avoid surface pollution, and events within 0.5~km of the tropopause are removed to avoid false positives induced by the sharp transition to stratospheric air.
     
     \begin{figure}[t]
-      % Figure created in getevents.pro, edited in inkscape
+      % Figure 3 created in getevents.pro, edited in inkscape
       \includegraphics[width=8.3cm]{figures/filtereg.png}
       \caption{ %
 	An example of the STT identification and flux estimation methods used in this work. 
@@ -284,7 +284,7 @@
     Large biomass burning events emit substantial quantities of ozone precursors, some of which are capable of being transported long distances and driving ozone production far from the fire source \citep{Jaffe2012}.
     Ozone production from biomass burning is complex and affected by photochemistry, fuel nitrogen load, and time since emission, among other factors. 
     While ozone production occurs in some biomass burning plumes, this is not always the case; therefore ozone perturbations detected during transported smoke events may or may not be caused by the plume.
-    For this reason all detected STT events found near smoke plumes are flagged.
+    For this reason all detected STT events found near (within $\sim$150~km of) smoke plumes are flagged, following visual inspection.
     Calculations of seasonality, and ozone flux do not include flagged events, however they are included in summary plots in this work.
     
     %Biomass burning influence in the Southern Hemisphere comes mostly from Southern Africa and South America, however Australian fires from the midlatitudes, and Indonesian fires can also influence the ozonesonde release sites.
@@ -397,7 +397,7 @@
   At Davis, there is increased Antarctic winter activity, which may be due to the polar vortex and it's associated lowered tropopause and increased turbulence.
   STT events associated with cut-off low pressure systems are more prevalent during summer (winter for Davis), while STT events associated with frontal passage occur throughout the year.
   
-  This seasonality is not seen in the recent ERA-Interim tropopause fold analysis performed by \citet{Skerlak2015}, where a winter maximum over Australia can be seen.
+  This seasonality is not seen in the recent ERA-Interim tropopause fold analysis performed by \citet{Skerlak2015}, where a winter maximum of ozone fold frequency ($\sim 0.5\%$ more folds in winter) over Australia can be seen.
   However their winter maximum is in the subtropics only - from around 20$^{\circ}$~S to 40$^{\circ}$~S, which can be seen as the prevalent feature over Australia in Fig. 5 of their publication.
   \cite{Wauben1998} look at modelled (CTM driven by ECMWF output) and measured ozone distributions and find more SH ozone in the lower troposphere during Austral winter, however they note that the ECMWF fields are uncertain here again due to lack of measurements.
   Their work shows a generally cleaner lower troposphere in the SH summer but can not be construed to suggest more or less STT folds in either season.
@@ -552,7 +552,7 @@
     
     To determine the ozone column attributable to STT, we determine monthly averaged STT impact (\textit{I}) and the monthly mean tropospheric ozone column over the Southern Ocean (from the GEOS-Chem multi-year mean, $\Omega_{SO_{O_3}}$), expressed simply as flux$_i = \Omega_{SO_{O_3}} \times I$, where flux$_i$ is the STT flux per event in each month.
     Next we determine how many events are occuring per month by assuming only one event can occur at one time, and that no event is measured twice.
-    These assumptions are not realistic (the first one especially), however they allow a simple estimate of events per month from the relatively sparse dataset.
+    These assumptions allow a simple estimate of events per month from the relatively sparse dataset, and as long as our regions of extrapolation aren't too large, should be true.
     The monthly likelihoods of STT is calculated from fraction of ozonesonde releases for which an STT event was detected, within each month, \textit{L}.
     And if we assume events last N days, we find how many events per month by multiplying the days in a month by L and dividing by the assumed event lifetime.
     For example if we expect to see an event 25\% of the time in a month, and events last one day, we expect one event every four days ($\sim 7.5$ events in that month) whereas if we expect events to last a whole week then we would expect $\sim$one event in that month.
@@ -600,16 +600,19 @@
     Our calculated seasonal contributions, along with total uncertainty are shown in Table \ref{table:extrapolationResults}.
     
     Two other previous studies have found STT ozone fluxes in the SH extratropics are largest from autumn or winter to early spring.
-    \citet{Olsen2003} used PV and winds from the GEOS reanalysis combined with ozone measurements from the TOMS satellite to estimate that the ozone flux between 30$^{\circ}$ S and 60$^{\circ}$ S 210~Tg yr$^{-1}$ .
+    \citet{Olsen2003} used PV and winds from the GEOS reanalysis combined with ozone measurements from the TOMS satellite to estimate that the ozone flux between 30$^{\circ}$ S and 60$^{\circ}$ S 210~Tg yr$^{-1}$.
     \citet{Liu2016} model the upper tropospheric ozone and it's source (emissions/lightning/stratospheric) over the Atlantic ocean between 30$^{\circ}$ S and 45$^{\circ}$ S, and suggest that most of this is transported from the stratosphere from March to September, which is when the subtropical jet system is strongest.
     The extrapolation over the entire southern ocean has been performed by extending the above calculations, however assuming such a large area is homogeneous is not feasible.
     The results extrapolated over the southern ocean can be viewed in the supplementary section (TODO: hardcode reference here{sup:sec:SOExtrapolation}).
   
   \subsection{Uncertainties}
     The uncertainties in our two regions of extrapolated ozone are determined from the standard deviations in monthly values over the multi-year dataset range.
+    For each term; I, L, and $\Omega_{O_3}$, the monthly averaged quantities are stored for each year where we have data, and then the standard deviation over the 7-10 values for each month are used to calculate the proportional uncertainty for each parameter.
+    In the case where only one event is recorded for a particular month (eg. June over Melbourne), uncertainty in I (the impact, which for this case has only one value) is set to 100\%, and finally the proportional uncertainties are added to get the total flux estimate uncertainty.
     This ignores uncertainty due to the non-homogeneity of the regions extrapolated over, and would require more data, parameters, and analysis to apply to larger regions.
     The overall uncertainty as a percentage is shown in parentheses in Table \ref{table:extrapolationResults}, these values are on the order of 200\%, largely due to uncertainty in the L and I factors which both sit near 100\% uncertainty for each month.
     Uncertainty in tropospheric ozone from GEOS-Chem is $\sim 5$-20\%, and uncertainty in assumed event lifetime is set at 10\%.
+    
     As discussed in here and in Sect. \ref{sec:sensitivity}, there are several uncertainties in our method that are likely to lead to a low bias in the overall extrapolated flux, including a conservative estimate of flux within each event and a process that excludes potential events which are too close to the tropopause or to transported smoke plumes.
     
     It is worth noting that this extrapolation is simplistic and is performed as an example of how the STT detection algorithm could be used.
@@ -618,8 +621,8 @@
 
     %  This result highlights the difficulty associated with extrapolating from temporally sparse ozonesonde data, as STT impact is hard to measure without multiple measurements during and surrounding each event.
     
-    Our estimate of the fraction of tropospheric ozone from each STT event ($I$) is almost certainly biased low, perhaps by a significant amount. 
-    Using a global CTM with a stratospheric ozone tracer, \citet{Terao2008} estimated that 30--40\% of the ozone was transported from the stratosphere, at least for the ozone mixing ratio at 500~hPa in the northern hemisphere.
+    Our estimate of the fraction of tropospheric ozone from each STT event ($I$) is likely to be biased low, perhaps by a significant amount.
+    Using a global CTM with a stratospheric ozone tracer, \citet{Terao2008} estimated that up to 30--40\% of the ozone was transported from the stratosphere, for the ozone mixing ratio at 500~hPa in the northern hemisphere.
 
 \section{Sensitivities and limitations}
 \label{sec:sensitivity}
