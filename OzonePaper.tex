@@ -134,7 +134,14 @@
     Standardised procedures are followed when constructing, transporting, and releasing the ozonesondes \url{http://www.ndsc.ncep.noaa.gov/organize/protocols/appendix5/}.
     Ozonesondes are estimated to provide around 2\% precision in the stratosphere, which improves at lower altitudes, and ozonesondes have been shown to be accurate to within 5\% when the correct procedures are followed \citep{Smit2007}.
     
-    Ozonesondes are launched approximately weekly from Melbourne (38$^{\circ}$ S, 145$^{\circ}$ E), Macquarie Island (55$^{\circ}$ S, 159$^{\circ}$ E) and Davis (69$^{\circ}$ S, 78$^{\circ}$ E). 
+    \begin{figure}
+    % Figure 1: Comparison region made in map script
+      \includegraphics[width=10cm]{figures/ComparisonRegions.png}
+      \caption{Ozonesonde release sites and the regions which will be used to examine STT effect on tropospheric ozone levels.}
+      \label{fig:ComparisonRegion}
+    \end{figure}
+    
+    Ozonesondes are launched approximately weekly from Melbourne (38$^{\circ}$ S, 145$^{\circ}$ E), Macquarie Island (55$^{\circ}$ S, 159$^{\circ}$ E) and Davis (69$^{\circ}$ S, 78$^{\circ}$ E), as shown in Fig. \ref{fig:ComparisonRegion}. 
     Melbourne, a major city in Victoria, Australia is in the far south eastern section of the Australian mainland, actual releases are north of the central business district in the Broadmeadows suburb.
     Macquarie island is isolated from the Australian mainland, situated in the remote southern ocean and unlikely to be affected by any local anthropogenic pollution events.
     Davis is on the coast of Antarctica and also unlikely to experience the effects of local pollution.
@@ -182,7 +189,7 @@
     %The tropopause is higher on days with an STT event at all during winter and spring at Davis.
 
     \begin{figure}[t] 
-    % Figure 1
+    % Figure 2
     % figure produced in seasonal_tropopause in Examine_stations.py
       \includegraphics[width=10cm]{figures/tpheights.png}
       \caption{%
@@ -198,7 +205,7 @@
     This seasonality at the high latitude sites is driven by a decrease in photochemical destruction under the reduced radiation conditions around polar night. % (TODO: read and cite S. Oltmans antarctic papers - re Andrews comment)... Can't find paper.
     
     \begin{figure}[t]
-      %Figure 2
+      %Figure 3
       %Created by seasonal_tropozone function in examine_stations.py
       \includegraphics[width=12.0cm]{figures/seasonaltropozone}
       \caption{ %
@@ -246,7 +253,7 @@
     STT events at altitudes below 4~km are removed to avoid surface pollution, and events within 0.5~km of the tropopause are removed to avoid false positives induced by the sharp transition to stratospheric air.
     
     \begin{figure}[t]
-      % Figure 3 created in getevents.pro, edited in inkscape
+      % Figure 4 created in getevents.pro, edited in inkscape
       \includegraphics[width=8.3cm]{figures/filtereg.png}
       \caption{ %
 	An example of the STT identification and flux estimation methods used in this work. 
@@ -538,19 +545,16 @@
       \label{fig:fluxsummaryabs}
     \end{figure}
     
-    \begin{figure}
-    % Comparison region made in map script
-      \includegraphics[width=10cm]{figures/ComparisonRegion.png}
-      \caption{Ozonesonde release sites and the regions used to examine STT effect on tropospheric ozone levels.}
-      \label{fig:ComparisonRegion}
-    \end{figure}
-    
-    Two regions are used to examine possible STT flux over a larger area using modeled tropospheric ozone concentrations.
+    Three regions are used to examine possible STT flux over a larger area using modeled tropospheric ozone concentrations.
     The regions are shown in Fig. \ref{fig:ComparisonRegion}.
-    The region containing Melbourne and Macquarie (M region) describes $\sim 5.87$ million square km, extending from 60$^{\circ}$ S to 35$^{\circ}$ S, and 140$^{\circ}$ E to 165$^{\circ}$ E, with an estimated STT ozone contribution of $\sim 2.3 \times 10^{17}$ molecules cm$^{-2}$ a$^{-1}$ or equivalently 1.1~Tg a$^{-1}$.
-    The region containing Davis (D region) describes $\sim 2.91$ million square km, extending from 70$^{\circ}$ S to 55$^{\circ}$ S, and 60$^{\circ}$ E to 90$^{\circ}$ E, with an estimated STT ozone contribution of $\sim 1.9 \times 10^{17}$ molecules cm$^{-2}$ a$^{-1}$ or equivalently 0.4~Tg a$^{-1}$.
+    The regions are centred at each site, and cover the site plus or minus ten degrees latitude, plus or minus 25, 16, and 11 degrees longitude for Davis, Macquarie Island, and Melbourne respectively. 
+    These boundaries provide a square (approximately) centred around each site with $\sim 2000$~km side lengths.
+    The regions thus describe $\sim TODO:X$ million square km, for Davis, Macquarie Island, and Melbourne respectively.
+    Davis has an estimated STT ozone contribution of TODO:$\sim X \times 10^{17}$ molecules cm$^{-2}$ a$^{-1}$ or equivalently TODO:X~Tg a$^{-1}$.
+    TODO: also numbers for Mac/Melb.
     
-    To determine the ozone column attributable to STT, we determine monthly averaged STT impact (\textit{I}) and the monthly mean tropospheric ozone column over the Southern Ocean (from the GEOS-Chem multi-year mean, $\Omega_{SO_{O_3}}$), expressed simply as flux$_i = \Omega_{SO_{O_3}} \times I$, where flux$_i$ is the STT flux per event in each month.
+    To determine the ozone column attributable to STT, we determine monthly averaged STT impact (\textit{I}) and the monthly mean tropospheric ozone column (from the GEOS-Chem multi-year mean, $\Omega_{Trop_{O_3}}$) over the regions described above.
+    This can be expressed simply as the STT flux per event (flux$_i$ in each month: flux$_i = \Omega_{SO_{O_3}} \times I$.
     Next we determine how many events are occuring per month by assuming only one event can occur at one time, and that no event is measured twice.
     These assumptions allow a simple estimate of events per month from the relatively sparse dataset, and as long as our regions of extrapolation aren't too large, should be true.
     The monthly likelihoods of STT is calculated from fraction of ozonesonde releases for which an STT event was detected, within each month, \textit{L}.
@@ -563,7 +567,7 @@
       \includegraphics[width=12.0cm]{figures/STT_extrapolation_MelbMac_B.png}
       \caption{%
 	(Top) The three quantities used to calculate the ozone flux from STT events over the region containing Macquarie Island and Melbourne.
-	The tropospheric ozone column $\Omega_{trop O_3}$ (black, left axis) is from GEOS-Chem, while the STT likelihood $L$ (magenta, right axis) and impact $I$ (teal, right axis) are from the ozonesonde measurements.
+	The tropospheric ozone column $\Omega_{Trop_{O_3}}$ (black, left axis) is from GEOS-Chem, while the STT likelihood $L$ (magenta, right axis) and impact $I$ (teal, right axis) are from the ozonesonde measurements.
 	The STT impact is multiplied by 4 to better show the seasonality.
 	(Bottom) Estimated contribution of STT to tropospheric ozone columns over the region, with range and line determined through the assumed possible longevity of STT events as described in the text.
 	Black line shows STT ozone flux if event lifetime is assumed to be 2.5 days.}
