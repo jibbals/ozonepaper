@@ -189,7 +189,7 @@
     %The tropopause is higher on days with an STT event at all during winter and spring at Davis.
 
     \begin{figure}[t] 
-    % Figure 1
+    % Figure 2
     % figure produced in seasonal_tropopause in Examine_stations.py
       \includegraphics[width=10cm]{figures/tpheights.png}
       \caption{%
@@ -205,7 +205,7 @@
     This seasonality at the high latitude sites is driven by a decrease in photochemical destruction under the reduced radiation conditions around polar night. % (TODO: read and cite S. Oltmans antarctic papers - re Andrews comment)... Can't find paper.
     
     \begin{figure}[t]
-      %Figure 2
+      %Figure 3
       %Created by seasonal_tropozone function in examine_stations.py
       \includegraphics[width=12.0cm]{figures/seasonaltropozone}
       \caption{ %
@@ -253,7 +253,7 @@
     STT events at altitudes below 4~km are removed to avoid surface pollution, and events within 0.5~km of the tropopause are removed to avoid false positives induced by the sharp transition to stratospheric air.
     
     \begin{figure}[t]
-      % Figure 3 created in getevents.pro, edited in inkscape
+      % Figure 4 created in getevents.pro, edited in inkscape
       \includegraphics[width=8.3cm]{figures/filtereg.png}
       \caption{ %
 	An example of the STT identification and flux estimation methods used in this work. 
@@ -521,7 +521,7 @@
     We quantify the mean stratosphere-to-troposphere ozone flux due to STT events at each site based on the integrated ozone amount associated with each STT event (see Sect. \ref{Section:CharacterisationOfSTTs}).
     Events that may have been influenced by transported biomass burning are excluded from this calculation.
     Our estimate provides a preliminary estimate of how much ozone is transported from the stratosphere by the events detected by our method.
-    The estimate is conservative for several reasons: it ignores secondary ozone peaks which may also be transported from the stratosphere, it ignores potential ozone enhancements which may have dispersed and increased the local background mixing ratio, and any influence from STT events nearby which may also increase the local background ozone.
+    The estimate is conservative for several reasons: it ignores secondary ozone peaks which may also be transported from the stratosphere, it ignores potential ozone enhancements which may have dispersed and increased the local background mixing ratio, and any influence from STT events advected into our measuremente region, which may have increases the local background ozone.
     
     Figure \ref{fig:fluxsummary} shows the mean fraction of total tropospheric column ozone (calculated from ozonesonde profiles) attributed to stratospheric ozone intrusions at each site, averaged over days when an STT event occurred.
     At all sites, the mean fraction of tropospheric ozone attributed to STT events is 2--4\%. On individual days at Macquarie and Melbourne, this value can exceed 10\%.

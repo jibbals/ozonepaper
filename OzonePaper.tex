@@ -521,7 +521,7 @@
     We quantify the mean stratosphere-to-troposphere ozone flux due to STT events at each site based on the integrated ozone amount associated with each STT event (see Sect. \ref{Section:CharacterisationOfSTTs}).
     Events that may have been influenced by transported biomass burning are excluded from this calculation.
     Our estimate provides a preliminary estimate of how much ozone is transported from the stratosphere by the events detected by our method.
-    The estimate is conservative for several reasons: it ignores secondary ozone peaks which may also be transported from the stratosphere, it ignores potential ozone enhancements which may have dispersed and increased the local background mixing ratio, and any influence from STT events nearby which may also increase the local background ozone.
+    The estimate is conservative for several reasons: it ignores secondary ozone peaks which may also be transported from the stratosphere, it ignores potential ozone enhancements which may have dispersed and increased the local background mixing ratio, and any influence from STT events advected into our measuremente region, which may have increases the local background ozone.
     
     Figure \ref{fig:fluxsummary} shows the mean fraction of total tropospheric column ozone (calculated from ozonesonde profiles) attributed to stratospheric ozone intrusions at each site, averaged over days when an STT event occurred.
     At all sites, the mean fraction of tropospheric ozone attributed to STT events is 2--4\%. On individual days at Macquarie and Melbourne, this value can exceed 10\%.
@@ -560,7 +560,7 @@
     The monthly likelihoods of STT is calculated from fraction of ozonesonde releases for which an STT event was detected, within each month, \textit{L}.
     And if we assume events last N days, we find how many events per month by multiplying the days in a month by L and dividing by the assumed event lifetime.
     For example if we expect to see an event 25\% of the time in a month, and events last one day, we expect one event every four days ($\sim 7.5$ events in that month) whereas if we expect events to last a whole week then we would expect $\sim$one event in that month.
-    This leads us to multiply our flux$_i$ by L, and then by the term determined by our assumed event lifetime (M) in order to determine monthly STT ozone flux.
+    This leads us to multiply our flux$_i$ by L, and then by the term (M) determined by our assumed event lifetime in order to determine monthly STT ozone flux.
     
     \begin{figure}
       % Plot from examine_stations.py in stations repo
@@ -597,7 +597,9 @@
     
     Figures \ref{fig:MExtrapolation}, and \ref{fig:DExtrapolation} (upper panel) shows the factors I, L, and $\Omega_{SO_{O_3}}$ which are used along with the assumed event lifetime to estimate the STT flux.
     The tropospheric ozone and area of our region is calculated using the output and surface area from GEOS-Chem over the Southern Ocean grid boxes along with the molecules cm$^{-2}$ per month calculations, along with ozone molar mass of 48~g mol$^{-1}$.
-    The lower panel of these two figures shows the results of the calculation when we choose 2.5 days for our flux estimation, with the range shown in representing the values calculated if we assume events last 1 day (upper bound of estimated flux) or one week (lower bound of estimated flux).
+    The longevity of ozone events is very difficult to determine, and we've chosen 2 days as a representative number based on several examples in \cite{Lin2012} where intrusions were seen to last from 1-3 days (occasionally longer) and an analysis of one large event by \cite{Cooper2004} showing that most of the ozone had dispersed after 48 hours.
+    The lower panel of these two figures shows the results of the calculation when we choose 2 days for our flux estimation, with dotted lines showing the values calculated if we assume events last 1 day (upper bound of estimated flux) or one week (lower bound of estimated flux).
+    Relative uncertainty in this M term is set to 50\%, by setting the standard deviation equal to half of the magnitude of the term.
   
   \subsection{Results and comparisons}
     \cite{Skerlak2014} shows an estimate of roughly 40 to 150~kg km$^{-2}$ month$^{-1}$ in these regions, over all seasons, of which 0 to 10~kg km$^{-2}$ month$^{-1}$ enters the boundary layer (see Fig. 16, 17 in their publication) while we estimate 2 to 41~kg km$^{-2}$ month$^{-1}$ STT impact, of which the largest part is in Summer (DJF).
