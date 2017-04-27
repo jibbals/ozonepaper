@@ -553,57 +553,65 @@
     Davis has an estimated STT ozone contribution of TODO:$\sim X \times 10^{17}$ molecules cm$^{-2}$ a$^{-1}$ or equivalently TODO:X~Tg a$^{-1}$.
     TODO: also numbers for Mac/Melb.
     
-    To determine the ozone column attributable to STT, we determine monthly averaged STT impact (\textit{I}) and the monthly mean tropospheric ozone column (from the GEOS-Chem multi-year mean, $\Omega_{Trop_{O_3}}$) over the regions described above.
+    To determine the ozone column attributable to STT, we determine monthly averaged STT impact (\textit{I}; fraction of tropospheric ozone sourced from the stratosphere) and the monthly mean tropospheric ozone column (from the GEOS-Chem multi-year mean, $\Omega_{Trop_{O_3}}$) over the regions described above.
     This can be expressed simply as the STT flux per event (flux$_i$ in each month: flux$_i = \Omega_{SO_{O_3}} \times I$.
     Next we determine how many events are occuring per month by assuming only one event can occur at one time, and that no event is measured twice.
     These assumptions allow a simple estimate of events per month from the relatively sparse dataset, and as long as our regions of extrapolation aren't too large, should be true.
-    The monthly (P)robability of STT is calculated from fraction of ozonesonde releases for which an STT event was detected, within each month.
-   If we assume events last N days, we find how many events per month by multiplying the days in a month by P and dividing by the assumed event lifetime.
-    For example if we expect to see an event 25\% of the time in a month, and events last one day, we expect one event every four days ($\sim 7.5$ events in that month) whereas if we expect events to last a whole week then we would expect $\sim$one event in that month.
-    This leads us to multiply our flux$_i$ by P, and then by the term (M) determined by our assumed event lifetime in order to determine monthly STT ozone flux.
+    The monthly ($P$)robability of STT is calculated from fraction of ozonesonde releases for which an STT event was detected, within each month.
+   If we assume events last N days, we find how many events per month by multiplying the days in a month by $P$ and dividing by the assumed event lifetime.
+    For example if we expect to see an event 25\% of the time in a month, and events last one day, we expect one event every four days ($\sim 7.5$ events in that month) whereas if we expect events to last a week then we would expect $\sim$one event in that month.
+    This leads us to multiply our flux$_i$ by $P$, and then by the term $M$ ($M=$ days per month $/N$) determined by our assumed event lifetime in order to determine monthly STT ozone flux.
     
     \begin{figure}
       % Plot from examine_stations.py in stations repo
-      \includegraphics[width=12.0cm]{figures/STT_extrapolation_MelbMac_B.png}
+      \includegraphics[width=12.0cm]{figures/STT_extrapolation_Dav.png}
       \caption{%
 				(Top) The three quantities used to calculate the ozone flux from STT events over the region containing Macquarie Island and Melbourne.
 				The tropospheric ozone column $\Omega_{Trop_{O_3}}$ (black, left axis) is from GEOS-Chem, while the STT probability  $P$(magenta, right axis) and impact $I$ (teal, right axis) are from the ozonesonde measurements.
 				The STT impact is multiplied by 4 to better show the seasonality.
-				(Bottom) Estimated contribution of STT to tropospheric ozone columns over the region, with range and line determined through the assumed possible longevity of STT events as described in the text.
-				Black line shows STT ozone flux if event lifetime is assumed to be 2 days, with shaded region showing the large uncertainty in this calculation, estimated as outlined in Sect \ref{Section:uncertainty}.}
-      \label{fig:MExtrapolation}
+				(Bottom) Estimated contribution of STT to tropospheric ozone columns over the region, with range determined by the uncertainty estimated as outlined in Sect. \ref{Section:uncertainty}.
+				The black line shows STT ozone flux if event lifetime is assumed to be 2 days, with dashed lines showing flux if event lifetime was assumed to be either 1 day or 1 week.}
+      \label{fig:DavExtrapolation}
+    \end{figure}
+    
+    \begin{figure}
+      % Plot from examine_stations.py in stations repo
+      \includegraphics[width=12.0cm]{figures/STT_extrapolation_Mac.png}
+      \caption{%
+				As described in \ref{fig:DavExtrapolation}, for the region containing Melbourne.}
+      \label{fig:MacExtrapolation}
     \end{figure}
 
     \begin{figure}
-      \includegraphics[width=12.0cm]{figures/STT_extrapolation_Dav_B.png}
+      \includegraphics[width=12.0cm]{figures/STT_extrapolation_Melb.png}
       \caption{%
-	As described in \ref{fig:MExtrapolation}, for the region containing Davis station.}
-      \label{fig:DExtrapolation}
+	      As described in \ref{fig:DavExtrapolation}, for the region containing Melbourne.}
+      \label{fig:MelbExtrapolation}
     \end{figure}
     
     \begin{table}[t]
       \captionsetup{justification=centering}
-      \caption{Seasonal STT ozone contribution in our two regions, in kg km$^{-2}$ month$^{-1}$.}
+      \caption{Seasonal STT ozone contribution in the regions near each site, in kg km$^{-2}$ month$^{-1}$.}
       \begin{tabular}{ l l l l l } 
-	\hline
-	Region & DJF & MAM & JJA & SON \\
-	\hline
-	M region & 41(X\%) & 12(X\%) &  2(X\%) &  7(\%) \\ 
-	D region & 17(X\%) &  9(X\%) & 11(X\%) & 14(\%) \\
-	\hline
+				\hline
+				Region & DJF & MAM & JJA & SON \\
+				\hline
+				Davis             & 10(382\%) & 13(325\%) & 11(405\%) & 13(353\%) \\ 
+				Macqaurie   & 20(412\%) & 9(666\%) & 5(958\%) & 4(1267\%) \\
+				Melbourne  & 195(223\%) & 18(500\%) & 5(1320\%) & 15(635\%) \\
+				\hline
       \end{tabular}
       \label{table:extrapolationResults}
     \end{table}
     
-    The upper panels in figures \ref{fig:MExtrapolation}, and \ref{fig:DExtrapolation} show the factors I, P, and $\Omega_{SO_{O_3}}$ which are used along with the assumed event lifetime to estimate the STT flux.
-    The tropospheric ozone and area of our region is calculated using the output and surface area from GEOS-Chem over the Southern Ocean grid boxes along with the molecules cm$^{-2}$ per month calculations, along with ozone molar mass of 48~g mol$^{-1}$.
+    The upper panels in figures \ref{fig:DavExtrapolation}-\ref{fig:MelbExtrapolation} show the factors $I$, $P$, and $\Omega_{O_3}}$ which are used along with the assumed event lifetime to estimate the STT flux.
+    The tropospheric ozone and area of our region is calculated using the output and surface area from GEOS-Chem over the Southern Ocean grid boxes.
     The longevity of ozone events is very difficult to determine, and we've chosen 2 days as a representative number based on several examples in \cite{Lin2012} where intrusions were seen to last from 1-3 days (occasionally longer) and an analysis of one large event by \cite{Cooper2004} showing that most of the ozone had dispersed after 48 hours.
-    The lower panel of these two figures shows the results of the calculation when we choose 2 days for our flux estimation, with dotted lines showing the values calculated if we assume events last 1 day (upper bound of estimated flux) or one week (lower bound of estimated flux).
-    Relative uncertainty in this M term is set to 50\%, by setting the standard deviation equal to half of the magnitude of the term.
+    The lower panel of these two figures show the results of the calculation when we choose 2 days for our flux estimation, with dotted lines showing the values calculated if we assume events last 1 day (upper bound of estimated flux) or one week (lower bound of estimated flux).
+    Relative uncertainty in this $M$ term is set to 50\%, by setting the standard deviation equal to half of the magnitude of the term.
   
   \subsection{Results and comparisons}
-    \cite{Skerlak2014} shows an estimate of roughly 40 to 150~kg km$^{-2}$ month$^{-1}$ in these regions, over all seasons (see Fig. 16, 17 in their publication) while we estimate 2 to 41~kg km$^{-2}$ month$^{-1}$ STT impact, of which the largest part is in Summer (DJF).
-    %, of which 0 to 10~kg km$^{-2}$ month$^{-1}$ enters the boundary layer 
+    \cite{Skerlak2014} show an estimate of roughly 40 to 150~kg km$^{-2}$ month$^{-1}$ in these regions, over all seasons (see Fig. 16, 17 in their publication) while we estimate 4 to 20~kg km$^{-2}$ month$^{-1}$ STT impact, except for Summer (DJF) over Melbourne, which shows a large spike to 195~kg km$^{-2}$ month$^{-1}$. 
     Our calculated seasonal contributions, along with total uncertainty are shown in Table \ref{table:extrapolationResults}.
     
     Two other previous studies have found STT ozone fluxes in the SH extratropics are largest from autumn or winter to early spring.
@@ -615,17 +623,17 @@
   \subsection{Uncertainties}
   \label{Section:uncertainty}
     The uncertainties in our two regions of extrapolated ozone are determined from the standard deviations in monthly values over the multi-year dataset range.
-    For each term; I, P, and $\Omega_{O_3}$, the monthly averaged quantities are stored for each year where we have data, and then the standard deviation over the 7-10 values for each month are used to calculate the proportional uncertainty for each parameter.
-    In the case where only one event is recorded for a particular month (eg. June over Melbourne), uncertainty in I (the impact, which for this case has only one value) is set to 100\%, and finally the proportional uncertainties are added to get the total flux estimate uncertainty.
+    For each term; $I$, $P$, and $\Omega_{O_3}$, the monthly averaged quantities are stored for each year where we have data, and then the standard deviation over the 7-10 values for each month are used to calculate the proportional uncertainty for each parameter.
+    In the case where only one event is recorded for a particular month (eg. June over Melbourne), uncertainty in $I$ (the impact, which for this case has only one value) is set to 100\%, and finally the proportional uncertainties are added to get the total flux estimate uncertainty.
     This ignores uncertainty due to the non-homogeneity of the regions extrapolated over, and would require more data, parameters, and analysis to apply to larger regions.
-    The overall uncertainty as a percentage is shown in parentheses in Table \ref{table:extrapolationResults}, these values are on the order of 200\%, largely due to uncertainty in the P and I factors which both sit near 100\% uncertainty for each month.
-    The uncertainty in the I factor of our STT flux calculation is estimated from the standard deviation of the calculated values, for each of the three sites, as the variability in this term appears to be homoskedastic (unvarying in time).
-    The P factor is assumed to follow a Bernoulli distribution, with variance calculated for each month at each site.
+    The overall uncertainty as a percentage is shown in parentheses in Table \ref{table:extrapolationResults}, these values are on the order of 200\%, largely due to uncertainty in the $P$ and $I$ factors which both sit near 100\% uncertainty for each month.
+    The uncertainty in the $I$ factor of our STT flux calculation is estimated from the standard deviation of the calculated values, for each of the three sites, as the variability in this term appears to be homoskedastic (unvarying in time).
+    The $P$ factor is assumed to follow a Bernoulli distribution, with variance calculated for each month at each site.
     Uncertainty in tropospheric ozone from GEOS-Chem is estimated using the standard deviation at each site, this term is also seen to be homoskedastic. 
     Uncertainty in assumed event lifetime is set at 50\%.
     These uncertainties propogate to the STT flux calculation through the standard variance of a product of independent variables calculation: $var(\Pi_i X_i) = \Pi_i ( var(X_i) + E(X_i)^2 ) - (\Pi_i E(X_i))^2$
      
-    Considering the I factor, as discussed in here and in Sect. \ref{sec:sensitivity}, there are several uncertainties in our method that are likely to lead to a low bias, including a conservative estimate of flux within each event and a process that excludes potential events which are too close to the tropopause or to transported smoke plumes.
+    Considering the $I$ factor, as discussed in here and in Sect. \ref{sec:sensitivity}, there are several uncertainties in our method that are likely to lead to a low bias, including a conservative estimate of flux within each event and a process that excludes potential events which are too close to the tropopause or to transported smoke plumes.
     
     It is worth noting that this extrapolation is simplistic and is performed as an example of how the STT detection algorithm could be used.
     A more spatially resolved estimate could be determined by dividing the Southern Ocean region into longitudinal and latitudinal bins for calculating the average $\Omega_{SO_{O_3}}$ from GEOS-Chem, applying latitudinal gradients to $P$ and $I$ based on their values at the three sonde release sites, and adding longitudinal variability due to seasonal stratospheric wind jet streams \citep{Baray2012,Skerlak2015}.
