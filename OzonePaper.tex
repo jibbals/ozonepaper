@@ -487,9 +487,9 @@
     \includegraphics[width=14.0cm]{figures/seasonalprofiles00.png}
     \caption{%
       Observed and simulated tropospheric ozone profiles over Davis, Macquarie, and Melbourne, averaged seasonally.
-      Model means (2005-2013 average) are shown as red solid lines, with red dashed lines showing the 10th and 90th percentiles.
-      Ozonesonde means (over each season, for all years) are shown as black solid lines, with coloured shaded areas showing the 10th and 90th percentiles.
-      The horizontal dashed lines show the mean tropopause heights from the model (red) and the observations (black).}
+      Model medians (2005-2013 average) are shown as red solid lines, with red dashed lines showing the 10th and 90th percentiles.
+      Ozonesonde medians (over each season, for all years) are shown as black solid lines, with coloured shaded areas showing the 10th and 90th percentiles.
+      The horizontal dashed lines show the median tropopause heights from the model (red) and the observations (black).}
     \label{fig:GEOSChemSeasonalProfiles}
   \end{figure}
   
@@ -500,6 +500,9 @@
   Also shown is the tropopause height simulated by the model (horizontal dashed red line), the mean of which is always higher than the observed average, although this difference is not statistically significant.
   The effect of local pollution over Melbourne during austral summer (DJF) can be seen from the increased mean mixing ratios and enhanced variance near the surface.
   The gradient of the O$_3$ profiles is steeper in the measurements than the model, at all sites during all seasons.
+
+  Recently (TODO: cite Hu et al., 2017) examined GEOS-Chem ozone simulations and saw a similar overestimation of upper troposphere ozone in the mid southern latitudes when running with GEOS5 meteorological fields. 
+  They suggest that in general GEOS-Chem underestimates STT, with $\sim 360$~Tg a$^{-1}$ simulated globally, compared to $\sim 550$~Tg a$^{-1}$ observationly constrained.
   
   GEOS-Chem does not have the vertical resolution required to capture STT events.
   Figure \ref{fig:event_profile_comparison} compares modeled (red) and observed (black) ozone profiles on three example days when STT events were detected using the ozonesondes. 
