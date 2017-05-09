@@ -102,7 +102,11 @@
   STT events have been observed in tropopause folds around both the polar front jet \citep{Vaughan1994, Beekmann1997} and the subtropical jet \citep{Baray2000}.
   A big influence on the high surface ozone concentrations over the eastern Mediterranean is stratospheric mixing and anticyclonic subsidence \citep{Zanis2014}. 
   They are also observed near cut-off lows \citep{Price1993, Wirth1995}, so both regional weather patterns and stratospheric mixing are important to understand for STT analysis.
-
+  
+  % TODO: small review of transport literature
+  Stratospheric ozone intrusions undergo transport and mixing, with up to half of the ozone diffusing within 12 hours following descension from the upper troposphere \citep{Trickl2014}.
+  Horizontal transport or advection of stratospheric ozone within the free troposphere can spread ozone quite far, as shown by \cite{Cooper2004}, where an event is seen to spread from TODO to TODO over the course of a few days.
+  
   %STT events are driven by deep overshooting convection \citep{Frey2015}, tropical cyclones \citep{Das2016} and mid-latitude synoptic scale disturbances (e.g., \citet{Stohl2003, Mihalikova2012}) and are strongly dependent on both season and location. 
   The strength (ozone enhancement above background levels), horizontal scale, vertical depth, and longevity of these intruding ozone tongues vary with weather, topography, and season.
   %Because of their dependence on meteorological phenomena, STT events are strongly dependent on both season and location.
@@ -326,10 +330,11 @@
   \subsection{Classifying synoptic conditions during STT events}
   \label{sec:WeatherClassifications}
     Data from the European Centre for Medium-range Weather Forecasts (ECMWF) Interim Reanalysis (ERA-I) \citep{Dee2011} product are used for synoptic-scale examination of weather patterns over our three sites on dates matching detected STT events.
-    We use the ERA-I 500~hPa data to subjectively classify the events based on their likely meteorological cause, examining each date where an event was detected.
+    We use the ERA-I 500~hPa data to subjectively classify the events based on their likely meteorological cause, by visually examining each date where an event was detected.
     During STT occurrence, the upper troposphere is typically characterised by nearby low pressure fronts or cut-offs.
     Over Melbourne and Macquarie Island, we find that frontal and low pressure activity are prevalent during STT events (see Sect. \ref{sec:eventclimatologies}).
-    Over Davis, the weather systems are harder to distinguish. The stratospheric polar vortex may create ozone folds without other sources of upper tropospheric turbulence.
+    Over Davis, the weather systems are harder to distinguish. 
+    The stratospheric polar vortex may create ozone folds without other sources of upper tropospheric turbulence \citep{Baray2000,Sprenger2003}.
 
     We examine two case studies in detail to illustrate the relationship between synoptic-scale conditions and STT events  over Melbourne.
     Figure \ref{fig:Melbourne20050203} (left) shows the ozone profile on 3 February 2005.
@@ -528,8 +533,10 @@
     where $z$ is the altitude (GPH), $TP$ is the altitude at the tropopause, $T$ is the temperature, and $k_B$ is the Boltzmann constant.
     
     The top panel of Fig. \ref{fig:fluxsummary} shows the STT ozone enhancements, based on a vertical integration of the ozone above baseline levels for each ozonesonde where an event was detected.
+    The area considered to be 'enhanced' ozone is outlined with yellow dashes on the left panel of Fig. \ref{fig:filterEG}.
     We find that the mean ozone flux associated with STT events is $1$-$2 \times 10^{16}$~molecules cm$^{-2}$.
     The bottom panel shows the mean fraction of total tropospheric column ozone (calculated from ozonesonde profiles) attributed to stratospheric ozone intrusions at each site, averaged over days when an STT event occurred.
+    First the tropospheric ozone column is calculated, then the enhanced ozone column amount is used to determine the relative increase.
     At all sites, the mean fraction of tropospheric ozone attributed to STT events is 2--4\%. On individual days at Macquarie and Melbourne, this value can exceed 10\%.
     
     \begin{figure}
@@ -545,9 +552,9 @@
     
     Three regions are used to examine possible STT flux over a larger area using modeled tropospheric ozone concentrations.
     The regions are shown in Fig. \ref{fig:ComparisonRegion}.
-    The regions are centred at each site, and cover the site plus or minus ten degrees latitude, plus or minus 25, 16, and 11 degrees longitude for Davis, Macquarie Island, and Melbourne respectively. 
+    The regions are centred at each site, plus or minus ten degrees latitude, and plus or minus 25, 16, and 11 degrees longitude for Davis, Macquarie Island, and Melbourne respectively.
     These boundaries provide a square (approximately) centred around each site with $\sim 2000$~km side lengths.
-    The regions thus describe $\sim TODO:X$ million square km, for Davis, Macquarie Island, and Melbourne respectively.
+    The regions thus describe $\sim 4.4$, $4.6$, and $4.8$ million square km, for Davis, Macquarie Island, and Melbourne respectively.
     Davis has an estimated STT ozone contribution of TODO:$\sim X \times 10^{17}$ molecules cm$^{-2}$ a$^{-1}$ or equivalently TODO:X~Tg a$^{-1}$.
     TODO: also numbers for Mac/Melb.
     
@@ -566,9 +573,9 @@
       \caption{%
 	(Top) The three quantities used to calculate the ozone flux from STT events over the region containing Macquarie Island and Melbourne.
 	The tropospheric ozone column $\Omega_{Trop_{O_3}}$ (black, left axis) is from GEOS-Chem, while the STT probability  $P$(magenta, right axis) and impact $I$ (teal, right axis) are from the ozonesonde measurements.
-	The STT impact is multiplied by 4 to better show the seasonality.
+	The STT impact is multiplied by four to better show the seasonality.
 	(Bottom) Estimated contribution of STT to tropospheric ozone columns over the region, with range determined by the uncertainty estimated as outlined in Sect. \ref{sec:uncertainty}.
-	The black line shows STT ozone flux if event lifetime is assumed to be 2 days, with dashed lines showing flux if event lifetime was assumed to be either 1 day or 1 week.}
+	The black line shows STT ozone flux if event lifetime is assumed to be two days, with dashed lines showing flux if event lifetime was assumed to be either one day or one week.}
       \label{fig:DavExtrapolation}
     \end{figure}
     
@@ -576,14 +583,14 @@
       % Plot from examine_stations.py in stations repo
       \includegraphics[width=12.0cm]{figures/STT_extrapolation_Mac.png}
       \caption{%
-				As described in \ref{fig:DavExtrapolation}, for the region containing Melbourne.}
+	As described in \ref{fig:DavExtrapolation}, for the region containing Melbourne.}
       \label{fig:MacExtrapolation}
     \end{figure}
 
     \begin{figure}
       \includegraphics[width=12.0cm]{figures/STT_extrapolation_Melb.png}
       \caption{%
-	      As described in \ref{fig:DavExtrapolation}, for the region containing Melbourne.}
+	As described in \ref{fig:DavExtrapolation}, for the region containing Melbourne.}
       \label{fig:MelbExtrapolation}
     \end{figure}
     
@@ -605,6 +612,7 @@
     The upper panels in figures \ref{fig:DavExtrapolation}-\ref{fig:MelbExtrapolation} show the factors $I$, $P$, and $\Omega_{O_3}$ which are used along with the assumed event lifetime to estimate the STT flux.
     The tropospheric ozone and area of our region is calculated using the output and surface area from GEOS-Chem over the Southern Ocean grid boxes.
     The longevity of ozone events is very difficult to determine, and we've chosen 2 days as a representative number based on several examples in \cite{Lin2012} where intrusions were seen to last from 1-3 days (occasionally longer) and an analysis of one large event by \cite{Cooper2004} showing that most of the ozone had dispersed after 48 hours.
+    Another example is described by \cite{Trickl2014}, where an intrusion is detected $~2$ days and thousands of kilometres away from it's initial descent into the troposphere over Greenland.
     The lower panel of these two figures show the results of the calculation when we choose 2 days for our flux estimation, with dotted lines showing the values calculated if we assume events last 1 day (upper bound of estimated flux) or one week (lower bound of estimated flux).
     Relative uncertainty in this $M$ term is set to 50\%, by setting the standard deviation equal to half of the magnitude of the term.
   
