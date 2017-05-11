@@ -146,7 +146,7 @@
     \end{figure}
     
     Ozonesondes are launched approximately weekly from Melbourne (38$^{\circ}$ S, 145$^{\circ}$ E), Macquarie Island (55$^{\circ}$ S, 159$^{\circ}$ E) and Davis (69$^{\circ}$ S, 78$^{\circ}$ E), as shown in Fig. \ref{fig:ComparisonRegion}. 
-    Melbourne, a major city in Victoria, Australia is in the far south eastern section of the Australian mainland, actual releases are north of the central business district in the Broadmeadows suburb.
+    Melbourne, a major city with more than 4 million residents \citep{ABS2016}, is in the far south eastern section of the Australian mainland, actual releases are north of the central business district in the Broadmeadows suburb.
     Macquarie island is isolated from the Australian mainland, situated in the remote southern ocean and unlikely to be affected by any local anthropogenic pollution events.
     Davis is on the coast of Antarctica and also unlikely to experience the effects of local pollution.
     
@@ -183,14 +183,13 @@
     The ozone tropopause can be less robust during stratosphere-troposphere exchange; however, it is more robust than the lapse rate tropopause at polar latitudes in winter and near jet streams in the lower stratosphere due to temperature inversions near the tropopause \citep{Bethan1996, Tomikawa2009, Alexander2013}.
     In this work, the lower of these two tropopause altitudes is used.
     We slightly alter the lapse rate tropopause definition so as only to detect tropopauses above 4~km altitude, since at all three sites we saw several false positive lapse-rate detections due to temperature inversions near 2~km in altitude.
-    This choice avoids occasional unrealistically high tropopause heights due to perturbed ozone or temperature measurements in the ozonesonde data.
+    Using the minimum of the two definitions avoids the occasionally too high tropopauses due to perturbed ozone or temperature measurements in the ozonesonde data.
     Another commonly used tropopause definition (the dynamical tropopause) is determined from the $\pm 2$ PVU isosurface, which allows a 3D view of folds and other tropopause features in a sufficiently resolved model \citep{Skerlak2014}.
     
     Figure \ref{fig:seasonaltpheights} shows the monthly median tropopause altitudes at each location (solid lines).
     At Melbourne, tropopause altitude displays a seasonal cycle with maximum in summer and minimum is winter.
     This seasonality is missing at Macquarie and almost reversed at Davis, which has a minimum during autumn and maximum from winter to spring.
-    Tropopause altitude decreases with latitude from 9-12 km at Melbourne (38$^\circ$ S) to 7-9 km at Davis (69$^\circ$ S).
-    %The tropopause is higher on days with an STT event at all during winter and spring at Davis.
+    Tropopause altitude decreases with latitude from 9-14 km at Melbourne (38$^\circ$ S) to 7-9 km at Davis (69$^\circ$ S).
 
     \begin{figure}[t] 
     % Figure 2
@@ -204,9 +203,10 @@
 
     Figure \ref{fig:seasonaltropozone} shows multi-year averaged ozone mixing ratios measured by ozonesonde over the three stations.
     Over Melbourne, increased ozone extending down through the troposphere is apparent from December to March and from September to November.
-    The increased tropospheric ozone in these months is due to STT (in summer), and possible biomass burning influence (in spring), both discussed in more detail below.
+    The increased tropospheric ozone in these months is due to STT (in summer), and possible biomass burning influence (in spring), both discussed in more detail in the following sections.
     Over Davis and Macquarie Island, tropospheric ozone is higher between March and October, although the seasonal differences are small compared to those at Melbourne.
     This seasonality at the high latitude sites is driven by a decrease in photochemical destruction under the reduced radiation conditions around polar night. % (TODO: read and cite S. Oltmans antarctic papers - re Andrews comment)... Can't find paper.
+    Influence from the ozone hole can be seen over Davis in October, with relatively low ozone levels extending up 5-6~km into the stratosphere.
     
     \begin{figure}[t]
       %Figure 3
@@ -281,7 +281,7 @@
     Our method differs somewhat from that used by \citet{Tang2010} to detect STT events from ozonesonde measurements. 
     Their definition is based on subjective analysis of sondes released from 20 stations ranging in latitude from 35$^\circ$ S to 40$^\circ$ N.
     They identify an STT event if, starting from 5~km altitude, ozone exceeds 80~ppb and then within 3~km decreases by 20~ppb or more to a value less than 120~ppb.
-    Their technique would miss many events due to the lower ozone concentrations found in the cleaner Southern Hemisphere (SH).
+    Their technique would miss many events due to the lower ozone concentrations found in the cleaner Southern Hemisphere.
 
   \subsection{Biomass burning influence}
   \label{sec:BiomassBurning}
@@ -519,6 +519,7 @@
   
 \section{Stratosphere-to-troposphere ozone flux from STT events}
   \subsection{Method}
+  \label{sec:fluxcalc}
     We quantify the mean stratosphere-to-troposphere ozone flux due to STT events at each site based on the integrated ozone amount associated with each STT event (see Sect. \ref{sec:CharacterisationOfSTTs}).
     Events that may have been influenced by transported biomass burning are excluded from this calculation.
     Our estimate provides a preliminary estimate of how much ozone is transported from the stratosphere by the events detected by our method.
@@ -558,11 +559,11 @@
     Davis has an estimated STT ozone contribution of TODO:$\sim X \times 10^{17}$ molecules cm$^{-2}$ a$^{-1}$ or equivalently TODO:X~Tg a$^{-1}$.
     TODO: also numbers for Mac/Melb.
     
-    To determine the ozone column attributable to STT, we determine monthly averaged STT impact (\textit{I}; fraction of tropospheric ozone sourced from the stratosphere) and the monthly mean tropospheric ozone column (from the GEOS-Chem multi-year mean, $\Omega_{Trop_{O_3}}$) over the regions described above.
-    This can be expressed simply as the STT flux per event (flux$_i$ in each month: flux$_i = \Omega_{SO_{O_3}} \times I$.
+    To determine the ozone column attributable to STT, we determine monthly averaged STT impact (\textit{I}; fraction of tropospheric ozone sourced from the stratosphere as shown above) and the monthly mean tropospheric ozone column (from the GEOS-Chem multi-year mean, $\Omega_{Trop_{O_3}}$) over the regions described above.
+    This can be expressed simply as the STT flux per event (flux$_i$ in each month: flux$_i = \Omega_{Trop_{O_3}} \times I$.
     Next we determine how many events are occuring per month by assuming only one event can occur at one time, and that no event is measured twice.
-    These assumptions allow a simple estimate of events per month from the relatively sparse dataset, and as long as our regions of extrapolation aren't too large, should be true.
-    The monthly ($P$)robability of STT is calculated from fraction of ozonesonde releases for which an STT event was detected, within each month.
+    These assumptions allow a simple estimate of events per month from the relatively sparse dataset, and as long as our regions of extrapolation aren't too large, should hold true.
+    The monthly ($P$)robability of any sonde launch detecting an event is calculated as the fraction of ozonesonde releases for which an STT event was detected, within each month.
     If we assume events last N days, we find how many events per month by multiplying the days in a month by $P$ and dividing by the assumed event lifetime.
     For example if we expect to see an event 25\% of the time in a month, and events last one day, we expect one event every four days ($\sim 7.5$ events in that month) whereas if we expect events to last a week then we would expect $\sim$one event in that month.
     This leads us to multiply our flux$_i$ by $P$, and then by the term $M$ ($M=$ days per month $/N$) determined by our assumed event lifetime in order to determine monthly STT ozone flux.
@@ -571,11 +572,11 @@
       % Plot from examine_stations.py in stations repo
       \includegraphics[width=12.0cm]{figures/STT_extrapolation_Dav.png}
       \caption{%
-	(Top) The three quantities used to calculate the ozone flux from STT events over the region containing Macquarie Island and Melbourne.
+	(Top) Tropospheric ozone, ($I$)mpact per event, and ($P$)robability of event detection per sonde launch, averaged over the region above Davis.
 	The tropospheric ozone column $\Omega_{Trop_{O_3}}$ (black, left axis) is from GEOS-Chem, while the STT probability  $P$(magenta, right axis) and impact $I$ (teal, right axis) are from the ozonesonde measurements.
 	The STT impact is multiplied by four to better show the seasonality.
 	(Bottom) Estimated contribution of STT to tropospheric ozone columns over the region, with range determined by the uncertainty estimated as outlined in Sect. \ref{sec:uncertainty}.
-	The black line shows STT ozone flux if event lifetime is assumed to be two days, with dashed lines showing flux if event lifetime was assumed to be either one day or one week.}
+	The black line shows STT ozone flux if event lifetime is assumed to be two days, with dashed lines showing the range of flux estimation if we assumed events lasted from one day to one week.}
       \label{fig:DavExtrapolation}
     \end{figure}
     
@@ -594,35 +595,37 @@
       \label{fig:MelbExtrapolation}
     \end{figure}
     
-    \begin{table}[t]
-      \captionsetup{justification=centering}
-      \caption{Seasonal STT ozone contribution in the regions near each site, in kg km$^{-2}$ month$^{-1}$.}
-      \begin{tabular}{ l l l l l } 
-	\hline
-	Region & DJF & MAM & JJA & SON \\
-	\hline
-	Davis       & 34.9(  188\%) & 21.8(  225\%) & 19.4(  170\%) & 27.7(  165\%) &  \\ 
-	Macqaurie   & 52.9(  181\%) & 20.4(  267\%) & 10.7(  345\%) & 13.0(  328\%) &  \\
-	Melbourne   &111.5(  144\%) & 38.4(  210\%) & 13.9(  297\%) & 37.8(  242\%) & \\
-	\hline
-      \end{tabular}
-      \label{table:extrapolationResults}
-    \end{table}
-    
     The upper panels in figures \ref{fig:DavExtrapolation}-\ref{fig:MelbExtrapolation} show the factors $I$, $P$, and $\Omega_{O_3}$ which are used along with the assumed event lifetime to estimate the STT flux.
     The tropospheric ozone and area of our region is calculated using the output and surface area from GEOS-Chem over the Southern Ocean grid boxes.
-    The lower panel of these two figures show the results of the calculation when we choose 2 days for our flux estimation, with dotted lines showing the values calculated if we assume events last 1 day (upper bound of estimated flux) or one week (lower bound of estimated flux).
-    Relative uncertainty in this $M$ term is set to 50\%, by setting the standard deviation equal to half of the magnitude of the term.
+    The lower panel of these two figures show the results of the calculation when we choose 2 days for our flux estimation, with dotted lines showing the range of flux calculated if we assume events last from one day to one week.
+    The seasonal cycle of ozone flux is mostly driven by the $P$ and term, which peaks in the SH summer over both Macquarie and Melbourne.
+    The uncertainty is quite high, on the order of $100\%$, except for two months over Macquarie Island where there were no events detected and therefor no estimate of uncertainty for event $(I)$mpacts.
     
     The longevity of ozone events is very difficult to determine, and we've chosen 2 days as a representative number based on several examples in \cite{Lin2012} where intrusions were seen to last from 1-3 days (occasionally longer) and an analysis of one large event by \cite{Cooper2004} showing that most of the ozone had dispersed after 48 hours.
     Worth noting is the work done by \cite{Trickl2014}, where an intrusions are detected $>2$ days and thousands of kilometres away from their initial descent into the troposphere over Greenland or the Arctic.
     In these regions with high wind shear, mixing appears to be slower, which allows ozone intrusions to be transported further without dissipating into the troposphere.
+    Relative uncertainty in our $M$ term is set to 50\%, as we expect these synoptic events to generally last from 1-3 days.
   
   \subsection{Results and comparisons}
     \cite{Skerlak2014} show an estimate of roughly 40 to 150~kg km$^{-2}$ month$^{-1}$ in these regions, over all seasons (see Fig. 16, 17 in their publication) while we estimate 4 to 20~kg km$^{-2}$ month$^{-1}$ STT impact, except for Summer (DJF) over Melbourne, which shows a large spike to 195~kg km$^{-2}$ month$^{-1}$. 
     Our calculated seasonal contributions, along with total uncertainty are shown in Table \ref{table:extrapolationResults}.
     The extrapolation over the entire southern ocean has been performed by extending the above calculations, however assuming such a large area is homogeneous is not feasible.
     The results extrapolated over the southern ocean can be viewed in the supplementary section (TODO: hardcode reference here{sup:sec:SOExtrapolation}).
+    
+    \begin{table}[t]
+      \captionsetup{justification=centering}
+      \caption{Seasonal STT ozone contribution in the regions near each site, in kg km$^{-2}$ month$^{-1}$. In parentheses are the relative uncertainties.}
+      \begin{tabular}{ l l l l l } 
+	\hline
+	Region & DJF & MAM & JJA & SON \\
+	\hline
+	Davis       & 33.5(   82\%) & 30.8(   85\%) & 21.5(   86\%) & 15.8(   99\%)  \\ 
+	Macqaurie   & 36.9(   78\%) & 42.0(   89\%) & 11.9(  101\%) & 12.5(  156\%)  \\
+	Melbourne   & 66.5(  104\%) & 71.2(   84\%) & 19.1(   91\%) & 33.4(   98\%)  \\
+	\hline
+      \end{tabular}
+      \label{table:extrapolationResults}
+    \end{table}
     
     This result disagrees with several other studies which have found STT ozone fluxes in the SH extratropics are largest from autumn or winter to early spring.
     \cite{Roelofs1997} use a model with a stratospheric ozone tracer to estimate STT impacts, similar to our model they see higher SH tropospheric ozone concentrations in the winter, however the peak of SH STT occurence is in winter.
@@ -632,26 +635,23 @@
     \citet{Liu2016} model the upper tropospheric ozone and it's source (emissions/lightning/stratospheric) over the Atlantic ocean between 30$^{\circ}$ S and 45$^{\circ}$ S, and suggest that most of this is transported from the stratosphere from March to September, which is when the subtropical jet system is strongest.
     
     The disagreements largely reflect the difference between point source based estimates and zonally averaged estimates, as the meteorological behaviour at our three sites is not the same as the southern hemisphere in general.
-    As mentioned in Sect. \ref{sec:eventclimatologies}, the maximum in SH winter when examined on a large scale is almost entirely due to the dominant STT system which occurs anually over the southern Indian ocean and middle of Australia.
+    As mentioned in Sect. \ref{sec:eventclimatologies}, the maximum STT influx which occurs during SH winter is almost entirely due to the dominant STT system which occurs anually over the southern Indian ocean and middle of Australia.
     It is difficult to compare remote ozonesonde datasets with area averaged models or reanalyses based on noncolocated measurements (such as ERA).
   
   \subsection{Uncertainties}
   \label{sec:uncertainty}
-    The uncertainties in our two regions of extrapolated ozone are determined from the standard deviations in monthly values over the multi-year dataset range.
-    For each term; $I$, $P$, and $\Omega_{O_3}$, the monthly averaged quantities are stored for each year where we have data, and then the standard deviation over the 7-10 values for each month are used to calculate the proportional uncertainty for each parameter.
-    In the case where only one event is recorded for a particular month (eg. June over Melbourne), uncertainty in $I$ (the impact, which for this case has only one value) is set to 100\%, and finally the proportional uncertainties are added to get the total flux estimate uncertainty.
-    This ignores uncertainty due to the non-homogeneity of the regions extrapolated over, and would require more data, parameters, and analysis to apply to larger regions.
-    The overall uncertainty as a percentage is shown in parentheses in Table \ref{table:extrapolationResults}, these values are on the order of 200\%, largely due to uncertainty in the $P$ and $I$ factors which both sit near 100\% uncertainty for each month.
-    The uncertainty in the $I$ factor of our STT flux calculation is estimated from the standard deviation of the calculated values, for each of the three sites, as the variability in this term appears to be homoskedastic (unvarying in time).
-    The $P$ factor is assumed to follow a Bernoulli distribution, with variance calculated for each month at each site.
-    Uncertainty in tropospheric ozone from GEOS-Chem is estimated using the standard deviation at each site, this term is also seen to be homoskedastic. 
-    Uncertainty in assumed event lifetime is set at 50\%.
-    These uncertainties propogate to the STT flux calculation through the standard variance of a product of independent variables calculation: $var(\Pi_i X_i) = \Pi_i ( var(X_i) + E(X_i)^2 ) - (\Pi_i E(X_i))^2$
-     
-    Considering the $I$ factor, as discussed in here and in Sect. \ref{sec:sensitivity}, there are several uncertainties in our method that are likely to lead to a low bias, including a conservative estimate of flux within each event and a process that excludes potential events which are too close to the tropopause or to transported smoke plumes.
+    Flux is calculated as $ I \times P \times M \times \Omega_{O_3}$, with each term calculated as described in Sect. \ref{sec:fluxcalc}.
+    The uncertainty is determined by the variance of a product formula, assuming that each of our terms is independent: $var(\Pi_i X_i) = \Pi_i ( var(X_i) + E(X_i)^2 ) - (\Pi_i E(X_i))^2$.
+    The uncertainties for each region of extrapolated ozone are determined from the standard deviations of the $I$ and $\Omega_{O_3}$ terms.
+    These terms are considered to be homoskedastic (unchanging variance over time), and to estimate uncertainty we use the standard deviation between the monthly averages.
+    Uncertainty in assumed event lifetime is set at 50\%, as we believe it is reasonable to expect events to last 1-3 days.
+    $P$ is the probability of any ozonesonde detecting an event, and is assumed to be constant (for any month).
+    The overall uncertainty as a percentage is shown in parentheses in Table \ref{table:extrapolationResults}, these values are on the order of 100\%, largely due to uncertainty in the $I$ factor which ranges from 50-120\% for each month.
     
-    Our estimate of the fraction of tropospheric ozone from each STT event ($I$) is likely to be biased low, perhaps by a significant amount.
-    Using a global CTM with a stratospheric ozone tracer, \citet{Terao2008} estimated that up to 30--40\% of the ozone was transported from the stratosphere, for the ozone mixing ratio at 500~hPa in the northern hemisphere.
+    Considering the $I$ factor, as discussed in here and in Sect. \ref{sec:sensitivity}, there are several uncertainties in our method that are likely to lead to a low bias, such as the conservative estimate of flux within each event.
+    Although there is little available data on SH ozone events for us to compare against, consider \citet{Terao2008}, who estimated that up to 30--40\% of the ozone at 500~hPa was transported from the stratosphere, in the northern hemisphere.
+    
+    Other uncertainties in our calculation of STT flux include TODO: we exclude potential events which are too close to the tropopause or to transported smoke plumes, when we are not 100\% sure that they should be, and list other uncertainties.
 
 \section{Sensitivities and limitations}
 \label{sec:sensitivity}
@@ -687,7 +687,7 @@
 %\input{Text/OzoneConclusions.tex}
 %\section{Conclusions}
   
-Stratosphere-to-troposphere transport (STT) can be a major source of ozone to the remote free troposphere, but the occurrence and influence of STT events remains poorly quantified in the southern hemisphere (SH) extratropics.
+Stratosphere-to-troposphere transport (STT) can be a major source of ozone to the remote free troposphere, but the occurrence and influence of STT events remains poorly quantified in the southern extratropics.
 Ozonesonde observations in the SH provide a satellite-independent quantification of the frequency of STT events, as well as an estimate of their impact and source.
 %The frequency and amount of ozone descending from the stratosphere into the troposphere can be estimated from the long time series of tropospheric ozone profiles.
 Using almost ten years of ozonesonde profiles over the southern high latitudes, we have quantified the frequency, seasonality, and altitude distributions of STT events in the SH extratropics. 

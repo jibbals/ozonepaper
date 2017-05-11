@@ -2,7 +2,17 @@
   \label{sup:sec:SOExtrapolation}
 
   \subsection{Outline}
-    We use simulated tropospheric ozone columns from GEOS-Chem to extrapolate the ozonesonde-based estimates to the entire Southern Ocean region, defined here as 35$^{\circ}$ S-75$^{\circ}$ S to encompass our three measurement sites. 
+    We use simulated tropospheric ozone columns from GEOS-Chem to extrapolate the ozonesonde-based estimates over a large area of the Southern Ocean encompassing our three measurement sites. 
+    Figure \ref{sup:fig:SORegion} shows the region defined by latitudes 79$^{\circ}$ - 28$^{\circ}$ S, and longitudes 53$^{\circ}$ - 175$^{\circ}$ E.
+    
+    \begin{figure}[t]
+      % Plot from examine_stations.py in stations repo
+      \includegraphics[width=12.0cm]{../figures/OzoneSORegion.png}
+      \caption{%
+	Region used for large SO estimation of STT flux}
+      \label{sup:fig:SORegion}
+    \end{figure}
+    
     To determine the ozone column attributable to STT, we determine monthly averaged STT impact (\textit{I}) and the monthly mean tropospheric ozone column over the Southern Ocean (from the GEOS-Chem multi-year mean, $\Omega_{SO_{O_3}}$), expressed simply as flux$_{per event} = \Omega_{SO_{O_3}} \times I$.
     This value gives us the STT flux per event in each month.
     Next we determine how many events are occuring per month, using a few of assumptions: we assume only one event can occur at one time, and that no event is measured twice.
@@ -11,17 +21,17 @@
     And if we assume events last N days, we find how many events per month by multiplying the days in a month by L and dividing by the assumed event lifetime.
     For example if we expect to see an event 25\% of the time in a month, and events last one day, we expect one event every four days ($\sim 7.5$ events in that month) whereas if we expect events to last a whole week then we would expect $\sim$one event in that month.
     This leads us to multiply our flux$_{per event}$ by L, and then by the range dictated by our assumed event lifetime.
-    We choose 2.5 days for our flux estimation, with the range shown in Fig. \ref{sup:fig:SOExtrapolation} (lower panel) representing the values calculated if we assume events last 1 day (upper bound of flux) or one week (lower bound of estimated flux).
-    Figure \ref{sup:fig:SOExtrapolation} (upper panel) shows the factors I, L, and $\Omega_{SO_{O_3}}$ which are used along with the assumed event lifetime to estimate the STT flux.
-    The tropospheric ozone and regional effect in our region is calculated using the output and surface area from GEOS-Chem over the Southern Ocean grid boxes along with the molecules cm$^{-2}$ per month calculations, along with ozone molar mass of 48~g mol$^{-1}$.
     
+    Figure \ref{sup:fig:SOExtrapolation} (upper panel) shows the factors I, L, and $\Omega_{SO_{O_3}}$ which are used along with the assumed event lifetime to estimate the STT flux.
+    The tropospheric ozone and area of our region is calculated using the output and surface area from GEOS-Chem over the Southern Ocean grid boxes along with the molecules cm$^{-2}$ per month calculations, along with ozone molar mass of 48~g mol$^{-1}$.
     
     It is worth noting that this extrapolation is very simplistic and is performed as an example of how the seasonal ozone STT calculations could be used.
-    A more spatially resolved estimate could be determined by dividing the Southern Ocean region into longitudinal and latitudinal bins for calculating the average $\Omega_{SO_{O_3}}$ from GEOS-Chem, applying latitudinal gradients to $f$ and $I$ based on their values at the three sonde release sites, and adding longitudinal variability due to seasonal stratospheric wind jet streams \citep{Baray2012,Skerlak2015}, but this is beyond the scope of this work and in any case would not address the limitations of the estimate provided below.
-
+    A more spatially resolved estimate could be determined by dividing the Southern Ocean region into longitudinal and latitudinal bins for calculating the average $\Omega_{SO_{O_3}}$ from GEOS-Chem, applying latitudinal gradients to $L$ and $I$ based on their values at the three sonde release sites, and adding longitudinal variability due to seasonal stratospheric wind jet streams \citep{Baray2012,Skerlak2015}.
+    An improved estimate of event lifetime and parameterisation of how many events may be occuring simultaneously could also be addressed, however this is beyond the scope of this work and in any case would not address all the limitations of the estimate provided below.
+    %  This result highlights the difficulty associated with extrapolating from temporally sparse ozonesonde data, as STT impact is hard to measure without multiple measurements during and surrounding each event.
   \subsection{Results}
     
-    Figure \ref{sup:fig:SOExtrapolation} (lower panel) shows the resulting extrapolated monthly mean ozone flux from STT events over the Southern Ocean.
+    Fig. \ref{sup:fig:SOExtrapolation} (lower panel) shows the results of the calculation when we choose 2.5 days for our flux estimation, with the range shown in representing the values calculated if we assume events last 1 day (upper bound of estimated flux) or one week (lower bound of estimated flux).
     Previous studies have found STT ozone fluxes in the SH extratropics are largest from autumn or winter to early spring \citep{Olsen2003, Liu2016}.
     At this time of year, we find the highest tropospheric $\Omega_{O3}$ but a relatively low STT flux due to reduced event frequency.
     Our results suggest instead that the ozone flux associated with STT events (at least those due to tropopause folds) is largest in austral summer (December-March), primarily due to an increased frequency of STT detections during these months.
