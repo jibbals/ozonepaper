@@ -753,9 +753,9 @@ examined }\DIFaddend GEOS-Chem \DIFdelbegin \DIFdel{does not have the vertical r
 \DIFdel{. On individual days at Macquarie and Melbourne, this value can exceed 10}%DIFDELCMD < \%%%%
 \DIFdel{.
   Figure \ref{fig:fluxsummaryabs} shows the STT-induced ozone flux in absolute terms .
-  We find that the mean ozone flux associated with STT events is $1$}\DIFdelend \DIFaddbegin \DIFadd{Observed tropospheric columns are calculated from the ozonesondes by calculating the ozone number density (molec cm$^{-3}$) using measured ozone partial pressure (P$_{O_3}$) and integrating over the measured GPH up to the tropopause:}
+  We find that the mean ozone flux associated with STT events is $1$}\DIFdelend \DIFaddbegin \DIFadd{Observed tropospheric columns are calculated from the ozonesondes by calculating the ozone number density (molec cm$^{-3}$) using measured ozone partial pressure (P$_{O_3}$) and integrating over the measured GPH up to the tropopause:
     %DIF >  Using \begin{equation*}... doesn't center the equation so I've used $$ instead.
-    $$ \Omega_{O_3} = \int_{0}^{TP} \frac{P_{O_3}(z)}{k_B \times T(z)} \mathrm{d}z $$
+    $$} \DIFadd{\Omega_{O_3} = \int_{0}^{TP} \frac{P_{O_3}(z)}{k_B \times T(z)} \mathrm{d}z }$$\DIFadd{
     where $z$ is the altitude (GPH), $TP$ is the altitude at the tropopause, $T$ is the temperature, and $k_B$ is the Boltzmann constant.
 
     Three regions are used to examine possible STT flux over a larger area using modeled tropospheric ozone concentrations.

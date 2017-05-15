@@ -50,16 +50,16 @@
 %\input{Text/OzoneAbstract.tex}
   Stratosphere-to-troposphere transport (STT) provides an important natural source of ozone to the upper troposphere, but the characteristics of STT events in the southern hemisphere extratropics and their contribution to the regional tropospheric ozone budget remain poorly constrained.
   Here, we develop a quantitative method to identify STT events from ozonesonde profiles. 
-  Using this method we estimate the seasonality and quantify the ozone transported across the tropopause over Davis ($69^\circ$ S), Macquarie Island ($54^\circ$ S), and Melbourne ($38^\circ$ S).
-  STT seasonality is determined by two distinct methods: a Fourier bandpass filter of the vertical ozone profile, and an analysis of the Brunt-Viäsälä frequency.
+  Using this method we estimate the seasonality of STT events and quantify the ozone transported across the tropopause over Davis ($69^\circ$ S, 2006-2013), Macquarie Island ($54^\circ$ S, 2004-2013), and Melbourne ($38^\circ$ S, 2004-2013).
+  STT seasonality is determined by two distinct methods: a Fourier bandpass filter of the vertical ozone profile, and an analysis of the Brunt-Väisälä frequency.
   Using a bandpass filter on 7--9 years of ozone profiles from each site provides clear detection of STT events, with maximum occurrences during summer and minimum during winter above all three sites.
-  The majority of tropospheric ozone enhancements from STT events occur within 2.5~km, 3~km of the tropopause at Davis, and Macquarie Island.
+  The majority of tropospheric ozone enhancements from STT events occur within 2.5~km and 3~km of the tropopause at Davis, and Macquarie Island.
   Events are more spread out at Melbourne, occurring frequently up to 7.5~km from the tropopause.
   The mean fraction of total tropospheric ozone attributed to STT during STT events is 2–4\% at each site; however, during individual events over 10\% of tropospheric ozone may be directly transported from the stratosphere.
   The cause of STTs is determined to be largely due to synoptic low pressure frontal systems, determined using coincident ERA-Interim reanalysis meteorological data.
   %Ozone enhancements caused by transported biomass burning plumes are flagged using an analysis of CO column measurements from the AIRS satellite.
   %The effects of African and South American biomass burning are apparent during the austral autumn and winter months.
-  Ozone enhancements can also be caused by biomass burning plumes transported from Africa and South America, these are apparent during austral winter and spring, and are determined using satellite measurements of CO.
+  Ozone enhancements can also be caused by biomass burning plumes transported from Africa and South America, which are apparent during austral winter and spring, and are determined using satellite measurements of CO.
   
   To provide regional context for the ozonesonde observations, we use the GEOS-Chem chemical transport model, which is too coarsely resolved to distinguish STT events but is able to accurately simulate the seasonal cycle of tropospheric ozone columns over the three southern hemisphere sites.
   %The GEOS-Chem model is run with active stratospheric chemistry, however is too coarsely resolved in the vertical and horizontal dimensions to determine STTs.
@@ -76,9 +76,10 @@
   Tropospheric ozone constitutes only 10\% of the total ozone column but is an important oxidant and greenhouse gas which is toxic to life, harming natural ecosystems and reducing agricultural productivity.
   Over the industrial period, increasing tropospheric ozone has been estimated to exert a radiative forcing (RF) of 365~mWm$^{-2}$  \citep{Stevenson2013}, equivalent to a quarter of the CO$_2$ forcing \citep{IPCC_Chapter2}. 
   While much tropospheric ozone is produced photochemically from anthropogenic and natural precursors, %from NO$_x$ and volatile organic compounds, which have both anthropogenic (fossil fuel, biomass combustion) and natural (wildfires, lightning, biogenic) sources.
-  downward transport from the ozone-rich stratosphere provides an additional natural source of ozone that is particularly important in the upper troposphere (\citet{Jacobson2000} and references therein).
+  downward transport from the ozone-rich stratosphere provides an additional natural source of ozone that is particularly important in the upper troposphere \citep[][and references therein]{Jacobson2000}TODO: check this pdf output.
   The contribution of this source to overall tropospheric ozone budgets remains uncertain \citep{Skerlak2014}, especially in the southern hemisphere.
-  While models show decreasing tropospheric ozone due to stratospheric ozone depletion propagated to the upper troposphere through vertical mixing \citep{Stevenson2013}, recent work based on the Southern Hemisphere ADditional OZonesonde (SHADOZ) network suggests increasing upper tropospheric ozone near southern Africa, most likely due to stratospheric mixing \citep{Liu2015, Thompson2014}.
+  Models show stratospheric ozone depletion has propogated to the upper troposphere \citep{Stevenson2013}. 
+  However, work based on the Southern Hemisphere Additional OZonesonde (SHADOZ) network suggests stratospheric mixing may be increasing upper tropospheric ozone near southern Africa \citep{Liu2015, Thompson2014}.
   Uncertainties in the various processes which produce tropospheric ozone limit predictions of future ozone-induced radiative forcing.
   Here we use a multi-year record of ozonesonde observations from sites in the southern hemisphere extratropics, combined with a global model, to better characterise the impact of stratospheric ozone on the tropospheric ozone budget in the southern hemisphere.
   %Understanding and accurately portraying ozone concentrations in the troposphere is important to allow accurate predictions of future climate.
@@ -87,20 +88,20 @@
 
   Stratosphere-to-troposphere transport (STT) primarily impacts the ozone budget in the upper troposphere but can also increase regional surface ozone levels above the legal thresholds set by air quality standards \citep{Danielson1968, Lelieveld2009, Lefohn2011, Langford2012, Zhang2014, Lin2015}.
   In the western US, for example, deep STT events during spring can add 20-40~ppbv of ozone to the ground-level ozone concentration, which can provide over half the ozone needed to exceed the standard set by the U.S. Environmental Protection Agency \citep{Lin2012, Lin2015}.
-  Another important region of STT is the Middle East, where surface ozone excedes values of 80~ppbv in summer, with 10~ppbv from STT contribution \citep{Lelieveld2009}.
+  Another important region of STT is the Middle East, where surface ozone exceeds values of 80~ppbv in summer, with 10~ppbv from STT contribution \citep{Lelieveld2009}.
   Estimates of the overall contribution of STT to tropospheric ozone vary widely \citep[e.g.][]{Galani2003, Stohl2003, Stevenson2006, Lefohn2011}.
   Early work based on two photochemical models showed that 25-50\% of the tropospheric ozone column can be attributed to STT events globally, with most contribution in the upper troposphere \citep{Stohl2003}.
-  In contrast, a more recent analysis of the Atmospheric Chemistry and Climate Model Inter-comparison Project (ACCMIP) simulations by \citet{Young2013} found STT is responsible for $540\pm140$~Tg yr$^{-1}$, equivalent to $\sim$11\% of the tropospheric ozone column, with the remainder produced photochemically \citep{Monks2015}.
-  This wide range in model estimates exists in part because STT is challenging to accurately represent, and better model resolution is necessary to simulate small scale turbulence.
+  In contrast, a more recent analysis of the Atmospheric Chemistry and Climate Model Inter-comparison Project (ACCMIP) simulations by \citet{Young2013} found that STT is responsible for $540\pm140$~Tg yr$^{-1}$, equivalent to $\sim$11\% of the tropospheric ozone column, with the remainder produced photochemically \citep{Monks2015}.
+  This wide range in model estimates exists in part because STT is challenging to be accurately represented, and finer model resolution is necessary to simulate small scale turbulence.
   Observation-based process studies are therefore key in determining the relative frequency of STT events, with models then able to quantify STT impact over large regions.
   Ozonesondes are particularly valuable for this purpose as they provide multi-year datasets with high vertical resolution.
 
-  Lower stratospheric and upper tropospheric ozone concentrations are highly correlated \citep{Terao2008}, suggesting mixing across the tropopause mainly caused by the jet streams over the ocean.
-  Extratropical STT events most commonly occur during synoptic-scale tropopause folds \citep{Sprenger2003, Tang2012, Frey2015} and are characterised by tongues of high potential vorticity (PV) air descending to low altitudes.
+  Lower stratospheric and upper tropospheric ozone concentrations are highly correlated \citep{Terao2008}, suggesting mixing across the tropopause mainly associated with the jet streams over the ocean.
+  Extratropical STT events most commonly occur during synoptic-scale tropopause folds \citep{Sprenger2003, Tang2012, Frey2015} and are characterised by tongues of high potential vorticity (PV) air descending to lower altitudes.
   As these tongues become elongated, filaments disperse away from the tongue and mix irreversibly into the troposphere.
-  STT can also be induced by deep overshooting convection \citep{Frey2015}, tropical cyclones \citep{Das2016} and mid-latitude synoptic scale disturbances (e.g., \citet{Stohl2003, Mihalikova2012}). 
+  STT can also be induced by deep overshooting convection \citep{Frey2015}, tropical cyclones \citep{Das2016} and mid-latitude synoptic scale disturbances \citep[e.g.][]{Stohl2003, Mihalikova2012}. 
   STT events have been observed in tropopause folds around both the polar front jet \citep{Vaughan1994, Beekmann1997} and the subtropical jet \citep{Baray2000}.
-  A big influence on the high surface ozone concentrations over the eastern Mediterranean is stratospheric mixing and anticyclonic subsidence \citep{Zanis2014}. 
+  A big influence on the high surface ozone concentrations over the eastern Mediterranean can be attributed to stratospheric mixing and anticyclonic subsidence \citep{Zanis2014}. 
   They are also observed near cut-off lows \citep{Price1993, Wirth1995}, so both regional weather patterns and stratospheric mixing are important to understand for STT analysis.
   
   % TODO: small review of transport literature
@@ -108,9 +109,9 @@
   Horizontal transport or advection of stratospheric ozone within the free troposphere can spread ozone quite far, as shown by \cite{Cooper2004}, where an event is seen to spread from TODO to TODO over the course of a few days.
   
   %STT events are driven by deep overshooting convection \citep{Frey2015}, tropical cyclones \citep{Das2016} and mid-latitude synoptic scale disturbances (e.g., \citet{Stohl2003, Mihalikova2012}) and are strongly dependent on both season and location. 
-  The strength (ozone enhancement above background levels), horizontal scale, vertical depth, and longevity of these intruding ozone tongues vary with weather, topography, and season.
+  The strength (ozone enhancement above background levels), horizontal scale, vertical depth, and longevity of these intruding ozone tongues vary with wind direction and strength, topography, and season.
   %Because of their dependence on meteorological phenomena, STT events are strongly dependent on both season and location.
-  While the frequency, seasonality, and impacts of STT events have been well characterised in the tropics and northern hemisphere (NH), observational estimates from the southern hemisphere (SH) extra-tropics are noticeably absent in the literature. 
+  While the frequency, seasonality, and impacts of STT events have been well described in the tropics and northern hemisphere (NH), observational estimates from the southern hemisphere (SH) extra-tropics are noticeably absent in the literature. 
   %Since 1998 NASA has tried to standardise ozonesonde release procedures and improve measurement frequency in the SH through the Southern Hemisphere ADditional OZonesonde (SHADOZ) program (\url{http://croc.gsfc.nasa.gov/shadoz/}).
   % moved reference earlier
   %Recent work based on the  Southern Hemisphere ADditional OZonesonde (SHADOZ) ozonesondes suggests increasing upper tropospheric ozone near southern Africa, most likely due to stratospheric mixing \citep{Liu2015, Thompson2014}.
@@ -134,8 +135,8 @@
     %(Too basic)Ozonesondes are weather balloons which measure ozone concentrations from the surface to around 35km.
     Ozonesondes provide a high vertical resolution profile of ozone, temperature, pressure, and humidity from the surface to 35 km.
     In the troposphere, the ozonesondes generally make 150-300 measurements.    
-    Ozone mixing ratio is quantified with an electrochemical concentration cell that senses the proportional electrical current from reaction of ozone with a solution of potassium iodide.
-    Standardised procedures are followed when constructing, transporting, and releasing the ozonesondes \url{http://www.ndsc.ncep.noaa.gov/organize/protocols/appendix5/}.
+    %Ozone mixing ratio is quantified with an electrochemical concentration cell that senses the proportional electrical current from reaction of ozone with a solution of potassium iodide.
+    Ozone mixing ratio is quantified with an electrochemical concentration cell, using standardised procedures when constructing, transporting, and releasing the ozonesondes \url{http://www.ndsc.ncep.noaa.gov/organize/protocols/appendix5/}.
     Ozonesondes are estimated to provide around 2\% precision in the stratosphere, which improves at lower altitudes, and ozonesondes have been shown to be accurate to within 5\% when the correct procedures are followed \citep{Smit2007}.
     
     \begin{figure}
@@ -173,14 +174,14 @@
     
     Characterisation of STT events requires a clear definition of the tropopause.
     Two common tropopause height definitions are the standard lapse rate tropopause \citep{WMO1957} and the ozone tropopause \citep{Bethan1996}.
-    The lapse rate tropopause is defined as the lowest altitude where the lapse rate (vertical gradient of temperature) is less than 2$^\circ$C~km$^{-1}$, provided the lapse rate between this altitude and 2~km above is also below 2$^\circ$C~km$^{-1}$.
+    The lapse rate tropopause is defined as the lowest altitude where the lapse rate (vertical gradient of temperature) is less than 2$^\circ$C~km$^{-1}$, provided the lapse rate averaged between this altitude and 2~km above is also below 2$^\circ$C~km$^{-1}$.
     The ozone tropopause is defined as the lowest altitude satisfying the following three conditions for the ozone mixing ratio (OMR) \citep{Bethan1996}:
     \begin{enumerate}
       \item Vertical gradient of OMR is greater than 60~ppb km$^{-1}$;
       \item OMR is greater than 80~ppb; and
       \item OMR exceeds 110~ppb between 500~m and 2000~m above the altitude under inspection (modified to between 500~m and 1500~m in the Antarctic, including the site at Davis).
     \end{enumerate}
-    The ozone tropopause can be less robust during stratosphere-troposphere exchange; however, it is more robust than the lapse rate tropopause at polar latitudes in winter and near jet streams in the lower stratosphere due to temperature inversions near the tropopause \citep{Bethan1996, Tomikawa2009, Alexander2013}.
+    The ozone tropopause may misdiagnose the real tropopause altitude during stratosphere-troposphere exchange; however, it is more robust than the lapse rate tropopause at polar latitudes in winter and near jet streams in the lower stratosphere, which the lapse-rate definition may misdiagnose due to upper troposphere temperature inversions \citep{Bethan1996, Tomikawa2009, Alexander2013}.
     In this work, the lower of these two tropopause altitudes is used.
     We slightly alter the lapse rate tropopause definition so as only to detect tropopauses above 4~km altitude, since at all three sites we saw several false positive lapse-rate detections due to temperature inversions near 2~km in altitude.
     Using the minimum of the two definitions avoids the occasionally too high tropopauses due to perturbed ozone or temperature measurements in the ozonesonde data.
@@ -241,6 +242,7 @@
     The process is illustrated in Figure~\ref{fig:filterEG} on an example ozone profile.
     First, the ozone vertical profiles are linearly interpolated to a regular grid with 20~m resolution from the surface to 14~km altitude. 
     The interpolated profiles are then bandpass-filtered using a Fourier transform to retain perturbations with vertical scales between 0.5~km and 5~km (removing low and high frequency perturbations).
+    The high frequency perturbations are removed as they may represent noise in the measurements. The perturbations with scales longer than 5~km represent the vertical gradient of ozone concentration from the surface to the stratosphere.
     In what follows, these filtered vertical profiles are referred to as perturbation profiles.
     
     We assume that in the troposphere, the ozone profile is a simple summation of sine and cosine waves.
@@ -269,7 +271,7 @@
     \end{figure}
    
     We define the ozone peak as the altitude where the OMR is greatest within the lowest range of altitudes over which the perturbation profile exceeds the percentile-based threshold.
-    The STT event is confirmed if the perturbation profile drops below zero between the ozone peak and the tropopause. 
+    The STT event is confirmed if the perturbation profile drops below zero between the ozone peak and the tropopause, as this represents a return to non-enhanced ozone concentrations.
     Alternatively, the STT event is also confirmed if the OMR between the ozone peak and the tropopause drops below 80~ppb and is at least 20~ppb lower than the OMR at the ozone peak. 
     If neither of these conditions are met, the profile is rejected as a non-event.
     This final step removes near-tropopause anomalies for which there is insufficient evidence of detachment from the stratosphere.
@@ -292,7 +294,7 @@
     On occasion, smoke plumes from Australian and Indonesian fires can also reach the mid-high southern latitudes, as seen from satellite measurements of carbon monoxide (CO) discussed below. %from the AIRS (Atmospheric Infrared Sounder) instrument on board the Aqua satellite \citep{AIRS3STD}.
     
     %Ozone precursors include nitrogen oxides ($NO_x = NO + NO_2$) and non methane volatile organic compounds (NMVOCs). % too basic for here..
-    Large biomass burning events emit substantial quantities of ozone precursors, some of which are capable of being transported long distances and driving ozone production far from the fire source \citep{Jaffe2012}.
+    Large biomass burning events emit substantial quantities of ozone precursors, some of which are capable of being transported over long distances and driving ozone production far from the fire source \citep{Jaffe2012}.
     Ozone production from biomass burning is complex and affected by photochemistry, fuel nitrogen load, and time since emission, among other factors. 
     While ozone production occurs in some biomass burning plumes, this is not always the case; therefore ozone perturbations detected during transported smoke events may or may not be caused by the plume.
     For this reason all detected STT events found near (within $\sim$150~km of) smoke plumes are flagged, following visual inspection.
@@ -303,7 +305,7 @@
     
     Possible biomass burning influence is identified using satellite observations of CO from the AIRS (Atmospheric Infra-red Sounder) instrument on board the Aqua satellite \citep{AIRS3STD}.
     CO is emitted during incomplete combustion and is an effective tracer of long-range transport due to its long lifetime \citep{Edwards2003, Edwards2006}.
-    In the Southern Hemisphere, biomass burning is the primary source of CO, making CO a good proxy for fire plumes (e.g., \citet{Sinha2004, Mari2008}).
+    In the Southern Hemisphere, biomass burning is the primary source of CO, making CO a good proxy for fire plumes \citep[e.g.][]{Sinha2004, Mari2008}.
     To identify possible biomass burning influence, AIRS vertical column CO is visually inspected for all dates with detected STT events.
     Smoke plumes are diagnosed over areas with elevated CO columns ($\sim 2 \times 10^{18}$ molecules cm$^{-2}$ or higher), and any sonde-detected STT event that occurs near a smoke plume is flagged.
 
@@ -313,7 +315,7 @@
     All days with detected STT events were screened, with the exception of one event during which there were no available AIRS data (January 2010).
     We find that biomass burning may have influenced 14 events over Melbourne and 8 events over Macquarie island.
     These events are flagged in the following sections, and are not used in our calculation of total STT flux.
-    All of the flagged events except for one (in January at Macquarie Island) occurred during the SH burning season (July to December, \citet{Edwards2006}). % burning season from \citep{Pak2003}.
+    All of the flagged events except for one (in January at Macquarie Island) occurred during the SH burning season (July to December). %\citet{Edwards2006}). % burning season from \citep{Pak2003}.
     No events at Davis were seen to be influenced by smoke transport.
     
     \begin{figure}[t]
@@ -329,7 +331,8 @@
 
   \subsection{Classifying synoptic conditions during STT events}
   \label{sec:WeatherClassifications}
-    Data from the European Centre for Medium-range Weather Forecasts (ECMWF) Interim Reanalysis (ERA-I) \citep{Dee2011} product are used for synoptic-scale examination of weather patterns over our three sites on dates matching detected STT events.
+    Synoptic scale weather patterns are examined using data from the European Centre for Medium-range Weather Forecasts (ECMWF) Interim Reanalysis (ERA-I) \citep{Dee2011}.
+    This is done using the ERA-I data products over the three sites on dates matching the detected STT events.
     We use the ERA-I 500~hPa data to subjectively classify the events based on their likely meteorological cause, by visually examining each date where an event was detected.
     During STT occurrence, the upper troposphere is typically characterised by nearby low pressure fronts or cut-offs.
     Over Melbourne and Macquarie Island, we find that frontal and low pressure activity are prevalent during STT events (see Sect. \ref{sec:eventclimatologies}).
@@ -337,7 +340,7 @@
     The stratospheric polar vortex may create ozone folds without other sources of upper tropospheric turbulence \citep{Baray2000,Sprenger2003}.
 
     We examine two case studies in detail to illustrate the relationship between synoptic-scale conditions and STT events  over Melbourne.
-    Figure \ref{fig:Melbourne20050203} (left) shows the ozone profile on 3 February 2005.
+    Figure \ref{fig:Melbourne20050203} (left) shows the vertical ozone profile on 3 February 2005.
     The tropopause was between 400 and 500~hPa and ozone in the upper troposphere was anticorrelated with relative humidity, suggesting the ozone enhancements derived from dry stratospheric air. 
     An ozone intrusion into the troposphere at $\sim$520~hPa was identified by our detection algorithm.
     The right panel shows the concurrent synoptic weather system, a cut-off low pressure system that caused a large storm and lowered the local tropopause height for several days.
@@ -420,7 +423,7 @@
   The seasonality of our three sites is not driven by the larger STT system seen over the southern Indian ocean and middle Australia which dominates prior analysis near or over Australia.
   
   To examine the robustness of the distributions shown in Fig. \ref{fig:SummarySeasonality}, we developed an alternative assessment of the seasonal occurrence of STT events, with results shown in Fig. \ref{fig:AndrewProxySTT}.
-  Here STT occurrence is evaluated by consideration of the square of the dry Brunt-Viäsälä frequency (N$^2$) at the heights of the ozone tropopause (z$_{OT}$) and lapse rate tropopause (z$_{LRT}$) in each ozonesonde profile that has been binned to 500~m resolution.
+  Here STT occurrence is evaluated by consideration of the square of the dry Brunt-Väisälä frequency (N$^2$) at the heights of the ozone tropopause (z$_{OT}$) and lapse rate tropopause (z$_{LRT}$) in each ozonesonde profile that has been binned to 500~m resolution.
   We use N$^2$ to assess atmospheric stability, which is normally distinctly higher in the stratosphere than in the troposphere, and assume that the vertical temperature gradients within the intrusion respond most rapidly to transported heat, which is an additional characteristic of stratospheric air.
   The altitude binning chosen is a compromise between vertical resolution and the level of variability in N$^2$ introduced by temperature gradients associated with perturbations from gravity waves and changes near the lapse rate tropopause, and is the minimum that produces a robust seasonal distribution.
   We define STT as having taken place if N$^2$(z$_{OT}$) $>$ N$^2$(z$_{LRT}$) and z$_{OT}$ $<$ z$_{LRT}$; in this way the characteristically higher static stability and ozone concentration of stratospheric intrusion is regarded as being retained as it penetrates below the lapse rate tropopause. 
@@ -510,7 +513,7 @@
       Example comparisons of ozone profiles from ozonesondes (black) and GEOS-Chem (red) from three different dates during which STT events were detected from the measurements.
       The dates were picked based on subjective visual analysis. 
       The examples show the best match between model and observations for each site.
-      GEOS-Chem pressure levels are marked with a dash.}
+      GEOS-Chem and ozonesonde pressure levels are marked with red and black dashes respectively.}
     \label{fig:event_profile_comparison}
   \end{figure}
   
@@ -574,7 +577,7 @@
 	(Top) Tropospheric ozone, ($I$)mpact per event, and ($P$)robability of event detection per sonde launch, averaged over the region above Davis.
 	The tropospheric ozone column $\Omega_{O_3}$ (black, left axis) is from GEOS-Chem, while the STT probability  $P$(magenta, right axis) and impact $I$ (teal, right axis) are from the ozonesonde measurements.
 	The STT impact is multiplied by four to better show the seasonality.
-	(Bottom) Estimated contribution of STT to tropospheric ozone columns over the region, with range determined by the uncertainty estimated as outlined in Sect. \ref{sec:uncertainty}.
+	(Bottom) Estimated contribution of STT to tropospheric ozone columns over the region, with range determined by the uncertainty estimated as outlined in Sect. \ref{sec:sensitivity}.
 	The black line shows STT ozone flux if event lifetime is assumed to be two days, with dashed lines showing the range of flux estimation if we assumed events lasted from one day to one week.}
       \label{fig:DavExtrapolation}
     \end{figure}
@@ -634,28 +637,7 @@
     The disagreements largely reflect the difference between point source based estimates and zonally averaged estimates, as the meteorological behaviour at our three sites is not the same as the system that dominates the southern hemisphere in general.
     As mentioned in Sect. \ref{sec:eventclimatologies}, the maximum STT influx which occurs during SH winter is almost entirely due to the dominant STT system which occurs anually over the southern Indian ocean and middle of Australia.
     It is difficult to compare remote ozonesonde datasets with area averaged models or reanalyses based on noncolocated measurements (such as ERA).
-  
-  \subsection{Uncertainties}
-  \label{sec:uncertainty}
-    Flux is calculated as $ I \times P \times M \times \Omega_{O_3}$, with each term calculated as described in Sect. \ref{sec:fluxcalc}.
-    The uncertainty is determined using the standard deviation of the product, with variance calculated using the variance of a product formula, assuming that each of our terms is independent: $$var(\Pi_i X_i) = \Pi_i ( var(X_i) + E(X_i)^2 ) - (\Pi_i E(X_i))^2$$
-    The standard deviations for the $I$ and $\Omega_{O_3}$ terms are calculated over the entire dataset.
-    These terms are considered to be homoskedastic (unchanging variance over time).
-    Uncertainty in assumed event lifetime is set at 50\%, as we believe it is reasonable to expect events to last 1-3 days.
-    $P$ is the probability of any ozonesonde detecting an event, and is assumed to be constant (for any month).
-    The overall uncertainty as a percentage is shown in parentheses in Table \ref{table:extrapolationResults}, these values are on the order of 100\%, largely due to uncertainty in the $I$ factor which ranges from 50-120\% for each month.
     
-    Considering the $I$ factor, as discussed in here and in Sect. \ref{sec:sensitivity}, there are several uncertainties in our method that are likely to lead to a low bias, such as the conservative estimate of flux within each event.
-    Although there is little available data on SH ozone events for us to compare against, consider \citet{Terao2008}, who estimated that up to 30--40\% of the ozone at 500~hPa was transported from the stratosphere, in the northern hemisphere.
-    
-    Other possibly important uncertainties in our calculation of STT flux which we don't cover are listed here.
-    Uncertainty in the $P$ parameter, which could be affected by false negatives caused by overzealous smoke plume filtering.
-    This could lead to an underestimation of the $P$ value during winter months.
-    Filtering events which occur within 500~m of the tropopause may also lead to more false negatives.
-    This could also cause lower impact estimates due to only measuring ozone enhancements which have descended and potentially slightly dissipated.
-    The estimated tropospheric ozone columns modelled by GEOS-Chem may be biased, for instance \cite{Hu2017} suggest that in general GEOS-Chem (with GEOS-5 met. fields) underestimates STT, with $\sim 360$~Tg a$^{-1}$ simulated globally, compared to $\sim 550$~Tg a$^{-1}$ observationly constrained.
-    Transport uncertainty is very difficult to estimate with the disparate point measurements; it's possible that detected events are (at least partially) advected out of the analysis regions, which would mean we overestimate the influx into the region, and it is also possible that we are influenced by STT events outside the regions of analysis.
-    Uncertainty in event longevity is set to 50\%, however this is implies a very simplistic model of event lifetimes, a great deal of work could be done to properly model the regional event lifetimes however this is beyond the scope of our work.
 
 \section{Sensitivities and limitations}
 \label{sec:sensitivity}
@@ -681,9 +663,31 @@
     For instance; when relaxing the ozone perturbation threshold to 98\% several events are detected at each site which were not clear events (determined visually).
     
   \subsection{Flux calculations}
-    Our flux estimates are relatively insensitive to our biomass burning filter: including smoke-influenced days changed the mean flux by less than 5\% relative to the absolute values.
+    Flux is calculated as $ I \times P \times M \times \Omega_{O_3}$, with each term calculated as described in Sect. \ref{sec:fluxcalc}.
+    The uncertainty is determined using the standard deviation of the product, with variance calculated using the variance of a product formula, assuming that each of our terms is independent: $$var(\Pi_i X_i) = \Pi_i ( var(X_i) + E(X_i)^2 ) - (\Pi_i E(X_i))^2$$
+    The standard deviations for the $I$ and $\Omega_{O_3}$ terms are calculated over the entire dataset.
+    These terms are considered to be homoskedastic (unchanging variance over time).
+    Uncertainty in assumed event lifetime is set at 50\%, as we believe it is reasonable to expect events to last 1-3 days.
+    $P$ is the probability of any ozonesonde detecting an event, and is assumed to be constant (for any month).
+    The overall uncertainty as a percentage is shown in parentheses in Table \ref{table:extrapolationResults}, these values are on the order of 100\%, largely due to uncertainty in the $I$ factor which ranges from 50-120\% for each month.
+    
+    Considering the $I$ factor, as discussed in here and in Sect. \ref{sec:sensitivity}, there are several uncertainties in our method that are likely to lead to a low bias, such as the conservative estimate of flux within each event.
+    Although there is little available data on SH ozone events for us to compare against, consider \citet{Terao2008}, who estimated that up to 30--40\% of the ozone at 500~hPa was transported from the stratosphere, in the northern hemisphere.
+    
+    Other possibly important uncertainties in our calculation of STT flux which we don't cover are listed here.
+    Uncertainty in the $P$ parameter, which could be affected by false negatives caused by overzealous smoke plume filtering.
+    This could lead to an underestimation of the $P$ value during winter months.
+    Filtering events which occur within 500~m of the tropopause may also lead to more false negatives.
+    This could also cause lower impact estimates due to only measuring ozone enhancements which have descended and potentially slightly dissipated.
+    The estimated tropospheric ozone columns modelled by GEOS-Chem may be biased, for instance \cite{Hu2017} suggest that in general GEOS-Chem (with GEOS-5 met. fields) underestimates STT, with $\sim 360$~Tg a$^{-1}$ simulated globally, compared to $\sim 550$~Tg a$^{-1}$ observationly constrained.
+    Transport uncertainty is very difficult to estimate with the disparate point measurements; it's possible that detected events are (at least partially) advected out of the analysis regions, which would mean we overestimate the influx into the region, and it is also possible that we are influenced by STT events outside the regions of analysis.
+    Uncertainty in event longevity is set to 50\%, however this is implies a very simplistic model of event lifetimes, a great deal of work could be done to properly model the regional event lifetimes however this is beyond the scope of our work.
+    
+    Our STT event impact estimates are relatively insensitive to our biomass burning filter: including smoke-influenced days changed the mean flux by less than 5\% relative to the absolute values.
+    The change in our P parameter when we include potentially smoke influenced events leads to a yearly estimated STT of (TODO: number here), which suggests that up to (TODO: number here) ozone enhancement could be caused by smoke plume transported precursors.
+    This is a potential area for improvement, as a better method of smoke influenced columns would improve confidence in our estimate.
   
-    Uncertainties in STT ozone flux detection are also quite large ($\sim 200\%$), and could be directly improved with larger or longer datasets.
+    Uncertainties in STT ozone flux detection are also quite large ($\sim 100\%$), and could be directly improved with larger or longer datasets.
     Possible parameterisations and an improved model of event lifetime could also improve the confidence in our estimate of event impacts, as well as allowing fewer assumptions.
     The simple assumptions made in order to achieve an estimate of ozone flux are not feasible over larger areas, however as a preliminary or constraining estimate for a region with few measurements we believe they add to the discussion.
   
@@ -699,24 +703,24 @@ By combining this information with ozone column estimates from a global chemical
 
 Our method involved applying a Fourier bandpass filter to the measured ozone profiles to determine STT event occurrence and strength.
 The filter removed seasonal influences and allowed clear detection of ozone-enhanced tongues of air in the troposphere.
-By setting empirically-derived threshholds, this method clearly distinguished tropospheric ozone enhancements that are separated from the stratosphere.
+By setting empirically-derived thresholds, this method clearly distinguished tropospheric ozone enhancements that are separated from the stratosphere.
 Our method is sensitive to various parameters involved in the calculation; however, for our sites we saw no false positive detections of STT events.
 
 Detected STT events at three sites spanning the SH extra-tropics (38$^{\circ}$S, 55$^{\circ}$S, and 69$^{\circ}$S) showed a distinct seasonal cycle.
 All three sites displayed a summer (DJF) maximum and winter (JJA) minimum, although the seasonal amplitude was less apparent at the Antarctic site (Davis) as events were also detected regularly in winter and spring (likely due to polar jet stream-caused turbulence).  %The cause of these ozone enhancements is examined through the use of satellite CO data (to determine fire influence) and ERA-I meteorological data.
-Comparison with ERA-Interim reanalysis data suggested the majority of events were caused by turbulent weather in the upper troposphere due to low pressure fronts, followed by cut-off low pressure systems.
+Analysis of ERA-Interim reanalysis data suggested the majority of events were caused by turbulent weather in the upper troposphere due to low pressure fronts, followed by cut-off low pressure systems.
 Comparison of ozonesonde-measured ozone profiles against those simulated by the GEOS-Chem global chemical transport model showed the model is able to reproduce seasonal features but does not have sufficient vertical resolution to distinguish STT events.
 %The seasonal features in the ozonesonde record of tropospheric ozone columns are well represented by the model.
 %Simulated profiles generally can not identify STT events due to their lower vertical resolution.
 
-By combining the simulated tropospheric column ozone from GEOS-Chem with ozonesonde-derived STT estimates, we provide a first estimate of the total contribution of STT events to tropospheric ozone over the Southern Ocean.
-We conservatively estimated that the ozone enhancement due to STT events at our three sites ranges from TODO: range of local to site calculations.
+By combining the simulated tropospheric column ozone from GEOS-Chem with ozonesonde-derived STT estimates, we provide a first estimate of the total contribution of STT events to tropospheric ozone in these southern extratropical regions.
+We conservatively estimated that the ozone enhancement due to STT events near our three sites ranges from 300-570~kg km$^{-2}$ a$^{-1}$, with seasonal maximum in SH summer.
 %This method implies that STT events can only explain $\sim$3\% of the global net downward flux of ozone, a value that is likely too low.
 %Replacing the sonde-derived estimate of the ozone fraction associated with each STT event with a value derived from a global model \citep{Terao2008} increases this estimate by an order of magnitude.
 
 Estimating STT flux using ozonesonde data alone remains challenging; however, the very high vertical resolution provided by ozonesondes means they are capable of detecting STT events that models, reanalyses, and satellites may not. 
 Further work is needed to more accurately translate these ozonesonde measurements into STT ozone fluxes, particularly in the SH where data are sparse and STT is likely to be a major contributor to upper tropsopheric ozone in some regions.
-More frequent ozonesonde releases at SH sites would facilitate development of better STT flux estimates for this region.
+More frequent ozonesonde releases at SH sites could facilitate development of better STT flux estimates for this region.
 %As the climate alters, an understanding of mixing between the stratosphere and troposphere over the southern ocean will help diagnose potential hazards.
 %Seasonality and impact of stratospheric ozone are changing over time, furter analysis of this long term set of ozonesonde data will be useful into the future.
 
