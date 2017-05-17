@@ -101,12 +101,14 @@
   As these tongues become elongated, filaments disperse away from the tongue and mix irreversibly into the troposphere.
   STT can also be induced by deep overshooting convection \citep{Frey2015}, tropical cyclones \citep{Das2016} and mid-latitude synoptic scale disturbances \citep[e.g.][]{Stohl2003, Mihalikova2012}. 
   STT events have been observed in tropopause folds around both the polar front jet \citep{Vaughan1994, Beekmann1997} and the subtropical jet \citep{Baray2000}.
-  A big influence on the high surface ozone concentrations over the eastern Mediterranean can be attributed to stratospheric mixing and anticyclonic subsidence \citep{Zanis2014}. 
+  A big influence on the high surface ozone concentrations over the eastern Mediterranean (EM) can be attributed to stratospheric mixing and anticyclonic subsidence \citep{Zanis2014, Akritidis2016}.
+  The EM frequently shows a summer maximum of stratospheric subsidence, which sits between 20$^{\circ}$E and 35$^{\circ}$E and 31$^{\circ}$N to 39$^{\circ}$N, while zonally most subtropical ozone folds occur during Winter \citep[][and references therein]{Tyrlis2014}.
   They are also observed near cut-off lows \citep{Price1993, Wirth1995}, so both regional weather patterns and stratospheric mixing are important to understand for STT analysis.
   
   % TODO: small review of transport literature
   Stratospheric ozone intrusions undergo transport and mixing, with up to half of the ozone diffusing within 12 hours following descension from the upper troposphere \citep{Trickl2014}.
-  Horizontal transport or advection of stratospheric ozone within the free troposphere can spread ozone quite far, as shown by \cite{Cooper2004}, where an event is seen to spread from TODO to TODO over the course of a few days.
+  The long range transport of enhanced ozone can be facilitated by shear upper tropospheric winds, with remarkably little convective mixing, as shown by \cite{Trickl2014} who measure STT airmasses two days and thousands of kilometres from their source.
+  \citet{Cooper2004} also shows how STT advection can transport stratospheric air over long distances, with a modelled STT event spreading from the northern Pacific to the East coast of the USA over a few days.
   
   %STT events are driven by deep overshooting convection \citep{Frey2015}, tropical cyclones \citep{Das2016} and mid-latitude synoptic scale disturbances (e.g., \citet{Stohl2003, Mihalikova2012}) and are strongly dependent on both season and location. 
   The strength (ozone enhancement above background levels), horizontal scale, vertical depth, and longevity of these intruding ozone tongues vary with wind direction and strength, topography, and season.
@@ -185,7 +187,8 @@
     In this work, the lower of these two tropopause altitudes is used.
     We slightly alter the lapse rate tropopause definition so as only to detect tropopauses above 4~km altitude, since at all three sites we saw several false positive lapse-rate detections due to temperature inversions near 2~km in altitude.
     Using the minimum of the two definitions avoids the occasionally too high tropopauses due to perturbed ozone or temperature measurements in the ozonesonde data.
-    Another commonly used tropopause definition (the dynamical tropopause) is determined from the $\pm 2$ PVU isosurface, which allows a 3D view of folds and other tropopause features in a sufficiently resolved model \citep{Skerlak2014}.
+    Another commonly used tropopause definition (the dynamical tropopause) is determined from the potential vorticity unit (PVU; 1~PVU$= 10^{-6}$~m$^2$ s$^{-1}$ K kg$^{-1}$). In the extratropics the isosurface where PVU$=2$ is often used, which allows a 3D view of folds and other tropopause features in a sufficiently resolved model \citep{Skerlak2014,Tyrlis2014}.
+    
     
     Figure \ref{fig:seasonaltpheights} shows the monthly median tropopause altitudes at each location (solid lines).
     At Melbourne, tropopause altitude displays a seasonal cycle with maximum in summer and minimum is winter.
@@ -337,7 +340,8 @@
     During STT occurrence, the upper troposphere is typically characterised by nearby low pressure fronts or cut-offs.
     Over Melbourne and Macquarie Island, we find that frontal and low pressure activity are prevalent during STT events (see Sect. \ref{sec:eventclimatologies}).
     Over Davis, the weather systems are harder to distinguish. 
-    The stratospheric polar vortex may create ozone folds without other sources of upper tropospheric turbulence \citep{Baray2000,Sprenger2003}.
+    The stratospheric polar vortex may create ozone folds without other sources of upper tropospheric turbulence \citep[e.g.][]{Baray2000,Sprenger2003,Tyrlis2014}
+    %, for example near the more intense part of the subtropical jet over the Middle East \citep{Tyrlis2014}.
 
     We examine two case studies in detail to illustrate the relationship between synoptic-scale conditions and STT events  over Melbourne.
     Figure \ref{fig:Melbourne20050203} (left) shows the vertical ozone profile on 3 February 2005.
@@ -411,6 +415,7 @@
   This summertime peak is due to a prevalence of summer low-pressure storms and fronts, which increase turbulence and lower the tropopause \citep{Reutter2015}.
   At Davis, there is increased Antarctic winter activity, which may be due to the polar vortex and it's associated lowered tropopause and increased turbulence.
   STT events associated with cut-off low pressure systems are more prevalent during summer (winter for Davis), while STT events associated with frontal passage occur throughout the year.
+  The high frequency of STT ozone enhancements is comparable to the $>25\%$ frequencies seen near over the Turkey and east of the Caspian sea in an ERA-I analysis performed by \citet{Tyrlis2014}. 
   
   This seasonality is not seen in the recent ERA-Interim tropopause fold analysis performed by \citet{Skerlak2015}, where a winter maximum of ozone fold frequency ($\sim 0.5\%$ more folds in winter) over Australia can be seen.
   However their winter maximum is in the subtropics only - from around 20$^{\circ}$~S to 40$^{\circ}$~S, which can be seen as the prevalent feature over Australia in Fig. 5 of their publication.
@@ -679,6 +684,7 @@
     This could lead to an underestimation of the $P$ value during winter months.
     Filtering events which occur within 500~m of the tropopause may also lead to more false negatives.
     This could also cause lower impact estimates due to only measuring ozone enhancements which have descended and potentially slightly dissipated.
+    On the other hand we have no measure of how often or likely the detached ozone intrusion reascends into the stratosphere, which would lead to a reduced stratospheric impact.
     The estimated tropospheric ozone columns modelled by GEOS-Chem may be biased, for instance \cite{Hu2017} suggest that in general GEOS-Chem (with GEOS-5 met. fields) underestimates STT, with $\sim 360$~Tg a$^{-1}$ simulated globally, compared to $\sim 550$~Tg a$^{-1}$ observationly constrained.
     Transport uncertainty is very difficult to estimate with the disparate point measurements; it's possible that detected events are (at least partially) advected out of the analysis regions, which would mean we overestimate the influx into the region, and it is also possible that we are influenced by STT events outside the regions of analysis.
     Uncertainty in event longevity is set to 50\%, however this is implies a very simplistic model of event lifetimes, a great deal of work could be done to properly model the regional event lifetimes however this is beyond the scope of our work.
