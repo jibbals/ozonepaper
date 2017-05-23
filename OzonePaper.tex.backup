@@ -101,13 +101,14 @@
   As these tongues become elongated, filaments disperse away from the tongue and mix irreversibly into the troposphere.
   STT can also be induced by deep overshooting convection \citep{Frey2015}, tropical cyclones \citep{Das2016} and mid-latitude synoptic scale disturbances \citep[e.g.][]{Stohl2003, Mihalikova2012}. 
   STT events have been observed in tropopause folds around both the polar front jet \citep{Vaughan1994, Beekmann1997} and the subtropical jet \citep{Baray2000}.
-  A big influence on the high surface ozone concentrations over the eastern Mediterranean (EM) can be attributed to stratospheric mixing and anticyclonic subsidence \citep{Zanis2014}.
+  A big influence on the high surface ozone concentrations over the eastern Mediterranean (EM) can be attributed to stratospheric mixing and anticyclonic subsidence \citep{Zanis2014, Akritidis2016}.
   The EM frequently shows a summer maximum of stratospheric subsidence, which sits between 20$^{\circ}$E and 35$^{\circ}$E and 31$^{\circ}$N to 39$^{\circ}$N, while zonally most subtropical ozone folds occur during Winter \citep[][and references therein]{Tyrlis2014}.
   They are also observed near cut-off lows \citep{Price1993, Wirth1995}, so both regional weather patterns and stratospheric mixing are important to understand for STT analysis.
   
   % TODO: small review of transport literature
   Stratospheric ozone intrusions undergo transport and mixing, with up to half of the ozone diffusing within 12 hours following descension from the upper troposphere \citep{Trickl2014}.
-  Horizontal transport or advection of stratospheric ozone within the free troposphere can spread ozone quite far, as shown by \cite{Cooper2004}, where an event is seen to spread from TODO to TODO over the course of a few days.
+  The long range transport of enhanced ozone can be facilitated by shear upper tropospheric winds, with remarkably little convective mixing, as shown by \cite{Trickl2014} who measure STT airmasses two days and thousands of kilometres from their source.
+  \citet{Cooper2004} also shows how STT advection can transport stratospheric air over long distances, with a modelled STT event spreading from the northern Pacific to the East coast of the USA over a few days.
   
   %STT events are driven by deep overshooting convection \citep{Frey2015}, tropical cyclones \citep{Das2016} and mid-latitude synoptic scale disturbances (e.g., \citet{Stohl2003, Mihalikova2012}) and are strongly dependent on both season and location. 
   The strength (ozone enhancement above background levels), horizontal scale, vertical depth, and longevity of these intruding ozone tongues vary with wind direction and strength, topography, and season.
@@ -182,7 +183,7 @@
       \item OMR is greater than 80~ppb; and
       \item OMR exceeds 110~ppb between 500~m and 2000~m above the altitude under inspection (modified to between 500~m and 1500~m in the Antarctic, including the site at Davis).
     \end{enumerate}
-    The ozone tropopause may misdiagnose the real tropopause altitude during stratosphere-troposphere exchange; however, it is more robust than the lapse rate tropopause at polar latitudes in winter and near jet streams in the lower stratosphere, which the lapse-rate definition may misdiagnose due to upper troposphere temperature inversions \citep{Bethan1996, Tomikawa2009, Alexander2013}.
+    The ozone tropopause may misdiagnose the real tropopause altitude during stratosphere-troposphere exchange; however, it is useful at polar latitudes in winter, where the lapse-rate definition may result in artificially high tropopause values \citep{Bethan1996, Tomikawa2009, Alexander2013}.
     In this work, the lower of these two tropopause altitudes is used.
     We slightly alter the lapse rate tropopause definition so as only to detect tropopauses above 4~km altitude, since at all three sites we saw several false positive lapse-rate detections due to temperature inversions near 2~km in altitude.
     Using the minimum of the two definitions avoids the occasionally too high tropopauses due to perturbed ozone or temperature measurements in the ozonesonde data.
@@ -414,6 +415,7 @@
   This summertime peak is due to a prevalence of summer low-pressure storms and fronts, which increase turbulence and lower the tropopause \citep{Reutter2015}.
   At Davis, there is increased Antarctic winter activity, which may be due to the polar vortex and it's associated lowered tropopause and increased turbulence.
   STT events associated with cut-off low pressure systems are more prevalent during summer (winter for Davis), while STT events associated with frontal passage occur throughout the year.
+  The high frequency of STT ozone enhancements is comparable to the $>25\%$ frequencies seen near over the Turkey and east of the Caspian sea in an ERA-I analysis performed by \citet{Tyrlis2014}. 
   
   This seasonality is not seen in the recent ERA-Interim tropopause fold analysis performed by \citet{Skerlak2015}, where a winter maximum of ozone fold frequency ($\sim 0.5\%$ more folds in winter) over Australia can be seen.
   However their winter maximum is in the subtropics only - from around 20$^{\circ}$~S to 40$^{\circ}$~S, which can be seen as the prevalent feature over Australia in Fig. 5 of their publication.
@@ -649,6 +651,7 @@
     Here we briefly discuss these quantities and the sensitivity of the method to each.
     Using the algorithm discussed in Sect. \ref{sec:CharacterisationOfSTTs}, we detect 46 events at Davis, 47 (+8 fire influenced) events at Macquarie Island, and 73 (+14 fire influenced) events at Melbourne.
     
+    (TODO: update this )
     The cut-off threshold (defined separately for each site) is determined from the 99th percentile of the ozone perturbation profiles between 2~km above the earth's surface and 1~km below the tropopause.
     We use the 99th percentile because at this point the filter locates clear events with no obvious false positives.
     Event detection is highly sensitive to this choice; for example, using the 98.5th percentile instead increased detected events by 10 (22\%) at Davis, 19 (40\%) at Macquarie Island, and 24 (33\%) at Melbourne.
