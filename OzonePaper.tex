@@ -183,7 +183,7 @@
       \item OMR is greater than 80~ppb; and
       \item OMR exceeds 110~ppb between 500~m and 2000~m above the altitude under inspection (modified to between 500~m and 1500~m in the Antarctic, including the site at Davis).
     \end{enumerate}
-    The ozone tropopause may misdiagnose the real tropopause altitude during stratosphere-troposphere exchange; however, it is more robust than the lapse rate tropopause at polar latitudes in winter and near jet streams in the lower stratosphere, which the lapse-rate definition may misdiagnose due to upper troposphere temperature inversions \citep{Bethan1996, Tomikawa2009, Alexander2013}.
+    The ozone tropopause may misdiagnose the real tropopause altitude during stratosphere-troposphere exchange; however, it is useful at polar latitudes in winter, where the lapse-rate definition may result in artificially high tropopause values \citep{Bethan1996, Tomikawa2009, Alexander2013}.
     In this work, the lower of these two tropopause altitudes is used.
     We slightly alter the lapse rate tropopause definition so as only to detect tropopauses above 4~km altitude, since at all three sites we saw several false positive lapse-rate detections due to temperature inversions near 2~km in altitude.
     Using the minimum of the two definitions avoids the occasionally too high tropopauses due to perturbed ozone or temperature measurements in the ozonesonde data.
@@ -651,6 +651,7 @@
     Here we briefly discuss these quantities and the sensitivity of the method to each.
     Using the algorithm discussed in Sect. \ref{sec:CharacterisationOfSTTs}, we detect 46 events at Davis, 47 (+8 fire influenced) events at Macquarie Island, and 73 (+14 fire influenced) events at Melbourne.
     
+    (TODO: update this )
     The cut-off threshold (defined separately for each site) is determined from the 99th percentile of the ozone perturbation profiles between 2~km above the earth's surface and 1~km below the tropopause.
     We use the 99th percentile because at this point the filter locates clear events with no obvious false positives.
     Event detection is highly sensitive to this choice; for example, using the 98.5th percentile instead increased detected events by 10 (22\%) at Davis, 19 (40\%) at Macquarie Island, and 24 (33\%) at Melbourne.
