@@ -149,9 +149,10 @@
     \end{figure}
     
     Ozonesondes are launched approximately weekly from Melbourne (38$^{\circ}$ S, 145$^{\circ}$ E), Macquarie Island (55$^{\circ}$ S, 159$^{\circ}$ E) and Davis (69$^{\circ}$ S, 78$^{\circ}$ E), as shown in Fig. \ref{fig:ComparisonRegion}. 
-    Melbourne, a major city with more than 4 million residents \citep{ABS2016}, is in the far south eastern section of the Australian mainland, actual releases are north of the central business district in the Broadmeadows suburb.
-    Macquarie Island is isolated from the Australian mainland, situated in the remote southern ocean and unlikely to be affected by any local anthropogenic pollution events.
-    Davis is on the coast of Antarctica and also unlikely to experience the effects of local pollution.
+    Melbourne, a major city in Australia is located  in the south eastern of Australia.
+    Macquarie Island is isolated from the Australian mainland, situated in the remote Southern Ocean and unlikely to be affected by any local pollution events.
+    Davis is on the coast of Antarctica and also unlikely to experience the effects of anthropogenic pollution.
+    %Melbourne, a major city with more than 4 million residents \citep{ABS2016}, is in the far south eastern section of the Australian mainland.% Actual releases are north of the central business district in the Broadmeadows suburb.
     
     For this study, we use the 2004-2013 data for Melbourne and Macquarie Island and the 2006-2013 data for Davis because both ozone and geopotential height (GPH) profiles were measured during these periods.
     At Davis, ozonesondes are launched twice as frequently during the ozone hole season and preceding months (June-October) as at other times of year \citep{Alexander2013}.
@@ -184,10 +185,9 @@
       \item OMR exceeds 110~ppb between 500~m and 2000~m above the altitude under inspection (modified to between 500~m and 1500~m in the Antarctic, including the site at Davis).
     \end{enumerate}
     The ozone tropopause may misdiagnose the real tropopause altitude during stratosphere-troposphere exchange; however, it is useful at polar latitudes in winter, where the lapse-rate definition may result in artificially high tropopause values \citep{Bethan1996, Tomikawa2009, Alexander2013}.
-    In this work, the lower of these two tropopause altitudes is used.
-    We slightly alter the lapse rate tropopause definition so as only to detect tropopauses above 4~km altitude, since at all three sites we saw several false positive lapse-rate detections due to temperature inversions near 2~km in altitude.
-    Using the minimum of the two definitions avoids the occasionally too high tropopauses due to perturbed ozone or temperature measurements in the ozonesonde data.
+    We require lapse rate tropopauses to be at a minimum of 4~km altitude. %This is due to several temperature inversions causing low misdiagnosed tropopauses.
     Another commonly used tropopause definition (the dynamical tropopause) is determined from the potential vorticity unit (PVU; 1~PVU$= 10^{-6}$~m$^2$ s$^{-1}$ K kg$^{-1}$). In the extratropics the isosurface where PVU$=2$ is often used, which allows a 3D view of folds and other tropopause features in a sufficiently resolved model \citep{Skerlak2014,Tyrlis2014}.
+    In this work, the ozone tropopause is used when determining STT events or measured tropopause altitude.
     
     Figure \ref{fig:seasonaltpheights} shows the monthly median tropopause altitudes at each location (solid lines).
     At Melbourne, tropopause altitude displays a seasonal cycle with maximum in summer and minimum is winter.
@@ -208,7 +208,9 @@
     Over Melbourne, increased ozone extending down through the troposphere is apparent from December to March and from September to November.
     The increased tropospheric ozone in these months is due to STT (in summer), and possible biomass burning influence (in spring), both discussed in more detail in the following sections.
     Over Davis and Macquarie Island, tropospheric ozone is higher between March and October, although the seasonal differences are small compared to those at Melbourne.
-    This seasonality at the high latitude sites is driven by a decrease in photochemical destruction under the reduced radiation conditions around polar night. % (TODO: read and cite S. Oltmans antarctic papers - re Andrews comment)... Can't find paper.
+    %This seasonality at the high latitude sites is driven by a decrease in photochemical destruction under the reduced radiation conditions around polar night. % (TODO: read and cite S. Oltmans antarctic papers - re Andrews comment)... Can't find paper.
+    The seasonality shown in Fig. \ref{fig:seasonaltropozone} is consistent with remote free tropospheric photochemistry determined by solar radiation availability and temperature, resulting in higher ozone in winter \citep{Lelieveld2000}.
+    NO$_2$ stratospheric observations have been conducted in the Southern hemisphere at Lauder, Macquarie island and Arrival Heights i.e. \citet{Struthers2004} which displays a winter minima in seasonality consistent with an ozone maxima.
     Influence from the ozone hole can be seen over Davis in October, with relatively low ozone levels extending up 5-6~km into the stratosphere.
     
     \begin{figure}[t]
@@ -231,11 +233,11 @@
     Our simulation was modified from the standard v10-01 to fix an error in the treatment of ozone data from the Total Ozone Mapping Spectrometer (TOMS) satellite used to calculate photolysis (see \url{http://wiki.seas.harvard.edu/geos-chem/index.php/FAST-JX_v7.0_photolysis_mechanism#Fix_for_TOMS_to_address_strange_cycle_in_OH_output.}).  
 
     Our simulations span 2005-2012 (following a 1-year spin-up) with horizontal resolution of 2$^{\circ}$ latitude by 2.5$^{\circ}$ longitude and 72 vertical levels from the surface to 0.01~hPa.
-    The vertical resolution is finer near the surface at $\sim 60$~m between levels, spreading out to $\sim 500$~m near 10~km altitude, and reaching $\sim 1500$~m near the top of the atmosphere.
+    The vertical resolution is finer near the surface at $\sim 60$~m between levels, spreading out to $\sim 500$~m near 10~km altitude.%, and reaching $\sim 1500$~m near the top of the atmosphere.
     For comparison to the ozonesonde observations, the model state was saved every 6 hours within the grid boxes containing each site.
     When comparing against ozonesondes, GEOS-Chem UTC+0 time samples are used for all sites.
     This means that the simulated ozone profiles are analysed at local times of 7AM for Davis, and 11AM for Macquarie Island and Melbourne.
-    GEOS-Chem uses the tropopause height provided by GEOS-5 met fields which are calculated using a lapse-rate definition using the first minimum above the surface in the function $0.03 \times T(p) - log_{10}(p)$, with p in hPa and T being temperature as a function of pressure \citep{Rienecker2008}.
+    GEOS-Chem uses the tropopause height provided by GEOS-5 meteorological fields, which are calculated using a lapse-rate tropopause definition using the first minimum above the surface in the function $0.03 \times T(p) - \mathrm{log}(p)$, with p in hPa \citep{Rienecker2008}.
     
   \subsection{Characterisation of STT events and associated fluxes}
     \label{sec:CharacterisationOfSTTs}
@@ -243,25 +245,25 @@
     We characterise STT events using the ozonesonde vertical profiles to identify tropospheric ozone enhancements above a local background (in moles per billion moles of dry air, referred to here as ppb).
     The process is illustrated in Figure~\ref{fig:filterEG} on an example ozone profile.
     First, the ozone vertical profiles are linearly interpolated to a regular grid with 20~m resolution from the surface to 14~km altitude. 
-    The interpolated profiles are then bandpass-filtered using a Fourier transform to retain perturbations with vertical scales between 0.5~km and 5~km (removing low and high frequency perturbations).
-    The high frequency perturbations are removed as they may represent noise in the measurements. The perturbations with scales longer than 5~km represent the vertical gradient of ozone concentration from the surface to the stratosphere.
+    Small vertical-scale fluctuations in ozone, which are captured by the high-resolution ozonesondes, can be regarded as sinusoidal waves superimposed on the large vertical scale background tropospheric ozone.
+    As such, the interpolated profiles are bandpass-filtered using a fast Fourier transform \citep{Press1992} to retain these small vertical scales, between 0.5~km and 5~km (removing low and high frequency perturbations).
+    The high frequency perturbations are removed as they may represent noise in the measurements.
+    The perturbations with scales longer than 5~km represent the vertical gradient of ozone concentration from the surface to the stratosphere.
     In what follows, these filtered vertical profiles are referred to as perturbation profiles.
-    
-    We assume that in the troposphere, the ozone profile is a simple summation of sine and cosine waves.
-    Note that this would not really be the case if you include the stratosphere due to the sharp jump at the tropopause.
-    Once the troposphere is split into wave sine and cosine wave functions we remove the waves with frequency outside of our chosen bandwidth (in this case the upper and lower frequency limits equate to our chosen vertical scale).
-    This is done quickly using a fast fourier transform method \citep{Press1992}, using IDL code written by Dr. Simon Alexander shown in a supplementary document (TODO:hardcode reference here sup:sec:FFTCode).
     
     The choice of band limits was set empirically in order to remove the slow positive gradient of ozone over altitude as well as any measurement noise.
     For an event to qualify as STT, a clear increase above the background ozone level is needed, as a bandpass filter leaves us with enhancements minus any noise or seasonal scale vertical profile effects.
     The 0.5~km scale limit is set in order to remove any spikes of ozone which could be considered noise.
-    We next use all the perturbation profiles at each site to calculate the 99th percentile perturbation value for the site.
+    We next use all the perturbation profiles at each site to calculate the 95th percentile perturbation value for the site.
     The threshold is calculated from all the interpolated filtered values between 2~km above the surface and 1~km below the tropopause.
     This is our threshold for tropospheric ozone perturbations, and any profiles with perturbations exceeding this value in individual ozonesondes are classified as STT events.
     STT events at altitudes below 4~km are removed to avoid surface pollution, and events within 0.5~km of the tropopause are removed to avoid false positives induced by the sharp transition to stratospheric air.
+    We note that this ozone detection methodology detailed above does not allow us to resolve STT events where the ozone flux is spread diffusely across the troposphere without a peak-like structure in the ozonesonde profile. 
+    In other words, STT events which might have occurred some distance and time away from the location of the ozonesonde profiles may not be readily detected using the high vertical resolution, but infrequent, ozonesonde launches.
     
     \begin{figure}[t]
-      % Figure 4 created in getevents.pro, edited in inkscape
+      % Figure 4 
+      % created in getevents.pro, edited in inkscape
       \includegraphics[width=8.3cm]{figures/filtereg.png}
       \caption{ %
 	An example of the STT identification and flux estimation methods used in this work. 
@@ -310,26 +312,13 @@
     In the Southern Hemisphere, biomass burning is the primary source of CO, making CO a good proxy for fire plumes \citep[e.g.][]{Sinha2004, Mari2008}.
     To identify possible biomass burning influence, AIRS vertical column CO is visually inspected for all dates with detected STT events.
     Smoke plumes are diagnosed over areas with elevated CO columns ($\sim 2 \times 10^{18}$ molecules cm$^{-2}$ or higher), and any sonde-detected STT event that occurs near (within $\sim$150~km of) a smoke plume is flagged.
-
-    Figure \ref{fig:excludedeg} contrasts two days; one with and one without signs of biomass burning influence near the Melbourne site (purple circle).
-    On 17 October 2007 (top) elevated CO suggests the site may have been influenced by long-range transport from African and/or South American biomass burning.
-    In contrast, on 3 February 2006 (bottom) CO columns across the SH show no influence from biomass burning.
+    Removal of these detections reduces the yearly estimated ozone flux by $\sim 15\%$ at Macquarie Island and $\sim 20\%$ at Melbourne.
+  
     All days with detected STT events were screened, with the exception of one event during which there were no available AIRS data (January 2010).
-    We find that biomass burning may have influenced 14 events over Melbourne and 8 events over Macquarie Island.
+    We find that biomass burning may have influenced 27 events over Melbourne and 21 events over Macquarie Island.
     These events are flagged in the following sections, and are not used in our calculation of total STT flux.
-    All of the flagged events except for one (in January at Macquarie Island) occurred during the SH burning season (July to December). %\citet{Edwards2006}). % burning season from \citep{Pak2003}.
+    All of the flagged events except for two occurred during the SH burning season (July to December). %\citet{Edwards2006}). % burning season from \citep{Pak2003}.
     No events at Davis were seen to be influenced by smoke transport.
-    
-    \begin{figure}[t]
-      %Figure created in shared HPC folder by egplotday.py in AIRS CO data folder
-      \includegraphics[width=12cm]{figures/AIRS_compare.png}
-      \caption{ %
-	Example detection of biomass burning influence using AIRS total column CO. 
-	The top panel (17 October 2007) shows a day when ozone above Melbourne (purple dot) could have been caused by a transported biomass burning plume, and so was flagged in subsequent analysis.
-	The bottom panel (3 February 2006) shows a day when Melbourne ozone was not influenced by transported smoke.
-	}
-      \label{fig:excludedeg}
-    \end{figure}
 
   \subsection{Classifying synoptic conditions during STT events}
   \label{sec:WeatherClassifications}
@@ -342,42 +331,12 @@
     The stratospheric polar vortex may create ozone folds without other sources of upper tropospheric turbulence \citep[e.g.][]{Baray2000,Sprenger2003,Tyrlis2014}
     %, for example near the more intense part of the subtropical jet over the Middle East \citep{Tyrlis2014}.
 
-    We examine two case studies in detail to illustrate the relationship between synoptic-scale conditions and STT events  over Melbourne.
-    Figure \ref{fig:Melbourne20050203} (left) shows the vertical ozone profile on 3 February 2005.
-    The tropopause was between 400 and 500~hPa and ozone in the upper troposphere was anticorrelated with relative humidity, suggesting the ozone enhancements are due to dry stratospheric air. 
-    An ozone intrusion into the troposphere at $\sim$520~hPa was identified by our detection algorithm.
-    The right panel shows the concurrent synoptic weather system, a cut-off low pressure system that caused a large storm and lowered the local tropopause height for several days.
-    %These systems also increase turbulence near the tropopause, which can lead to increased transport events.
-    %The wind circles around the low pressure system in a clockwise direction, typical geostrophic flows which are caused by pressure gradients and coriolis forces.
-    The flux of stratospheric ozone into the troposphere associated with this event, calculated using the method shown in Sect. \ref{sec:CharacterisationOfSTTs}, was at least $3.1 \times 10^{11}$ molecules cm$^{-3}$, or 8\% of the tropospheric ozone column.
-
-    \begin{figure*}[t]
-    % these IMAGE CREATED BY show_profile.py, EDITTED IN INKSCAPE and then PINTA
-      \includegraphics[width=14.0cm]{figures/Melbourne20050203.png}
-      \caption{(Left) Vertical profile of ozone (black), relative humidity (blue), and temperature (red) measured by ozonesonde over Melbourne on 3 February 2005.
-      The detected ozone STT event is highlighted in pink.
-      Tropopause heights using both the ozone definition (black dashed line) and lapse rate definition (red dashed line) are also shown.
-      (Right) Geopotential heights at 500~hPa from the ERA-Interim reanalysis, with wind vectors over-plotted.
-      Also shown is the 1~PVU contour line (purple).}
-      \label{fig:Melbourne20050203}
-    \end{figure*}
     
-    Figure \ref{fig:Melbourne20100113} (left) shows the ozone profile over Melbourne on 13 January 2010.
-    The tropopause was higher on this date (120-160~hPa).
-    Using our algorithm, we detected an ozone intrusion centred around 200~hPa.
-    As before, ozone anti-correlation with relative humidity provides further evidence that the elevated ozone was stratospheric in origin.
-    In this profile, there was clear separation between the detected intrusion (highlighted in pink) and the ozone tropopause (black dashed line), which indicates that the sonde passed through regular tropospheric air after hitting a stratospheric intrusion but before reaching the tropopause.
-    The right panel shows that this event was associated with a trough (front) of low pressure passing over south eastern Australia.
-    This front travelled from west to east and caused a wave of lowered tropopause height. 
+    Cut-off low pressure systems can be seen clearly in synoptic scale weather maps as regions with lowered pressure and cyclonic winds.
+    Low pressure fronts in the higher southern latitudes generally travel from west to east and cause waves of lowered tropopause height.
+    We examine two case studies in detail to illustrate the relationship between synoptic-scale conditions and STT events  over Melbourne. 
+    These are included in a supplementary document (TODO: hardcode reference).
     Frontal passage is a known cause of STT as stratospheric air descends and streamers of ozone-rich air break off and mix into the troposphere \citep{Sprenger2003}.
-    
-    \begin{figure*}[t]
-    % these IMAGE CREATED BY show_profile.py, EDITTED IN INKSCAPE
-      \includegraphics[width=14.0cm]{figures/Melbourne20100113.png}
-      \caption{Same as Fig. \ref{fig:Melbourne20050203} but for 13 January 2010.
-	Also shown in this figure is the 2 PVU contour (white), often used to determine dynamical tropopause height.}
-      \label{fig:Melbourne20100113}
-    \end{figure*}
 
 \section{STT event climatologies}
   \label{sec:eventclimatologies}
@@ -529,7 +488,7 @@
     We quantify the mean stratosphere-to-troposphere ozone flux due to STT events at each site based on the integrated ozone amount associated with each STT event (see Sect. \ref{sec:CharacterisationOfSTTs}).
     Events that may have been influenced by transported biomass burning are excluded from this calculation.
     Our estimate provides a preliminary estimate of how much ozone is transported from the stratosphere by the events detected by our method.
-    The estimate is conservative for several reasons: it ignores secondary ozone peaks which may also be transported from the stratosphere, it ignores potential ozone enhancements which may have dispersed and increased the local background mixing ratio, and any influence from STT events advected into our measuremente region, which may have increases the local background ozone.
+    The estimate is conservative for several reasons: it ignores secondary ozone peaks which may also be transported from the stratosphere, it ignores potential ozone enhancements which may have dispersed and increased the local background mixing ratio, and any influence from STT events nearby which may also increase the local background ozone.
     
     Observed tropospheric columns are calculated from the ozonesondes by calculating the ozone number density (molec cm$^{-3}$) using measured ozone partial pressure (P$_{O_3}$) and integrating vertically up to the tropopause:
     % Using \begin{equation*}... doesn't center the equation so I've used $$ instead.
@@ -607,7 +566,7 @@
     The tropospheric ozone and area of our region is calculated using the output and surface area from GEOS-Chem over our three regions.
     The lower panel of these figures show the results of the calculation when we choose two days for our flux estimation, with dotted lines showing the range of flux calculated if we assume events last from one day to one week.
     The seasonal cycle of ozone flux is mostly driven by the $P$ term, which peaks in the SH summer over all three sites.
-    The uncertainty (shaded) is quite high, on the order of $100\%$, this level of uncertainty means we do not attempt to draw conclusions about the seasonal quantities of STT ozone flux, but calculate the anual amount based on the sum of the monthly values.
+    The uncertainty (shaded) is quite high, on the order of $100\%$ (see Sect. \ref{sec:fluxuncertainty}), this level of uncertainty means we do not attempt to draw conclusions about the seasonal quantities of STT ozone flux, but calculate the anual amount based on the sum of the monthly values.
     The regions over Davis, Macquarie Island, and Melbourne have estimated STT ozone contributions of $\sim 5.7 \times 10^{17}$, $\sim 5.7 \times 10^{17}$, and $\sim 8.7 \times 10^{17}$ molecules cm$^{-2}$ a$^{-1}$ respectively, or equivalently $\sim 2.0$, 2.1, and 3.3~Tg a$^{-1}$.
   
   \subsection{Comparison to literature}
@@ -651,40 +610,41 @@
     Using the algorithm discussed in Sect. \ref{sec:CharacterisationOfSTTs}, we detect 46 events at Davis, 47 (+8 fire influenced) events at Macquarie Island, and 73 (+14 fire influenced) events at Melbourne.
     
     The cut-off threshold (defined separately for each site) is determined from the 95th percentile of the ozone perturbation profiles between 2~km above the earth's surface and 1~km below the tropopause.
-    We use the 95th percentile because at this point the filter locates clear events with fewer than 2\% obvious false positive detections.
-    TODO: update these numbersEvent detection is sensitive to this choice; for example, using the 96th, and 97th percentile instead decreased detected events by 2, 9 (2,10\%) at Davis, 13, 31 (11, 28\%) at Macquarie Island, and 8, 24 (6, 18\%) at Melbourne.
+    We use the 95th percentile because at this point the filter locates clear events with fewer than 5\% obvious false positive detections.
+    Event detection is sensitive to this choice; for example, using the 96th, and 97th percentile instead decreased detected events by 2, 9 (2,10\%) at Davis, 13, 31 (11, 28\%) at Macquarie Island, and 8, 24 (6, 18\%) at Melbourne.
     Event detection is therefore also sensitive to the range over which the percentile is calculated (2~km above the earth's surface to 1~km below the tropopause).
     This range was chosen to remove anomalous edge effects of the Fourier bandpass filter and to discount the highly variable ozone concentration which occurs near the tropopause.
     
     Ozone enhancements are only considered STT events if they occur above 4~km and below 500~m below the tropopause.
     This range removes possible ground pollution and events not sufficiently separated from the stratosphere, while still capturing many well-defined events that occur within 1~km of the tropopause.
-    An example of a well-defined event that occurs within 1~km of the tropopause is shown in Fig. \ref{fig:Melbourne20050203}.
+    An example of a well-defined event that occurs within 1~km of the tropopause is shown in the supplementary (Fig. TODO: hardcode reference here).
+    However STT events which reach below 4~km are possible and we may have some false negative detections due to the altitude restricted detections.
     
-    The event detection was less sensitive to the choice of Fourier bandpass scales: widening the allowed scales from the range 0.5-5.0~km to 0.4-5.1~km increased the detected events by 3 at Melbourne and 2 at Macquarie Island. Meanwhile, 2 fewer events were detected at Davis because the change to bandpass scales resulted in an increase in the threshold value calculated from the perturbed profiles (removing some detected events which were no longer larger than the new 99th percentile).
+    The event detection was less sensitive to the choice of Fourier bandpass scales: widening the allowed scales from the range 0.5-5.0~km to 0.4-5.1~km increased the detected events by 3 at Melbourne and 2 at Macquarie Island. 
+    Meanwhile, 2 fewer events were detected at Davis because the change to bandpass scales resulted in an increase in the threshold value calculated from the perturbed profiles (removing some detected events which were no longer larger than the new threshold).
     %It may seem strange that Davis lost events when the bandpass range was widened, however this was an effect of the threshold value in the perturbations filter increasing - removing some detections which weren't subsequently filtered.
     
     Overall, the method used here to detect STTs is conservative, and more events could be classified by changing some the parameters in the detection algorithm; however, this would increase the chance of misdiagnosis. 
     For instance; when relaxing the ozone perturbation threshold to 98\% several events are detected at each site which were not clear events (determined visually).
     
   \subsection{Flux calculations}
+    \label{sec:fluxuncertainty}
     Flux is calculated as $ I \times P \times M \times \Omega_{O_3}$, with each term calculated as described in Sect. \ref{sec:fluxcalc}.
     The uncertainty is determined using the standard deviation of the product, with variance calculated using the variance of a product formula, assuming that each of our terms is independent: $$ var(\Pi_i X_i) = \Pi_i ( var(X_i) + E(X_i)^2 ) - (\Pi_i E(X_i))^2 $$
     The standard deviations for the $I$ and $\Omega_{O_3}$ terms are calculated over the entire dataset.
     These terms are considered to be homoskedastic (unchanging variance over time).
     Uncertainty in assumed event lifetime is set at 50\%, as we believe it is reasonable to expect events to last 1-3 days.
     $P$ is the probability of any ozonesonde detecting an event, and is assumed to be constant (for any month).
-    The overall uncertainty as a percentage is shown in parentheses in Table \ref{table:extrapolationResults}, these values are on the order of 100\%, largely due to uncertainty in the $I$ factor which ranges from 50-120\% for each month.
+    The overall uncertainty as a percentage is shown in parentheses in Table \ref{table:extrapolationResults}, these values are on the order of 100\%, largely due to relative uncertainty in the $I$ factor which ranges from 50-120\% for each month.
     
-   Small changes in the region dont have a large affect on the per area flux calculations, with an increasing or decreasing the regions by 1$^{\circ}$ on each side ($\sim 10\%$ change in area) changing the resulting flux by $\sim 1\%$~Kg cm$^{-2}$.
-   However due to the large portion of winter STT events being flagged due to potential smoke plume influence, a significant change in the yearly flux is seen when we don't remove these events.
-   Without removing smoke flagged events we see an increase in estimated yearly flux of $\sim 1.1, 1.4 \times 10^17 $~molecules cm^{-2} yr^{-1} (which is a change of $\sim 15, 20%$), over Macquarie Island and Melbourne respectively.
+    Small changes in the region dont have a large affect on the per area flux calculations, with an increasing or decreasing the regions by 1$^{\circ}$ on each side ($\sim 10\%$ change in area) changing the resulting flux by $\sim 1\%$~Kg cm$^{-2}$.
+    However due to the large portion of winter STT events being flagged due to potential smoke plume influence, a significant change in the yearly flux is seen when we don't remove these events.
+    Without removing smoke flagged events we see an increase in estimated yearly flux of $\sim 1.1, 2.1 \times 10^{17} $~molecules cm$^{-2}$ yr$^{-1}$ (which is a change of $\sim 15, 20\%$), over Macquarie Island and Melbourne respectively.
     
     Considering the $I$ factor, as discussed in here and in Sect. \ref{sec:sensitivity}, there are several uncertainties in our method that are likely to lead to a low bias, such as the conservative estimate of flux within each event.
     Although there is little available data on SH ozone events for us to compare against, consider \citet{Terao2008}, who estimated that up to 30--40\% of the ozone at 500~hPa was transported from the stratosphere, in the northern hemisphere.
     
     Other possibly important uncertainties in our calculation of STT flux which we don't cover are listed here.
-    Uncertainty in the $P$ parameter, which could be affected by false negatives caused by overzealous smoke plume filtering.
-    This could lead to an underestimation of the $P$ value during winter months.
     Filtering events which occur within 500~m of the tropopause may also lead to more false negatives.
     This could also cause lower impact estimates due to only measuring ozone enhancements which have descended and potentially slightly dissipated.
     On the other hand we have no measure of how often or likely the detached ozone intrusion reascends into the stratosphere, which would lead to a reduced stratospheric impact.
@@ -692,9 +652,10 @@
     Transport uncertainty is very difficult to estimate with the disparate point measurements; it's possible that detected events are (at least partially) advected out of the analysis regions, which would mean we overestimate the influx into the region, and it is also possible that we are influenced by STT events outside the regions of analysis.
     Uncertainty in event longevity is set to 50\%, however this is implies a very simplistic model of event lifetimes, a great deal of work could be done to properly model the regional event lifetimes however this is beyond the scope of our work.
     
-    Our STT event impact estimates are relatively insensitive to our biomass burning filter: including smoke-influenced days changed the mean flux by less than 5\% relative to the absolute values.
-    The change in our P parameter when we include potentially smoke influenced events leads to a yearly estimated STT of (TODO: number here), which suggests that up to (TODO: number here) ozone enhancement could be caused by smoke plume transported precursors.
-    This is a potential area for improvement, as a better method of smoke influenced columns would improve confidence in our estimate.
+    Our STT event impact estimates have some sensitivity to our biomass burning filter: including smoke-influenced days increases the mean per area flux by 15-20\%.
+    Although events which are detected near fire smoke plumes are removed, some portion of these could be actual STTs.
+    The change in our P parameter when we include potentially smoke influenced events leads to a yearly estimated STT of 11$\times 10^{17}$ molecules cm$^{-2}$ yr$^{-1}$ over Melbourne, which suggests that up to $2.1 \times 10^{17}$ molecules cm$^{-2}$ yr$^{-1}$ ozone enhancement could be caused by smoke plume transported precursors.
+    This is a potential area for improvement, as a better method of determining smoke influenced columns would improve confidence in our estimate.
   
     Uncertainties in STT ozone flux detection are also quite large ($\sim 100\%$), and could be directly improved with larger or longer datasets.
     Possible parameterisations and an improved model of event lifetime could also improve the confidence in our estimate of event impacts, as well as allowing fewer assumptions.
