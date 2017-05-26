@@ -138,7 +138,7 @@
     Ozonesondes provide a high vertical resolution profile of ozone, temperature, pressure, and humidity from the surface to 35 km.
     In the troposphere, the ozonesondes generally make 150-300 measurements.    
     %Ozone mixing ratio is quantified with an electrochemical concentration cell that senses the proportional electrical current from reaction of ozone with a solution of potassium iodide.
-    Ozone mixing ratio is quantified with an electrochemical concentration cell, using standardised procedures when constructing, transporting, and releasing the ozonesondes \url{http://www.ndsc.ncep.noaa.gov/organize/protocols/appendix5/}.
+    Ozone mixing ratio is quantified with an electrochemical concentration cell, using standardised procedures when constructing, transporting, and releasing the ozonesondes (\url{http://www.ndsc.ncep.noaa.gov/organize/protocols/appendix5/}).
     Ozonesondes are estimated to provide around 2\% precision in the stratosphere, which improves at lower altitudes, and ozonesondes have been shown to be accurate to within 5\% when the correct procedures are followed \citep{Smit2007}.
     
     \begin{figure}
@@ -149,7 +149,7 @@
     \end{figure}
     
     Ozonesondes are launched approximately weekly from Melbourne (38$^{\circ}$ S, 145$^{\circ}$ E), Macquarie Island (55$^{\circ}$ S, 159$^{\circ}$ E) and Davis (69$^{\circ}$ S, 78$^{\circ}$ E), as shown in Fig. \ref{fig:ComparisonRegion}. 
-    Melbourne, a major city in south eastern Australia.
+    Melbourne, a major city in the south east of Australia.
     Macquarie Island is isolated from the Australian mainland, situated in the remote Southern Ocean and unlikely to be affected by any local pollution events.
     Davis is on the coast of Antarctica and also unlikely to experience the effects of anthropogenic pollution.
     %Melbourne, a major city with more than 4 million residents \citep{ABS2016}, is in the far south eastern section of the Australian mainland.% Actual releases are north of the central business district in the Broadmeadows suburb.
@@ -200,7 +200,7 @@
     % figure produced in seasonal_tropopause in Examine_stations.py
       \includegraphics[width=10cm]{figures/tpheights.png}
       \caption{%
-	Multi-year monthly median tropopause altitude (using ozone defined tropopause) determined from ozonesondes measurements at Melbourne (2004-2013), Macquarie Island (2004-2013) and Davis (2006-2013) (solid lines).
+	Multi-year monthly median tropopause altitude (using the ozone defined tropopause) determined from ozonesondes measurements at Melbourne (2004-2013), Macquarie Island (2004-2013) and Davis (2006-2013) (solid lines).
 	Dashed lines show the 10th to the 90th percentile of tropopause altitude for each site.}
       \label{fig:seasonaltpheights}
     \end{figure}
@@ -335,8 +335,10 @@
 
     Cut-off low pressure systems can be seen clearly in synoptic scale weather maps as regions with lowered pressure and cyclonic winds.
     Low pressure fronts in the higher southern latitudes generally travel from west to east and cause waves of lowered tropopause height.
-    We examine two case studies in detail to illustrate the relationship between synoptic-scale conditions and STT events  over Melbourne. 
+    We examine two cases in detail to illustrate the relationship between synoptic-scale conditions and STT events over Melbourne.
     These are included in a supplementary document (Fig. S2 and S3) which show an archetypal cut-off low and low pressure front.
+    To detect cut-off low pressure systems we look for cyclonic winds and a detached area of low pressure within $\sim 500$~km of a site on days of event detection.
+    For low pressure fronts we look for low pressure troughs within $\sim 500$~km.
     Frontal passage is a known cause of STT as stratospheric air descends and streamers of ozone-rich air break off and mix into the troposphere \citep{Sprenger2003}.
 
 \section{STT event climatologies}
@@ -644,6 +646,11 @@
     Considering the $I$ factor, as discussed in here and in Sect. \ref{sec:sensitivity}, there are several uncertainties in our method that are likely to lead to a low bias, such as the conservative estimate of flux within each event.
     Although there is little available data on SH ozone events for us to compare against, consider \citet{Terao2008}, who estimated that up to 30--40\% of the ozone at 500~hPa was transported from the stratosphere, in the northern hemisphere.
     
+    Our STT event impact estimates have some sensitivity to our biomass burning filter: including smoke-influenced days increases the mean per area flux by 15-20\%.
+    Although events which are detected near fire smoke plumes are removed, some portion of these could be actual STTs.
+    The change in our P parameter when we include potentially smoke influenced events leads to a yearly estimated STT of 11$\times 10^{17}$ molecules cm$^{-2}$ yr$^{-1}$ over Melbourne, which suggests that up to $2.1 \times 10^{17}$ molecules cm$^{-2}$ yr$^{-1}$ ozone enhancement could be caused by smoke plume transported precursors.
+    This is a potential area for improvement, as a better method of determining smoke influenced columns would improve confidence in our estimate.
+    
     Other possibly important uncertainties in our calculation of STT flux which we don't cover are listed here.
     Filtering events which occur within 500~m of the tropopause may also lead to more false negatives.
     This could also cause lower impact estimates due to only measuring ozone enhancements which have descended and potentially slightly dissipated.
@@ -651,13 +658,8 @@
     The estimated tropospheric ozone columns modelled by GEOS-Chem may be biased, for instance \cite{Hu2017} suggest that in general GEOS-Chem (with GEOS-5 met. fields) underestimates STT, with $\sim 360$~Tg a$^{-1}$ simulated globally, compared to $\sim 550$~Tg a$^{-1}$ observationally constrained.
     Transport uncertainty is very difficult to estimate with the disparate point measurements; it's possible that detected events are (at least partially) advected out of the analysis regions, which would mean we overestimate the influx into the region, and it is also possible that we are influenced by STT events outside the regions of analysis.
     Uncertainty in event longevity is set to 50\%, however this implies a very simplistic model of event lifetimes, a great deal of work could be done to properly model the regional event lifetimes however this is beyond the scope of our work.
-    
-    Our STT event impact estimates have some sensitivity to our biomass burning filter: including smoke-influenced days increases the mean per area flux by 15-20\%.
-    Although events which are detected near fire smoke plumes are removed, some portion of these could be actual STTs.
-    The change in our P parameter when we include potentially smoke influenced events leads to a yearly estimated STT of 11$\times 10^{17}$ molecules cm$^{-2}$ yr$^{-1}$ over Melbourne, which suggests that up to $2.1 \times 10^{17}$ molecules cm$^{-2}$ yr$^{-1}$ ozone enhancement could be caused by smoke plume transported precursors.
-    This is a potential area for improvement, as a better method of determining smoke influenced columns would improve confidence in our estimate.
   
-    Uncertainties in STT ozone flux detection are also quite large ($\sim 100\%$), and could be directly improved with larger or longer datasets.
+    Uncertainties in STT ozone flux detection are ($\sim 100\%$), and could be directly improved with larger or longer datasets.
     Possible parameterisations and an improved model of event lifetime could also improve the confidence in our estimate of event impacts, as well as allowing fewer assumptions.
     The simple assumptions made in order to achieve an estimate of ozone flux are not feasible over larger areas, however as a preliminary or constraining estimate for a region with few measurements we believe they add to the discussion.
   
