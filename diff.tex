@@ -1,7 +1,7 @@
 %% Copernicus Publications Manuscript Preparation Template for LaTeX Submissions
 %DIF LATEXDIFF DIFFERENCE FILE
 %DIF DEL ACPD_version/OzonePaper.tex   Fri Mar 24 11:00:20 2017
-%DIF ADD OzonePaper.tex                Fri May 26 18:35:52 2017
+%DIF ADD OzonePaper.tex                Fri May 26 23:22:10 2017
 %% ---------------------------------
 %% This template should be used for copernicus.cls
 %% The class file and some style files are bundled in the Copernicus Latex Package, which can be downloaded from the different journal webpages.
@@ -46,12 +46,20 @@
 \Author[1,6]{Jenny A.}{Fisher}
 \Author[2,3]{Andrew K.}{Klekociuk}
 
-\affil[1]{Centre for Atmospheric Chemistry, School of Chemistry, University of Wollongong}
-\affil[2]{Australian Antarctic Division, Hobart}
-\affil[3]{Antarctic Climate and Ecosystems Co-operative Research Centre, Hobart, Australia}
-\affil[4]{School of Earth Sciences, University of Melbourne}
-\affil[5]{ARC Centre of Excellence for Climate System Science, University of New South Wales}
-\affil[6]{School of Earth \& Environmental Sciences, University of Wollongong}
+\DIFdelbegin %DIFDELCMD < \affil[1]{Centre for Atmospheric Chemistry, School of Chemistry, University of Wollongong}
+%DIFDELCMD < \affil[2]{Australian Antarctic Division, Hobart}
+%DIFDELCMD < %%%
+\DIFdelend \DIFaddbegin \affil[1]{Centre for Atmospheric Chemistry, School of Chemistry, University of Wollongong, Australia}
+\affil[2]{Australian Antarctic Division, Hobart, Australia}
+\DIFaddend \affil[3]{Antarctic Climate and Ecosystems Co-operative Research Centre, Hobart, Australia}
+\DIFdelbegin %DIFDELCMD < \affil[4]{School of Earth Sciences, University of Melbourne}
+%DIFDELCMD < \affil[5]{ARC Centre of Excellence for Climate System Science, University of New South Wales}
+%DIFDELCMD < \affil[6]{School of Earth \& Environmental Sciences, University of Wollongong}
+%DIFDELCMD < %%%
+\DIFdelend \DIFaddbegin \affil[4]{School of Earth Sciences, University of Melbourne, Australia}
+\affil[5]{ARC Centre of Excellence for Climate System Science, University of New South Wales, Australia}
+\affil[6]{School of Earth \& Environmental Sciences, University of Wollongong, Australia}
+\DIFaddend 
 
 \runningtitle{Southern Hemisphere stratospheric ozone intrusions}
 \runningauthor{Greenslade et al.}
@@ -75,8 +83,8 @@
   STT seasonality is determined by two distinct methods: a Fourier bandpass filter of the vertical ozone profile, and an analysis of the \DIFdelbegin \DIFdel{Brunt-Viäsälä }\DIFdelend \DIFaddbegin \DIFadd{Brunt-V\"{a}is\"{a}l\"{a} }\DIFaddend frequency.
   Using a bandpass filter on 7--9 years of ozone profiles from each site provides clear detection of STT events, with maximum occurrences during summer and minimum during winter above all three sites.
   The majority of tropospheric ozone enhancements from STT events occur within 2.5~km \DIFdelbegin \DIFdel{, }\DIFdelend \DIFaddbegin \DIFadd{and }\DIFaddend 3~km of the tropopause at Davis, and Macquarie Island.
-  Events are more spread out at Melbourne, occurring frequently up to 7.5~km from the tropopause.
-  The mean fraction of total tropospheric ozone attributed to STT during STT events is 2–4\% at each site; however, during individual events over 10\% of tropospheric ozone may be directly transported from the stratosphere.
+  Events are more spread out at Melbourne, occurring frequently up to \DIFdelbegin \DIFdel{7.5}\DIFdelend \DIFaddbegin \DIFadd{6}\DIFaddend ~km from the tropopause.
+  The mean fraction of total tropospheric ozone attributed to STT during STT events is \DIFdelbegin \DIFdel{2–4\% }\DIFdelend \DIFaddbegin \DIFadd{$\sim 1.0$--$3.5\%$ }\DIFaddend at each site; however, during individual events over 10\% of tropospheric ozone may be directly transported from the stratosphere.
   The cause of STTs is determined to be largely due to synoptic low pressure frontal systems, determined using coincident ERA-Interim reanalysis meteorological data.
   %Ozone enhancements caused by transported biomass burning plumes are flagged using an analysis of CO column measurements from the AIRS satellite.
   %The effects of African and South American biomass burning are apparent during the austral autumn and winter months.
@@ -92,7 +100,6 @@
   Despite lingering uncertainties in scaling ozonesonde measurements to regional values, ozonesonde datasets provide a useful tool for STT detection, and the analysis methods described in this paper could be applied to many existing long-term records.
 }\DIFdelend 
 
-  
 \end{abstract}
 
 \introduction  %% \introduction[modified heading if necessary]
@@ -166,7 +173,7 @@ and references therein)}\DIFdelend \DIFaddbegin \DIFadd{\mbox{%DIFAUXCMD
 .
   }\DIFaddend They are also observed near cut-off lows \citep{Price1993, Wirth1995}, so both regional weather patterns and stratospheric mixing are important to understand for STT analysis.
 
-  %DIF >  TODO: small review of transport literature
+  %DIF >  small review of transport literature
   \DIFaddbegin \DIFadd{Stratospheric ozone intrusions undergo transport and mixing, with up to half of the ozone diffusing within 12 hours following descent from the upper troposphere \mbox{%DIFAUXCMD
 \citep{Trickl2014}}%DIFAUXCMD
 .
@@ -205,7 +212,7 @@ also shows how STT advection can transport stratospheric air over long distances
   \DIFdelbegin \DIFdel{In Section 2 we describe }\DIFdelend \DIFaddbegin \DIFadd{Section \ref{sec:DataMethods} describes }\DIFaddend the observations and \DIFdelbegin \DIFdel{the }\DIFdelend methods used to identify STT events and to relate STT occurrence to meteorological events. 
   \DIFdelbegin \DIFdel{Section 3 provides our newly derived climatologies of STT frequency, seasonality}\DIFdelend \DIFaddbegin \DIFadd{We describe how possible biomass burning smoke plume influence is detected and handled, and we introduce the GEOS-Chem model which is used for ozone flux estimation.
   Section \ref{sec:eventclimatologies} describes the seasonality, altitude}\DIFaddend , \DIFdelbegin \DIFdel{intrusion altitude, and }\DIFdelend depth, and \DIFdelbegin \DIFdel{Section 4 uses these new climatologies to evaluate upper tropospheric ozone in a global chemical transport model (}\DIFdelend \DIFaddbegin \DIFadd{frequency of detected STT events, along with a comparison of our findings to other literature where possible. 
-  Section \ref{sec:ModelComparison} analyses at how well }\DIFaddend GEOS-Chem \DIFdelbegin \DIFdel{). 
+  Section \ref{sec:ModelComparison} analyses how well }\DIFaddend GEOS-Chem \DIFdelbegin \DIFdel{). 
   }\DIFdelend \DIFaddbegin \DIFadd{captures the tropospheric ozone seasonality and quantity near our three sites.
   Section \ref{sec:STTevents} uses the STT detection frequencies along with GEOS-Chem monthly tropospheric ozone columns to estimate STT ozone flux near our three sites. 
   We also compare and contrast our results against relevant literature. 
@@ -236,15 +243,15 @@ also shows how STT advection can transport stratospheric air over long distances
 
     \DIFaddend Ozonesondes are launched approximately weekly from Melbourne (38$^{\circ}$ S, 145$^{\circ}$ E), Macquarie Island (55$^{\circ}$ S, 159$^{\circ}$ E) and Davis (69$^{\circ}$ S, 78$^{\circ}$ E)\DIFdelbegin \DIFdel{. 
     }\DIFdelend \DIFaddbegin \DIFadd{, as shown in Fig. \ref{fig:ComparisonRegion}. 
-    Melbourne, a major city in the south east of Australia.
+    Melbourne is a major city in the south east of Australia, and may be affected by anthropogenic pollution in the lower troposphere.
     Macquarie Island is isolated from the Australian mainland, situated in the remote Southern Ocean and unlikely to be affected by any local pollution events.
     Davis is on the coast of Antarctica and also unlikely to experience the effects of anthropogenic pollution.
     %DIF > Melbourne, a major city with more than 4 million residents \citep{ABS2016}, is in the far south eastern section of the Australian mainland.% Actual releases are north of the central business district in the Broadmeadows suburb.
     }
 
-    \DIFaddend For this study, we use the 2004-2013 data for Melbourne and Macquarie \DIFaddbegin \DIFadd{Island }\DIFaddend and the 2006-2013 data for Davis because both ozone and geopotential height (GPH) profiles were measured during these periods.
+    \DIFaddend For this study, we use the 2004-2013 data for Melbourne and Macquarie \DIFaddbegin \DIFadd{Island }\DIFaddend and the 2006-2013 data for Davis because both ozone and geopotential height (GPH) \DIFdelbegin \DIFdel{profiles were measured during }\DIFdelend \DIFaddbegin \DIFadd{are available from the World Ozone and Ultraviolet Data Centre archived data in }\DIFaddend these periods.
     At Davis, ozonesondes are launched twice as frequently during the ozone hole season and preceding months (June-October) as at other times of year \citep{Alexander2013}.
-    A summary of ozonesondes at each site can be seen in Table \ref{table:sondesummary}.
+    A summary of \DIFdelbegin \DIFdel{ozonesondes }\DIFdelend \DIFaddbegin \DIFadd{ozonesonde releases }\DIFaddend at each site can be seen in Table \ref{table:sondesummary}.
 
     \begin{table}[t]
       \caption{Number of sonde releases at each site over the period of analysis.}
@@ -297,7 +304,7 @@ also shows how STT advection can transport stratospheric air over long distances
     % figure produced in seasonal_tropopause in Examine_stations.py
       \includegraphics[width=10cm]{figures/tpheights.png}
       \caption{%
-	Multi-year monthly median tropopause altitude (\DIFdelbeginFL \DIFdelFL{minimum of lapse rate and }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{using the }\DIFaddendFL ozone defined tropopause) determined from ozonesondes measurements at Melbourne (2004-2013), Macquarie \DIFaddbeginFL \DIFaddFL{Island }\DIFaddendFL (2004-2013) and Davis (2006-2013) (solid lines).
+	Multi-year monthly median tropopause altitude (\DIFdelbeginFL \DIFdelFL{minimum of lapse rate and }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{using the }\DIFaddendFL ozone defined tropopause) determined from ozonesondes measurements at \DIFdelbeginFL \DIFdelFL{Melbourne }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{Davis }\DIFaddendFL (\DIFdelbeginFL \DIFdelFL{2004-2013}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{2006-2013}\DIFaddendFL ), Macquarie \DIFaddbeginFL \DIFaddFL{Island }\DIFaddendFL (2004-2013)\DIFaddbeginFL \DIFaddFL{, }\DIFaddendFL and \DIFdelbeginFL \DIFdelFL{Davis }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{Melbourne }\DIFaddendFL (\DIFdelbeginFL \DIFdelFL{2006-2013}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{2004-2013}\DIFaddendFL ) (solid lines).
 	\DIFdelbeginFL \DIFdelFL{Vertical shading shows }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{Dashed lines show }\DIFaddendFL the 10th to the 90th percentile of tropopause altitude for each site.}
       \label{fig:seasonaltpheights}
     \end{figure}
@@ -309,7 +316,7 @@ also shows how STT advection can transport stratospheric air over long distances
     \DIFdelbegin \DIFdel{This seasonality at the high latitude sites is driven by a decrease in photochemical destruction under the reduced radiation conditions around polar night.
     %DIF <  (TODO: read and cite S. Oltmans antarctic papers - re Andrews comment)... Can't find paper.
     }\DIFdelend %DIF > This seasonality at the high latitude sites is driven by a decrease in photochemical destruction under the reduced radiation conditions around polar night. % (TODO: read and cite S. Oltmans antarctic papers - re Andrews comment)... Can't find paper.
-    \DIFaddbegin \DIFadd{The seasonality shown in Fig. \ref{fig:seasonaltropozone} is consistent with remote free tropospheric photochemistry determined by solar radiation availability and temperature, resulting in higher ozone in winter \mbox{%DIFAUXCMD
+    \DIFaddbegin \DIFadd{The seasonality shown in Fig. \ref{fig:seasonaltropozone} for Davis is consistent with remote free tropospheric photochemistry determined by solar radiation availability and temperature, resulting in higher ozone in winter \mbox{%DIFAUXCMD
 \citep{Lelieveld2000}}%DIFAUXCMD
 .
     NO$_2$ stratospheric observations have been conducted in the Southern hemisphere at Lauder, Macquarie Island and Arrival Heights \mbox{%DIFAUXCMD
@@ -373,11 +380,11 @@ to retain these small vertical scales, }\DIFaddend between 0.5~km and 5~km (remo
     \DIFaddbegin \DIFadd{The high frequency perturbations are removed as they may represent noise in the measurements.
     The perturbations with scales longer than 5~km represent the vertical gradient of ozone concentration from the surface to the stratosphere.
     }\DIFaddend In what follows, these filtered vertical profiles are referred to as perturbation profiles.
-    \DIFaddbegin 
+    \DIFdelbegin \DIFdel{The choice of band limits was set empirically in order to remove the slow positive gradient of ozone over altitude as well as any measurement noise.
+    }\DIFdelend \DIFaddbegin 
 
-    \DIFaddend The choice of band limits was set empirically in order to remove the slow positive gradient of ozone over altitude as well as any measurement noise.
-    For an event to qualify as STT, a clear increase above the background ozone level is needed, \DIFdelbegin \DIFdel{and we find that }\DIFdelend \DIFaddbegin \DIFadd{as }\DIFaddend a bandpass filter \DIFdelbegin \DIFdel{removes seasonal-scale }\DIFdelend \DIFaddbegin \DIFadd{leaves us with enhancements minus any noise or seasonal scale vertical profile }\DIFaddend effects.
-    The 0.5~km scale limit is set in order to remove any spikes of ozone which could be considered noise.
+    \DIFaddend For an event to qualify as STT, a clear increase above the background ozone level is needed, \DIFdelbegin \DIFdel{and we find that }\DIFdelend \DIFaddbegin \DIFadd{as }\DIFaddend a bandpass filter \DIFdelbegin \DIFdel{removes seasonal-scale effects.
+    The 0.5~km scale limit is set in order to remove any spikes of ozone which could be considered noise }\DIFdelend \DIFaddbegin \DIFadd{leaves us with enhancements minus any noise or seasonal scale vertical profile effects}\DIFaddend .
     We next use all the perturbation profiles at each site to calculate the \DIFdelbegin \DIFdel{99th }\DIFdelend \DIFaddbegin \DIFadd{95th }\DIFaddend percentile perturbation value for the site.
     \DIFaddbegin \DIFadd{The threshold is calculated from all the interpolated filtered values between 2~km above the surface and 1~km below the tropopause.
     }\DIFaddend This is our threshold for tropospheric ozone perturbations, and any profiles with perturbations exceeding this value in individual ozonesondes are classified as STT events.
@@ -648,11 +655,11 @@ to retain these small vertical scales, }\DIFaddend between 0.5~km and 5~km (remo
   }\DIFdelend \DIFaddbegin \DIFadd{, which can be seen as the prevalent feature over Australia in their Fig. 5.
   \mbox{%DIFAUXCMD
 \cite{Wauben1998} }%DIFAUXCMD
-look at modelled (CTM driven by ECMWF output) and measured ozone distributions and find more SH ozone in the lower troposphere during Austral winter, however they note that the ECMWF fields are uncertain here again due to lack of measurements.
+look at modelled (CTM driven by ECMWF output) and measured ozone distributions and find more SH ozone in the lower troposphere during austral winter, however they note that the ECMWF fields are uncertain here again due to lack of measurements.
   Their work shows a generally cleaner lower troposphere in the SH summer but this can not be construed to suggest more or less STT folds in either season.
   \mbox{%DIFAUXCMD
 \cite{Sprenger2003} }%DIFAUXCMD
-examine modelled STT folds using ECMWF output over March 2000 - April 2001, and show that for this year there is a clear Austral winter maximum, again over the 20$^{\circ}$~S to 40$^{\circ}$~S band.
+examine modelled STT folds using ECMWF output over March 2000 - April 2001, and show that for this year there is a clear austral winter maximum, again over the 20$^{\circ}$~S to 40$^{\circ}$~S band.
   The winter maximum does not include Melbourne, or the southern ocean, which explains why we see a seasonality not readily evident in these global-scale studies.
   }\DIFaddend 
 
@@ -663,17 +670,20 @@ examine modelled STT folds using ECMWF output over March 2000 - April 2001, and 
   }
 
   \DIFaddend To examine the robustness of the distributions shown in Fig. \ref{fig:SummarySeasonality}, we developed an alternative assessment of the seasonal occurrence of STT events, with results shown in Fig. \ref{fig:AndrewProxySTT}.
-  Here STT occurrence is evaluated by consideration of the square of the dry \DIFdelbegin \DIFdel{Brunt-Viäsälä }\DIFdelend \DIFaddbegin \DIFadd{Brunt-V\"{a}is\"{a}l\"{a} }\DIFaddend frequency (N$^2$) at the heights of the ozone tropopause (z$_{OT}$) and lapse rate tropopause (z$_{LRT}$) in each ozonesonde profile that has been binned to 500~m resolution.
+  Here STT occurrence is evaluated by consideration of the square of the dry \DIFdelbegin \DIFdel{Brunt-Viäsälä }\DIFdelend \DIFaddbegin \DIFadd{Brunt-V\"{a}is\"{a}l\"{a} }\DIFaddend frequency (N$^2$) at the heights of the ozone tropopause (z$_{OT}$) and lapse rate tropopause (z$_{LRT}$) in each ozonesonde profile that has been binned to \DIFdelbegin \DIFdel{500}\DIFdelend \DIFaddbegin \DIFadd{100}\DIFaddend ~m resolution.
   We use N$^2$ to assess atmospheric stability, which is normally distinctly higher in the stratosphere than in the troposphere, and assume that the vertical temperature gradients within the intrusion respond most rapidly to transported heat, which is an additional characteristic of stratospheric air.
-  The altitude binning chosen is a compromise between vertical resolution and the level of variability in N$^2$ introduced by temperature gradients associated with perturbations from gravity waves and changes near the lapse rate tropopause, and is the minimum that produces a robust seasonal distribution.
+  \DIFaddbegin \DIFadd{N$^2$ is evaluated using 250~m resolution data (to smooth variability in the vertical gradient of potential temperature that is due to small temperature fluctuations likely associated with gravity waves).
+  }\DIFaddend The altitude binning chosen is a compromise between vertical resolution and the level of variability in N$^2$ introduced by temperature gradients associated with perturbations from gravity waves and changes near the lapse rate tropopause, and is the minimum that produces a robust seasonal distribution.
   We define STT as having taken place if N$^2$(z$_{OT}$) $>$ N$^2$(z$_{LRT}$) and z$_{OT}$ $<$ z$_{LRT}$; in this way the characteristically higher static stability and ozone concentration of stratospheric intrusion is regarded as being retained as it penetrates below the lapse rate tropopause. 
-  The seasonal distributions shown for the three stations in Fig. \ref{fig:AndrewProxySTT} are generally similar to those shown in Fig. \ref{fig:SummarySeasonality} (although detected events are less frequent), with the main exception that no events are identified with the alternative method at Davis in the first half of the year.
-  From December to June, ozonesondes are generally only launched monthly at Davis, and the lack of STT events in these months for Davis potentially reflects the fewer measurement opportunities.
+  The seasonal distributions shown for the three stations in Fig. \ref{fig:AndrewProxySTT} are generally similar to those shown in Fig. \ref{fig:SummarySeasonality} (although detected events are less frequent), with the main exception that \DIFdelbegin \DIFdel{no }\DIFdelend \DIFaddbegin \DIFadd{very few }\DIFaddend events are identified with the alternative method at Davis in the first half of the year.
+  \DIFdelbegin \DIFdel{From December to June, ozonesondes are generally only launched monthly at Davis }\DIFdelend \DIFaddbegin \DIFadd{For our STT proxy, we only detect intrusions where the lowest altitude of the intrusion satisfies the ozone tropopause definition. During summer and autumn, the vertical ozone gradients at Davis are weaker compared with the other seasons}\DIFaddend , and the \DIFdelbegin \DIFdel{lack of STT events in these months for Davis potentially reflects the fewer measurement opportunities}\DIFdelend \DIFaddbegin \DIFadd{detected ozone tropopause tends to lie above the lapse rate tropopause potentially reducing the ability to identify STT events based on the definition of our proxy}\DIFaddend .
 
   \begin{figure}[t]
     % Figure from Andrew Klekociuk data, plotted in examinestations.py
-    \includegraphics[width=10cm]{figures/AndrewProxySTT.png}
-    \caption{Seasonal distribution of STT events using the alternative STT proxy, obtained from consideration of the static stability at the ozone and lapse rate tropopauses, for Davis (2003-2012), Macquarie Island (1994-2012) and Melbourne (1999-2012).}
+    \DIFdelbeginFL %DIFDELCMD < \includegraphics[width=10cm]{figures/AndrewProxySTT.png}
+%DIFDELCMD <     %%%
+\DIFdelendFL \DIFaddbeginFL \includegraphics[width=10cm]{figures/AndrewProxySTTV2.png}
+    \DIFaddendFL \caption{Seasonal distribution of STT events using the alternative STT proxy, obtained from consideration of the static stability at the ozone and lapse rate tropopauses, for Davis (\DIFdelbeginFL \DIFdelFL{2003-2012}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{2006-2013}\DIFaddendFL ), Macquarie Island (\DIFdelbeginFL \DIFdelFL{1994-2012}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{2004-2013}\DIFaddendFL )\DIFaddbeginFL \DIFaddFL{, }\DIFaddendFL and Melbourne (\DIFdelbeginFL \DIFdelFL{1999-2012}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{2004-2013}\DIFaddendFL ).}
     \label{fig:AndrewProxySTT}
   \DIFdelbeginFL %DIFDELCMD < 
 
@@ -704,7 +714,7 @@ examine modelled STT folds using ECMWF output over March 2000 - April 2001, and 
     \label{fig:SummaryTPDepths}    
   \end{figure}
 
-\section{Simulation of southern \DIFdelbegin \DIFdel{mid-latitude }\DIFdelend \DIFaddbegin \DIFadd{regions of }\DIFaddend ozone columns}
+\section{Simulation of \DIFdelbegin \DIFdel{southern mid-latitude }\DIFdelend ozone columns}
   \DIFdelbegin %DIFDELCMD < 
 
 %DIFDELCMD <   %%%
@@ -963,12 +973,13 @@ show an estimate of roughly 40 to 150~kg km$^{-2}$ month$^{-1}$ in these regions
     \DIFadd{This result disagrees with several other studies which }\DIFaddend have found STT ozone fluxes in the SH \DIFdelbegin \DIFdel{extratropics }\DIFdelend \DIFaddbegin \DIFadd{extra-tropics }\DIFaddend are largest from autumn or winter to early spring\DIFdelbegin \DIFdel{\mbox{%DIFAUXCMD
 \citep{Olsen2003, Liu2016}}%DIFAUXCMD
 .
-    At this time of year, we find the highest tropospheric $\Omega_{O3}$ but a relatively low STT fluxdue to reduced event frequency (Fig.
+    At this time of year, we find the highest tropospheric $\Omega_{O3}$ but a relatively low STT flux due to reduced event frequency (Fig.
     \ref{fig:SOExtrapolation}).
   Our results suggest instead }\DIFdelend \DIFaddbegin \DIFadd{.
     \mbox{%DIFAUXCMD
 \cite{Roelofs1997} }%DIFAUXCMD
-use a model with a stratospheric ozone tracer to estimate STT impacts, they see higher SH tropospheric ozone concentrations, as well as STT flux, in the SH winter.
+use a model with a stratospheric ozone tracer to estimate STT impacts. 
+    They see higher SH tropospheric ozone concentrations, as well as STT flux, in the SH winter.
     Our model also shows ozone column amounts peaking in winter, however flux is maximised in summer due to our detected event frequencies.
     %DIF >  Note: Roelofs model suggested equal trop o3 contribution from STT and production...
     \mbox{%DIFAUXCMD
@@ -988,7 +999,6 @@ model the upper tropospheric ozone and its source (emissions/lightning/stratosph
     %DIF < It is worth noting that the 30$^{\circ}$ S to 60$^{\circ}$ S latitudes describe the Ferrel cell, while our region of analysis also includes some of the Polar cell.
   }\DIFdelend \DIFaddbegin \DIFadd{difficult to compare remote ozonesonde datasets with area averaged models or re-analyses based on non-co-located measurements (such as ERA).
     }\DIFaddend 
-
 
 \DIFdelbegin %DIFDELCMD < \begin{figure*}[t]
 %DIFDELCMD <     %%%
@@ -1011,7 +1021,7 @@ model the upper tropospheric ozone and its source (emissions/lightning/stratosph
   \subsection{\DIFadd{Event detection}}
     \DIFadd{Our method uses several subjectively-defined quantities in the process of STT event detection.
     Here we briefly discuss these quantities and the sensitivity of the method to each.
-    Using the algorithm discussed in Sect. \ref{sec:CharacterisationOfSTTs}, we detect 46 events at Davis, 47 (+8 fire influenced) events at Macquarie Island, and 73 (+14 fire influenced) events at Melbourne.
+    Using the algorithm discussed in Sect. \ref{sec:CharacterisationOfSTTs}, we detect 80 events at Davis, 105 (21 fire influenced) events at Macquarie Island, and 127 (27 fire influenced) events at Melbourne.
     }\DIFaddend 
 
     \DIFdelbegin \DIFdel{Summing the monthly estimated fluxes shown in Fig. \ref{fig:SOExtrapolation} over the year, we find from this estimate that STT events may be responsible for at least $3.1 \times10^{16}$~molecules cm$^{-2}$ yr$^{-1}$ of the tropospheric ozone over the Southern Ocean, equivalent to 2.48~Tg yr$^{-1}$.
@@ -1023,10 +1033,9 @@ and net downward STT fluxes of 75~Tg yr$^{-1}$ \mbox{%DIFAUXCMD
 .
     Our value would suggest only $\sim$3.3\% of this global net downward flux can be attributed to STT events in }\DIFdelend \DIFaddbegin \DIFadd{The cut-off threshold (defined separately for each site) is determined from }\DIFaddend the \DIFdelbegin \DIFdel{Southern Ocean region, a contribution that is likely too low.
     This result is only marginally sensitive to the latitude range chosen to represent the Southern Ocean (35$^{\circ}$ S-75$^{\circ}$ S): changing this range by }\DIFdelend \DIFaddbegin \DIFadd{95th percentile of the ozone perturbation profiles between 2~km above the earth's surface and 1~km below the tropopause.
-    We use the 95th percentile because at this point the filter locates clear events with fewer than }\DIFaddend 5\DIFdelbegin \DIFdel{$^{\circ}$ in either direction at either end of the range changes $\Omega_{SO_{O_3}}$ by -7 to +9\% }\DIFdelend \DIFaddbegin \DIFadd{\% obvious false positive detections.
-    Event detection is sensitive to this choice; for example, using the 96th, and 97th percentile instead decreased detected events by 2}\DIFaddend , \DIFdelbegin \DIFdel{with even smaller impacts on the overall flux .
-  As discussed in }\DIFdelend \DIFaddbegin \DIFadd{9 (2,10\%) at Davis, 13, 31 (11, 28\%) at Macquarie Island, and 8, 24 (6, 18\%) at Melbourne.
-    Event detection is therefore also sensitive to the range over which the percentile is calculated (2~km above the earth's surface to 1~km below the tropopause).
+    We use the 95th percentile because at this point the filter locates clear events with fewer than }\DIFaddend 5\DIFdelbegin \DIFdel{$^{\circ}$ in either direction at either end of the range changes $\Omega_{SO_{O_3}}$ by -7 to +}\DIFdelend \DIFaddbegin \DIFadd{\% obvious false positive detections.
+    Event detection is sensitive to this choice; for example, using the 96th, and 97th percentile instead decreased detected events by 2, }\DIFaddend 9 \DIFdelbegin \DIFdel{\%, with even smaller impacts on the overall flux }\DIFdelend \DIFaddbegin \DIFadd{(2,10\%) at Davis, 13, 31 (11, 28\%) at Macquarie Island, and 8, 24 (6, 18\%) at Melbourne.
+    Event detection is therefore also sensitive to the range over which the percentile is calculated.
     This range was chosen to remove anomalous edge effects of the Fourier bandpass filter and to discount the highly variable ozone concentration which occurs near the tropopause.
     }
 
@@ -1051,8 +1060,8 @@ and net downward STT fluxes of 75~Tg yr$^{-1}$ \mbox{%DIFAUXCMD
     The overall uncertainty as a percentage is shown in parentheses in Table \ref{table:extrapolationResults}, these values are on the order of 100\%, largely due to relative uncertainty in the $I$ factor which ranges from 50-120\% for each month.
     }
 
-    \DIFadd{Small changes in the region don't have a large affect on the per area flux calculations, with an increasing or decreasing the regions by 1$^{\circ}$ on each side ($\sim 10\%$ change in area) changing the resulting flux by $\sim 1\%$. %DIF >  units of ~Kg cm$^{-2}$.
-    However due to the large portion of winter STT events being flagged due to potential smoke plume influence, a significant change in the yearly flux is seen when we don't remove these events.
+    \DIFadd{Small changes in the region don't have a large affect on the per area flux calculations: increasing or decreasing the regions by 1$^{\circ}$ on each side ($\sim 10\%$ change in area) change the resulting flux by $\sim 1\%$}\DIFaddend . \DIFdelbegin \DIFdel{As discussed in }\DIFdelend %DIF >  units of ~Kg cm$^{-2}$.
+    \DIFaddbegin \DIFadd{However due to the large portion of winter STT events being flagged due to potential smoke plume influence, a significant change in the yearly flux is seen when we don't remove these events.
     Without removing smoke flagged events we see an increase in estimated yearly flux of $\sim 1.1, 2.1 \times 10^{17} $~molecules cm$^{-2}$ yr$^{-1}$ (which is a change of $\sim 15, 20\%$), over Macquarie Island and Melbourne respectively.
     }
 
@@ -1106,12 +1115,13 @@ estimated that this number was closer }\DIFdelend \DIFaddbegin \DIFadd{.
     \DIFaddbegin \DIFadd{Other possibly important uncertainties in our calculation of STT flux which we don't cover are listed here.
     Filtering events which occur within 500~m of the tropopause may also lead to more false negatives.
     This could also cause lower impact estimates due to only measuring ozone enhancements which have descended and potentially slightly dissipated.
-    On the other hand we have no measure of how often or likely the detached ozone intrusion reascends into the stratosphere, which would lead to a reduced stratospheric impact.
+    On the other hand we have no measure of how often the detached ozone intrusion reascends into the stratosphere, which would lead to a reduced stratospheric impact.
     The estimated tropospheric ozone columns modelled by GEOS-Chem may be biased, for instance \mbox{%DIFAUXCMD
 \cite{Hu2017} }%DIFAUXCMD
 suggest that in general GEOS-Chem (with GEOS-5 met. fields) underestimates STT, with $\sim 360$~Tg a$^{-1}$ simulated globally, compared to $\sim 550$~Tg a$^{-1}$ observationally constrained.
     Transport uncertainty is very difficult to estimate with the disparate point measurements; it's possible that detected events are (at least partially) advected out of the analysis regions, which would mean we overestimate the influx into the region, and it is also possible that we are influenced by STT events outside the regions of analysis.
-    Uncertainty in event longevity is set to 50\%, however this implies a very simplistic model of event lifetimes, a great deal of work could be done to properly model the regional event lifetimes however this is beyond the scope of our work.
+    Uncertainty in event longevity is set to 50\%, however this implies a very simplistic model of event lifetimes. 
+    A great deal of work could be done to properly model the regional event lifetimes, however this is beyond the scope of our work.
   }
 
     \DIFadd{Uncertainties in STT ozone flux detection are ($\sim 100\%$), and could be directly improved with larger or longer datasets.
@@ -1135,22 +1145,20 @@ By setting empirically-derived \DIFdelbegin \DIFdel{threshholds}\DIFdelend \DIFa
 Our method is sensitive to various parameters involved in the calculation; however, for our sites we saw \DIFdelbegin \DIFdel{no }\DIFdelend \DIFaddbegin \DIFadd{few }\DIFaddend false positive detections of STT events.
 
 Detected STT events at three sites spanning the SH extra-tropics (38$^{\circ}$S, 55$^{\circ}$S, and 69$^{\circ}$S) showed a distinct seasonal cycle.
-All three sites displayed a summer (DJF) maximum and winter (JJA) minimum, although the seasonal amplitude was less apparent at the Antarctic site (Davis) as events were also detected regularly in winter and spring (likely due to polar jet stream-caused turbulence).  %The cause of these ozone enhancements is examined through the use of satellite CO data (to determine fire influence) and ERA-I meteorological data.
+All three sites displayed a summer (DJF) maximum and \DIFdelbegin \DIFdel{winter (JJA}\DIFdelend \DIFaddbegin \DIFadd{an autumn to winter (AMJJA}\DIFaddend ) minimum, although the seasonal amplitude was less apparent at the Antarctic site (Davis) as events were also detected regularly in winter and spring (likely due to polar jet stream-caused turbulence).
+%DIF < The cause of these ozone enhancements is examined through the use of satellite CO data (to determine fire influence) and ERA-I meteorological data.
 \DIFdelbegin \DIFdel{Comparison with }\DIFdelend \DIFaddbegin \DIFadd{Analysis of }\DIFaddend ERA-Interim reanalysis data suggested the majority of events were caused by turbulent weather in the upper troposphere due to low pressure fronts, followed by cut-off low pressure systems.
 Comparison of ozonesonde-measured ozone profiles against those simulated by the GEOS-Chem global chemical transport model showed the model is able to reproduce seasonal features but does not have sufficient vertical resolution to distinguish STT events.
 %The seasonal features in the ozonesonde record of tropospheric ozone columns are well represented by the model.
 %Simulated profiles generally can not identify STT events due to their lower vertical resolution.
 
-By combining the simulated tropospheric column ozone from GEOS-Chem with ozonesonde-derived STT estimates, we \DIFdelbegin \DIFdel{provided }\DIFdelend \DIFaddbegin \DIFadd{provide }\DIFaddend a first estimate of the total contribution of STT events to tropospheric ozone \DIFdelbegin \DIFdel{over the Southern Ocean}\DIFdelend \DIFaddbegin \DIFadd{in these southern extra-tropical regions}\DIFaddend .
-We conservatively estimated that the ozone enhancement due to STT events \DIFdelbegin \DIFdel{at }\DIFdelend \DIFaddbegin \DIFadd{near }\DIFaddend our three sites ranges from \DIFdelbegin \DIFdel{$1$-$6 \times 10^{16}$ molecules cm}\DIFdelend \DIFaddbegin \DIFadd{300-570~kg km}\DIFaddend $^{-2}$ \DIFdelbegin \DIFdel{.
+By combining the simulated tropospheric column ozone from GEOS-Chem with ozonesonde-derived STT estimates, we \DIFdelbegin \DIFdel{provided }\DIFdelend \DIFaddbegin \DIFadd{provide }\DIFaddend a first estimate of the total contribution of STT events to tropospheric ozone \DIFdelbegin \DIFdel{over the Southern Ocean.
+We conservatively estimated }\DIFdelend \DIFaddbegin \DIFadd{in these southern extra-tropical regions.
+We estimate }\DIFaddend that the ozone enhancement due to STT events \DIFdelbegin \DIFdel{at }\DIFdelend \DIFaddbegin \DIFadd{near }\DIFaddend our three sites ranges from \DIFdelbegin \DIFdel{$1$-$6 \times 10^{16}$ molecules cm}\DIFdelend \DIFaddbegin \DIFadd{300-570~kg km}\DIFaddend $^{-2}$ \DIFdelbegin \DIFdel{.
 This method implies that STT events can only explain $\sim$3\% of the global net downward flux of ozone, avalue that is likely too low.
 Replacing the sonde-derived estimate of the ozone fraction associated with each STT event with a value derived from a global model \mbox{%DIFAUXCMD
 \citep{Terao2008} }%DIFAUXCMD
-increases this estimate by an order of magnitude.
-}\DIFdelend \DIFaddbegin \DIFadd{a$^{-1}$, with seasonal maximum in SH summer.
-%DIF > This method implies that STT events can only explain $\sim$3\% of the global net downward flux of ozone, a value that is likely too low.
-%DIF > Replacing the sonde-derived estimate of the ozone fraction associated with each STT event with a value derived from a global model \citep{Terao2008} increases this estimate by an order of magnitude.
-}\DIFaddend 
+increases this estimate by an order of magnitude}\DIFdelend \DIFaddbegin \DIFadd{a$^{-1}$, with seasonal maximum in SH summer}\DIFaddend .
 
 Estimating STT flux using ozonesonde data alone remains challenging; however, the very high vertical resolution provided by ozonesondes means they are capable of detecting STT events that models, \DIFdelbegin \DIFdel{reanalyses}\DIFdelend \DIFaddbegin \DIFadd{re-analyses}\DIFaddend , and satellites may not. 
 Further work is needed to more accurately translate these ozonesonde measurements into STT ozone fluxes, particularly in the SH where data are sparse and STT is likely to be a major contributor to upper tropsopheric ozone in some regions.
@@ -1165,7 +1173,10 @@ More frequent ozonesonde releases at SH sites \DIFdelbegin \DIFdel{would }\DIFde
 \appendixfigures  %% needs to be added in front of appendix figures in one-column style (\documentclass[acp, manuscript]{copernicus})
 \appendixtables   %% needs to be added in front of appendix tables in one-column style (\documentclass[acp, manuscript]{copernicus})
 
-\authorcontribution{JG wrote the algorithms, ran the GEOS-Chem simulations, performed the analysis and led the writing of the paper under the supervision and guidance of SPA, RS, and JAF. AK contributed the Davis ozonesonde data and performed the analysis of the alternate STT proxy. All authors contributed to editing and revising the manuscript.}
+\DIFdelbegin %DIFDELCMD < \authorcontribution{JG wrote the algorithms, ran the GEOS-Chem simulations, performed the analysis and led the writing of the paper under the supervision and guidance of SPA, RS, and JAF. AK contributed the Davis ozonesonde data and performed the analysis of the alternate STT proxy. All authors contributed to editing and revising the manuscript.}
+%DIFDELCMD < %%%
+\DIFdelend \DIFaddbegin \authorcontribution{JWG wrote the algorithms, ran the GEOS-Chem simulations, performed the analysis and led the writing of the paper under the supervision and guidance of SPA, RS, and JAF. AK contributed the Davis ozonesonde data and performed the analysis of the alternate STT proxy. All authors contributed to editing and revising the manuscript.}
+\DIFaddend 
 
 %DIF <  Authored and edited this manuscript, as well as analysing the datasets, under the supervision of Dr. Alexander, Dr. Fisher, and Dr. Schofield.
 %DIF < Mr. Greenslade ran GEOS-Chem and analysed the output.
@@ -1185,90 +1196,98 @@ More frequent ozonesonde releases at SH sites \DIFdelbegin \DIFdel{would }\DIFde
 \textit{Data availability.} All GEOS-Chem model output and the ozonesonde observational data are available from the authors upon request.
 
 \begin{acknowledgements}
-We thank \DIFdelbegin \DIFdel{the }\DIFdelend \DIFaddbegin \DIFadd{Dr. Sandy Burden for help clarifying some of the uncertainties involved in methods within this work.
-We thank the }\DIFaddend Australian Bureau of Meteorology and the Australian Antarctic Division for providing the ozonesonde data. 
+We thank \DIFdelbegin \DIFdel{the Australian Bureau of Meteorology and the Australian Antarctic Division for providing the ozonesonde data }\DIFdelend \DIFaddbegin \DIFadd{Dr. Sandy Burden for help clarifying some of the uncertainties involved in methods within this work.
+We also thank Dr. Clare Paton-Walsh, who identified the need to account for smoke-influenced events, and provided discussions on how to go about doing such.
+Ozonesonde data comes from the World Ozone and Ultraviolet Data Centre (WOUDC)}\DIFaddend .
 The ERA-Interim data were downloaded from the ECMWF website following registration.
 This \DIFdelbegin \DIFdel{work was commenced with support from the Australian Department of the Environment summer ozone science scholarship and partly supported by research project 4012 of the Australian Antarctic Programme.
 This research }\DIFdelend \DIFaddbegin \DIFadd{research }\DIFaddend was undertaken with the assistance of resources provided at the NCI National Facility systems at the Australian National University through the National Computational Merit Allocation Scheme supported by the Australian Government.
 This work was supported through funding by the Australian Government's Australian Antarctic science grant program (FoRCES 4012), the Australian Research Council's Centre of Excellence for Climate System Science (CE110001028), the Commonwealth Department of the Environment ozone summer scholar program.
-Dr. Clare Paton Walsh identified the need to account for smoke-influenced events, and provided discussions on how to go about doing such\DIFaddbegin \DIFadd{.
-This research is supported by an Australian Government Research Training Program (RTP) Scholarship}\DIFaddend .
-\end{acknowledgements}
+\DIFdelbegin \DIFdel{Dr.
+Clare Paton Walsh identified the need to account for smoke-influenced events, and provided discussions on how to go about doing such.
+}\DIFdelend \DIFaddbegin \DIFadd{This research is supported by an Australian Government Research Training Program (RTP) Scholarship.
+}\DIFaddend \end{acknowledgements}
 
 %% Since the Copernicus LaTeX package includes the BibTeX style file copernicus.bst,
 %% authors experienced with BibTeX only have to include the following two lines:
 %%
 \bibliographystyle{copernicus}
 \bibliography{bibliography/Ozone.bib}
-%%
-%% URLs and DOIs can be entered in your BibTeX file as:
-%%
-%% URL = {http://www.xyz.org/~jones/idx_g.htm}
-%% DOI = {10.5194/xyz}
+%DIF < %
+%DIF < % URLs and DOIs can be entered in your BibTeX file as:
+%DIF < %
+%DIF < % URL = {http://www.xyz.org/~jones/idx_g.htm}
+%DIF < % DOI = {10.5194/xyz}
+\DIFdelbegin %DIFDELCMD < 
 
+%DIFDELCMD < %%%
+%DIF < % LITERATURE CITATIONS
+%DIF < %
+%DIF < % command                        & example result
+%DIF < % \citet{jones90}|               & Jones et al. (1990)
+%DIF < % \citep{jones90}|               & (Jones et al., 1990)
+%DIF < % \citep{jones90,jones93}|       & (Jones et al., 1990, 1993)
+%DIF < % \citep[p.~32]{jones90}|        & (Jones et al., 1990, p.~32)
+%DIF < % \citep[e.g.,][]{jones90}|      & (e.g., Jones et al., 1990)
+%DIF < % \citep[e.g.,][p.~32]{jones90}| & (e.g., Jones et al., 1990, p.~32)
+%DIF < % \citeauthor{jones90}|          & Jones et al.
+%DIF < % \citeyear{jones90}|            & 1990
+%DIFDELCMD < 
 
-%% LITERATURE CITATIONS
-%%
-%% command                        & example result
-%% \citet{jones90}|               & Jones et al. (1990)
-%% \citep{jones90}|               & (Jones et al., 1990)
-%% \citep{jones90,jones93}|       & (Jones et al., 1990, 1993)
-%% \citep[p.~32]{jones90}|        & (Jones et al., 1990, p.~32)
-%% \citep[e.g.,][]{jones90}|      & (e.g., Jones et al., 1990)
-%% \citep[e.g.,][p.~32]{jones90}| & (e.g., Jones et al., 1990, p.~32)
-%% \citeauthor{jones90}|          & Jones et al.
-%% \citeyear{jones90}|            & 1990
+%DIFDELCMD < %%%
+%DIF < %% ONE-COLUMN TABLE
+%DIF < 
+%DIF < %t
+%DIF < \begin{table}[t]
+%DIF < \caption{TEXT}
+%DIF < \begin{tabular}{column = lcr}
+%DIF < \tophline
+%DIF < 
+%DIF < \middlehline
+%DIF < 
+%DIF < \bottomhline
+%DIF < \end{tabular}
+%DIF < \belowtable{} % Table Footnotes
+%DIF < \end{table}
+%DIF < 
+%DIF < %% TWO-COLUMN TABLE
+%DIF < 
+%DIF < %t
+%DIF < \begin{table*}[t]
+%DIF < \caption{TEXT}
+%DIF < \begin{tabular}{column = lcr}
+%DIF < \tophline
+%DIF < 
+%DIF < \middlehline
+%DIF < 
+%DIF < \bottomhline
+%DIF < \end{tabular}
+%DIF < \belowtable{} % Table Footnotes
+%DIF < \end{table*}
+%DIF < 
+%DIF < 
+%DIF < %% MATHEMATICAL EXPRESSIONS
+%DIF < 
+%DIF < %% All papers typeset by Copernicus Publications follow the math typesetting regulations
+%DIF < %% given by the IUPAC Green Book (IUPAC: Quantities, Units and Symbols in Physical Chemistry,
+%DIF < %% 2nd Edn., Blackwell Science, available at: http://old.iupac.org/publications/books/gbook/green_book_2ed.pdf, 1993).
+%DIF < %%
+%DIF < %% Physical quantities/variables are typeset in italic font (t for time, T for Temperature)
+%DIF < %% Indices which are not defined are typeset in italic font (x, y, z, a, b, c)
+%DIF < %% Items/objects which are defined are typeset in roman font (Car A, Car B)
+%DIF < %% Descriptions/specifications which are defined by itself are typeset in roman font (abs, rel, ref, tot, net, ice)
+%DIF < %% Abbreviations from 2 letters are typeset in roman font (RH, LAI)
+%DIF < %% Vectors are identified in bold italic font using \vec{x}
+%DIF < %% Matrices are identified in bold roman font
+%DIF < %% Multiplication signs are typeset using the LaTeX commands \times (for vector products, grids, and exponential notations) or \cdot
+%DIF < %% The character * should not be applied as mutliplication sign
+%DIFDELCMD < 
 
-%%% ONE-COLUMN TABLE
-%
-%%t
-%\begin{table}[t]
-%\caption{TEXT}
-%\begin{tabular}{column = lcr}
-%\tophline
-%
-%\middlehline
-%
-%\bottomhline
-%\end{tabular}
-%\belowtable{} % Table Footnotes
-%\end{table}
-%
-%%% TWO-COLUMN TABLE
-%
-%%t
-%\begin{table*}[t]
-%\caption{TEXT}
-%\begin{tabular}{column = lcr}
-%\tophline
-%
-%\middlehline
-%
-%\bottomhline
-%\end{tabular}
-%\belowtable{} % Table Footnotes
-%\end{table*}
-%
-%
-%%% MATHEMATICAL EXPRESSIONS
-%
-%%% All papers typeset by Copernicus Publications follow the math typesetting regulations
-%%% given by the IUPAC Green Book (IUPAC: Quantities, Units and Symbols in Physical Chemistry,
-%%% 2nd Edn., Blackwell Science, available at: http://old.iupac.org/publications/books/gbook/green_book_2ed.pdf, 1993).
-%%%
-%%% Physical quantities/variables are typeset in italic font (t for time, T for Temperature)
-%%% Indices which are not defined are typeset in italic font (x, y, z, a, b, c)
-%%% Items/objects which are defined are typeset in roman font (Car A, Car B)
-%%% Descriptions/specifications which are defined by itself are typeset in roman font (abs, rel, ref, tot, net, ice)
-%%% Abbreviations from 2 letters are typeset in roman font (RH, LAI)
-%%% Vectors are identified in bold italic font using \vec{x}
-%%% Matrices are identified in bold roman font
-%%% Multiplication signs are typeset using the LaTeX commands \times (for vector products, grids, and exponential notations) or \cdot
-%%% The character * should not be applied as mutliplication sign
-
-%%% PHYSICAL UNITS
-%%%
-%%% Please use \unit{} and apply the exponential notation
+%DIFDELCMD < %%%
+%DIF < %% PHYSICAL UNITS
+%DIF < %%
+%DIF < %% Please use \unit{} and apply the exponential notation
+\DIFdelend 
 
 
 \end{document}
