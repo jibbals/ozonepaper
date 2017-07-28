@@ -1,0 +1,50 @@
+﻿Report 1:
+In authors’ responses to my first review many of my comments have been addressed. I believe that the revised manuscript is improved both in terms of scientific approach and structure. Nevertheless, I still see place for comments. Moreover, I don’t see any improvement with the language usage in the revised version. I would recommend publication of the manuscript after the authors improve the readability of the manuscript and address the following minor comments.
+
+- Page 1, line 8: above all three sites -> for all three sites 
+- Page 1, line 9: from STT events -> owing to STT events 
+- Page 1, line 9: and Macquarie Island -> and Macquarie Island, respectively
+- Page 2, line 9: show stratospheric ozone -> show that stratospheric ozone
+- Page 2, line 21: Another important region of STT -> Another hotspot of STT
+- Page 2, lines 21-22: with 10 ppbv from STT contribution -> with a stratospheric contribution of 10 ppb 
+- Page 2, lines 32-33: “Lower stratospheric ... over the ocean”. Which ocean? Please rephrase.
+- Page 3, lines 5-7: Replace sentence with: “The summertime pool of high tropospheric ozone over the eastern Mediterranean (EM) is mainly attributed to the downward ozone transport, as a result of the enhanced subsidence (Zanis et al., 2014) and the tropopause fold activity (Akritidis et al., 2016) over the region.”
+- Page 3, line 7: frequently shows -> exhibits 
+- Page 3, line 7: stratospheric subsidence -> subsidence
+- Page 3, line 13: “shear upper tropospheric winds” -> “upper tropospheric wind shear” ?
+	This was meant to say just “upper tropospheric winds”, fixed in text. The wind shear was a potential driver of tropospheric mixing rather than transport (Trickl et al. 2014).
+- The “southern hemisphere” phrase is first seen at page 2, line 9. You should add the SH abbreviation there instead of the current position in the manuscript.
+- Page 3: “Section 2 describes”, “Section 3 describes”, “Section 4 analyses”: I suggest rephrasing these with “In Section 2 we describe..” or something similar.
+- Figure 1 caption: I suggest removing “which will be”.
+- Page 4, line 3: to 35 -> and up to 35
+- Page 4, line 4: make -> perform
+- Page 5, line 16: high tropopause values -> high tropopause height values
+- Page 5, line 17: lapse rate tropopauses -> lapse rate defined tropopause
+- PVU is the unit and potential vorticity (PV) the variable. Please replace at page 5 lines 18-20 “Another commonly used…Tyrlis et al., 2014).” with the following: “Another commonly used tropopause definition is determined with the use of PV (dynamical tropopause). In the extra-tropics the isosurface where PV=2 PVU (1 PVU= 10-6 m2 s-1 K kg-1) is often used to define the tropopause, allowing the 3D representation of tropopause folds and other tropopause features in a sufficiently resolved model (Škerlak et al., 2014; Tyrlis et al., 2014)”.
+- Page 5, line 20: The PVU-> PV
+- Page 11, line 18: ozone fold -> tropopause fold
+- Page 11, lines 19-20: “Their work seems.. ozonesonde measurements.” I don’t find any remarkable agreement between your findings and the findings by Skerlak et al. (2015) over Melbourne. In Skerlak et al. (2015) the fold frequency over Melbourne during DJF is 1-2% and during JJA is 0.5-1%, which in no case agrees with your findings (much higher STT frequency during DJF compared to JJA).
+	The agreement is very slight, and may be too subjective (since we are just looking closely at images rather than analysing their actual data)
+- Page 14, Figure 7 caption: STT event altitude -> STT events altitude
+- Page 15, Figure 8 caption: STT event depth -> STT events depth
+- Page 15, Section 4 title: I suggest using “Simulated ozone columns” instead of “Simulation of ozone columns”.
+- Page 16, line 14: and saw -> and found
+- Page 16, lines 14-15: when running with -> when using the
+- Page 19, lines 22-23: “(fluxi.. “. Close parenthesis. 
+- Page 20, line 31: use a model with stratospheric ozone tracer -> used a model carrying a tracer for stratospheric ozone
+- Page 21, Figure 12: Multiply with 100 the y axis values on the bottom figure in order to be the % fraction. 
+- Page 27, means they are capable -> suggests they are capable
+- Page 27, line 3: tropsopheric -> tropospheric
+- Supplement, Figure S1 caption: Melbourne ozone -> ozone over Melbourne
+
+
+Report 2:
+The authors performed a major revision of their manuscript, which lead to a significant improvement of the paper. Particularly they changed the method of calculating the ozone fluxes by also accounting for the duration of the events. This led to different values for the ozone flux. Therefore they could remove the rescaling of the event intensity by using the model results of Terao et al., (2008) to get a better agreement with other studies. The new estimates for ozone fluxes are in the range of other estimates (Skerlak et al., 2014) and are compared to this study. They also added a detailed error discussion and a comparison with Skerlak et al., (2014), which shows, that the updated approach leads to reasonable results.
+I therefore recommend the paper in the present form with a few technical correction.
+
+Fig.12: Please check the y_axis of the percentage plot (bottom)
+
+p.10, l.27: If we assume.... check the sentence - it seems to be incomplete
+
+
+
