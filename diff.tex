@@ -1,7 +1,7 @@
 %% Copernicus Publications Manuscript Preparation Template for LaTeX Submissions
 %DIF LATEXDIFF DIFFERENCE FILE
-%DIF DEL ACPD_version2/OzonePaper.tex   Fri Jul 28 11:09:10 2017
-%DIF ADD OzonePaper.tex                 Fri Jul 28 14:53:21 2017
+%DIF DEL ACPD_version2/OzonePaper.tex   Wed Jun 21 13:59:39 2017
+%DIF ADD OzonePaper.tex                 Tue Aug  1 09:31:53 2017
 %% ---------------------------------
 %% This template should be used for copernicus.cls
 %% The class file and some style files are bundled in the Copernicus Latex Package, which can be downloaded from the different journal webpages.
@@ -213,11 +213,11 @@ over the region}\DIFaddend .
     Two common tropopause height definitions are the standard lapse rate tropopause \citep{WMO1957} and the ozone tropopause \citep{Bethan1996}.
     The lapse rate tropopause is defined as the lowest altitude where the lapse rate (vertical gradient of temperature) is less than 2$^\circ$C~km$^{-1}$, provided the lapse rate averaged between this altitude and 2~km above is also below 2$^\circ$C~km$^{-1}$.
     The ozone tropopause is defined as the lowest altitude satisfying the following three conditions for the ozone mixing ratio (OMR) \citep{Bethan1996}:
-    \begin{enumerate}
+     \begin{enumerate} 
       \item Vertical gradient of OMR is greater than 60~ppb km$^{-1}$;
       \item OMR is greater than 80~ppb; and
       \item OMR exceeds 110~ppb between 500~m and 2000~m above the altitude under inspection (modified to between 500~m and 1500~m in the Antarctic, including the site at Davis).
-    \end{enumerate}
+     \end{enumerate} 
     The ozone tropopause may misdiagnose the real tropopause altitude during stratosphere-troposphere exchange; however, it is useful at polar latitudes in winter, where the lapse-rate definition may result in artificially high \DIFdelbegin \DIFdel{tropopause values }\DIFdelend \DIFaddbegin \DIFadd{values for tropopause height }\DIFaddend \citep{Bethan1996, Tomikawa2009, Alexander2013}.
     We require lapse rate \DIFaddbegin \DIFadd{defined }\DIFaddend tropopauses to be at a minimum of 4~km altitude. %This is due to several temperature inversions causing low misdiagnosed tropopauses.
     Another commonly used tropopause definition \DIFdelbegin \DIFdel{(the }\DIFdelend \DIFaddbegin \DIFadd{is determined with the use of PV (}\DIFaddend dynamical tropopause)\DIFdelbegin \DIFdel{is determined from the potential vorticity unit (PVU ; }\DIFdelend \DIFaddbegin \DIFadd{.
@@ -444,9 +444,11 @@ over the region}\DIFaddend .
   There is no clear relationship between meteorological conditions and event altitude, which may reflect the fact that the ozonesondes observe a snapshot of an event at different stages of its life cycle.
 
   \begin{figure}[t]
-    %\includegraphics[width=0.99\columnwidth]{figures/summary_altitude.png}
+    %DIF < \includegraphics[width=0.99\columnwidth]{figures/summary_altitude.png}
+    %DIF >  fig 7
+    %DIF >  done in examine_stations I think
     \includegraphics[width=12cm]{figures/summary_altitude.png}
-    \caption{The distribution of STT \DIFdelbeginFL \DIFdelFL{event }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{events }\DIFaddendFL altitude at Davis (top), Macquarie Island (middle), and Melbourne (bottom), determined as described in the text.
+    \caption{The distribution of STT \DIFdelbeginFL \DIFdelFL{event altitude }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{events' altitudes }\DIFaddendFL at Davis (top), Macquarie Island (middle), and Melbourne (bottom), determined as described in the text.
     Events are coloured as described in Fig. \ref{fig:SummarySeasonality}.}
     \label{fig:SummaryAltitudes}
   \end{figure}
@@ -457,8 +459,10 @@ over the region}\DIFaddend .
   Again, there is no clear relationships between meteorological conditions and event depth.
 
   \begin{figure}[t]
+  	%DIF >  Fig 8
+  	%DIF >  
     \includegraphics[width=12cm]{figures/summary_depth.png}
-    \caption{The distribution of STT \DIFdelbeginFL \DIFdelFL{event }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{events }\DIFaddendFL depth, defined as the distance from the event to the tropopause, at Davis (top), Macquarie Island (middle), and Melbourne (bottom), determined as described in the text.
+    \caption{The distribution of STT \DIFdelbeginFL \DIFdelFL{event depth}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{events' depths}\DIFaddendFL , defined as the distance from the event to the tropopause, at Davis (top), Macquarie Island (middle), and Melbourne (bottom), determined as described in the text.
     Events are coloured as described in Fig. \ref{fig:SummarySeasonality}.}
     \label{fig:SummaryTPDepths}    
   \end{figure}
